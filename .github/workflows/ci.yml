@@ -1,6 +1,6 @@
 # ci.yml - the compiler and test runner for the Flutter app. Nobody can run Flutter on the phone, so THIS is the proof.
-# Jobs: check (Node only, fast) -> test (flutter analyze + flutter test) -> web build -> deploy to GitHub Pages.
-# The Android APK is built only when you ask: run this workflow by hand, or put [apk] in the commit message.
+# Jobs: check (Node only, fast) -> test (flutter analyze + flutter test) -> web build -> android apk build -> deploy to GitHub Pages.
+# Both builds run on every push to main. The APK and the web build are uploaded as artifacts.
 name: ci
 
 on:
@@ -75,6 +75,10 @@ jobs:
             echo '### Problems, copy this block into docs/CI_LAST.txt'
             echo '```'
             echo "commit: ${GITHUB_SHA::7}  flutter: $(flutter --version | head -n 1)"
+            # Never let this block claim "no errors" just because a log was never written.
+            for f in analyze.log test.log; do
+              if [ ! -s "$f" ]; then echo "LOGS MISSING OR EMPTY: $f - the step that writes it did not run, so this is NOT a pass"; fi
+            done
             grep -hE "error •|warning •|\[E\]|Expected|Actual|expected:|actual:|Some tests failed|Exception|Error:|Could not|version solving|Because " analyze.log test.log 2>/dev/null | head -n 120 || true
             if ! grep -qE "error •|\[E\]|Some tests failed" analyze.log test.log 2>/dev/null; then echo "no errors found in analyze.log or test.log"; fi || true
             echo '```'
@@ -93,40 +97,31 @@ jobs:
         with:
           channel: stable
           cache: true
-      - name: Create android and web folders if they are not committed yet
+      - name: Create the web folder if it is not committed yet
         run: |
-          if [ ! -d android ] || [ ! -d web ]; then
-            flutter create --platforms=android,web --project-name nexus --org app.nexus .
-            rm -f test/widget_test.dart
-          fi
-      - run: flutter pub get
+          if [ ! -d web ]; then flutter create --platforms=web --project-name nexus --org app.nexus . ; fi
+          rm -f test/widget_test.dart
+      - name: flutter pub get
+        run: flutter pub get
       - name: flutter build web
         run: flutter build web --release --base-href "/${{ github.event.repository.name }}/"
+      - name: Say what was built
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo '### Web build'
+            echo '```'
+            if [ -f build/web/index.html ]; then echo "OK: build/web/index.html ($(find build/web -type f | wc -l) files)"; else echo "FAILED: no build/web/index.html"; fi
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: app/build/web
 
-  deploy:
-    name: deploy to GitHub Pages (optional)
-    needs: web
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    # Until the owner turns Pages on (Settings > Pages > Source: GitHub Actions) this job fails. That must not make the whole run red.
-    continue-on-error: true
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
-
   apk:
-    name: android apk (only on request)
+    name: android apk
     needs: [check, test]
-    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[apk]')
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -141,17 +136,49 @@ jobs:
         with:
           channel: stable
           cache: true
-      - name: Create android and web folders if they are not committed yet
+      - name: Create the android folder if it is not committed yet
         run: |
-          if [ ! -d android ] || [ ! -d web ]; then
-            flutter create --platforms=android,web --project-name nexus --org app.nexus .
-            rm -f test/widget_test.dart
-          fi
-      - run: flutter pub get
-      - name: flutter build apk (release build, debug-signed, fine for your own phone)
+          if [ ! -d android ]; then flutter create --platforms=android --project-name nexus --org app.nexus . ; fi
+          rm -f test/widget_test.dart
+      - name: flutter pub get
+        run: flutter pub get
+      # Release build signed with the debug key: fine for installing on your own phone.
+      # A Play Store build needs a keystore, which never belongs in this repo.
+      - name: flutter build apk
         run: flutter build apk --release
+      - name: Say what was built
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo '### Android apk'
+            echo '```'
+            if [ -f build/app/outputs/flutter-apk/app-release.apk ]; then
+              echo "OK: app-release.apk ($(du -h build/app/outputs/flutter-apk/app-release.apk | cut -f1))"
+            else
+              echo "FAILED: no app-release.apk"
+            fi
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         with:
           name: nexus-apk
           path: app/build/app/outputs/flutter-apk/app-release.apk
           retention-days: 14
+
+  deploy:
+    name: deploy to GitHub Pages (optional)
+    needs: web
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    # Until the owner turns Pages on (Settings > Pages > Source: GitHub Actions) this job fails. That must not make the whole run red.
+    continue-on-error: true
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
