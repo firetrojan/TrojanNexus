@@ -3,13 +3,14 @@
 // what the page shows and that the store-visible settings round-trip; fixtures/sample-backup.json
 // is used for the counts (no real data).
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nexus/app.dart';
 import 'package:nexus/core/storage.dart';
 import 'package:nexus/core/store_core.dart';
+
+import 'fixture_path.dart';
 
 /// One frame so the store finishes loading, then settle. pumpAndSettle alone would
 /// sit on the endless progress indicator of the loading screen.
@@ -26,7 +27,7 @@ Future<void> _start(tester, {Map<String, Object?>? seed, Storage? storage}) asyn
 void main() {
   testWidgets('the profile page shows the appearance settings and both backup actions',
       (tester) async {
-    final seed = jsonDecode(File('fixtures/sample-backup.json').readAsStringSync()) as Map;
+    final seed = jsonDecode(fixtureFile('sample-backup.json').readAsStringSync()) as Map;
     await _start(tester, seed: seed.cast<String, Object?>());
     await tester.tap(find.byIcon(Icons.account_circle_outlined));
     await tester.pumpAndSettle();
