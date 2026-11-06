@@ -52,15 +52,12 @@ Widget _app({Map<String, Object?>? seed}) => NexusApp(
 /// The tab labels in order.
 const List<String> _tabLabels = <String>['Home', 'Sectors', 'Vault', 'Missions', 'Alerts'];
 
-/// The text scale the app really applies, read through the bottom bar: that widget sits inside
-/// the MediaQuery the app inserts, so this does not depend on how app.dart arranges its tree.
-/// Returns 0 when no MediaQuery is found, so the failure reads "expected >1.0, found 0".
+/// The text scale the app really applies. Read through the whole bottom bar: that widget sits
+/// inside the MediaQuery the app inserts, whatever way its labels are drawn, so this does not
+/// depend on any private widget inside app.dart. Returns 0 when there is no such MediaQuery,
+/// so a missing one fails with "expected: <1.0> actual: <0>" instead of a StateError.
 double _appliedTextScale(WidgetTester tester) {
-  final bar = find.descendant(
-    of: find.byType(NavigationBar),
-    matching: find.text('Home'),
-  );
-  final data = MediaQuery.maybeOf(tester.element(bar));
+  final data = MediaQuery.maybeOf(tester.element(find.byType(NavigationBar)));
   return data == null ? 0 : data.textScaler.scale(14);
 }
 
