@@ -1,7 +1,6 @@
 // app_test.dart - widget tests for the shell, the tabs and the profile page.
 // In-memory storage only; the fixture is fixtures/sample-backup.json (no real data).
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -9,8 +8,10 @@ import 'package:nexus/app.dart';
 import 'package:nexus/core/storage.dart';
 import 'package:nexus/core/store_core.dart';
 
+import 'fixture_path.dart';
+
 Map<String, Object?> _sample() {
-  final raw = File('fixtures/sample-backup.json').readAsStringSync();
+  final raw = fixtureFile('sample-backup.json').readAsStringSync();
   return (jsonDecode(raw) as Map).cast<String, Object?>();
 }
 
