@@ -24,6 +24,15 @@ Future<void> _start(tester, {Map<String, Object?>? seed, Storage? storage}) asyn
   await tester.pumpAndSettle();
 }
 
+/// The text scale the app really applies. Read through the whole bottom bar: that widget sits
+/// inside the MediaQuery the app inserts, whatever way its labels are drawn, so this does not
+/// depend on any private widget inside app.dart. Returns 0 when there is no such MediaQuery,
+/// so a missing one fails with "expected: <1.0> actual: <0>" instead of a StateError.
+double _appliedTextScale(WidgetTester tester) {
+  final data = MediaQuery.maybeOf(tester.element(find.byType(NavigationBar)));
+  return data == null ? 0 : data.textScaler.scale(14);
+}
+
 void main() {
   testWidgets('the profile page shows the appearance settings and both backup actions',
       (tester) async {
@@ -65,8 +74,6 @@ void main() {
       tester.widget<MaterialApp>(find.byType(MaterialApp)).themeMode,
       ThemeMode.dark,
     );
-    final scale =
-        tester.widget<MediaQuery>(find.byKey(textScaleKey)).data.textScaler.scale(14);
-    expect(scale, greaterThan(1.0));
+    expect(_appliedTextScale(tester), greaterThan(1.0));
   });
 }
