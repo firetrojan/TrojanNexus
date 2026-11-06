@@ -1,6 +1,5 @@
 // smoke_test.dart - the smallest check that the app builds and shows its name.
 // In-memory storage, so the real backend is never touched and no file is written.
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nexus/app.dart';
 import 'package:nexus/core/storage.dart';
