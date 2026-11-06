@@ -59,10 +59,26 @@ jobs:
       - name: flutter pub get
         run: flutter pub get
       - name: flutter analyze
-        run: flutter analyze --no-fatal-infos
+        shell: bash
+        run: flutter analyze --no-fatal-infos 2>&1 | tee analyze.log
       - name: flutter test
-        env: { TZ: UTC }
-        run: flutter test
+        shell: bash
+        run: flutter test 2>&1 | tee test.log
+        env:
+          TZ: UTC
+      # Manual route: no gh needed. Open the run > Summary tab, copy the block into docs/CI_LAST.txt, tell the agent.
+      - name: Summary of problems (copy from the run's Summary tab)
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo '### Problems, copy this block into docs/CI_LAST.txt'
+            echo '```'
+            echo "commit: ${GITHUB_SHA::7}  flutter: $(flutter --version | head -n 1)"
+            grep -hE "error •|warning •|\[E\]|Expected|Actual|expected:|actual:|Some tests failed|Exception|Error:|Could not|version solving|Because " analyze.log test.log 2>/dev/null | head -n 120
+            if ! grep -qE "error •|\[E\]|Some tests failed" analyze.log test.log 2>/dev/null; then echo "no errors found in analyze.log or test.log"; fi
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
 
   web:
     name: web build
