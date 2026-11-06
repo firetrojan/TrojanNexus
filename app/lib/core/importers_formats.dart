@@ -14,11 +14,6 @@ Object? _firstTruthy(List<Object?> values) {
   return values.isEmpty ? null : values.last;
 }
 
-String _cell(List<String> row, int? index) {
-  if (index == null || index < 0 || index >= row.length) return '';
-  return row[index];
-}
-
 // ---------- browser bookmarks ----------
 
 /// Browser bookmarks export (Netscape format). Keeps the folder path in `folder`.

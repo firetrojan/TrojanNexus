@@ -1,4 +1,4 @@
-import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter_test/flutter_test.dart' hide matches;
 import 'package:nexus/core/model/job.dart';
 import 'package:nexus/core/model/resource.dart';
 import 'package:nexus/core/model/settings.dart';

@@ -3,7 +3,6 @@
 // returns, events, safety-copy reasons and the final state.
 import 'dart:convert';
 
-import 'package:flutter_test/flutter_test.dart';
 import 'package:nexus/core/model/job.dart';
 import 'package:nexus/core/model/resource.dart';
 import 'package:nexus/core/model/thread.dart';
