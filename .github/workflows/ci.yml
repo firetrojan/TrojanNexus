@@ -118,11 +118,23 @@ jobs:
   web:
     name: web build
     needs: [check, test]
+    # Build even when a test or the lint job is red: a skipped job produces no web build and no
+    # explanation, which is exactly what happened for several rounds.
+    if: always()
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: app
     steps:
+      - name: Say whether the jobs it waits on were green
+        shell: bash
+        run: |
+          {
+            echo '### Web build'
+            echo '```'
+            echo "check: ${{ needs.check.result }}   test: ${{ needs.test.result }}"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
         with:
@@ -168,11 +180,23 @@ jobs:
   apk:
     name: android apk
     needs: [check, test]
+    # Build even when a test or the lint job is red: a skipped job produces no APK and no
+    # explanation, which is exactly what happened for several rounds.
+    if: always()
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: app
     steps:
+      - name: Say whether the jobs it waits on were green
+        shell: bash
+        run: |
+          {
+            echo '### Android apk'
+            echo '```'
+            echo "check: ${{ needs.check.result }}   test: ${{ needs.test.result }}"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
         with:
