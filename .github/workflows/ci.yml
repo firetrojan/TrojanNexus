@@ -61,41 +61,58 @@ jobs:
         run: flutter pub get
       - name: flutter analyze
         shell: bash
-        run: flutter analyze --no-fatal-infos 2>&1 | tee analyze.log
+        run: |
+          set +e +o pipefail
+          flutter analyze --no-fatal-infos 2>&1 | tee analyze.log
+          echo "ANALYZE_EXIT=${PIPESTATUS[0]}" >> "$GITHUB_ENV"
       - name: flutter test
         shell: bash
-        run: flutter test 2>&1 | tee test.log
+        run: |
+          set +e +o pipefail
+          flutter test 2>&1 | tee test.log
+          echo "TEST_EXIT=${PIPESTATUS[0]}" >> "$GITHUB_ENV"
         env:
           TZ: UTC
       # Manual route: no gh needed. Open the run > Summary tab, copy the block into docs/CI_LAST.txt, tell the agent.
-      - name: Verdict (fails only when an error is found, passes when none is)
+      - name: Verdict (an error or a failed test is a failure; a clean run is a success)
         if: always()
         shell: bash
         run: |
           set +e +o pipefail
           missing=0
           for f in analyze.log test.log; do
-            if [ ! -s "$f" ]; then missing=1; echo "LOGS MISSING OR EMPTY: $f - the step that writes it did not run"; fi
+            if [ ! -s "$f" ]; then missing=1; fi
           done
+          # The failing lines, collected once: they go into the job log AND the Summary tab.
+          problems=$(grep -hE "error •|warning •|\[E\]|Test failed|EXCEPTION CAUGHT|Bad state|Expected:|Actual:|expected:|actual:|Some tests failed|Exception|Error:|Could not|version solving|Because " analyze.log test.log 2>/dev/null | head -n 120)
           {
             echo '### Problems, copy this block into docs/CI_LAST.txt'
             echo '```'
             echo "commit: ${GITHUB_SHA::7}  flutter: $(flutter --version | head -n 1)"
+            echo "flutter analyze exit=${ANALYZE_EXIT:-ran-not}  flutter test exit=${TEST_EXIT:-ran-not}"
             for f in analyze.log test.log; do
               if [ ! -s "$f" ]; then echo "LOGS MISSING OR EMPTY: $f - could not check it, so this is NOT a pass"; fi
             done
-            grep -hE "error •|warning •|\[E\]|Expected|Actual|expected:|actual:|Some tests failed|Exception|Error:|Could not|version solving|Because " analyze.log test.log 2>/dev/null | head -n 120
+            echo "$problems"
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
-          if grep -qE "error •|\[E\]|Some tests failed" analyze.log test.log 2>/dev/null; then
-            echo "::error::ERROR FOUND in analyze.log or test.log - read the Summary tab"
+          a=${ANALYZE_EXIT:-ran-not}; t=${TEST_EXIT:-ran-not}
+          if [ "$a" != "0" ] || [ "$t" != "0" ]; then
+            echo "::error::FAILURE: analyze exit=$a, test exit=$t"
+            echo "===== the failing lines ====="
+            echo "$problems"
+            if [ "$t" != "0" ]; then
+              echo "===== last 60 lines of test.log ====="
+              tail -n 60 test.log 2>/dev/null
+            fi
             exit 1
           fi
           if [ "$missing" = 1 ]; then
-            echo "::error::a log is missing, so this is NOT a pass - read the Summary tab"
+            echo "::error::a log is missing, so this is NOT a pass"
             exit 1
           fi
-          echo "SUCCESS: no errors found in analyze.log or test.log"
+          echo "===== no failing lines in analyze.log or test.log ====="
+          echo "SUCCESS: analyze and test both exited 0"
           exit 0
 
   web:
@@ -118,27 +135,34 @@ jobs:
       - name: flutter pub get
         run: flutter pub get
       - name: flutter build web
-        run: flutter build web --release --base-href "/${{ github.event.repository.name }}/" 2>&1 | tee web-build.log
-      - name: Verdict (fails only when the build failed, passes when it built)
+        shell: bash
+        run: |
+          set +e +o pipefail
+          flutter build web --release --base-href "/${{ github.event.repository.name }}/" 2>&1 | tee web-build.log
+          echo "WEB_EXIT=${PIPESTATUS[0]}" >> "$GITHUB_ENV"
+      - name: Verdict (a failed build is a failure; a built web folder is a success)
         if: always()
         shell: bash
         run: |
           set +e +o pipefail
-          missing=0
-          if [ ! -s web-build.log ]; then missing=1; fi
+          b=${WEB_EXIT:-ran-not}
+          problems=$(grep -hE "error|Error|FAILED|Exception|failed|not found" web-build.log 2>/dev/null | head -n 40)
           {
             echo '### Web build'
             echo '```'
-            if [ ! -s web-build.log ]; then echo "LOGS MISSING OR EMPTY: web-build.log - could not check it, so this is NOT a pass"; fi
-            grep -hE "error|Error|FAILED|Exception|failed" web-build.log 2>/dev/null | head -n 40
-            if [ -f build/web/index.html ]; then echo "OK: build/web/index.html ($(find build/web -type f | wc -l) files)"; else echo "FAILED: no build/web/index.html"; fi
+            echo "flutter build web exit=$b"
+            echo "$problems"
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
-          if [ -f build/web/index.html ] && [ "$missing" = 0 ]; then
-            echo "SUCCESS: the web build produced build/web/index.html"
+          if [ "$b" = "0" ] && [ -f build/web/index.html ]; then
+            echo "SUCCESS: build/web/index.html ($(find build/web -type f | wc -l) files)"
             exit 0
           fi
-          echo "::error::FAILED: no build/web/index.html - read the Summary tab"
+          echo "::error::FAILURE: flutter build web exit=$b"
+          echo "===== the failing lines ====="
+          echo "$problems"
+          echo "===== last 60 lines of web-build.log ====="
+          tail -n 60 web-build.log 2>/dev/null
           exit 1
 
   apk:
@@ -167,19 +191,23 @@ jobs:
       # Release build signed with the debug key: fine for installing on your own phone.
       # A Play Store build needs a keystore, which never belongs in this repo.
       - name: flutter build apk
-        run: flutter build apk --release 2>&1 | tee apk-build.log
-      - name: Verdict (fails only when the build failed, passes when it built)
+        shell: bash
+        run: |
+          set +e +o pipefail
+          flutter build apk --release 2>&1 | tee apk-build.log
+          echo "APK_EXIT=${PIPESTATUS[0]}" >> "$GITHUB_ENV"
+      - name: Verdict (a failed build is a failure; a built apk is a success)
         if: always()
         shell: bash
         run: |
           set +e +o pipefail
-          missing=0
-          if [ ! -s apk-build.log ]; then missing=1; fi
+          b=${APK_EXIT:-ran-not}
+          problems=$(grep -hE "error|Error|FAILED|Exception|failed|not found" apk-build.log 2>/dev/null | head -n 40)
           {
             echo '### Android apk'
             echo '```'
-            if [ ! -s apk-build.log ]; then echo "LOGS MISSING OR EMPTY: apk-build.log - could not check it, so this is NOT a pass"; fi
-            grep -hE "error|Error|FAILED|Exception|failed" apk-build.log 2>/dev/null | head -n 40
+            echo "flutter build apk exit=$b"
+            echo "$problems"
             if [ -f build/app/outputs/flutter-apk/app-release.apk ]; then
               echo "OK: app-release.apk ($(du -h build/app/outputs/flutter-apk/app-release.apk | cut -f1))"
             else
@@ -187,7 +215,16 @@ jobs:
             fi
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
-          if [ -f build/app/outputs/flutter-apk/app-release.apk ] && [ "$missing" = 0 ]; then
+          if [ "$b" = "0" ] && [ -f build/app/outputs/flutter-apk/app-release.apk ]; then
+            echo "SUCCESS: the apk build produced app-release.apk"
+            exit 0
+          fi
+          echo "::error::FAILURE: flutter build apk exit=$b"
+          echo "===== the failing lines ====="
+          echo "$problems"
+          echo "===== last 60 lines of apk-build.log ====="
+          tail -n 60 apk-build.log 2>/dev/null
+          exit 1
             echo "SUCCESS: the apk build produced app-release.apk"
             exit 0
           fi
