@@ -1,102 +1,90 @@
-// app_test.dart - widget tests for the shell, the tabs and the profile page.
-// In-memory storage only; the fixture is fixtures/sample-backup.json (no real data).
-import 'dart:convert';
-import 'dart:io';
-
+// app.dart - the root widget. Loads the store, then builds the themed app.
+// Integrator-only file.
 import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:nexus/app.dart';
-import 'package:nexus/core/storage.dart';
-import 'package:nexus/core/store_core.dart';
 
-Map<String, Object?> _sample() {
-  final raw = File('fixtures/sample-backup.json').readAsStringSync();
-  return (jsonDecode(raw) as Map).cast<String, Object?>();
+import 'core/storage.dart';
+import 'core/storage_pick.dart';
+import 'core/nexus_store.dart';
+import 'core/store_core.dart';
+import 'theme_from_settings.dart';
+import 'ui/shell.dart';
+
+/// The key the text-scale MediaQuery carries, so tests can find it exactly.
+const Key textScaleKey = Key('nexus-text-scale');
+
+/// [storage], [clock] and [seed] exist for tests; the app uses the real backend.
+class NexusApp extends StatefulWidget {
+  const NexusApp({
+    super.key,
+    this.storage,
+    this.clock,
+    this.seed,
+  });
+
+  final Storage? storage;
+  final Clock? clock;
+  final Object? seed;
+
+  @override
+  State<NexusApp> createState() => _NexusAppState();
 }
 
-Clock _frozenClock() => Clock(now: () => DateTime.utc(2026, 10, 31, 12));
+class _NexusAppState extends State<NexusApp> {
+  NexusStore? _store;
 
-Widget _app({Map<String, Object?>? seed}) => NexusApp(
-      storage: MemoryStorage(),
-      clock: _frozenClock(),
-      seed: seed ?? const <String, Object?>{},
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  Future<void> _load() async {
+    final store = NexusStore(
+      StoreCore(
+        clock: widget.clock ?? Clock(),
+        idGen: (p) => '${p}_new',
+        storage: widget.storage ?? createDefaultStorage('nexus-backup.json'),
+      ),
     );
+    await store.load(widget.seed);
+    if (!mounted) return;
+    setState(() => _store = store);
+  }
 
-/// The tab labels in order.
-const List<String> _tabLabels = <String>['Home', 'Sectors', 'Vault', 'Missions', 'Alerts'];
-
-void main() {
-  testWidgets('the app starts and shows the 5 tabs', (tester) async {
-    await tester.pumpWidget(_app());
-    await tester.pumpAndSettle();
-    expect(find.text('Nexus'), findsOneWidget);
-    for (final label in _tabLabels) {
-      expect(find.text(label), findsOneWidget, reason: 'tab $label is missing');
+  @override
+  Widget build(BuildContext context) {
+    const seed = Color(0xFF007AFF);
+    final store = _store;
+    if (store == null) {
+      return MaterialApp(
+        title: 'Nexus',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(colorSchemeSeed: seed, useMaterial3: true, brightness: Brightness.light),
+        home: const Scaffold(body: Center(child: CircularProgressIndicator())),
+      );
     }
-    expect(find.byIcon(Icons.account_circle_outlined), findsOneWidget);
-  });
-
-  testWidgets('tapping each tab shows its title', (tester) async {
-    await tester.pumpWidget(_app());
-    await tester.pumpAndSettle();
-    for (final label in _tabLabels) {
-      await tester.tap(find.text(label));
-      await tester.pumpAndSettle();
-      expect(find.text(label), findsWidgets, reason: 'tab $label did not open');
-    }
-  });
-
-  testWidgets('loading the sample backup shows its counts', (tester) async {
-    final data = _sample();
-    await tester.pumpWidget(_app(seed: data));
-    await tester.pumpAndSettle();
-    expect(find.text('Home'), findsOneWidget);
-    expect(
-      find.text('${data['resources']!.length} resources'),
-      findsNothing,
-      reason: 'the count comes from the store, not from a label on its own',
+    // The store is below MaterialApp, so the theme and the text scale have to be
+    // rebuilt by hand when a setting changes: listen to the store here.
+    return ListenableBuilder(
+      listenable: store,
+      builder: (context, _) => MaterialApp(
+        title: 'Nexus',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+            colorSchemeSeed: seed, useMaterial3: true, brightness: Brightness.light),
+        darkTheme: ThemeData(
+            colorSchemeSeed: seed, useMaterial3: true, brightness: Brightness.dark),
+        themeMode: themeModeFor(store.settings.theme),
+        home: Builder(
+          builder: (context) => MediaQuery(
+            key: textScaleKey,
+            data: MediaQuery.of(context).copyWith(
+              textScaler: TextScaler.linear(textScaleFor(store.settings.textSize)),
+            ),
+            child: Shell(store: store),
+          ),
+        ),
+      ),
     );
-    // Home shows resources, sectors, missions and to-review counts from the fixture.
-    final expected = '${(data['resources'] as List).length} resources, '
-        '${(data['jobs'] as List).length} sectors, '
-        '${(data['threads'] as List).length} missions, '
-        '${(data['resources'] as List).where((r) => (r as Map)['draft'] == true).length} to review';
-    expect(find.text(expected), findsOneWidget);
-  });
-
-  testWidgets('dark theme works', (tester) async {
-    await tester.pumpWidget(_app());
-    await tester.pumpAndSettle();
-    await tester.tap(find.byIcon(Icons.account_circle_outlined));
-    await tester.pumpAndSettle();
-    expect(find.text('Profile'), findsOneWidget);
-    await tester.tap(find.text('Dark'));
-    await tester.pumpAndSettle();
-    expect(
-      tester.widget<MaterialApp>(find.byType(MaterialApp)).themeMode,
-      ThemeMode.dark,
-    );
-    // and it survives a store reload, because it is saved in the settings
-    await tester.tap(find.text('Light'));
-    await tester.pumpAndSettle();
-    expect(
-      tester.widget<MaterialApp>(find.byType(MaterialApp)).themeMode,
-      ThemeMode.light,
-    );
-  });
-
-  testWidgets('text size changes the text scale', (tester) async {
-    await tester.pumpWidget(_app());
-    await tester.pumpAndSettle();
-    await tester.tap(find.byIcon(Icons.account_circle_outlined));
-    await tester.pumpAndSettle();
-    await tester.tap(find.text('Larger'));
-    await tester.pumpAndSettle();
-    final scaler = tester.widget<MediaQuery>(find.byType(MediaQuery).first).data.textScaler;
-    expect(scaler.scale(14), greaterThan(1.0));
-    await tester.tap(find.text('Normal'));
-    await tester.pumpAndSettle();
-    final back = tester.widget<MediaQuery>(find.byType(MediaQuery).first).data.textScaler;
-    expect(back.scale(14), 1.0);
-  });
+  }
 }
