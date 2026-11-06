@@ -9,6 +9,9 @@ import 'core/store_core.dart';
 import 'theme_from_settings.dart';
 import 'ui/shell.dart';
 
+/// The key the text-scale MediaQuery carries, so tests can find it exactly.
+const Key textScaleKey = Key('nexus-text-scale');
+
 /// [storage], [clock] and [seed] exist for tests; the app uses the real backend.
 class NexusApp extends StatefulWidget {
   const NexusApp({
@@ -52,22 +55,36 @@ class _NexusAppState extends State<NexusApp> {
   Widget build(BuildContext context) {
     const seed = Color(0xFF007AFF);
     final store = _store;
-    return MaterialApp(
-      title: 'Nexus',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(colorSchemeSeed: seed, useMaterial3: true, brightness: Brightness.light),
-      darkTheme: ThemeData(colorSchemeSeed: seed, useMaterial3: true, brightness: Brightness.dark),
-      themeMode: store == null ? ThemeMode.system : themeModeFor(store.settings.theme),
-      home: store == null
-          ? const Scaffold(body: Center(child: CircularProgressIndicator()))
-          : Builder(
-              builder: (context) => MediaQuery(
-                data: MediaQuery.of(context).copyWith(
-                  textScaler: TextScaler.linear(textScaleFor(store.settings.textSize)),
-                ),
-                child: Shell(store: store),
-              ),
+    if (store == null) {
+      return MaterialApp(
+        title: 'Nexus',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(colorSchemeSeed: seed, useMaterial3: true, brightness: Brightness.light),
+        home: const Scaffold(body: Center(child: CircularProgressIndicator())),
+      );
+    }
+    // The store is below MaterialApp, so the theme and the text scale have to be
+    // rebuilt by hand when a setting changes: listen to the store here.
+    return ListenableBuilder(
+      listenable: store,
+      builder: (context, _) => MaterialApp(
+        title: 'Nexus',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+            colorSchemeSeed: seed, useMaterial3: true, brightness: Brightness.light),
+        darkTheme: ThemeData(
+            colorSchemeSeed: seed, useMaterial3: true, brightness: Brightness.dark),
+        themeMode: themeModeFor(store.settings.theme),
+        home: Builder(
+          builder: (context) => MediaQuery(
+            key: textScaleKey,
+            data: MediaQuery.of(context).copyWith(
+              textScaler: TextScaler.linear(textScaleFor(store.settings.textSize)),
             ),
+            child: Shell(store: store),
+          ),
+        ),
+      ),
     );
   }
 }
