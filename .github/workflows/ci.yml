@@ -75,8 +75,8 @@ jobs:
             echo '### Problems, copy this block into docs/CI_LAST.txt'
             echo '```'
             echo "commit: ${GITHUB_SHA::7}  flutter: $(flutter --version | head -n 1)"
-            grep -hE "error •|warning •|\[E\]|Expected|Actual|expected:|actual:|Some tests failed|Exception|Error:|Could not|version solving|Because " analyze.log test.log 2>/dev/null | head -n 120
-            if ! grep -qE "error •|\[E\]|Some tests failed" analyze.log test.log 2>/dev/null; then echo "no errors found in analyze.log or test.log"; fi
+            grep -hE "error •|warning •|\[E\]|Expected|Actual|expected:|actual:|Some tests failed|Exception|Error:|Could not|version solving|Because " analyze.log test.log 2>/dev/null | head -n 120 || true
+            if ! grep -qE "error •|\[E\]|Some tests failed" analyze.log test.log 2>/dev/null; then echo "no errors found in analyze.log or test.log"; fi || true
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 
