@@ -52,6 +52,18 @@ Widget _app({Map<String, Object?>? seed}) => NexusApp(
 /// The tab labels in order.
 const List<String> _tabLabels = <String>['Home', 'Sectors', 'Vault', 'Missions', 'Alerts'];
 
+/// The text scale the app really applies, read through the bottom bar: that widget sits inside
+/// the MediaQuery the app inserts, so this does not depend on how app.dart arranges its tree.
+/// Returns 0 when no MediaQuery is found, so the failure reads "expected >1.0, found 0".
+double _appliedTextScale(WidgetTester tester) {
+  final bar = find.descendant(
+    of: find.byType(NavigationBar),
+    matching: find.text('Home'),
+  );
+  final data = MediaQuery.maybeOf(tester.element(bar));
+  return data == null ? 0 : data.textScaler.scale(14);
+}
+
 void main() {
   testWidgets('the app starts and shows the 5 tabs', (tester) async {
     await _start(tester);
@@ -120,12 +132,9 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(find.text('Larger'));
     await tester.pumpAndSettle();
-    final scaler =
-        tester.widget<MediaQuery>(find.byKey(textScaleKey)).data.textScaler;
-    expect(scaler.scale(14), greaterThan(1.0));
+    expect(_appliedTextScale(tester), greaterThan(1.0));
     await tester.tap(find.text('Normal'));
     await tester.pumpAndSettle();
-    final back = tester.widget<MediaQuery>(find.byKey(textScaleKey)).data.textScaler;
-    expect(back.scale(14), 1.0);
+    expect(_appliedTextScale(tester), 1.0);
   });
 }
