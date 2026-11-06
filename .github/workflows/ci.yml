@@ -1,6 +1,7 @@
 # ci.yml - the compiler and test runner for the Flutter app. Nobody can run Flutter on the phone, so THIS is the proof.
 # Jobs: check (Node only, fast) -> test (flutter analyze + flutter test) -> web build -> android apk build -> deploy to GitHub Pages.
-# Both builds run on every push to main. The APK and the web build are uploaded as artifacts.
+# Orientation: an error is a FAILURE (the job step says so and exits 1); no error is a SUCCESS (exit 0).
+# Every job writes the errors it can see into the run's Summary tab, so no job can turn the run red without a matching line.
 name: ci
 
 on:
@@ -67,22 +68,35 @@ jobs:
         env:
           TZ: UTC
       # Manual route: no gh needed. Open the run > Summary tab, copy the block into docs/CI_LAST.txt, tell the agent.
-      - name: Summary of problems (copy from the run's Summary tab)
+      - name: Verdict (fails only when an error is found, passes when none is)
         if: always()
         shell: bash
         run: |
+          set +e +o pipefail
+          missing=0
+          for f in analyze.log test.log; do
+            if [ ! -s "$f" ]; then missing=1; echo "LOGS MISSING OR EMPTY: $f - the step that writes it did not run"; fi
+          done
           {
             echo '### Problems, copy this block into docs/CI_LAST.txt'
             echo '```'
             echo "commit: ${GITHUB_SHA::7}  flutter: $(flutter --version | head -n 1)"
-            # Never let this block claim "no errors" just because a log was never written.
             for f in analyze.log test.log; do
-              if [ ! -s "$f" ]; then echo "LOGS MISSING OR EMPTY: $f - the step that writes it did not run, so this is NOT a pass"; fi
+              if [ ! -s "$f" ]; then echo "LOGS MISSING OR EMPTY: $f - could not check it, so this is NOT a pass"; fi
             done
-            grep -hE "error •|warning •|\[E\]|Expected|Actual|expected:|actual:|Some tests failed|Exception|Error:|Could not|version solving|Because " analyze.log test.log 2>/dev/null | head -n 120 || true
-            if ! grep -qE "error •|\[E\]|Some tests failed" analyze.log test.log 2>/dev/null; then echo "no errors found in analyze.log or test.log"; fi || true
+            grep -hE "error •|warning •|\[E\]|Expected|Actual|expected:|actual:|Some tests failed|Exception|Error:|Could not|version solving|Because " analyze.log test.log 2>/dev/null | head -n 120
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
+          if grep -qE "error •|\[E\]|Some tests failed" analyze.log test.log 2>/dev/null; then
+            echo "::error::ERROR FOUND in analyze.log or test.log - read the Summary tab"
+            exit 1
+          fi
+          if [ "$missing" = 1 ]; then
+            echo "::error::a log is missing, so this is NOT a pass - read the Summary tab"
+            exit 1
+          fi
+          echo "SUCCESS: no errors found in analyze.log or test.log"
+          exit 0
 
   web:
     name: web build
@@ -104,20 +118,28 @@ jobs:
       - name: flutter pub get
         run: flutter pub get
       - name: flutter build web
-        run: flutter build web --release --base-href "/${{ github.event.repository.name }}/"
-      - name: Say what was built
+        run: flutter build web --release --base-href "/${{ github.event.repository.name }}/" 2>&1 | tee web-build.log
+      - name: Verdict (fails only when the build failed, passes when it built)
         if: always()
         shell: bash
         run: |
+          set +e +o pipefail
+          missing=0
+          if [ ! -s web-build.log ]; then missing=1; fi
           {
             echo '### Web build'
             echo '```'
+            if [ ! -s web-build.log ]; then echo "LOGS MISSING OR EMPTY: web-build.log - could not check it, so this is NOT a pass"; fi
+            grep -hE "error|Error|FAILED|Exception|failed" web-build.log 2>/dev/null | head -n 40
             if [ -f build/web/index.html ]; then echo "OK: build/web/index.html ($(find build/web -type f | wc -l) files)"; else echo "FAILED: no build/web/index.html"; fi
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: app/build/web
+          if [ -f build/web/index.html ] && [ "$missing" = 0 ]; then
+            echo "SUCCESS: the web build produced build/web/index.html"
+            exit 0
+          fi
+          echo "::error::FAILED: no build/web/index.html - read the Summary tab"
+          exit 1
 
   apk:
     name: android apk
@@ -145,14 +167,19 @@ jobs:
       # Release build signed with the debug key: fine for installing on your own phone.
       # A Play Store build needs a keystore, which never belongs in this repo.
       - name: flutter build apk
-        run: flutter build apk --release
-      - name: Say what was built
+        run: flutter build apk --release 2>&1 | tee apk-build.log
+      - name: Verdict (fails only when the build failed, passes when it built)
         if: always()
         shell: bash
         run: |
+          set +e +o pipefail
+          missing=0
+          if [ ! -s apk-build.log ]; then missing=1; fi
           {
             echo '### Android apk'
             echo '```'
+            if [ ! -s apk-build.log ]; then echo "LOGS MISSING OR EMPTY: apk-build.log - could not check it, so this is NOT a pass"; fi
+            grep -hE "error|Error|FAILED|Exception|failed" apk-build.log 2>/dev/null | head -n 40
             if [ -f build/app/outputs/flutter-apk/app-release.apk ]; then
               echo "OK: app-release.apk ($(du -h build/app/outputs/flutter-apk/app-release.apk | cut -f1))"
             else
@@ -160,6 +187,12 @@ jobs:
             fi
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
+          if [ -f build/app/outputs/flutter-apk/app-release.apk ] && [ "$missing" = 0 ]; then
+            echo "SUCCESS: the apk build produced app-release.apk"
+            exit 0
+          fi
+          echo "::error::FAILED: no app-release.apk - read the Summary tab"
+          exit 1
       - uses: actions/upload-artifact@v4
         with:
           name: nexus-apk
