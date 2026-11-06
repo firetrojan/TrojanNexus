@@ -11,9 +11,6 @@ import 'theme_from_settings.dart';
 import 'ui/shell.dart';
 import 'ui/store_scope.dart';
 
-/// The key the text-scale MediaQuery carries, so tests can find it exactly.
-const Key textScaleKey = Key('nexus-text-scale');
-
 /// [storage], [clock] and [seed] exist for tests; the app uses the real backend.
 class NexusApp extends StatefulWidget {
   const NexusApp({
@@ -40,9 +37,9 @@ class _NexusAppState extends State<NexusApp> {
     _load();
   }
 
-  /// The backend for this platform. A browser or a test can inject its own; otherwise the
-  /// backup goes to the app's documents directory, never to a relative path (which on
-  /// Android points at "/" and cannot be written).
+  /// The backend for this platform. A test can inject its own; otherwise the backup goes to the
+  /// app's documents directory, never to a relative path (which on Android points at "/" and
+  /// cannot be written).
   Future<Storage> _storage() async {
     final own = widget.storage;
     if (own != null) return own;
@@ -77,9 +74,9 @@ class _NexusAppState extends State<NexusApp> {
         home: const Scaffold(body: Center(child: CircularProgressIndicator())),
       );
     }
-    // StoreScope wraps MaterialApp, so a page pushed on the Navigator (Profile) also reads
-    // the store. ListenableBuilder above that rebuilds MaterialApp when a setting changes,
-    // because MaterialApp sits above StoreScope.
+    // StoreScope wraps MaterialApp, so a page pushed on the Navigator (Profile) also reads the
+    // store. ListenableBuilder above that rebuilds MaterialApp when a setting changes, because
+    // MaterialApp sits above StoreScope.
     return ListenableBuilder(
       listenable: store,
       builder: (context, _) => StoreScope(
@@ -91,15 +88,16 @@ class _NexusAppState extends State<NexusApp> {
           darkTheme: ThemeData(
               colorSchemeSeed: seed, useMaterial3: true, brightness: Brightness.dark),
           themeMode: themeModeFor(store.settings.theme),
-          home: Builder(
-            builder: (context) => MediaQuery(
-              key: textScaleKey,
-              data: MediaQuery.of(context).copyWith(
-                textScaler: TextScaler.linear(textScaleFor(store.settings.textSize)),
-              ),
-              child: Shell(store: store),
+          // The builder runs inside Flutter's own MediaQuery and wraps the Navigator, so the text
+          // scale reaches the tabs AND every page pushed on top of them (Profile). Putting it in
+          // `home:` would only scale the tabs.
+          builder: (context, child) => MediaQuery(
+            data: MediaQuery.of(context).copyWith(
+              textScaler: TextScaler.linear(textScaleFor(store.settings.textSize)),
             ),
+            child: child!,
           ),
+          home: Shell(store: store),
         ),
       ),
     );
