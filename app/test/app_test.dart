@@ -52,13 +52,16 @@ Widget _app({Map<String, Object?>? seed}) => NexusApp(
 /// The tab labels in order.
 const List<String> _tabLabels = <String>['Home', 'Sectors', 'Vault', 'Missions', 'Alerts'];
 
-/// The text scale the app really applies. Read through a widget on the Profile page, which is the
-/// page that is open when this is called: the builder above the Navigator scales it, so this works
-/// whether or not the tabs behind it are still on stage. Returns 0 when there is no such
-/// MediaQuery, so a missing one fails with "expected: <1.0> actual: <0>" instead of a StateError.
+/// The text scale FACTOR the app really applies (1.0 = Normal). Read through a widget on the
+/// Profile page, which is the page that is open when this is called: the builder above the
+/// Navigator scales it, so this works whether or not the tabs behind it are still on stage.
+/// Returns 0 when there is no such MediaQuery, so a missing scale fails with a number, not a
+/// StateError.
 double _appliedTextScale(WidgetTester tester) {
   final data = MediaQuery.maybeOf(tester.element(find.text('Theme')));
-  return data == null ? 0 : data.textScaler.scale(14);
+  if (data == null) return 0;
+  final scaled = data.textScaler.scale(14.0);
+  return scaled / 14.0;
 }
 
 void main() {
