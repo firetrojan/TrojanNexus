@@ -1,0 +1,50 @@
+/* 32-import.css - Import screen, "What is it about?" card, lookup progress box */
+.impdrop { display: grid; justify-items: center; gap: 8px; padding: 22px 18px 20px; text-align: center; border-radius: 14px; background: var(--cell); border: 1.5px dashed var(--label3); }
+.impdrop .big { color: var(--blue); }
+.impdrop b { font-size: 20px; font-weight: 600; }
+.impdrop p { max-width: 320px; font-size: 15px; line-height: 1.4; }
+.row.c { justify-content: center; margin-top: 6px; }
+.how { border-radius: 12px; background: var(--cell); padding: 0 16px; }
+.how summary { min-height: 44px; display: flex; align-items: center; color: var(--blue); font-size: 17px; cursor: pointer; list-style: none; }
+.how summary::-webkit-details-marker { display: none; }
+.how summary::after { content: "\203A"; margin-left: auto; color: var(--label3); font-size: 22px; transition: transform .25s var(--spring); }
+.how[open] summary::after { transform: rotate(90deg); }
+.how-body { display: grid; gap: 10px; padding: 0 0 14px; font-size: 15px; line-height: 1.45; color: var(--label2); }
+.how-body b { color: var(--label); font-weight: 600; }
+.src { display: flex; align-items: flex-start; gap: 12px; padding: 12px 12px 12px 16px; background: var(--cell); border-radius: 12px; }
+.src + .src { margin-top: 8px; }
+.src .t { font-size: 17px; line-height: 1.25; overflow-wrap: anywhere; }
+.src .s { margin-top: 2px; font-size: 14px; line-height: 1.35; color: var(--label2); overflow-wrap: anywhere; }
+.src .s.warnt { color: var(--orange); }
+.src.off { opacity: .5; }
+.src .tick { margin-top: 1px; }
+.src-ic { flex: none; width: 22px; height: 22px; display: grid; place-items: center; margin-top: 1px; }
+.src-ic.warn { color: var(--orange); }
+.src-ic .ico { width: 20px; height: 20px; }
+.src .btn.icon.xs { flex: none; color: var(--label3); }
+.list.fl { display: grid; gap: 0; background: var(--cell); border-radius: 12px; overflow: hidden; }
+.fl-row { display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 8px 14px; font-size: 16px; }
+.fl-row + .fl-row { border-top: .5px solid var(--sep); }
+.fl-row .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--c); flex: none; }
+.imp .field > label { margin-bottom: 2px; }
+.chips.centered { justify-content: center; }
+.scanbox { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.scanbox > * { min-width: 0; overflow-wrap: anywhere; }
+.scan-sum { font-size: 15px; line-height: 1.4; color: var(--label); }
+.scan-quote { font-size: 15px; line-height: 1.4; font-style: italic; color: var(--label2); padding-left: 10px; border-left: 3px solid var(--fill2); }
+.scanbox .d-acts, .panel.sheet .scanbox .d-acts { margin: 2px 0 0; flex-wrap: wrap; }
+.panel.sheet .scanbox .d-acts .btn:not(.icon) { flex: 1 1 auto; white-space: nowrap; }
+.scanbox .lnk { text-align: left; font-size: 15px; }
+.qa-guess { display: grid; gap: 6px; padding: 10px 12px; border-radius: 10px; background: var(--cell); }
+.qa-guess p { margin: 0; }
+.fill-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.fill-row .t { font-size: 16px; }
+.fill-row .s { font-size: 13px; color: var(--label2); }
+.fill-row .meta.acts { margin-top: 0; }
+.dlg.lookbox { width: min(92vw, 380px); }
+.dlg.lookbox p { text-align: left; }
+.dlg.lookbox .bar { margin: 10px 0 4px; }
+.dlg.lookbox .bar > i { transition: width .25s linear; }
+.dlg.lookbox h3 { text-align: center; }
+.dlg.lookbox .chips { margin: 4px 0; }
+.dlg.lookbox .scan-sum { text-align: center; }

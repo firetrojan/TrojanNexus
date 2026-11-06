@@ -1,0 +1,500 @@
+{
+ "module": "history",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "normLog",
+   "in": [
+    [
+     {
+      "at": "2026-10-01",
+      "k": "reviewed",
+      "t": "a"
+     },
+     {
+      "at": "bad",
+      "k": "reviewed",
+      "t": "b"
+     },
+     {
+      "at": "2026-10-02",
+      "k": "nope",
+      "t": "c"
+     },
+     {
+      "at": "2026-10-03",
+      "k": "checked",
+      "t": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+     }
+    ]
+   ],
+   "out": [
+    {
+     "at": "2026-10-01",
+     "k": "reviewed",
+     "t": "a"
+    },
+    {
+     "at": "2026-10-03",
+     "k": "checked",
+     "t": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+    }
+   ]
+  },
+  {
+   "fn": "normLog",
+   "in": [
+    null
+   ],
+   "out": []
+  },
+  {
+   "fn": "normLog",
+   "in": [
+    [
+     {
+      "at": "2026-10-01",
+      "k": "reviewed",
+      "t": "e0"
+     },
+     {
+      "at": "2026-10-02",
+      "k": "reviewed",
+      "t": "e1"
+     },
+     {
+      "at": "2026-10-03",
+      "k": "reviewed",
+      "t": "e2"
+     },
+     {
+      "at": "2026-10-04",
+      "k": "reviewed",
+      "t": "e3"
+     },
+     {
+      "at": "2026-10-05",
+      "k": "reviewed",
+      "t": "e4"
+     },
+     {
+      "at": "2026-10-06",
+      "k": "reviewed",
+      "t": "e5"
+     },
+     {
+      "at": "2026-10-07",
+      "k": "reviewed",
+      "t": "e6"
+     },
+     {
+      "at": "2026-10-08",
+      "k": "reviewed",
+      "t": "e7"
+     },
+     {
+      "at": "2026-10-09",
+      "k": "reviewed",
+      "t": "e8"
+     },
+     {
+      "at": "2026-10-10",
+      "k": "reviewed",
+      "t": "e9"
+     },
+     {
+      "at": "2026-10-11",
+      "k": "reviewed",
+      "t": "e10"
+     },
+     {
+      "at": "2026-10-12",
+      "k": "reviewed",
+      "t": "e11"
+     },
+     {
+      "at": "2026-10-13",
+      "k": "reviewed",
+      "t": "e12"
+     },
+     {
+      "at": "2026-10-14",
+      "k": "reviewed",
+      "t": "e13"
+     },
+     {
+      "at": "2026-10-15",
+      "k": "reviewed",
+      "t": "e14"
+     },
+     {
+      "at": "2026-10-16",
+      "k": "reviewed",
+      "t": "e15"
+     },
+     {
+      "at": "2026-10-17",
+      "k": "reviewed",
+      "t": "e16"
+     },
+     {
+      "at": "2026-10-18",
+      "k": "reviewed",
+      "t": "e17"
+     },
+     {
+      "at": "2026-10-19",
+      "k": "reviewed",
+      "t": "e18"
+     },
+     {
+      "at": "2026-10-20",
+      "k": "reviewed",
+      "t": "e19"
+     },
+     {
+      "at": "2026-10-21",
+      "k": "reviewed",
+      "t": "e20"
+     },
+     {
+      "at": "2026-10-22",
+      "k": "reviewed",
+      "t": "e21"
+     },
+     {
+      "at": "2026-10-23",
+      "k": "reviewed",
+      "t": "e22"
+     },
+     {
+      "at": "2026-10-24",
+      "k": "reviewed",
+      "t": "e23"
+     },
+     {
+      "at": "2026-10-25",
+      "k": "reviewed",
+      "t": "e24"
+     },
+     {
+      "at": "2026-10-26",
+      "k": "reviewed",
+      "t": "e25"
+     },
+     {
+      "at": "2026-10-27",
+      "k": "reviewed",
+      "t": "e26"
+     },
+     {
+      "at": "2026-10-28",
+      "k": "reviewed",
+      "t": "e27"
+     },
+     {
+      "at": "2026-10-01",
+      "k": "reviewed",
+      "t": "e28"
+     },
+     {
+      "at": "2026-10-02",
+      "k": "reviewed",
+      "t": "e29"
+     }
+    ]
+   ],
+   "out": [
+    {
+     "at": "2026-10-06",
+     "k": "reviewed",
+     "t": "e5"
+    },
+    {
+     "at": "2026-10-07",
+     "k": "reviewed",
+     "t": "e6"
+    },
+    {
+     "at": "2026-10-08",
+     "k": "reviewed",
+     "t": "e7"
+    },
+    {
+     "at": "2026-10-09",
+     "k": "reviewed",
+     "t": "e8"
+    },
+    {
+     "at": "2026-10-10",
+     "k": "reviewed",
+     "t": "e9"
+    },
+    {
+     "at": "2026-10-11",
+     "k": "reviewed",
+     "t": "e10"
+    },
+    {
+     "at": "2026-10-12",
+     "k": "reviewed",
+     "t": "e11"
+    },
+    {
+     "at": "2026-10-13",
+     "k": "reviewed",
+     "t": "e12"
+    },
+    {
+     "at": "2026-10-14",
+     "k": "reviewed",
+     "t": "e13"
+    },
+    {
+     "at": "2026-10-15",
+     "k": "reviewed",
+     "t": "e14"
+    },
+    {
+     "at": "2026-10-16",
+     "k": "reviewed",
+     "t": "e15"
+    },
+    {
+     "at": "2026-10-17",
+     "k": "reviewed",
+     "t": "e16"
+    },
+    {
+     "at": "2026-10-18",
+     "k": "reviewed",
+     "t": "e17"
+    },
+    {
+     "at": "2026-10-19",
+     "k": "reviewed",
+     "t": "e18"
+    },
+    {
+     "at": "2026-10-20",
+     "k": "reviewed",
+     "t": "e19"
+    },
+    {
+     "at": "2026-10-21",
+     "k": "reviewed",
+     "t": "e20"
+    },
+    {
+     "at": "2026-10-22",
+     "k": "reviewed",
+     "t": "e21"
+    },
+    {
+     "at": "2026-10-23",
+     "k": "reviewed",
+     "t": "e22"
+    },
+    {
+     "at": "2026-10-24",
+     "k": "reviewed",
+     "t": "e23"
+    },
+    {
+     "at": "2026-10-25",
+     "k": "reviewed",
+     "t": "e24"
+    },
+    {
+     "at": "2026-10-26",
+     "k": "reviewed",
+     "t": "e25"
+    },
+    {
+     "at": "2026-10-27",
+     "k": "reviewed",
+     "t": "e26"
+    },
+    {
+     "at": "2026-10-28",
+     "k": "reviewed",
+     "t": "e27"
+    },
+    {
+     "at": "2026-10-01",
+     "k": "reviewed",
+     "t": "e28"
+    },
+    {
+     "at": "2026-10-02",
+     "k": "reviewed",
+     "t": "e29"
+    }
+   ]
+  },
+  {
+   "fn": "pushLog",
+   "in": [
+    [],
+    [
+     [
+      "reviewed",
+      "Marked as reviewed"
+     ]
+    ],
+    "2026-10-31"
+   ],
+   "out": [
+    {
+     "at": "2026-10-31",
+     "k": "reviewed",
+     "t": "Marked as reviewed"
+    }
+   ]
+  },
+  {
+   "fn": "pushLog",
+   "in": [
+    [
+     {
+      "at": "2026-10-31",
+      "k": "reviewed",
+      "t": "Marked as reviewed"
+     }
+    ],
+    [
+     [
+      "reviewed",
+      "Marked as reviewed"
+     ]
+    ],
+    "2026-10-31"
+   ],
+   "out": [
+    {
+     "at": "2026-10-31",
+     "k": "reviewed",
+     "t": "Marked as reviewed"
+    }
+   ]
+  },
+  {
+   "fn": "pushLog",
+   "in": [
+    [
+     {
+      "at": "2026-10-30",
+      "k": "checked",
+      "t": "Checked"
+     }
+    ],
+    [
+     [
+      "checked",
+      "Checked"
+     ],
+     [
+      "status",
+      "To try to Trial"
+     ]
+    ],
+    "2026-10-31"
+   ],
+   "out": [
+    {
+     "at": "2026-10-31",
+     "k": "checked",
+     "t": "Checked"
+    },
+    {
+     "at": "2026-10-31",
+     "k": "status",
+     "t": "To try to Trial"
+    }
+   ]
+  },
+  {
+   "fn": "pushLog",
+   "in": [
+    [],
+    [
+     [
+      "bogus",
+      "x"
+     ]
+    ],
+    "2026-10-31"
+   ],
+   "out": []
+  },
+  {
+   "fn": "pushLog",
+   "in": [
+    null,
+    [
+     [
+      "learned",
+      "Wrote what I learned"
+     ]
+    ],
+    "2026-10-31"
+   ],
+   "out": [
+    {
+     "at": "2026-10-31",
+     "k": "learned",
+     "t": "Wrote what I learned"
+    }
+   ]
+  },
+  {
+   "fn": "showLog",
+   "in": [
+    [
+     {
+      "at": "2026-10-01",
+      "k": "reviewed",
+      "t": "a"
+     },
+     {
+      "at": "2026-10-02",
+      "k": "checked",
+      "t": "b"
+     }
+    ]
+   ],
+   "out": [
+    {
+     "at": "2026-10-02",
+     "k": "checked",
+     "t": "b"
+    },
+    {
+     "at": "2026-10-01",
+     "k": "reviewed",
+     "t": "a"
+    }
+   ]
+  },
+  {
+   "fn": "LOG_MAX",
+   "in": [],
+   "out": 25,
+   "note": "constant: the Dart value must equal this"
+  },
+  {
+   "fn": "LOG_KINDS",
+   "in": [],
+   "out": {
+    "reviewed": "Reviewed",
+    "status": "Stage",
+    "checked": "Checked",
+    "verdict": "Decision",
+    "merged": "Merged",
+    "learned": "Learned"
+   },
+   "note": "constant: the Dart value must equal this"
+  }
+ ]
+}

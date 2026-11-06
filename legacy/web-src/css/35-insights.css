@@ -1,0 +1,26 @@
+/* 35-insights.css - Insights page, plain CSS bars, theme colours only */
+.ins { display: flex; flex-direction: column; gap: 12px; padding-bottom: 24px; }
+.ins .tile { margin: 0; }
+.ins-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.ins-stat { background: var(--card); border-radius: 16px; padding: 12px 14px; box-shadow: var(--shadow-card, none); }
+.ins-v { font-size: 26px; font-weight: 700; letter-spacing: -.02em; line-height: 1.1; }
+.ins-l { font-size: 13px; color: var(--label2); margin-top: 2px; }
+.ins-s { font-size: 12px; color: var(--label3); margin-top: 2px; }
+.ins-list { display: flex; flex-direction: column; }
+.ins-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-top: .5px solid var(--sep); text-align: left; }
+.ins-list > .ins-row:first-child { border-top: 0; }
+.ins-row.btnrow { background: none; border: 0; border-top: .5px solid var(--sep); width: 100%; color: inherit; font: inherit; cursor: pointer; }
+.ins-list > .btnrow:first-child { border-top: 0; }
+.ins-row .grow { min-width: 0; }
+.ins-row .t { font-size: 15px; font-weight: 500; }
+.ins-row .dot { flex: none; width: 10px; height: 10px; border-radius: 50%; }
+.ins-n { flex: none; min-width: 28px; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--label2); }
+.ins-bar { height: 6px; border-radius: 3px; background: var(--fill2); overflow: hidden; margin-top: 5px; }
+.ins-bar > i { display: block; height: 100%; border-radius: 3px; }
+.ins-bar.big { height: 10px; border-radius: 5px; margin: 4px 0 8px; }
+.ins-cols { display: flex; align-items: flex-end; gap: 10px; height: 120px; padding-top: 6px; }
+.ins-col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; gap: 4px; }
+.ins-cbar { width: 100%; flex: 1; display: flex; align-items: flex-end; }
+.ins-cbar > i { display: block; width: 100%; border-radius: 6px 6px 2px 2px; background: var(--blue); }
+.ins-cv { font-size: 12px; font-weight: 600; color: var(--label2); min-height: 14px; }
+.ins-cl { font-size: 11px; color: var(--label3); }

@@ -1,0 +1,4373 @@
+{
+ "module": "exporters",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "typeName",
+   "in": [
+    "web-tool"
+   ],
+   "out": "Tool"
+  },
+  {
+   "fn": "typeName",
+   "in": [
+    "bogus"
+   ],
+   "out": "bogus"
+  },
+  {
+   "fn": "typeName",
+   "in": [
+    ""
+   ],
+   "out": ""
+  },
+  {
+   "fn": "stageName",
+   "in": [
+    "testing"
+   ],
+   "out": "Trial"
+  },
+  {
+   "fn": "stageName",
+   "in": [
+    "bogus"
+   ],
+   "out": "bogus"
+  },
+  {
+   "fn": "stageName",
+   "in": [
+    ""
+   ],
+   "out": ""
+  },
+  {
+   "fn": "pick",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "e1",
+       "title": "Design maker",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [
+        "make a sample deck"
+       ],
+       "capabilities": [
+        "draw shapes"
+       ],
+       "notes": "Line one\nLine two",
+       "fields": {
+        "cost": "Free",
+        "resets": "2026-11-04"
+       },
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e2",
+       "title": "Café notes",
+       "url": "https://notes.example.org/cafe",
+       "type": "web-tool",
+       "status": "testing",
+       "tags": [
+        "notes"
+       ],
+       "useWhen": [],
+       "capabilities": [
+        "write a note"
+       ],
+       "notes": "",
+       "fields": {
+        "resets": "2026-11-05"
+       },
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "2026-11-03",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e3",
+       "title": "Old archive",
+       "url": "https://old.example.org/",
+       "type": "web-tool",
+       "status": "archived",
+       "tags": [
+        "old"
+       ],
+       "useWhen": [
+        "look back"
+       ],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-01",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e4",
+       "title": "=SUM(A1) odd",
+       "url": "https://sheet.example.org/x",
+       "type": "article-site",
+       "status": "active",
+       "tags": [
+        "a,b"
+       ],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "=cmd\nnext",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e5",
+       "title": "No link",
+       "url": "",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "following",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      }
+     ],
+     "jobs": [
+      {
+       "id": "j1",
+       "name": "Design",
+       "note": "Sector note",
+       "members": [
+        "e1",
+        "e2",
+        "e3"
+       ]
+      },
+      {
+       "id": "j2",
+       "name": "Other",
+       "note": "",
+       "members": [
+        "e4"
+       ]
+      }
+     ],
+     "threads": [
+      {
+       "id": "t1",
+       "name": "Launch route",
+       "note": "A small goal",
+       "steps": [
+        {
+         "rid": "e1",
+         "note": "",
+         "done": true
+        },
+        {
+         "rid": "e2",
+         "note": "write",
+         "done": false
+        },
+        {
+         "rid": "missing",
+         "note": "",
+         "done": false
+        }
+       ]
+      },
+      {
+       "id": "t2",
+       "name": "Empty route",
+       "note": "",
+       "steps": []
+      }
+     ],
+     "settings": {}
+    },
+    {}
+   ],
+   "out": [
+    "e1",
+    "e2",
+    "e4",
+    "e5"
+   ],
+   "note": "out lists ids"
+  },
+  {
+   "fn": "pick",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "e1",
+       "title": "Design maker",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [
+        "make a sample deck"
+       ],
+       "capabilities": [
+        "draw shapes"
+       ],
+       "notes": "Line one\nLine two",
+       "fields": {
+        "cost": "Free",
+        "resets": "2026-11-04"
+       },
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e2",
+       "title": "Café notes",
+       "url": "https://notes.example.org/cafe",
+       "type": "web-tool",
+       "status": "testing",
+       "tags": [
+        "notes"
+       ],
+       "useWhen": [],
+       "capabilities": [
+        "write a note"
+       ],
+       "notes": "",
+       "fields": {
+        "resets": "2026-11-05"
+       },
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "2026-11-03",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e3",
+       "title": "Old archive",
+       "url": "https://old.example.org/",
+       "type": "web-tool",
+       "status": "archived",
+       "tags": [
+        "old"
+       ],
+       "useWhen": [
+        "look back"
+       ],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-01",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e4",
+       "title": "=SUM(A1) odd",
+       "url": "https://sheet.example.org/x",
+       "type": "article-site",
+       "status": "active",
+       "tags": [
+        "a,b"
+       ],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "=cmd\nnext",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e5",
+       "title": "No link",
+       "url": "",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "following",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      }
+     ],
+     "jobs": [
+      {
+       "id": "j1",
+       "name": "Design",
+       "note": "Sector note",
+       "members": [
+        "e1",
+        "e2",
+        "e3"
+       ]
+      },
+      {
+       "id": "j2",
+       "name": "Other",
+       "note": "",
+       "members": [
+        "e4"
+       ]
+      }
+     ],
+     "threads": [
+      {
+       "id": "t1",
+       "name": "Launch route",
+       "note": "A small goal",
+       "steps": [
+        {
+         "rid": "e1",
+         "note": "",
+         "done": true
+        },
+        {
+         "rid": "e2",
+         "note": "write",
+         "done": false
+        },
+        {
+         "rid": "missing",
+         "note": "",
+         "done": false
+        }
+       ]
+      },
+      {
+       "id": "t2",
+       "name": "Empty route",
+       "note": "",
+       "steps": []
+      }
+     ],
+     "settings": {}
+    },
+    {
+     "jobId": "j1"
+    }
+   ],
+   "out": [
+    "e1",
+    "e2"
+   ],
+   "note": "out lists ids"
+  },
+  {
+   "fn": "pick",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "e1",
+       "title": "Design maker",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [
+        "make a sample deck"
+       ],
+       "capabilities": [
+        "draw shapes"
+       ],
+       "notes": "Line one\nLine two",
+       "fields": {
+        "cost": "Free",
+        "resets": "2026-11-04"
+       },
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e2",
+       "title": "Café notes",
+       "url": "https://notes.example.org/cafe",
+       "type": "web-tool",
+       "status": "testing",
+       "tags": [
+        "notes"
+       ],
+       "useWhen": [],
+       "capabilities": [
+        "write a note"
+       ],
+       "notes": "",
+       "fields": {
+        "resets": "2026-11-05"
+       },
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "2026-11-03",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e3",
+       "title": "Old archive",
+       "url": "https://old.example.org/",
+       "type": "web-tool",
+       "status": "archived",
+       "tags": [
+        "old"
+       ],
+       "useWhen": [
+        "look back"
+       ],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-01",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e4",
+       "title": "=SUM(A1) odd",
+       "url": "https://sheet.example.org/x",
+       "type": "article-site",
+       "status": "active",
+       "tags": [
+        "a,b"
+       ],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "=cmd\nnext",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e5",
+       "title": "No link",
+       "url": "",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "following",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      }
+     ],
+     "jobs": [
+      {
+       "id": "j1",
+       "name": "Design",
+       "note": "Sector note",
+       "members": [
+        "e1",
+        "e2",
+        "e3"
+       ]
+      },
+      {
+       "id": "j2",
+       "name": "Other",
+       "note": "",
+       "members": [
+        "e4"
+       ]
+      }
+     ],
+     "threads": [
+      {
+       "id": "t1",
+       "name": "Launch route",
+       "note": "A small goal",
+       "steps": [
+        {
+         "rid": "e1",
+         "note": "",
+         "done": true
+        },
+        {
+         "rid": "e2",
+         "note": "write",
+         "done": false
+        },
+        {
+         "rid": "missing",
+         "note": "",
+         "done": false
+        }
+       ]
+      },
+      {
+       "id": "t2",
+       "name": "Empty route",
+       "note": "",
+       "steps": []
+      }
+     ],
+     "settings": {}
+    },
+    {
+     "ids": [
+      "e2",
+      "e4",
+      "zz"
+     ],
+     "archived": true,
+     "following": false
+    }
+   ],
+   "out": [
+    "e2",
+    "e4"
+   ],
+   "note": "out lists ids"
+  },
+  {
+   "fn": "pick",
+   "in": [
+    {
+     "resources": [],
+     "jobs": [],
+     "threads": [],
+     "settings": {}
+    },
+    {}
+   ],
+   "out": [],
+   "note": "empty input"
+  },
+  {
+   "fn": "taskText",
+   "in": [
+    [
+     {
+      "id": "e1",
+      "title": "Design maker",
+      "url": "https://maker.example.org/कला?utm_source=x",
+      "type": "web-tool",
+      "status": "active",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "useWhen": [
+       "make a sample deck"
+      ],
+      "capabilities": [
+       "draw shapes"
+      ],
+      "notes": "Line one\nLine two",
+      "fields": {
+       "cost": "Free",
+       "resets": "2026-11-04"
+      },
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-02",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     }
+    ],
+    {}
+   ],
+   "out": "Use Design maker\n\nUse this:\n- [Design maker](https://maker.example.org/कला?utm_source=x) (make a sample deck)\n"
+  },
+  {
+   "fn": "taskText",
+   "in": [
+    [
+     {
+      "id": "e1",
+      "title": "Design maker",
+      "url": "https://maker.example.org/कला?utm_source=x",
+      "type": "web-tool",
+      "status": "active",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "useWhen": [
+       "make a sample deck"
+      ],
+      "capabilities": [
+       "draw shapes"
+      ],
+      "notes": "Line one\nLine two",
+      "fields": {
+       "cost": "Free",
+       "resets": "2026-11-04"
+      },
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-02",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     {
+      "id": "e2",
+      "title": "Café notes",
+      "url": "https://notes.example.org/cafe",
+      "type": "web-tool",
+      "status": "testing",
+      "tags": [
+       "notes"
+      ],
+      "useWhen": [],
+      "capabilities": [
+       "write a note"
+      ],
+      "notes": "",
+      "fields": {
+       "resets": "2026-11-05"
+      },
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "2026-11-03",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     }
+    ],
+    {
+     "title": "Plan",
+     "goal": "Sample goal",
+     "steps": [
+      "one",
+      "two"
+     ]
+    }
+   ],
+   "out": "Plan\n\nGoal: Sample goal\n\nUse these:\n- [Design maker](https://maker.example.org/कला?utm_source=x) (make a sample deck)\n- [Café notes](https://notes.example.org/cafe)\n\nSteps:\n- [ ] one\n- [ ] two\n"
+  },
+  {
+   "fn": "taskText",
+   "in": [
+    [],
+    {
+     "title": "कला कार्य",
+     "steps": [
+      "कदम"
+     ]
+    }
+   ],
+   "out": "कला कार्य\n\nUse this:\n\nSteps:\n- [ ] कदम\n",
+   "note": "empty items, unicode"
+  },
+  {
+   "fn": "missionTask",
+   "in": [
+    {
+     "id": "t1",
+     "name": "Launch route",
+     "note": "A small goal",
+     "steps": [
+      {
+       "rid": "e1",
+       "note": "",
+       "done": true
+      },
+      {
+       "rid": "e2",
+       "note": "write",
+       "done": false
+      },
+      {
+       "rid": "missing",
+       "note": "",
+       "done": false
+      }
+     ]
+    },
+    {
+     "e1": {
+      "id": "e1",
+      "title": "Design maker",
+      "url": "https://maker.example.org/कला?utm_source=x",
+      "type": "web-tool",
+      "status": "active",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "useWhen": [
+       "make a sample deck"
+      ],
+      "capabilities": [
+       "draw shapes"
+      ],
+      "notes": "Line one\nLine two",
+      "fields": {
+       "cost": "Free",
+       "resets": "2026-11-04"
+      },
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-02",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     "e2": {
+      "id": "e2",
+      "title": "Café notes",
+      "url": "https://notes.example.org/cafe",
+      "type": "web-tool",
+      "status": "testing",
+      "tags": [
+       "notes"
+      ],
+      "useWhen": [],
+      "capabilities": [
+       "write a note"
+      ],
+      "notes": "",
+      "fields": {
+       "resets": "2026-11-05"
+      },
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "2026-11-03",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     "e3": {
+      "id": "e3",
+      "title": "Old archive",
+      "url": "https://old.example.org/",
+      "type": "web-tool",
+      "status": "archived",
+      "tags": [
+       "old"
+      ],
+      "useWhen": [
+       "look back"
+      ],
+      "capabilities": [],
+      "notes": "",
+      "fields": {},
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-01",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     "e4": {
+      "id": "e4",
+      "title": "=SUM(A1) odd",
+      "url": "https://sheet.example.org/x",
+      "type": "article-site",
+      "status": "active",
+      "tags": [
+       "a,b"
+      ],
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "=cmd\nnext",
+      "fields": {},
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     "e5": {
+      "id": "e5",
+      "title": "No link",
+      "url": "",
+      "type": "web-tool",
+      "status": "active",
+      "tags": [],
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "fields": {},
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "src": "following",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     }
+    }
+   ],
+   "out": "Launch route\n\nGoal: A small goal\n\nUse these:\n- [Design maker](https://maker.example.org/कला?utm_source=x) (make a sample deck)\n- [Café notes](https://notes.example.org/cafe)\n\nSteps:\n- [ ] (done) Use Design maker (https://maker.example.org/कला?utm_source=x)\n- [ ] write - Café notes (https://notes.example.org/cafe)\n",
+   "note": "byId is built from the resource object"
+  },
+  {
+   "fn": "missionTask",
+   "in": [
+    {
+     "id": "t2",
+     "name": "Empty route",
+     "note": "",
+     "steps": []
+    },
+    {
+     "e1": {
+      "id": "e1",
+      "title": "Design maker",
+      "url": "https://maker.example.org/कला?utm_source=x",
+      "type": "web-tool",
+      "status": "active",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "useWhen": [
+       "make a sample deck"
+      ],
+      "capabilities": [
+       "draw shapes"
+      ],
+      "notes": "Line one\nLine two",
+      "fields": {
+       "cost": "Free",
+       "resets": "2026-11-04"
+      },
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-02",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     "e2": {
+      "id": "e2",
+      "title": "Café notes",
+      "url": "https://notes.example.org/cafe",
+      "type": "web-tool",
+      "status": "testing",
+      "tags": [
+       "notes"
+      ],
+      "useWhen": [],
+      "capabilities": [
+       "write a note"
+      ],
+      "notes": "",
+      "fields": {
+       "resets": "2026-11-05"
+      },
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "2026-11-03",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     "e3": {
+      "id": "e3",
+      "title": "Old archive",
+      "url": "https://old.example.org/",
+      "type": "web-tool",
+      "status": "archived",
+      "tags": [
+       "old"
+      ],
+      "useWhen": [
+       "look back"
+      ],
+      "capabilities": [],
+      "notes": "",
+      "fields": {},
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-01",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     "e4": {
+      "id": "e4",
+      "title": "=SUM(A1) odd",
+      "url": "https://sheet.example.org/x",
+      "type": "article-site",
+      "status": "active",
+      "tags": [
+       "a,b"
+      ],
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "=cmd\nnext",
+      "fields": {},
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     "e5": {
+      "id": "e5",
+      "title": "No link",
+      "url": "",
+      "type": "web-tool",
+      "status": "active",
+      "tags": [],
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "fields": {},
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "src": "following",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     }
+    }
+   ],
+   "out": "Empty route\n\nUse this:\n",
+   "note": "empty steps"
+  },
+  {
+   "fn": "missionTask",
+   "in": [
+    {
+     "id": "t3",
+     "name": "Café",
+     "note": "",
+     "steps": [
+      {
+       "rid": "e4",
+       "note": "नोट",
+       "done": false
+      }
+     ]
+    },
+    {
+     "e1": {
+      "id": "e1",
+      "title": "Design maker",
+      "url": "https://maker.example.org/कला?utm_source=x",
+      "type": "web-tool",
+      "status": "active",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "useWhen": [
+       "make a sample deck"
+      ],
+      "capabilities": [
+       "draw shapes"
+      ],
+      "notes": "Line one\nLine two",
+      "fields": {
+       "cost": "Free",
+       "resets": "2026-11-04"
+      },
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-02",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     "e2": {
+      "id": "e2",
+      "title": "Café notes",
+      "url": "https://notes.example.org/cafe",
+      "type": "web-tool",
+      "status": "testing",
+      "tags": [
+       "notes"
+      ],
+      "useWhen": [],
+      "capabilities": [
+       "write a note"
+      ],
+      "notes": "",
+      "fields": {
+       "resets": "2026-11-05"
+      },
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "2026-11-03",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     "e3": {
+      "id": "e3",
+      "title": "Old archive",
+      "url": "https://old.example.org/",
+      "type": "web-tool",
+      "status": "archived",
+      "tags": [
+       "old"
+      ],
+      "useWhen": [
+       "look back"
+      ],
+      "capabilities": [],
+      "notes": "",
+      "fields": {},
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-01",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     "e4": {
+      "id": "e4",
+      "title": "=SUM(A1) odd",
+      "url": "https://sheet.example.org/x",
+      "type": "article-site",
+      "status": "active",
+      "tags": [
+       "a,b"
+      ],
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "=cmd\nnext",
+      "fields": {},
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     "e5": {
+      "id": "e5",
+      "title": "No link",
+      "url": "",
+      "type": "web-tool",
+      "status": "active",
+      "tags": [],
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "fields": {},
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "src": "following",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     }
+    }
+   ],
+   "out": "Café\n\nUse this:\n- [=SUM(A1) odd](https://sheet.example.org/x)\n\nSteps:\n- [ ] नोट - =SUM(A1) odd (https://sheet.example.org/x)\n",
+   "note": "unicode"
+  },
+  {
+   "fn": "markdownAll",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "e1",
+       "title": "Design maker",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [
+        "make a sample deck"
+       ],
+       "capabilities": [
+        "draw shapes"
+       ],
+       "notes": "Line one\nLine two",
+       "fields": {
+        "cost": "Free",
+        "resets": "2026-11-04"
+       },
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e2",
+       "title": "Café notes",
+       "url": "https://notes.example.org/cafe",
+       "type": "web-tool",
+       "status": "testing",
+       "tags": [
+        "notes"
+       ],
+       "useWhen": [],
+       "capabilities": [
+        "write a note"
+       ],
+       "notes": "",
+       "fields": {
+        "resets": "2026-11-05"
+       },
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "2026-11-03",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e3",
+       "title": "Old archive",
+       "url": "https://old.example.org/",
+       "type": "web-tool",
+       "status": "archived",
+       "tags": [
+        "old"
+       ],
+       "useWhen": [
+        "look back"
+       ],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-01",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e4",
+       "title": "=SUM(A1) odd",
+       "url": "https://sheet.example.org/x",
+       "type": "article-site",
+       "status": "active",
+       "tags": [
+        "a,b"
+       ],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "=cmd\nnext",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e5",
+       "title": "No link",
+       "url": "",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "following",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      }
+     ],
+     "jobs": [
+      {
+       "id": "j1",
+       "name": "Design",
+       "note": "Sector note",
+       "members": [
+        "e1",
+        "e2",
+        "e3"
+       ]
+      },
+      {
+       "id": "j2",
+       "name": "Other",
+       "note": "",
+       "members": [
+        "e4"
+       ]
+      }
+     ],
+     "threads": [
+      {
+       "id": "t1",
+       "name": "Launch route",
+       "note": "A small goal",
+       "steps": [
+        {
+         "rid": "e1",
+         "note": "",
+         "done": true
+        },
+        {
+         "rid": "e2",
+         "note": "write",
+         "done": false
+        },
+        {
+         "rid": "missing",
+         "note": "",
+         "done": false
+        }
+       ]
+      },
+      {
+       "id": "t2",
+       "name": "Empty route",
+       "note": "",
+       "steps": []
+      }
+     ],
+     "settings": {}
+    },
+    {}
+   ],
+   "out": "# My resources\n\nExported from Nexus on 2026-10-31.\n\n## Design\n\nSector note\n\n- [Design maker](https://maker.example.org/कला?utm_source=x) - Tool · Free · 2026-11-04\n  - Use it when: make a sample deck\n  - Can do: draw shapes\n  - Tags: #design #कला\n  - Notes: Line one Line two\n- [Café notes](https://notes.example.org/cafe) - Tool · Trial · 2026-11-05\n  - Can do: write a note\n  - Tags: #notes\n\n## Other\n\n- [=SUM(A1) odd](https://sheet.example.org/x) - Articles\n  - Tags: #a,b\n  - Notes: =cmd next\n\n## Not in a sector\n\n- **No link** - Tool\n\n## Missions\n\n### Launch route\nA small goal\n1. [x] Design maker\n2. Café notes - write\n\n### Empty route\n"
+  },
+  {
+   "fn": "markdownAll",
+   "in": [
+    {
+     "resources": [],
+     "jobs": [],
+     "threads": [],
+     "settings": {}
+    },
+    {}
+   ],
+   "out": "# My resources\n\nExported from Nexus on 2026-10-31.\n",
+   "note": "empty input"
+  },
+  {
+   "fn": "markdownAll",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "e1",
+       "title": "Design maker",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [
+        "make a sample deck"
+       ],
+       "capabilities": [
+        "draw shapes"
+       ],
+       "notes": "Line one\nLine two",
+       "fields": {
+        "cost": "Free",
+        "resets": "2026-11-04"
+       },
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e2",
+       "title": "Café notes",
+       "url": "https://notes.example.org/cafe",
+       "type": "web-tool",
+       "status": "testing",
+       "tags": [
+        "notes"
+       ],
+       "useWhen": [],
+       "capabilities": [
+        "write a note"
+       ],
+       "notes": "",
+       "fields": {
+        "resets": "2026-11-05"
+       },
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "2026-11-03",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e3",
+       "title": "Old archive",
+       "url": "https://old.example.org/",
+       "type": "web-tool",
+       "status": "archived",
+       "tags": [
+        "old"
+       ],
+       "useWhen": [
+        "look back"
+       ],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-01",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e4",
+       "title": "=SUM(A1) odd",
+       "url": "https://sheet.example.org/x",
+       "type": "article-site",
+       "status": "active",
+       "tags": [
+        "a,b"
+       ],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "=cmd\nnext",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e5",
+       "title": "No link",
+       "url": "",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "following",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      }
+     ],
+     "jobs": [
+      {
+       "id": "j1",
+       "name": "Design",
+       "note": "Sector note",
+       "members": [
+        "e1",
+        "e2",
+        "e3"
+       ]
+      },
+      {
+       "id": "j2",
+       "name": "Other",
+       "note": "",
+       "members": [
+        "e4"
+       ]
+      }
+     ],
+     "threads": [
+      {
+       "id": "t1",
+       "name": "Launch route",
+       "note": "A small goal",
+       "steps": [
+        {
+         "rid": "e1",
+         "note": "",
+         "done": true
+        },
+        {
+         "rid": "e2",
+         "note": "write",
+         "done": false
+        },
+        {
+         "rid": "missing",
+         "note": "",
+         "done": false
+        }
+       ]
+      },
+      {
+       "id": "t2",
+       "name": "Empty route",
+       "note": "",
+       "steps": []
+      }
+     ],
+     "settings": {}
+    },
+    {
+     "archived": true,
+     "following": false
+    }
+   ],
+   "out": "# My resources\n\nExported from Nexus on 2026-10-31.\n\n## Design\n\nSector note\n\n- [Design maker](https://maker.example.org/कला?utm_source=x) - Tool · Free · 2026-11-04\n  - Use it when: make a sample deck\n  - Can do: draw shapes\n  - Tags: #design #कला\n  - Notes: Line one Line two\n- [Café notes](https://notes.example.org/cafe) - Tool · Trial · 2026-11-05\n  - Can do: write a note\n  - Tags: #notes\n- [Old archive](https://old.example.org/) - Tool · Archived\n  - Use it when: look back\n  - Tags: #old\n\n## Other\n\n- [=SUM(A1) odd](https://sheet.example.org/x) - Articles\n  - Tags: #a,b\n  - Notes: =cmd next\n\n## Missions\n\n### Launch route\nA small goal\n1. [x] Design maker\n2. Café notes - write\n\n### Empty route\n",
+   "note": "archived and hidden following"
+  },
+  {
+   "fn": "csvAll",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "e1",
+       "title": "Design maker",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [
+        "make a sample deck"
+       ],
+       "capabilities": [
+        "draw shapes"
+       ],
+       "notes": "Line one\nLine two",
+       "fields": {
+        "cost": "Free",
+        "resets": "2026-11-04"
+       },
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e2",
+       "title": "Café notes",
+       "url": "https://notes.example.org/cafe",
+       "type": "web-tool",
+       "status": "testing",
+       "tags": [
+        "notes"
+       ],
+       "useWhen": [],
+       "capabilities": [
+        "write a note"
+       ],
+       "notes": "",
+       "fields": {
+        "resets": "2026-11-05"
+       },
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "2026-11-03",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e3",
+       "title": "Old archive",
+       "url": "https://old.example.org/",
+       "type": "web-tool",
+       "status": "archived",
+       "tags": [
+        "old"
+       ],
+       "useWhen": [
+        "look back"
+       ],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-01",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e4",
+       "title": "=SUM(A1) odd",
+       "url": "https://sheet.example.org/x",
+       "type": "article-site",
+       "status": "active",
+       "tags": [
+        "a,b"
+       ],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "=cmd\nnext",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e5",
+       "title": "No link",
+       "url": "",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "following",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      }
+     ],
+     "jobs": [
+      {
+       "id": "j1",
+       "name": "Design",
+       "note": "Sector note",
+       "members": [
+        "e1",
+        "e2",
+        "e3"
+       ]
+      },
+      {
+       "id": "j2",
+       "name": "Other",
+       "note": "",
+       "members": [
+        "e4"
+       ]
+      }
+     ],
+     "threads": [
+      {
+       "id": "t1",
+       "name": "Launch route",
+       "note": "A small goal",
+       "steps": [
+        {
+         "rid": "e1",
+         "note": "",
+         "done": true
+        },
+        {
+         "rid": "e2",
+         "note": "write",
+         "done": false
+        },
+        {
+         "rid": "missing",
+         "note": "",
+         "done": false
+        }
+       ]
+      },
+      {
+       "id": "t2",
+       "name": "Empty route",
+       "note": "",
+       "steps": []
+      }
+     ],
+     "settings": {}
+    },
+    {}
+   ],
+   "out": "Title,Link,Type,Stage,Sectors,Tags,Cost,Login needed,Works on,Free limit,Limit resets or offer ends,Models or features you use,Handle or channel name,What you use it for,Platform,Ask here about,Watch it for,How often you watch,Use it when,Can do,Notes,Last checked,Next check,Trial ends,Saved from\r\nDesign maker,https://maker.example.org/कला?utm_source=x,Tool,Active,Design,design; कला,Free,,,,2026-11-04,,,,,,,,make a sample deck,draw shapes,Line one Line two,,2026-11-02,,\r\nCafé notes,https://notes.example.org/cafe,Tool,Trial,Design,notes,,,,,2026-11-05,,,,,,,,,write a note,,,,2026-11-03,\r\n'=SUM(A1) odd,https://sheet.example.org/x,Articles,Active,Other,\"a,b\",,,,,,,,,,,,,,,'=cmd next,,,,\r\nNo link,,Tool,Active,,,,,,,,,,,,,,,,,,,,,following\r\n"
+  },
+  {
+   "fn": "csvAll",
+   "in": [
+    {
+     "resources": [],
+     "jobs": [],
+     "threads": [],
+     "settings": {}
+    },
+    {}
+   ],
+   "out": "Title,Link,Type,Stage,Sectors,Tags,Cost,Login needed,Works on,Free limit,Limit resets or offer ends,Models or features you use,Handle or channel name,What you use it for,Platform,Ask here about,Watch it for,How often you watch,Use it when,Can do,Notes,Last checked,Next check,Trial ends,Saved from\r\n",
+   "note": "empty input"
+  },
+  {
+   "fn": "csvAll",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "e1",
+       "title": "Design maker",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [
+        "make a sample deck"
+       ],
+       "capabilities": [
+        "draw shapes"
+       ],
+       "notes": "Line one\nLine two",
+       "fields": {
+        "cost": "Free",
+        "resets": "2026-11-04"
+       },
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e2",
+       "title": "Café notes",
+       "url": "https://notes.example.org/cafe",
+       "type": "web-tool",
+       "status": "testing",
+       "tags": [
+        "notes"
+       ],
+       "useWhen": [],
+       "capabilities": [
+        "write a note"
+       ],
+       "notes": "",
+       "fields": {
+        "resets": "2026-11-05"
+       },
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "2026-11-03",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e3",
+       "title": "Old archive",
+       "url": "https://old.example.org/",
+       "type": "web-tool",
+       "status": "archived",
+       "tags": [
+        "old"
+       ],
+       "useWhen": [
+        "look back"
+       ],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-01",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e4",
+       "title": "=SUM(A1) odd",
+       "url": "https://sheet.example.org/x",
+       "type": "article-site",
+       "status": "active",
+       "tags": [
+        "a,b"
+       ],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "=cmd\nnext",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e5",
+       "title": "No link",
+       "url": "",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "following",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      }
+     ],
+     "jobs": [
+      {
+       "id": "j1",
+       "name": "Design",
+       "note": "Sector note",
+       "members": [
+        "e1",
+        "e2",
+        "e3"
+       ]
+      },
+      {
+       "id": "j2",
+       "name": "Other",
+       "note": "",
+       "members": [
+        "e4"
+       ]
+      }
+     ],
+     "threads": [
+      {
+       "id": "t1",
+       "name": "Launch route",
+       "note": "A small goal",
+       "steps": [
+        {
+         "rid": "e1",
+         "note": "",
+         "done": true
+        },
+        {
+         "rid": "e2",
+         "note": "write",
+         "done": false
+        },
+        {
+         "rid": "missing",
+         "note": "",
+         "done": false
+        }
+       ]
+      },
+      {
+       "id": "t2",
+       "name": "Empty route",
+       "note": "",
+       "steps": []
+      }
+     ],
+     "settings": {}
+    },
+    {
+     "archived": true,
+     "following": false
+    }
+   ],
+   "out": "Title,Link,Type,Stage,Sectors,Tags,Cost,Login needed,Works on,Free limit,Limit resets or offer ends,Models or features you use,Handle or channel name,What you use it for,Platform,Ask here about,Watch it for,How often you watch,Use it when,Can do,Notes,Last checked,Next check,Trial ends,Saved from\r\nDesign maker,https://maker.example.org/कला?utm_source=x,Tool,Active,Design,design; कला,Free,,,,2026-11-04,,,,,,,,make a sample deck,draw shapes,Line one Line two,,2026-11-02,,\r\nCafé notes,https://notes.example.org/cafe,Tool,Trial,Design,notes,,,,,2026-11-05,,,,,,,,,write a note,,,,2026-11-03,\r\nOld archive,https://old.example.org/,Tool,Archived,Design,old,,,,,,,,,,,,,look back,,,,2026-11-01,,\r\n'=SUM(A1) odd,https://sheet.example.org/x,Articles,Active,Other,\"a,b\",,,,,,,,,,,,,,,'=cmd next,,,,\r\n",
+   "note": "archived and hidden following"
+  },
+  {
+   "fn": "estimateTokens",
+   "in": [
+    ""
+   ],
+   "out": 0
+  },
+  {
+   "fn": "estimateTokens",
+   "in": [
+    "abcd efgh"
+   ],
+   "out": 3
+  },
+  {
+   "fn": "estimateTokens",
+   "in": [
+    "कला और café"
+   ],
+   "out": 3
+  },
+  {
+   "fn": "aiBrief",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "e1",
+       "title": "Design maker",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [
+        "make a sample deck"
+       ],
+       "capabilities": [
+        "draw shapes"
+       ],
+       "notes": "Line one\nLine two",
+       "fields": {
+        "cost": "Free",
+        "resets": "2026-11-04"
+       },
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e2",
+       "title": "Café notes",
+       "url": "https://notes.example.org/cafe",
+       "type": "web-tool",
+       "status": "testing",
+       "tags": [
+        "notes"
+       ],
+       "useWhen": [],
+       "capabilities": [
+        "write a note"
+       ],
+       "notes": "",
+       "fields": {
+        "resets": "2026-11-05"
+       },
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "2026-11-03",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e3",
+       "title": "Old archive",
+       "url": "https://old.example.org/",
+       "type": "web-tool",
+       "status": "archived",
+       "tags": [
+        "old"
+       ],
+       "useWhen": [
+        "look back"
+       ],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-01",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e4",
+       "title": "=SUM(A1) odd",
+       "url": "https://sheet.example.org/x",
+       "type": "article-site",
+       "status": "active",
+       "tags": [
+        "a,b"
+       ],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "=cmd\nnext",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e5",
+       "title": "No link",
+       "url": "",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "following",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      }
+     ],
+     "jobs": [
+      {
+       "id": "j1",
+       "name": "Design",
+       "note": "Sector note",
+       "members": [
+        "e1",
+        "e2",
+        "e3"
+       ]
+      },
+      {
+       "id": "j2",
+       "name": "Other",
+       "note": "",
+       "members": [
+        "e4"
+       ]
+      }
+     ],
+     "threads": [
+      {
+       "id": "t1",
+       "name": "Launch route",
+       "note": "A small goal",
+       "steps": [
+        {
+         "rid": "e1",
+         "note": "",
+         "done": true
+        },
+        {
+         "rid": "e2",
+         "note": "write",
+         "done": false
+        },
+        {
+         "rid": "missing",
+         "note": "",
+         "done": false
+        }
+       ]
+      },
+      {
+       "id": "t2",
+       "name": "Empty route",
+       "note": "",
+       "steps": []
+      }
+     ],
+     "settings": {}
+    },
+    {}
+   ],
+   "out": {
+    "text": "These are my own resources: tools, sources, channels and communities I already use or plan to use.\nWhen I ask how to do a job, choose from this list first. Name the resource, say why it fits, and give the first steps.\nRespect the free limits and costs shown. If nothing here fits, say so, then suggest something outside the list.\n- Design maker (Tool, Free, Limit resets or offer ends 2026-11-04, maker.example.org): use when: make a sample deck. can do: draw shapes\n- Café notes (Tool, Trial, Limit resets or offer ends 2026-11-05, notes.example.org): can do: write a note\n- =SUM(A1) odd (Articles, sheet.example.org)\n",
+    "count": 3,
+    "left": 0,
+    "tokens": 155
+   }
+  },
+  {
+   "fn": "aiBrief",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "e1",
+       "title": "Design maker",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [
+        "make a sample deck"
+       ],
+       "capabilities": [
+        "draw shapes"
+       ],
+       "notes": "Line one\nLine two",
+       "fields": {
+        "cost": "Free",
+        "resets": "2026-11-04"
+       },
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e2",
+       "title": "Café notes",
+       "url": "https://notes.example.org/cafe",
+       "type": "web-tool",
+       "status": "testing",
+       "tags": [
+        "notes"
+       ],
+       "useWhen": [],
+       "capabilities": [
+        "write a note"
+       ],
+       "notes": "",
+       "fields": {
+        "resets": "2026-11-05"
+       },
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "2026-11-03",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e3",
+       "title": "Old archive",
+       "url": "https://old.example.org/",
+       "type": "web-tool",
+       "status": "archived",
+       "tags": [
+        "old"
+       ],
+       "useWhen": [
+        "look back"
+       ],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-01",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e4",
+       "title": "=SUM(A1) odd",
+       "url": "https://sheet.example.org/x",
+       "type": "article-site",
+       "status": "active",
+       "tags": [
+        "a,b"
+       ],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "=cmd\nnext",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e5",
+       "title": "No link",
+       "url": "",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "following",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      }
+     ],
+     "jobs": [
+      {
+       "id": "j1",
+       "name": "Design",
+       "note": "Sector note",
+       "members": [
+        "e1",
+        "e2",
+        "e3"
+       ]
+      },
+      {
+       "id": "j2",
+       "name": "Other",
+       "note": "",
+       "members": [
+        "e4"
+       ]
+      }
+     ],
+     "threads": [
+      {
+       "id": "t1",
+       "name": "Launch route",
+       "note": "A small goal",
+       "steps": [
+        {
+         "rid": "e1",
+         "note": "",
+         "done": true
+        },
+        {
+         "rid": "e2",
+         "note": "write",
+         "done": false
+        },
+        {
+         "rid": "missing",
+         "note": "",
+         "done": false
+        }
+       ]
+      },
+      {
+       "id": "t2",
+       "name": "Empty route",
+       "note": "",
+       "steps": []
+      }
+     ],
+     "settings": {}
+    },
+    {
+     "detail": "full",
+     "links": true,
+     "maxChars": 800
+    }
+   ],
+   "out": {
+    "text": "These are my own resources: tools, sources, channels and communities I already use or plan to use.\nWhen I ask how to do a job, choose from this list first. Name the resource, say why it fits, and give the first steps.\nRespect the free limits and costs shown. If nothing here fits, say so, then suggest something outside the list.\n- Design maker (Tool, Free, Limit resets or offer ends 2026-11-04, https://maker.example.org/कला?utm_source=x): use when: make a sample deck. can do: draw shapes. note: Line one Line two\n- Café notes (Tool, Trial, Limit resets or offer ends 2026-11-05, https://notes.example.org/cafe): can do: write a note\n- =SUM(A1) odd (Articles, https://sheet.example.org/x): note: =cmd next\n",
+    "count": 3,
+    "left": 0,
+    "tokens": 178
+   },
+   "note": "cut path"
+  },
+  {
+   "fn": "aiBrief",
+   "in": [
+    {
+     "resources": [],
+     "jobs": [],
+     "threads": [],
+     "settings": {}
+    },
+    {
+     "detail": "short"
+    }
+   ],
+   "out": {
+    "text": "These are my own resources: tools, sources, channels and communities I already use or plan to use.\nWhen I ask how to do a job, choose from this list first. Name the resource, say why it fits, and give the first steps.\nRespect the free limits and costs shown. If nothing here fits, say so, then suggest something outside the list.\n\n",
+    "count": 0,
+    "left": 0,
+    "tokens": 83
+   },
+   "note": "empty input"
+  },
+  {
+   "fn": "upcomingEvents",
+   "in": [
+    [
+     {
+      "id": "e1",
+      "title": "Design maker",
+      "url": "https://maker.example.org/कला?utm_source=x",
+      "type": "web-tool",
+      "status": "active",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "useWhen": [
+       "make a sample deck"
+      ],
+      "capabilities": [
+       "draw shapes"
+      ],
+      "notes": "Line one\nLine two",
+      "fields": {
+       "cost": "Free",
+       "resets": "2026-11-04"
+      },
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-02",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     {
+      "id": "e2",
+      "title": "Café notes",
+      "url": "https://notes.example.org/cafe",
+      "type": "web-tool",
+      "status": "testing",
+      "tags": [
+       "notes"
+      ],
+      "useWhen": [],
+      "capabilities": [
+       "write a note"
+      ],
+      "notes": "",
+      "fields": {
+       "resets": "2026-11-05"
+      },
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "2026-11-03",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     {
+      "id": "e3",
+      "title": "Old archive",
+      "url": "https://old.example.org/",
+      "type": "web-tool",
+      "status": "archived",
+      "tags": [
+       "old"
+      ],
+      "useWhen": [
+       "look back"
+      ],
+      "capabilities": [],
+      "notes": "",
+      "fields": {},
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-01",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     {
+      "id": "e4",
+      "title": "=SUM(A1) odd",
+      "url": "https://sheet.example.org/x",
+      "type": "article-site",
+      "status": "active",
+      "tags": [
+       "a,b"
+      ],
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "=cmd\nnext",
+      "fields": {},
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     {
+      "id": "e5",
+      "title": "No link",
+      "url": "",
+      "type": "web-tool",
+      "status": "active",
+      "tags": [],
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "fields": {},
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "src": "following",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     }
+    ],
+    {
+     "from": "2026-10-31",
+     "days": 10
+    }
+   ],
+   "out": [
+    {
+     "rid": "e1",
+     "kind": "check",
+     "date": "2026-11-02",
+     "title": "Check: Design maker",
+     "details": "make a sample deck\nhttps://maker.example.org/कला?utm_source=x",
+     "url": "https://maker.example.org/कला?utm_source=x"
+    },
+    {
+     "rid": "e2",
+     "kind": "trial",
+     "date": "2026-11-03",
+     "title": "Trial ends - keep or drop: Café notes",
+     "details": "https://notes.example.org/cafe",
+     "url": "https://notes.example.org/cafe"
+    },
+    {
+     "rid": "e1",
+     "kind": "resets",
+     "date": "2026-11-04",
+     "title": "Limit resets or offer ends: Design maker",
+     "details": "make a sample deck\nhttps://maker.example.org/कला?utm_source=x",
+     "url": "https://maker.example.org/कला?utm_source=x"
+    },
+    {
+     "rid": "e2",
+     "kind": "resets",
+     "date": "2026-11-05",
+     "title": "Limit resets or offer ends: Café notes",
+     "details": "https://notes.example.org/cafe",
+     "url": "https://notes.example.org/cafe"
+    }
+   ]
+  },
+  {
+   "fn": "upcomingEvents",
+   "in": [
+    [],
+    {
+     "from": "2026-10-31",
+     "days": 10
+    }
+   ],
+   "out": [],
+   "note": "empty input"
+  },
+  {
+   "fn": "upcomingEvents",
+   "in": [
+    [
+     {
+      "id": "e1",
+      "title": "Design maker",
+      "url": "https://maker.example.org/कला?utm_source=x",
+      "type": "web-tool",
+      "status": "active",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "useWhen": [
+       "make a sample deck"
+      ],
+      "capabilities": [
+       "draw shapes"
+      ],
+      "notes": "Line one\nLine two",
+      "fields": {
+       "cost": "Free",
+       "resets": "2026-11-04"
+      },
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-02",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     {
+      "id": "e2",
+      "title": "Café notes",
+      "url": "https://notes.example.org/cafe",
+      "type": "web-tool",
+      "status": "testing",
+      "tags": [
+       "notes"
+      ],
+      "useWhen": [],
+      "capabilities": [
+       "write a note"
+      ],
+      "notes": "",
+      "fields": {
+       "resets": "2026-11-05"
+      },
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "2026-11-03",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     {
+      "id": "e3",
+      "title": "Old archive",
+      "url": "https://old.example.org/",
+      "type": "web-tool",
+      "status": "archived",
+      "tags": [
+       "old"
+      ],
+      "useWhen": [
+       "look back"
+      ],
+      "capabilities": [],
+      "notes": "",
+      "fields": {},
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-01",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     {
+      "id": "e4",
+      "title": "=SUM(A1) odd",
+      "url": "https://sheet.example.org/x",
+      "type": "article-site",
+      "status": "active",
+      "tags": [
+       "a,b"
+      ],
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "=cmd\nnext",
+      "fields": {},
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     {
+      "id": "e5",
+      "title": "No link",
+      "url": "",
+      "type": "web-tool",
+      "status": "active",
+      "tags": [],
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "fields": {},
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "src": "following",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     }
+    ],
+    {
+     "from": "2026-10-31",
+     "days": 0
+    }
+   ],
+   "out": [],
+   "note": "no range"
+  },
+  {
+   "fn": "icsFor",
+   "in": [
+    [
+     {
+      "rid": "e1",
+      "kind": "check",
+      "date": "2026-11-02",
+      "title": "Check: Design maker",
+      "details": "make a sample deck\nhttps://maker.example.org/कला?utm_source=x",
+      "url": "https://maker.example.org/कला?utm_source=x"
+     },
+     {
+      "rid": "e2",
+      "kind": "trial",
+      "date": "2026-11-03",
+      "title": "Trial ends - keep or drop: Café notes",
+      "details": "https://notes.example.org/cafe",
+      "url": "https://notes.example.org/cafe"
+     },
+     {
+      "rid": "e1",
+      "kind": "resets",
+      "date": "2026-11-04",
+      "title": "Limit resets or offer ends: Design maker",
+      "details": "make a sample deck\nhttps://maker.example.org/कला?utm_source=x",
+      "url": "https://maker.example.org/कला?utm_source=x"
+     },
+     {
+      "rid": "e2",
+      "kind": "resets",
+      "date": "2026-11-05",
+      "title": "Limit resets or offer ends: Café notes",
+      "details": "https://notes.example.org/cafe",
+      "url": "https://notes.example.org/cafe"
+     }
+    ],
+    {
+     "now": "2026-10-31T12:00:00.000Z"
+    }
+   ],
+   "out": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Nexus//Resources//EN\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\nBEGIN:VEVENT\r\nUID:nexus-e1-check-20261102@nexus.local\r\nDTSTAMP:20261031T120000Z\r\nDTSTART;VALUE=DATE:20261102\r\nDTEND;VALUE=DATE:20261103\r\nSUMMARY:Check: Design maker\r\nDESCRIPTION:make a sample deck\\nhttps://maker.example.org/कला?utm_sou\r\n rce=x\r\nURL:https://maker.example.org/कला?utm_source=x\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\nUID:nexus-e2-trial-20261103@nexus.local\r\nDTSTAMP:20261031T120000Z\r\nDTSTART;VALUE=DATE:20261103\r\nDTEND;VALUE=DATE:20261104\r\nSUMMARY:Trial ends - keep or drop: Café notes\r\nDESCRIPTION:https://notes.example.org/cafe\r\nURL:https://notes.example.org/cafe\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\nUID:nexus-e1-resets-20261104@nexus.local\r\nDTSTAMP:20261031T120000Z\r\nDTSTART;VALUE=DATE:20261104\r\nDTEND;VALUE=DATE:20261105\r\nSUMMARY:Limit resets or offer ends: Design maker\r\nDESCRIPTION:make a sample deck\\nhttps://maker.example.org/कला?utm_sou\r\n rce=x\r\nURL:https://maker.example.org/कला?utm_source=x\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\nUID:nexus-e2-resets-20261105@nexus.local\r\nDTSTAMP:20261031T120000Z\r\nDTSTART;VALUE=DATE:20261105\r\nDTEND;VALUE=DATE:20261106\r\nSUMMARY:Limit resets or offer ends: Café notes\r\nDESCRIPTION:https://notes.example.org/cafe\r\nURL:https://notes.example.org/cafe\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+   "note": "in: now is an ISO string in JSON; the test passes new Date(now)"
+  },
+  {
+   "fn": "icsFor",
+   "in": [
+    [],
+    {
+     "now": "2026-10-31T12:00:00.000Z"
+    }
+   ],
+   "out": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Nexus//Resources//EN\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\nEND:VCALENDAR\r\n",
+   "note": "empty input"
+  },
+  {
+   "fn": "icsFor",
+   "in": [
+    [
+     {
+      "rid": "e9",
+      "kind": "check",
+      "date": "2026-11-02",
+      "title": "कला: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "details": "Line 1\nLine 2",
+      "url": "https://maker.example.org/कला"
+     }
+    ],
+    {
+     "now": "2026-10-31T12:00:00.000Z"
+    }
+   ],
+   "out": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Nexus//Resources//EN\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\nBEGIN:VEVENT\r\nUID:nexus-e9-check-20261102@nexus.local\r\nDTSTAMP:20261031T120000Z\r\nDTSTART;VALUE=DATE:20261102\r\nDTEND;VALUE=DATE:20261103\r\nSUMMARY:कला: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\nDESCRIPTION:Line 1\\nLine 2\r\nURL:https://maker.example.org/कला\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+   "note": "long unicode line and folding"
+  },
+  {
+   "fn": "gcalLink",
+   "in": [
+    {
+     "rid": "e1",
+     "kind": "check",
+     "date": "2026-11-02",
+     "title": "Check: Design maker",
+     "details": "make a sample deck\nhttps://maker.example.org/कला?utm_source=x",
+     "url": "https://maker.example.org/कला?utm_source=x"
+    }
+   ],
+   "out": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Check%3A+Design+maker&dates=20261102%2F20261103&details=make+a+sample+deck%0Ahttps%3A%2F%2Fmaker.example.org%2F%E0%A4%95%E0%A4%B2%E0%A4%BE%3Futm_source%3Dx"
+  },
+  {
+   "fn": "gcalLink",
+   "in": [
+    {
+     "rid": "e9",
+     "kind": "trial",
+     "date": "2026-11-03",
+     "title": "कला",
+     "details": "",
+     "url": ""
+    }
+   ],
+   "out": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E0%A4%95%E0%A4%B2%E0%A4%BE&dates=20261103%2F20261104&details=",
+   "note": "unicode"
+  },
+  {
+   "fn": "gcalLink",
+   "in": [
+    {
+     "rid": "e9",
+     "kind": "resets",
+     "date": "2026-11-04",
+     "title": "Line",
+     "details": "A & B",
+     "url": ""
+    }
+   ],
+   "out": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Line&dates=20261104%2F20261105&details=A+%26+B",
+   "note": "escaping"
+  },
+  {
+   "fn": "whatsappLink",
+   "in": [
+    "Hello sample"
+   ],
+   "out": "https://wa.me/?text=Hello%20sample"
+  },
+  {
+   "fn": "whatsappLink",
+   "in": [
+    ""
+   ],
+   "out": "https://wa.me/?text="
+  },
+  {
+   "fn": "whatsappLink",
+   "in": [
+    "कला और café"
+   ],
+   "out": "https://wa.me/?text=%E0%A4%95%E0%A4%B2%E0%A4%BE%20%E0%A4%94%E0%A4%B0%20caf%C3%A9"
+  },
+  {
+   "fn": "mailtoLink",
+   "in": [
+    "Sample",
+    "A short body"
+   ],
+   "out": {
+    "href": "mailto:?subject=Sample&body=A%20short%20body",
+    "cut": false
+   }
+  },
+  {
+   "fn": "mailtoLink",
+   "in": [
+    "",
+    "कला और café"
+   ],
+   "out": {
+    "href": "mailto:?subject=&body=%E0%A4%95%E0%A4%B2%E0%A4%BE%20%E0%A4%94%E0%A4%B0%20caf%C3%A9",
+    "cut": false
+   }
+  },
+  {
+   "fn": "mailtoLink",
+   "in": [
+    "Long",
+    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    10
+   ],
+   "out": {
+    "href": "mailto:?subject=Long&body=xxxxxxxxxx%0A...(cut%2C%20copy%20the%20full%20text%20instead)",
+    "cut": true
+   },
+   "note": "cut path"
+  },
+  {
+   "fn": "pick",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "e1",
+       "title": "Design maker",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [
+        "make a sample deck"
+       ],
+       "capabilities": [
+        "draw shapes"
+       ],
+       "notes": "Line one\nLine two",
+       "fields": {
+        "cost": "Free",
+        "resets": "2026-11-04"
+       },
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e2",
+       "title": "Café notes",
+       "url": "https://notes.example.org/cafe",
+       "type": "web-tool",
+       "status": "testing",
+       "tags": [
+        "notes"
+       ],
+       "useWhen": [],
+       "capabilities": [
+        "write a note"
+       ],
+       "notes": "",
+       "fields": {
+        "resets": "2026-11-05"
+       },
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "2026-11-03",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e3",
+       "title": "Old archive",
+       "url": "https://old.example.org/",
+       "type": "web-tool",
+       "status": "archived",
+       "tags": [
+        "old"
+       ],
+       "useWhen": [
+        "look back"
+       ],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-01",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e4",
+       "title": "=SUM(A1) odd",
+       "url": "https://sheet.example.org/x",
+       "type": "article-site",
+       "status": "active",
+       "tags": [
+        "a,b"
+       ],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "=cmd\nnext",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e5",
+       "title": "No link",
+       "url": "",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "following",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      }
+     ],
+     "jobs": [
+      {
+       "id": "j1",
+       "name": "Design",
+       "note": "Sector note",
+       "members": [
+        "e1",
+        "e2",
+        "e3"
+       ]
+      },
+      {
+       "id": "j2",
+       "name": "Other",
+       "note": "",
+       "members": [
+        "e4"
+       ]
+      }
+     ],
+     "threads": [
+      {
+       "id": "t1",
+       "name": "Launch route",
+       "note": "A small goal",
+       "steps": [
+        {
+         "rid": "e1",
+         "note": "",
+         "done": true
+        },
+        {
+         "rid": "e2",
+         "note": "write",
+         "done": false
+        },
+        {
+         "rid": "missing",
+         "note": "",
+         "done": false
+        }
+       ]
+      },
+      {
+       "id": "t2",
+       "name": "Empty route",
+       "note": "",
+       "steps": []
+      }
+     ],
+     "settings": {}
+    },
+    {
+     "jobId": "missing"
+    }
+   ],
+   "out": [],
+   "note": "missing sector"
+  },
+  {
+   "fn": "taskText",
+   "in": [
+    {
+     "id": "e5",
+     "title": "No link",
+     "url": "",
+     "type": "web-tool",
+     "status": "active",
+     "tags": [],
+     "useWhen": [],
+     "capabilities": [],
+     "notes": "",
+     "fields": {},
+     "checkCadence": "none",
+     "nextCheck": "",
+     "trialEnd": "",
+     "src": "following",
+     "draft": false,
+     "createdAt": "2026-10-01"
+    },
+    {}
+   ],
+   "out": "Use No link\n\nUse this:\n- No link\n",
+   "note": "single item and no link"
+  },
+  {
+   "fn": "taskText",
+   "in": [
+    [],
+    {}
+   ],
+   "out": "Task\n\nUse this:\n",
+   "note": "no title and no items"
+  },
+  {
+   "fn": "missionTask",
+   "in": [
+    {
+     "id": "t4",
+     "name": "Plain",
+     "note": "",
+     "steps": [
+      {
+       "rid": "e5",
+       "note": "check",
+       "done": false
+      }
+     ]
+    },
+    {
+     "e1": {
+      "id": "e1",
+      "title": "Design maker",
+      "url": "https://maker.example.org/कला?utm_source=x",
+      "type": "web-tool",
+      "status": "active",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "useWhen": [
+       "make a sample deck"
+      ],
+      "capabilities": [
+       "draw shapes"
+      ],
+      "notes": "Line one\nLine two",
+      "fields": {
+       "cost": "Free",
+       "resets": "2026-11-04"
+      },
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-02",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     "e2": {
+      "id": "e2",
+      "title": "Café notes",
+      "url": "https://notes.example.org/cafe",
+      "type": "web-tool",
+      "status": "testing",
+      "tags": [
+       "notes"
+      ],
+      "useWhen": [],
+      "capabilities": [
+       "write a note"
+      ],
+      "notes": "",
+      "fields": {
+       "resets": "2026-11-05"
+      },
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "2026-11-03",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     "e3": {
+      "id": "e3",
+      "title": "Old archive",
+      "url": "https://old.example.org/",
+      "type": "web-tool",
+      "status": "archived",
+      "tags": [
+       "old"
+      ],
+      "useWhen": [
+       "look back"
+      ],
+      "capabilities": [],
+      "notes": "",
+      "fields": {},
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-01",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     "e4": {
+      "id": "e4",
+      "title": "=SUM(A1) odd",
+      "url": "https://sheet.example.org/x",
+      "type": "article-site",
+      "status": "active",
+      "tags": [
+       "a,b"
+      ],
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "=cmd\nnext",
+      "fields": {},
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     "e5": {
+      "id": "e5",
+      "title": "No link",
+      "url": "",
+      "type": "web-tool",
+      "status": "active",
+      "tags": [],
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "fields": {},
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "src": "following",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     }
+    }
+   ],
+   "out": "Plain\n\nUse this:\n- No link\n\nSteps:\n- [ ] check - No link\n",
+   "note": "step note and no link"
+  },
+  {
+   "fn": "markdownAll",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "e1",
+       "title": "Design maker",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [
+        "make a sample deck"
+       ],
+       "capabilities": [
+        "draw shapes"
+       ],
+       "notes": "Line one\nLine two",
+       "fields": {
+        "cost": "Free",
+        "resets": "2026-11-04"
+       },
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e2",
+       "title": "Café notes",
+       "url": "https://notes.example.org/cafe",
+       "type": "web-tool",
+       "status": "testing",
+       "tags": [
+        "notes"
+       ],
+       "useWhen": [],
+       "capabilities": [
+        "write a note"
+       ],
+       "notes": "",
+       "fields": {
+        "resets": "2026-11-05"
+       },
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "2026-11-03",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e3",
+       "title": "Old archive",
+       "url": "https://old.example.org/",
+       "type": "web-tool",
+       "status": "archived",
+       "tags": [
+        "old"
+       ],
+       "useWhen": [
+        "look back"
+       ],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-01",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e4",
+       "title": "=SUM(A1) odd",
+       "url": "https://sheet.example.org/x",
+       "type": "article-site",
+       "status": "active",
+       "tags": [
+        "a,b"
+       ],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "=cmd\nnext",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e5",
+       "title": "No link",
+       "url": "",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "following",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e6",
+       "title": "Odd",
+       "url": "",
+       "type": "",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01",
+       "inputs": "a file",
+       "outputs": "",
+       "verdict": {
+        "result": "keep",
+        "at": "2026-10-31",
+        "note": "sample note"
+       }
+      }
+     ],
+     "jobs": [
+      {
+       "id": "j1",
+       "name": "Design",
+       "note": "Sector note",
+       "members": [
+        "e1",
+        "e2",
+        "e3"
+       ]
+      },
+      {
+       "id": "j2",
+       "name": "Other",
+       "note": "",
+       "members": [
+        "e4"
+       ]
+      },
+      {
+       "id": "j3",
+       "name": "Empty sector",
+       "note": "",
+       "members": []
+      }
+     ],
+     "threads": [
+      {
+       "id": "t5",
+       "name": "Plain mission",
+       "note": "",
+       "steps": [
+        {
+         "rid": "e5",
+         "note": "check",
+         "done": false
+        }
+       ]
+      }
+     ],
+     "settings": {}
+    },
+    {}
+   ],
+   "out": "# My resources\n\nExported from Nexus on 2026-10-31.\n\n## Design\n\nSector note\n\n- [Design maker](https://maker.example.org/कला?utm_source=x) - Tool · Free · 2026-11-04\n  - Use it when: make a sample deck\n  - Can do: draw shapes\n  - Tags: #design #कला\n  - Notes: Line one Line two\n- [Café notes](https://notes.example.org/cafe) - Tool · Trial · 2026-11-05\n  - Can do: write a note\n  - Tags: #notes\n\n## Other\n\n- [=SUM(A1) odd](https://sheet.example.org/x) - Articles\n  - Tags: #a,b\n  - Notes: =cmd next\n\n## Not in a sector\n\n- **No link** - Tool\n- **Odd**\n  - In: a file\n  - Verdict: keep on 2026-10-31 - sample note\n\n## Missions\n\n### Plain mission\n1. No link - check\n",
+   "note": "inputs, verdict, no link and an empty sector"
+  },
+  {
+   "fn": "csvAll",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "e1",
+       "title": "Design maker",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [
+        "make a sample deck"
+       ],
+       "capabilities": [
+        "draw shapes"
+       ],
+       "notes": "Line one\nLine two",
+       "fields": {
+        "cost": "Free",
+        "resets": "2026-11-04"
+       },
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e2",
+       "title": "Café notes",
+       "url": "https://notes.example.org/cafe",
+       "type": "web-tool",
+       "status": "testing",
+       "tags": [
+        "notes"
+       ],
+       "useWhen": [],
+       "capabilities": [
+        "write a note"
+       ],
+       "notes": "",
+       "fields": {
+        "resets": "2026-11-05"
+       },
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "2026-11-03",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e3",
+       "title": "Old archive",
+       "url": "https://old.example.org/",
+       "type": "web-tool",
+       "status": "archived",
+       "tags": [
+        "old"
+       ],
+       "useWhen": [
+        "look back"
+       ],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-01",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e4",
+       "title": "=SUM(A1) odd",
+       "url": "https://sheet.example.org/x",
+       "type": "article-site",
+       "status": "active",
+       "tags": [
+        "a,b"
+       ],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "=cmd\nnext",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e5",
+       "title": "No link",
+       "url": "",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "following",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e6",
+       "title": "Odd",
+       "url": "",
+       "type": "",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01",
+       "inputs": "a file",
+       "outputs": "",
+       "verdict": {
+        "result": "keep",
+        "at": "2026-10-31",
+        "note": "sample note"
+       }
+      }
+     ],
+     "jobs": [
+      {
+       "id": "j1",
+       "name": "Design",
+       "note": "Sector note",
+       "members": [
+        "e1",
+        "e2",
+        "e3"
+       ]
+      },
+      {
+       "id": "j2",
+       "name": "Other",
+       "note": "",
+       "members": [
+        "e4"
+       ]
+      },
+      {
+       "id": "j3",
+       "name": "Empty sector",
+       "note": "",
+       "members": []
+      }
+     ],
+     "threads": [
+      {
+       "id": "t5",
+       "name": "Plain mission",
+       "note": "",
+       "steps": [
+        {
+         "rid": "e5",
+         "note": "check",
+         "done": false
+        }
+       ]
+      }
+     ],
+     "settings": {}
+    },
+    {}
+   ],
+   "out": "Title,Link,Type,Stage,Sectors,Tags,Cost,Login needed,Works on,Free limit,Limit resets or offer ends,Models or features you use,Handle or channel name,What you use it for,Platform,Ask here about,Watch it for,How often you watch,Use it when,Can do,Notes,Last checked,Next check,Trial ends,Saved from\r\nDesign maker,https://maker.example.org/कला?utm_source=x,Tool,Active,Design,design; कला,Free,,,,2026-11-04,,,,,,,,make a sample deck,draw shapes,Line one Line two,,2026-11-02,,\r\nCafé notes,https://notes.example.org/cafe,Tool,Trial,Design,notes,,,,,2026-11-05,,,,,,,,,write a note,,,,2026-11-03,\r\n'=SUM(A1) odd,https://sheet.example.org/x,Articles,Active,Other,\"a,b\",,,,,,,,,,,,,,,'=cmd next,,,,\r\nNo link,,Tool,Active,,,,,,,,,,,,,,,,,,,,,following\r\nOdd,,,Active,,,,,,,,,,,,,,,,,,,,,\r\n",
+   "note": "missing saved-from"
+  },
+  {
+   "fn": "aiBrief",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "e1",
+       "title": "Design maker",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [
+        "make a sample deck"
+       ],
+       "capabilities": [
+        "draw shapes"
+       ],
+       "notes": "Line one\nLine two",
+       "fields": {
+        "cost": "Free",
+        "resets": "2026-11-04"
+       },
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e2",
+       "title": "Café notes",
+       "url": "https://notes.example.org/cafe",
+       "type": "web-tool",
+       "status": "testing",
+       "tags": [
+        "notes"
+       ],
+       "useWhen": [],
+       "capabilities": [
+        "write a note"
+       ],
+       "notes": "",
+       "fields": {
+        "resets": "2026-11-05"
+       },
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "2026-11-03",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e3",
+       "title": "Old archive",
+       "url": "https://old.example.org/",
+       "type": "web-tool",
+       "status": "archived",
+       "tags": [
+        "old"
+       ],
+       "useWhen": [
+        "look back"
+       ],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-01",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e4",
+       "title": "=SUM(A1) odd",
+       "url": "https://sheet.example.org/x",
+       "type": "article-site",
+       "status": "active",
+       "tags": [
+        "a,b"
+       ],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "=cmd\nnext",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e5",
+       "title": "No link",
+       "url": "",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "following",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e6",
+       "title": "Odd",
+       "url": "",
+       "type": "",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01",
+       "inputs": "a file",
+       "outputs": "",
+       "verdict": {
+        "result": "keep",
+        "at": "2026-10-31",
+        "note": "sample note"
+       }
+      }
+     ],
+     "jobs": [
+      {
+       "id": "j1",
+       "name": "Design",
+       "note": "Sector note",
+       "members": [
+        "e1",
+        "e2",
+        "e3"
+       ]
+      },
+      {
+       "id": "j2",
+       "name": "Other",
+       "note": "",
+       "members": [
+        "e4"
+       ]
+      },
+      {
+       "id": "j3",
+       "name": "Empty sector",
+       "note": "",
+       "members": []
+      }
+     ],
+     "threads": [
+      {
+       "id": "t5",
+       "name": "Plain mission",
+       "note": "",
+       "steps": [
+        {
+         "rid": "e5",
+         "note": "check",
+         "done": false
+        }
+       ]
+      }
+     ],
+     "settings": {}
+    },
+    {
+     "detail": "full",
+     "maxChars": 30
+    }
+   ],
+   "out": {
+    "text": "These are my own resources: tools, sources, channels and communities I already use or plan to use.\nWhen I ask how to do a job, choose from this list first. Name the resource, say why it fits, and give the first steps.\nRespect the free limits and costs shown. If nothing here fits, say so, then suggest something outside the list.\n\n(4 more resources were left out to keep this short.)\n",
+    "count": 0,
+    "left": 4,
+    "tokens": 96
+   },
+   "note": "cut tail"
+  },
+  {
+   "fn": "icsFor",
+   "in": [
+    [
+     {
+      "rid": "e9",
+      "kind": "check",
+      "date": "2026-11-02",
+      "title": "A;B\\C, D",
+      "details": "A;B",
+      "url": "ftp://bad.example.org/"
+     }
+    ],
+    {
+     "now": "2026-10-31T12:00:00.000Z"
+    }
+   ],
+   "out": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Nexus//Resources//EN\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\nBEGIN:VEVENT\r\nUID:nexus-e9-check-20261102@nexus.local\r\nDTSTAMP:20261031T120000Z\r\nDTSTART;VALUE=DATE:20261102\r\nDTEND;VALUE=DATE:20261103\r\nSUMMARY:A\\;B\\\\C\\, D\r\nDESCRIPTION:A\\;B\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+   "note": "escaping and a non-http url"
+  },
+  {
+   "fn": "upcomingEvents",
+   "in": [
+    [
+     {
+      "id": "e7",
+      "title": "Café notes",
+      "url": "",
+      "type": "web-tool",
+      "status": "testing",
+      "tags": [
+       "notes"
+      ],
+      "useWhen": [],
+      "capabilities": [
+       "write a note"
+      ],
+      "notes": "",
+      "fields": {
+       "resets": "2026-11-20"
+      },
+      "checkCadence": "weekly",
+      "nextCheck": "bad",
+      "trialEnd": "2026-11-03",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     }
+    ],
+    {
+     "from": "2026-10-31",
+     "days": 10
+    }
+   ],
+   "out": [
+    {
+     "rid": "e7",
+     "kind": "trial",
+     "date": "2026-11-03",
+     "title": "Trial ends - keep or drop: Café notes",
+     "details": "",
+     "url": ""
+    }
+   ],
+   "note": "bad and out-of-range dates"
+  },
+  {
+   "fn": "markdownAll",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "e1",
+       "title": "Design maker",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [
+        "make a sample deck"
+       ],
+       "capabilities": [
+        "draw shapes"
+       ],
+       "notes": "Line one\nLine two",
+       "fields": {
+        "cost": "Free",
+        "resets": "2026-11-04"
+       },
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e2",
+       "title": "Café notes",
+       "url": "https://notes.example.org/cafe",
+       "type": "web-tool",
+       "status": "testing",
+       "tags": [
+        "notes"
+       ],
+       "useWhen": [],
+       "capabilities": [
+        "write a note"
+       ],
+       "notes": "",
+       "fields": {
+        "resets": "2026-11-05"
+       },
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "2026-11-03",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e3",
+       "title": "Old archive",
+       "url": "https://old.example.org/",
+       "type": "web-tool",
+       "status": "archived",
+       "tags": [
+        "old"
+       ],
+       "useWhen": [
+        "look back"
+       ],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-01",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e4",
+       "title": "=SUM(A1) odd",
+       "url": "https://sheet.example.org/x",
+       "type": "article-site",
+       "status": "active",
+       "tags": [
+        "a,b"
+       ],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "=cmd\nnext",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e5",
+       "title": "No link",
+       "url": "",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "following",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e6",
+       "title": "Odd",
+       "url": "",
+       "type": "",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01",
+       "inputs": "a file",
+       "outputs": "",
+       "verdict": {
+        "result": "keep",
+        "at": "2026-10-31",
+        "note": "sample note"
+       }
+      },
+      {
+       "id": "e8",
+       "title": "Odd",
+       "url": "",
+       "type": "",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01",
+       "inputs": "a file",
+       "outputs": "a result",
+       "verdict": {
+        "result": "keep",
+        "at": "2026-10-31",
+        "note": ""
+       }
+      }
+     ],
+     "jobs": [
+      {
+       "id": "j1",
+       "name": "Design",
+       "note": "Sector note",
+       "members": [
+        "e1",
+        "e2",
+        "e3"
+       ]
+      },
+      {
+       "id": "j2",
+       "name": "Other",
+       "note": "",
+       "members": [
+        "e4"
+       ]
+      },
+      {
+       "id": "j3",
+       "name": "Empty sector",
+       "note": "",
+       "members": []
+      }
+     ],
+     "threads": [
+      {
+       "id": "t5",
+       "name": "Plain mission",
+       "note": "",
+       "steps": [
+        {
+         "rid": "e5",
+         "note": "check",
+         "done": false
+        }
+       ]
+      }
+     ],
+     "settings": {}
+    },
+    {}
+   ],
+   "out": "# My resources\n\nExported from Nexus on 2026-10-31.\n\n## Design\n\nSector note\n\n- [Design maker](https://maker.example.org/कला?utm_source=x) - Tool · Free · 2026-11-04\n  - Use it when: make a sample deck\n  - Can do: draw shapes\n  - Tags: #design #कला\n  - Notes: Line one Line two\n- [Café notes](https://notes.example.org/cafe) - Tool · Trial · 2026-11-05\n  - Can do: write a note\n  - Tags: #notes\n\n## Other\n\n- [=SUM(A1) odd](https://sheet.example.org/x) - Articles\n  - Tags: #a,b\n  - Notes: =cmd next\n\n## Not in a sector\n\n- **No link** - Tool\n- **Odd**\n  - In: a file\n  - Verdict: keep on 2026-10-31 - sample note\n- **Odd**\n  - In: a file / Out: a result\n  - Verdict: keep on 2026-10-31\n\n## Missions\n\n### Plain mission\n1. No link - check\n",
+   "note": "outputs and verdict without note"
+  },
+  {
+   "fn": "csvAll",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "e10",
+       "title": "Design maker",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [
+        "make a sample deck"
+       ],
+       "capabilities": [
+        "draw shapes"
+       ],
+       "notes": "Line one\nLine two",
+       "fields": null,
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      }
+     ],
+     "jobs": [],
+     "threads": [],
+     "settings": {}
+    },
+    {}
+   ],
+   "out": "Title,Link,Type,Stage,Sectors,Tags,Cost,Login needed,Works on,Free limit,Limit resets or offer ends,Models or features you use,Handle or channel name,What you use it for,Platform,Ask here about,Watch it for,How often you watch,Use it when,Can do,Notes,Last checked,Next check,Trial ends,Saved from\r\nDesign maker,https://maker.example.org/कला?utm_source=x,Tool,Active,,design; कला,,,,,,,,,,,,,make a sample deck,draw shapes,Line one Line two,,2026-11-02,,\r\n",
+   "note": "resource without a fields object"
+  },
+  {
+   "fn": "aiBrief",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "e1",
+       "title": "Design maker",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [
+        "make a sample deck"
+       ],
+       "capabilities": [
+        "draw shapes"
+       ],
+       "notes": "Line one\nLine two",
+       "fields": {
+        "cost": "Free",
+        "resets": "2026-11-04"
+       },
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e11",
+       "title": "Café tie",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "Line one\nLine two",
+       "fields": {
+        "cost": "Free",
+        "resets": "2026-11-04"
+       },
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      }
+     ],
+     "jobs": [],
+     "threads": [],
+     "settings": {}
+    },
+    {
+     "detail": "full",
+     "links": true,
+     "maxChars": 0
+    }
+   ],
+   "out": {
+    "text": "These are my own resources: tools, sources, channels and communities I already use or plan to use.\nWhen I ask how to do a job, choose from this list first. Name the resource, say why it fits, and give the first steps.\nRespect the free limits and costs shown. If nothing here fits, say so, then suggest something outside the list.\n- Design maker (Tool, Free, Limit resets or offer ends 2026-11-04, https://maker.example.org/कला?utm_source=x): use when: make a sample deck. can do: draw shapes. note: Line one Line two\n- Café tie (Tool, Free, Limit resets or offer ends 2026-11-04, https://maker.example.org/कला?utm_source=x): note: Line one Line two\n",
+    "count": 2,
+    "left": 0,
+    "tokens": 163
+   },
+   "note": "equal scores and default size"
+  },
+  {
+   "fn": "icsFor",
+   "in": [
+    [
+     {
+      "rid": "e12",
+      "kind": "check",
+      "date": "2026-11-06"
+     }
+    ],
+    {
+     "now": "2026-10-31T12:00:00.000Z"
+    }
+   ],
+   "out": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Nexus//Resources//EN\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\nBEGIN:VEVENT\r\nUID:nexus-e12-check-20261106@nexus.local\r\nDTSTAMP:20261031T120000Z\r\nDTSTART;VALUE=DATE:20261106\r\nDTEND;VALUE=DATE:20261107\r\nSUMMARY:\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+   "note": "missing title, details and url"
+  },
+  {
+   "fn": "upcomingEvents",
+   "in": [
+    [
+     {
+      "id": "e13",
+      "title": "Same day B",
+      "url": "https://maker.example.org/कला?utm_source=x",
+      "type": "web-tool",
+      "status": "active",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "useWhen": [
+       "make a sample deck"
+      ],
+      "capabilities": [
+       "draw shapes"
+      ],
+      "notes": "Line one\nLine two",
+      "fields": {
+       "cost": "Free",
+       "resets": "2026-11-04"
+      },
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-02",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     },
+     {
+      "id": "e14",
+      "title": "Same day A",
+      "url": "https://maker.example.org/कला?utm_source=x",
+      "type": "web-tool",
+      "status": "active",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "useWhen": [
+       "make a sample deck"
+      ],
+      "capabilities": [
+       "draw shapes"
+      ],
+      "notes": "Line one\nLine two",
+      "fields": {
+       "cost": "Free",
+       "resets": "2026-11-04"
+      },
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-02",
+      "trialEnd": "",
+      "src": "",
+      "draft": false,
+      "createdAt": "2026-10-01"
+     }
+    ],
+    {
+     "from": "2026-10-31",
+     "days": 10
+    }
+   ],
+   "out": [
+    {
+     "rid": "e14",
+     "kind": "check",
+     "date": "2026-11-02",
+     "title": "Check: Same day A",
+     "details": "make a sample deck\nhttps://maker.example.org/कला?utm_source=x",
+     "url": "https://maker.example.org/कला?utm_source=x"
+    },
+    {
+     "rid": "e13",
+     "kind": "check",
+     "date": "2026-11-02",
+     "title": "Check: Same day B",
+     "details": "make a sample deck\nhttps://maker.example.org/कला?utm_source=x",
+     "url": "https://maker.example.org/कला?utm_source=x"
+    },
+    {
+     "rid": "e14",
+     "kind": "resets",
+     "date": "2026-11-04",
+     "title": "Limit resets or offer ends: Same day A",
+     "details": "make a sample deck\nhttps://maker.example.org/कला?utm_source=x",
+     "url": "https://maker.example.org/कला?utm_source=x"
+    },
+    {
+     "rid": "e13",
+     "kind": "resets",
+     "date": "2026-11-04",
+     "title": "Limit resets or offer ends: Same day B",
+     "details": "make a sample deck\nhttps://maker.example.org/कला?utm_source=x",
+     "url": "https://maker.example.org/कला?utm_source=x"
+    }
+   ],
+   "note": "same date sorts by title"
+  },
+  {
+   "fn": "aiBrief",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "e1",
+       "title": "Design maker",
+       "url": "https://maker.example.org/कला?utm_source=x",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [
+        "design",
+        "कला"
+       ],
+       "useWhen": [
+        "make a sample deck"
+       ],
+       "capabilities": [
+        "draw shapes"
+       ],
+       "notes": "Line one\nLine two",
+       "fields": {
+        "cost": "Free",
+        "resets": "2026-11-04"
+       },
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e2",
+       "title": "Café notes",
+       "url": "https://notes.example.org/cafe",
+       "type": "web-tool",
+       "status": "testing",
+       "tags": [
+        "notes"
+       ],
+       "useWhen": [],
+       "capabilities": [
+        "write a note"
+       ],
+       "notes": "",
+       "fields": {
+        "resets": "2026-11-05"
+       },
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "2026-11-03",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e3",
+       "title": "Old archive",
+       "url": "https://old.example.org/",
+       "type": "web-tool",
+       "status": "archived",
+       "tags": [
+        "old"
+       ],
+       "useWhen": [
+        "look back"
+       ],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-01",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e4",
+       "title": "=SUM(A1) odd",
+       "url": "https://sheet.example.org/x",
+       "type": "article-site",
+       "status": "active",
+       "tags": [
+        "a,b"
+       ],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "=cmd\nnext",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e5",
+       "title": "No link",
+       "url": "",
+       "type": "web-tool",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "following",
+       "draft": false,
+       "createdAt": "2026-10-01"
+      },
+      {
+       "id": "e6",
+       "title": "Odd",
+       "url": "",
+       "type": "",
+       "status": "active",
+       "tags": [],
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "fields": {},
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "src": "",
+       "draft": false,
+       "createdAt": "2026-10-01",
+       "inputs": "a file",
+       "outputs": "",
+       "verdict": {
+        "result": "keep",
+        "at": "2026-10-31",
+        "note": "sample note"
+       }
+      }
+     ],
+     "jobs": [
+      {
+       "id": "j1",
+       "name": "Design",
+       "note": "Sector note",
+       "members": [
+        "e1",
+        "e2",
+        "e3"
+       ]
+      },
+      {
+       "id": "j2",
+       "name": "Other",
+       "note": "",
+       "members": [
+        "e4"
+       ]
+      },
+      {
+       "id": "j3",
+       "name": "Empty sector",
+       "note": "",
+       "members": []
+      }
+     ],
+     "threads": [
+      {
+       "id": "t5",
+       "name": "Plain mission",
+       "note": "",
+       "steps": [
+        {
+         "rid": "e5",
+         "note": "check",
+         "done": false
+        }
+       ]
+      }
+     ],
+     "settings": {}
+    },
+    {
+     "links": true
+    }
+   ],
+   "out": {
+    "text": "These are my own resources: tools, sources, channels and communities I already use or plan to use.\nWhen I ask how to do a job, choose from this list first. Name the resource, say why it fits, and give the first steps.\nRespect the free limits and costs shown. If nothing here fits, say so, then suggest something outside the list.\n- Design maker (Tool, Free, Limit resets or offer ends 2026-11-04, https://maker.example.org/कला?utm_source=x): use when: make a sample deck. can do: draw shapes\n- Café notes (Tool, Trial, Limit resets or offer ends 2026-11-05, https://notes.example.org/cafe): can do: write a note\n- =SUM(A1) odd (Articles, https://sheet.example.org/x)\n- Odd ()\n",
+    "count": 4,
+    "left": 0,
+    "tokens": 169
+   },
+   "note": "no url and links asked"
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "module": "snap",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "KEEP_HARD",
+   "in": [],
+   "out": 5,
+   "note": "constant: the Dart value must equal this"
+  },
+  {
+   "fn": "KEEP_HARD",
+   "in": [],
+   "out": 5,
+   "note": "constant: the Dart value must equal this (repeat case)"
+  },
+  {
+   "fn": "KEEP_HARD",
+   "in": [],
+   "out": 5,
+   "note": "constant: the Dart value must equal this (repeat case)"
+  },
+  {
+   "fn": "KEEP_SOFT",
+   "in": [],
+   "out": 3,
+   "note": "constant: the Dart value must equal this"
+  },
+  {
+   "fn": "KEEP_SOFT",
+   "in": [],
+   "out": 3,
+   "note": "constant: the Dart value must equal this (repeat case)"
+  },
+  {
+   "fn": "KEEP_SOFT",
+   "in": [],
+   "out": 3,
+   "note": "constant: the Dart value must equal this (repeat case)"
+  },
+  {
+   "fn": "SOFT",
+   "in": [],
+   "out": {
+    "Before a bulk change": 120000,
+    "Before a delete": 60000
+   },
+   "note": "constant: the Dart value must equal this"
+  },
+  {
+   "fn": "SOFT",
+   "in": [],
+   "out": {
+    "Before a bulk change": 120000,
+    "Before a delete": 60000
+   },
+   "note": "constant: the Dart value must equal this (repeat case)"
+  },
+  {
+   "fn": "SOFT",
+   "in": [],
+   "out": {
+    "Before a bulk change": 120000,
+    "Before a delete": 60000
+   },
+   "note": "constant: the Dart value must equal this (repeat case)"
+  },
+  {
+   "fn": "currentSig",
+   "in": [],
+   "out": "0:2166136261",
+   "note": "empty store"
+  },
+  {
+   "fn": "currentSig",
+   "in": [],
+   "out": "2:2771872268",
+   "note": "two resources"
+  },
+  {
+   "fn": "currentSig",
+   "in": [],
+   "out": "20:2752008735",
+   "note": "many unicode resources"
+  }
+ ]
+}

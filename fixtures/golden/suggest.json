@@ -1,0 +1,5305 @@
+{
+ "module": "suggest",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "buildProfiles",
+   "in": [
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4",
+       "l8",
+       "l9"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "कला sector",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "match": "all",
+       "conds": []
+      },
+      "sealed": false,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j4",
+      "name": "Sealed",
+      "rule": null,
+      "sealed": true,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Tiny",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l1"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    }
+   ],
+   "out": {
+    "profiles": [
+     {
+      "job": "j1",
+      "n": 3,
+      "ids": [
+       "l2",
+       "l3",
+       "l4",
+       "l8",
+       "l9"
+      ],
+      "tags": {
+       "design": 3
+      },
+      "sites": {
+       "example.org": 3
+      },
+      "folders": {
+       "design": 3
+      },
+      "topics": {
+       "design": 1
+      },
+      "types": {
+       "article-site": 3
+      },
+      "words": [
+       "design"
+      ]
+     },
+     {
+      "job": "j2",
+      "n": 3,
+      "ids": [
+       "l5",
+       "l6",
+       "l7"
+      ],
+      "tags": {
+       "art": 3,
+       "café": 1
+      },
+      "sites": {
+       "example.org": 3
+      },
+      "folders": {
+       "art": 3
+      },
+      "topics": {
+       "art": 1
+      },
+      "types": {
+       "article-site": 3
+      },
+      "words": [
+       "sector"
+      ]
+     }
+    ],
+    "common": []
+   },
+   "note": "in: jobs + an id->link object; out: maps are objects and ids are arrays"
+  },
+  {
+   "fn": "buildProfiles",
+   "in": [
+    [],
+    {}
+   ],
+   "out": {
+    "profiles": [],
+    "common": []
+   },
+   "note": "empty input"
+  },
+  {
+   "fn": "buildProfiles",
+   "in": [
+    [
+     {
+      "id": "jx",
+      "name": "Odd",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "missing",
+       "l10",
+       "l9"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    }
+   ],
+   "out": {
+    "profiles": [],
+    "common": []
+   },
+   "note": "missing and draft members"
+  },
+  {
+   "fn": "suggestTop",
+   "in": [
+    {
+     "id": "l1",
+     "title": "कला पत्रिका",
+     "url": "https://l1.example.org/",
+     "tags": [
+      "design",
+      "कला"
+     ],
+     "status": "active",
+     "draft": false,
+     "folder": "Design",
+     "type": "article-site",
+     "scan": {
+      "topic": "design",
+      "conf": "clear"
+     }
+    },
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4",
+       "l8",
+       "l9"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "कला sector",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "match": "all",
+       "conds": []
+      },
+      "sealed": false,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j4",
+      "name": "Sealed",
+      "rule": null,
+      "sealed": true,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Tiny",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l1"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    [],
+    3
+   ],
+   "out": [
+    {
+     "job": "j1",
+     "score": 16.566667,
+     "why": [
+      "same website as 3 links here",
+      "bookmark folder has the sector's name"
+     ]
+    },
+    {
+     "job": "j2",
+     "score": 5.3,
+     "why": [
+      "same website as 3 links here"
+     ]
+    }
+   ],
+   "note": "profiles and jobsOfFn are built in the test from jobs, links and memberJobIds"
+  },
+  {
+   "fn": "suggestTop",
+   "in": [
+    {
+     "id": "l1",
+     "title": "कला पत्रिका",
+     "url": "https://l1.example.org/",
+     "tags": [
+      "design",
+      "कला"
+     ],
+     "status": "active",
+     "draft": false,
+     "folder": "Design",
+     "type": "article-site",
+     "scan": {
+      "topic": "design",
+      "conf": "clear"
+     }
+    },
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4",
+       "l8",
+       "l9"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "कला sector",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "match": "all",
+       "conds": []
+      },
+      "sealed": false,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j4",
+      "name": "Sealed",
+      "rule": null,
+      "sealed": true,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Tiny",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l1"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    [
+     "j1"
+    ],
+    3
+   ],
+   "out": [],
+   "note": "already in a sector -> no suggestion"
+  },
+  {
+   "fn": "suggestTop",
+   "in": [
+    {
+     "id": "l8",
+     "title": "Old archive",
+     "url": "https://l8.example.org/",
+     "tags": [
+      "design"
+     ],
+     "status": "archived",
+     "draft": false,
+     "folder": "Design",
+     "type": "article-site",
+     "scan": null
+    },
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4",
+       "l8",
+       "l9"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "कला sector",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "match": "all",
+       "conds": []
+      },
+      "sealed": false,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j4",
+      "name": "Sealed",
+      "rule": null,
+      "sealed": true,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Tiny",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l1"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    [],
+    3
+   ],
+   "out": [],
+   "note": "archived -> no suggestion"
+  },
+  {
+   "fn": "suggestTop",
+   "in": [
+    {
+     "id": "l5",
+     "title": "Café art",
+     "url": "https://l5.example.org/",
+     "tags": [
+      "art",
+      "café"
+     ],
+     "status": "active",
+     "draft": false,
+     "folder": "Art",
+     "type": "article-site",
+     "scan": {
+      "topic": "art",
+      "conf": "clear"
+     }
+    },
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4",
+       "l8",
+       "l9"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "कला sector",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "match": "all",
+       "conds": []
+      },
+      "sealed": false,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j4",
+      "name": "Sealed",
+      "rule": null,
+      "sealed": true,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Tiny",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l1"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    [],
+    2
+   ],
+   "out": [
+    {
+     "job": "j1",
+     "score": 5.3,
+     "why": [
+      "same website as 3 links here"
+     ]
+    }
+   ],
+   "note": "unicode tags and n=2"
+  },
+  {
+   "fn": "suggest",
+   "in": [
+    {
+     "id": "l1",
+     "title": "कला पत्रिका",
+     "url": "https://l1.example.org/",
+     "tags": [
+      "design",
+      "कला"
+     ],
+     "status": "active",
+     "draft": false,
+     "folder": "Design",
+     "type": "article-site",
+     "scan": {
+      "topic": "design",
+      "conf": "clear"
+     }
+    },
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4",
+       "l8",
+       "l9"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "कला sector",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "match": "all",
+       "conds": []
+      },
+      "sealed": false,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j4",
+      "name": "Sealed",
+      "rule": null,
+      "sealed": true,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Tiny",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l1"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    []
+   ],
+   "out": {
+    "job": "j1",
+    "score": 16.566667,
+    "why": [
+     "same website as 3 links here",
+     "bookmark folder has the sector's name"
+    ],
+    "unsure": false,
+    "also": [
+     "j2"
+    ]
+   },
+   "note": "best sector or null"
+  },
+  {
+   "fn": "suggest",
+   "in": [
+    {
+     "id": "l1",
+     "title": "कला पत्रिका",
+     "url": "https://l1.example.org/",
+     "tags": [
+      "design",
+      "कला"
+     ],
+     "status": "active",
+     "draft": false,
+     "folder": "Design",
+     "type": "article-site",
+     "scan": {
+      "topic": "design",
+      "conf": "clear"
+     }
+    },
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4",
+       "l8",
+       "l9"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "कला sector",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "match": "all",
+       "conds": []
+      },
+      "sealed": false,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j4",
+      "name": "Sealed",
+      "rule": null,
+      "sealed": true,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Tiny",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l1"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    [
+     "j1"
+    ]
+   ],
+   "out": null,
+   "note": "already filed away"
+  },
+  {
+   "fn": "suggest",
+   "in": [
+    {
+     "id": "l10",
+     "title": "No fields",
+     "url": "",
+     "tags": [],
+     "status": "active",
+     "draft": false,
+     "folder": "",
+     "type": "article-site",
+     "scan": null
+    },
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4",
+       "l8",
+       "l9"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "कला sector",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "match": "all",
+       "conds": []
+      },
+      "sealed": false,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j4",
+      "name": "Sealed",
+      "rule": null,
+      "sealed": true,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Tiny",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l1"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    []
+   ],
+   "out": null,
+   "note": "missing fields / no link"
+  },
+  {
+   "fn": "suggest",
+   "in": [
+    {
+     "id": "l5",
+     "title": "Café art",
+     "url": "https://l5.example.org/",
+     "tags": [
+      "art",
+      "café"
+     ],
+     "status": "active",
+     "draft": false,
+     "folder": "Art",
+     "type": "article-site",
+     "scan": {
+      "topic": "art",
+      "conf": "clear"
+     }
+    },
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4",
+       "l8",
+       "l9"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "कला sector",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "match": "all",
+       "conds": []
+      },
+      "sealed": false,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j4",
+      "name": "Sealed",
+      "rule": null,
+      "sealed": true,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Tiny",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l1"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    []
+   ],
+   "out": {
+    "job": "j1",
+    "score": 5.3,
+    "why": [
+     "same website as 3 links here"
+    ],
+    "unsure": false,
+    "also": []
+   },
+   "note": "unicode"
+  },
+  {
+   "fn": "suggestMany",
+   "in": [
+    [
+     {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    ],
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4",
+       "l8",
+       "l9"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "कला sector",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "match": "all",
+       "conds": []
+      },
+      "sealed": false,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j4",
+      "name": "Sealed",
+      "rule": null,
+      "sealed": true,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Tiny",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l1"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    []
+   ],
+   "out": [
+    {
+     "r": "l1",
+     "s": {
+      "job": "j1",
+      "score": 16.566667,
+      "why": [
+       "same website as 3 links here",
+       "bookmark folder has the sector's name"
+      ],
+      "unsure": false,
+      "also": [
+       "j2"
+      ]
+     }
+    },
+    {
+     "r": "l5",
+     "s": {
+      "job": "j1",
+      "score": 5.3,
+      "why": [
+       "same website as 3 links here"
+      ],
+      "unsure": false,
+      "also": []
+     }
+    }
+   ],
+   "note": "out lists ids"
+  },
+  {
+   "fn": "suggestMany",
+   "in": [
+    [],
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4",
+       "l8",
+       "l9"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "कला sector",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "match": "all",
+       "conds": []
+      },
+      "sealed": false,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j4",
+      "name": "Sealed",
+      "rule": null,
+      "sealed": true,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Tiny",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l1"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    []
+   ],
+   "out": [],
+   "note": "empty input"
+  },
+  {
+   "fn": "suggestMany",
+   "in": [
+    [
+     {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     }
+    ],
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4",
+       "l8",
+       "l9"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "कला sector",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "match": "all",
+       "conds": []
+      },
+      "sealed": false,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j4",
+      "name": "Sealed",
+      "rule": null,
+      "sealed": true,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Tiny",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l1"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    []
+   ],
+   "out": [
+    {
+     "r": "l2",
+     "s": {
+      "job": "j2",
+      "score": 5.3,
+      "why": [
+       "same website as 3 links here"
+      ],
+      "unsure": false,
+      "also": []
+     }
+    },
+    {
+     "r": "l6",
+     "s": {
+      "job": "j1",
+      "score": 5.3,
+      "why": [
+       "same website as 3 links here"
+      ],
+      "unsure": false,
+      "also": []
+     }
+    }
+   ],
+   "note": "members of existing sectors"
+  },
+  {
+   "fn": "buildProfiles",
+   "in": [
+    [
+     {
+      "id": "cj1",
+      "name": "Alpha",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "c1",
+       "c2",
+       "c3"
+      ]
+     },
+     {
+      "id": "cj2",
+      "name": "Beta",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "c4",
+       "c5",
+       "c6"
+      ]
+     },
+     {
+      "id": "cj3",
+      "name": "Gamma",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "c7",
+       "c8",
+       "c9"
+      ]
+     }
+    ],
+    {
+     "c1": {
+      "id": "c1",
+      "title": "Common c1",
+      "url": "https://c1.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c2": {
+      "id": "c2",
+      "title": "Common c2",
+      "url": "https://c2.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c3": {
+      "id": "c3",
+      "title": "Common c3",
+      "url": "https://c3.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c4": {
+      "id": "c4",
+      "title": "Common c4",
+      "url": "https://c4.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c5": {
+      "id": "c5",
+      "title": "Common c5",
+      "url": "https://c5.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c6": {
+      "id": "c6",
+      "title": "Common c6",
+      "url": "https://c6.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c7": {
+      "id": "c7",
+      "title": "Common c7",
+      "url": "https://c7.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c8": {
+      "id": "c8",
+      "title": "Common c8",
+      "url": "https://c8.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c9": {
+      "id": "c9",
+      "title": "Common c9",
+      "url": "https://c9.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     }
+    }
+   ],
+   "out": {
+    "profiles": [
+     {
+      "job": "cj1",
+      "n": 3,
+      "ids": [
+       "c1",
+       "c2",
+       "c3"
+      ],
+      "tags": {
+       "free": 3,
+       "art": 3
+      },
+      "sites": {
+       "c1.test": 1,
+       "c2.test": 1,
+       "c3.test": 1
+      },
+      "folders": {
+       "mine": 3
+      },
+      "topics": {},
+      "types": {
+       "article-site": 3
+      },
+      "words": [
+       "alpha"
+      ]
+     },
+     {
+      "job": "cj2",
+      "n": 3,
+      "ids": [
+       "c4",
+       "c5",
+       "c6"
+      ],
+      "tags": {
+       "free": 3,
+       "art": 3
+      },
+      "sites": {
+       "c4.test": 1,
+       "c5.test": 1,
+       "c6.test": 1
+      },
+      "folders": {
+       "mine": 3
+      },
+      "topics": {},
+      "types": {
+       "article-site": 3
+      },
+      "words": [
+       "beta"
+      ]
+     },
+     {
+      "job": "cj3",
+      "n": 3,
+      "ids": [
+       "c7",
+       "c8",
+       "c9"
+      ],
+      "tags": {
+       "free": 3,
+       "art": 3
+      },
+      "sites": {
+       "c7.test": 1,
+       "c8.test": 1,
+       "c9.test": 1
+      },
+      "folders": {
+       "mine": 3
+      },
+      "topics": {},
+      "types": {
+       "article-site": 3
+      },
+      "words": [
+       "gamma"
+      ]
+     }
+    ],
+    "common": [
+     "free",
+     "art"
+    ]
+   },
+   "note": "a tag common to three sectors"
+  },
+  {
+   "fn": "suggest",
+   "in": [
+    {
+     "id": "lt",
+     "title": "Tie link",
+     "url": "https://example.org/x",
+     "tags": [],
+     "status": "active",
+     "draft": false,
+     "folder": "",
+     "type": "feed",
+     "scan": null
+    },
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4",
+       "l8",
+       "l9"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "कला sector",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "match": "all",
+       "conds": []
+      },
+      "sealed": false,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j4",
+      "name": "Sealed",
+      "rule": null,
+      "sealed": true,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Tiny",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l1"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    []
+   ],
+   "out": {
+    "job": "j1",
+    "score": 4.5,
+    "why": [
+     "same website as 3 links here"
+    ],
+    "unsure": true,
+    "also": [
+     "j2"
+    ]
+   },
+   "note": "two sectors tie"
+  },
+  {
+   "fn": "suggestTop",
+   "in": [
+    {
+     "id": "cq",
+     "title": "Common query",
+     "url": "https://c1.test/",
+     "tags": [
+      "free",
+      "art"
+     ],
+     "status": "active",
+     "draft": false,
+     "folder": "",
+     "type": "feed",
+     "scan": null
+    },
+    [
+     {
+      "id": "cj1",
+      "name": "Alpha",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "c1",
+       "c2",
+       "c3"
+      ]
+     },
+     {
+      "id": "cj2",
+      "name": "Beta",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "c4",
+       "c5",
+       "c6"
+      ]
+     },
+     {
+      "id": "cj3",
+      "name": "Gamma",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "c7",
+       "c8",
+       "c9"
+      ]
+     }
+    ],
+    {
+     "c1": {
+      "id": "c1",
+      "title": "Common c1",
+      "url": "https://c1.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c2": {
+      "id": "c2",
+      "title": "Common c2",
+      "url": "https://c2.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c3": {
+      "id": "c3",
+      "title": "Common c3",
+      "url": "https://c3.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c4": {
+      "id": "c4",
+      "title": "Common c4",
+      "url": "https://c4.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c5": {
+      "id": "c5",
+      "title": "Common c5",
+      "url": "https://c5.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c6": {
+      "id": "c6",
+      "title": "Common c6",
+      "url": "https://c6.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c7": {
+      "id": "c7",
+      "title": "Common c7",
+      "url": "https://c7.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c8": {
+      "id": "c8",
+      "title": "Common c8",
+      "url": "https://c8.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c9": {
+      "id": "c9",
+      "title": "Common c9",
+      "url": "https://c9.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    [],
+    3
+   ],
+   "out": [
+    {
+     "job": "cj1",
+     "score": 4.3,
+     "why": [
+      "same website as 1 link here",
+      "tags #free #art"
+     ]
+    }
+   ],
+   "note": "common tag, same website as one and a type with no history"
+  },
+  {
+   "fn": "suggestTop",
+   "in": [
+    {
+     "id": "co",
+     "title": "Other site",
+     "url": "https://other.test/x",
+     "tags": [
+      "free"
+     ],
+     "status": "active",
+     "draft": false,
+     "folder": "",
+     "type": "feed",
+     "scan": null
+    },
+    [
+     {
+      "id": "cj1",
+      "name": "Alpha",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "c1",
+       "c2",
+       "c3"
+      ]
+     },
+     {
+      "id": "cj2",
+      "name": "Beta",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "c4",
+       "c5",
+       "c6"
+      ]
+     },
+     {
+      "id": "cj3",
+      "name": "Gamma",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "c7",
+       "c8",
+       "c9"
+      ]
+     }
+    ],
+    {
+     "c1": {
+      "id": "c1",
+      "title": "Common c1",
+      "url": "https://c1.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c2": {
+      "id": "c2",
+      "title": "Common c2",
+      "url": "https://c2.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c3": {
+      "id": "c3",
+      "title": "Common c3",
+      "url": "https://c3.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c4": {
+      "id": "c4",
+      "title": "Common c4",
+      "url": "https://c4.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c5": {
+      "id": "c5",
+      "title": "Common c5",
+      "url": "https://c5.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c6": {
+      "id": "c6",
+      "title": "Common c6",
+      "url": "https://c6.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c7": {
+      "id": "c7",
+      "title": "Common c7",
+      "url": "https://c7.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c8": {
+      "id": "c8",
+      "title": "Common c8",
+      "url": "https://c8.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c9": {
+      "id": "c9",
+      "title": "Common c9",
+      "url": "https://c9.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    [],
+    3
+   ],
+   "out": [],
+   "note": "a site the profiles have never seen"
+  },
+  {
+   "fn": "suggest",
+   "in": [
+    {
+     "id": "co",
+     "title": "Other site",
+     "url": "https://other.test/x",
+     "tags": [
+      "free"
+     ],
+     "status": "active",
+     "draft": false,
+     "folder": "",
+     "type": "feed",
+     "scan": null
+    },
+    [
+     {
+      "id": "cj1",
+      "name": "Alpha",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "c1",
+       "c2",
+       "c3"
+      ]
+     },
+     {
+      "id": "cj2",
+      "name": "Beta",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "c4",
+       "c5",
+       "c6"
+      ]
+     },
+     {
+      "id": "cj3",
+      "name": "Gamma",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "c7",
+       "c8",
+       "c9"
+      ]
+     }
+    ],
+    {
+     "c1": {
+      "id": "c1",
+      "title": "Common c1",
+      "url": "https://c1.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c2": {
+      "id": "c2",
+      "title": "Common c2",
+      "url": "https://c2.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c3": {
+      "id": "c3",
+      "title": "Common c3",
+      "url": "https://c3.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c4": {
+      "id": "c4",
+      "title": "Common c4",
+      "url": "https://c4.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c5": {
+      "id": "c5",
+      "title": "Common c5",
+      "url": "https://c5.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c6": {
+      "id": "c6",
+      "title": "Common c6",
+      "url": "https://c6.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c7": {
+      "id": "c7",
+      "title": "Common c7",
+      "url": "https://c7.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c8": {
+      "id": "c8",
+      "title": "Common c8",
+      "url": "https://c8.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     },
+     "c9": {
+      "id": "c9",
+      "title": "Common c9",
+      "url": "https://c9.test/",
+      "tags": [
+       "free",
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Mine",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    []
+   ],
+   "out": null,
+   "note": "score under 2.0 gives null"
+  },
+  {
+   "fn": "suggest",
+   "in": [
+    {
+     "id": "l1",
+     "title": "कला पत्रिका",
+     "url": "https://l1.example.org/",
+     "tags": [
+      "design",
+      "कला"
+     ],
+     "status": "active",
+     "draft": false,
+     "folder": "Design",
+     "type": "article-site",
+     "scan": {
+      "topic": "design",
+      "conf": "clear"
+     }
+    },
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4",
+       "l8",
+       "l9"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "कला sector",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "match": "all",
+       "conds": []
+      },
+      "sealed": false,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j4",
+      "name": "Sealed",
+      "rule": null,
+      "sealed": true,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Tiny",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l1"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    [
+     "j3"
+    ]
+   ],
+   "out": {
+    "job": "j1",
+    "score": 16.566667,
+    "why": [
+     "same website as 3 links here",
+     "bookmark folder has the sector's name"
+    ],
+    "unsure": false,
+    "also": [
+     "j2"
+    ]
+   },
+   "note": "only in a rule-based sector still gets a suggestion"
+  },
+  {
+   "fn": "suggest",
+   "in": [
+    {
+     "id": "lt",
+     "title": "Tie link",
+     "url": "https://example.org/x",
+     "tags": [],
+     "status": "active",
+     "draft": false,
+     "folder": "",
+     "type": "feed",
+     "scan": null
+    },
+    [
+     {
+      "id": "tj1",
+      "name": "First",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4"
+      ]
+     },
+     {
+      "id": "tj2",
+      "name": "Second",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    []
+   ],
+   "out": {
+    "job": "tj1",
+    "score": 4.5,
+    "why": [
+     "same website as 3 links here"
+    ],
+    "unsure": true,
+    "also": [
+     "tj2"
+    ]
+   },
+   "note": "exact tie, winner listed first"
+  },
+  {
+   "fn": "suggest",
+   "in": [
+    {
+     "id": "lt",
+     "title": "Tie link",
+     "url": "https://example.org/x",
+     "tags": [],
+     "status": "active",
+     "draft": false,
+     "folder": "",
+     "type": "feed",
+     "scan": null
+    },
+    [
+     {
+      "id": "tj2",
+      "name": "Second",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     },
+     {
+      "id": "tj1",
+      "name": "First",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    []
+   ],
+   "out": {
+    "job": "tj2",
+    "score": 4.5,
+    "why": [
+     "same website as 3 links here"
+    ],
+    "unsure": true,
+    "also": [
+     "tj1"
+    ]
+   },
+   "note": "exact tie, better-listed sector comes second"
+  },
+  {
+   "fn": "suggest",
+   "in": [
+    {
+     "id": "hq",
+     "title": "कला query",
+     "url": "https://other.example.org/",
+     "tags": [
+      "कला"
+     ],
+     "status": "active",
+     "draft": false,
+     "folder": "",
+     "type": "feed",
+     "scan": null
+    },
+    [
+     {
+      "id": "hj",
+      "name": "Hindi sector",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "h1",
+       "h2",
+       "h3"
+      ]
+     }
+    ],
+    {
+     "h1": {
+      "id": "h1",
+      "title": "कला h1",
+      "url": "https://hindih1.example.org/",
+      "tags": [
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     },
+     "h2": {
+      "id": "h2",
+      "title": "कला h2",
+      "url": "https://hindih2.example.org/",
+      "tags": [
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     },
+     "h3": {
+      "id": "h3",
+      "title": "कला h3",
+      "url": "https://hindih3.example.org/",
+      "tags": [
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    []
+   ],
+   "out": {
+    "job": "hj",
+    "score": 6,
+    "why": [
+     "same website as 3 links here",
+     "tags #कला"
+    ],
+    "unsure": false,
+    "also": []
+   },
+   "note": "a Hindi tag one sector really uses"
+  },
+  {
+   "fn": "suggestTop",
+   "in": [
+    {
+     "id": "l1",
+     "title": "कला पत्रिका",
+     "url": "https://l1.example.org/",
+     "tags": [
+      "design",
+      "कला"
+     ],
+     "status": "active",
+     "draft": false,
+     "folder": "Design",
+     "type": "article-site",
+     "scan": {
+      "topic": "design",
+      "conf": "clear"
+     }
+    },
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4",
+       "l8",
+       "l9"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "कला sector",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "match": "all",
+       "conds": []
+      },
+      "sealed": false,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j4",
+      "name": "Sealed",
+      "rule": null,
+      "sealed": true,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Tiny",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l1"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    [],
+    1
+   ],
+   "out": [
+    {
+     "job": "j1",
+     "score": 16.566667,
+     "why": [
+      "same website as 3 links here",
+      "bookmark folder has the sector's name"
+     ]
+    }
+   ],
+   "note": "n=1"
+  },
+  {
+   "fn": "suggestTop",
+   "in": [
+    {
+     "id": "l1",
+     "title": "कला पत्रिका",
+     "url": "https://l1.example.org/",
+     "tags": [
+      "design",
+      "कला"
+     ],
+     "status": "active",
+     "draft": false,
+     "folder": "Design",
+     "type": "article-site",
+     "scan": {
+      "topic": "design",
+      "conf": "clear"
+     }
+    },
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l2",
+       "l3",
+       "l4",
+       "l8",
+       "l9"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "कला sector",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l5",
+       "l6",
+       "l7"
+      ]
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "match": "all",
+       "conds": []
+      },
+      "sealed": false,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j4",
+      "name": "Sealed",
+      "rule": null,
+      "sealed": true,
+      "members": [
+       "l1",
+       "l2",
+       "l3"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Tiny",
+      "rule": null,
+      "sealed": false,
+      "members": [
+       "l1"
+      ]
+     }
+    ],
+    {
+     "l1": {
+      "id": "l1",
+      "title": "कला पत्रिका",
+      "url": "https://l1.example.org/",
+      "tags": [
+       "design",
+       "कला"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "clear"
+      }
+     },
+     "l2": {
+      "id": "l2",
+      "title": "Café layout",
+      "url": "https://l2.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": {
+       "topic": "design",
+       "conf": "maybe"
+      }
+     },
+     "l3": {
+      "id": "l3",
+      "title": "Poster study",
+      "url": "https://l3.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l4": {
+      "id": "l4",
+      "title": "Type specimen",
+      "url": "https://l4.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l5": {
+      "id": "l5",
+      "title": "Café art",
+      "url": "https://l5.example.org/",
+      "tags": [
+       "art",
+       "café"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": {
+       "topic": "art",
+       "conf": "clear"
+      }
+     },
+     "l6": {
+      "id": "l6",
+      "title": "Sketch book",
+      "url": "https://l6.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l7": {
+      "id": "l7",
+      "title": "Ink study",
+      "url": "https://l7.example.org/",
+      "tags": [
+       "art"
+      ],
+      "status": "active",
+      "draft": false,
+      "folder": "Art",
+      "type": "article-site",
+      "scan": null
+     },
+     "l8": {
+      "id": "l8",
+      "title": "Old archive",
+      "url": "https://l8.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "archived",
+      "draft": false,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l9": {
+      "id": "l9",
+      "title": "Draft note",
+      "url": "https://l9.example.org/",
+      "tags": [
+       "design"
+      ],
+      "status": "active",
+      "draft": true,
+      "folder": "Design",
+      "type": "article-site",
+      "scan": null
+     },
+     "l10": {
+      "id": "l10",
+      "title": "No fields",
+      "url": "",
+      "tags": [],
+      "status": "active",
+      "draft": false,
+      "folder": "",
+      "type": "article-site",
+      "scan": null
+     }
+    },
+    [],
+    5
+   ],
+   "out": [
+    {
+     "job": "j1",
+     "score": 16.566667,
+     "why": [
+      "same website as 3 links here",
+      "bookmark folder has the sector's name"
+     ]
+    },
+    {
+     "job": "j2",
+     "score": 5.3,
+     "why": [
+      "same website as 3 links here"
+     ]
+    }
+   ],
+   "note": "n=5"
+  }
+ ]
+}

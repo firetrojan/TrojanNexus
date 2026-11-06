@@ -1,0 +1,1071 @@
+{
+ "module": "pageparse",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "wallKind",
+   "in": [
+    "",
+    ""
+   ],
+   "out": ""
+  },
+  {
+   "fn": "wallKind",
+   "in": [
+    "Please log in",
+    "Sign in to continue"
+   ],
+   "out": "login"
+  },
+  {
+   "fn": "wallKind",
+   "in": [
+    "ok",
+    "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
+   ],
+   "out": "",
+   "note": "long pages are trusted"
+  },
+  {
+   "fn": "wallKind",
+   "in": [
+    "कला",
+    "सामान्य पाठ"
+   ],
+   "out": "",
+   "note": "unicode"
+  },
+  {
+   "fn": "cleanKeywords",
+   "in": [
+    ""
+   ],
+   "out": []
+  },
+  {
+   "fn": "cleanKeywords",
+   "in": [
+    "कला, Design, design, café"
+   ],
+   "out": [
+    "कल",
+    "design",
+    "café"
+   ]
+  },
+  {
+   "fn": "cleanKeywords",
+   "in": [
+    [
+     "a; b|c\nd",
+     " e"
+    ]
+   ],
+   "out": [
+    "a-bc-d"
+   ]
+  },
+  {
+   "fn": "cleanKeywords",
+   "in": [
+    [
+     "Tag 0",
+     "Tag 1",
+     "Tag 2",
+     "Tag 3",
+     "Tag 4",
+     "Tag 5",
+     "Tag 6",
+     "Tag 7",
+     "Tag 8",
+     "Tag 9",
+     "Tag 10",
+     "Tag 11",
+     "Tag 12",
+     "Tag 13",
+     "Tag 14",
+     "Tag 15",
+     "Tag 16",
+     "Tag 17",
+     "Tag 18",
+     "Tag 19"
+    ]
+   ],
+   "out": [
+    "tag-0",
+    "tag-1",
+    "tag-2",
+    "tag-3",
+    "tag-4",
+    "tag-5",
+    "tag-6",
+    "tag-7"
+   ],
+   "note": "capped at 8"
+  },
+  {
+   "fn": "tidyTitle",
+   "in": [
+    "",
+    ""
+   ],
+   "out": ""
+  },
+  {
+   "fn": "tidyTitle",
+   "in": [
+    "कला पत्रिका | Example",
+    "example"
+   ],
+   "out": "कला पत्रिका"
+  },
+  {
+   "fn": "tidyTitle",
+   "in": [
+    "Café - Notes - Example",
+    "example"
+   ],
+   "out": "Café - Notes"
+  },
+  {
+   "fn": "tidyTitle",
+   "in": [
+    "A | B",
+    ""
+   ],
+   "out": "A | B"
+  },
+  {
+   "fn": "parseHTML",
+   "in": [
+    "<!doctype html><html lang=\"hi\"><head>\n    <title>कला पत्रिका | Example</title>\n    <meta property=\"og:title\" content=\"कला पत्रिका\">\n    <meta name=\"description\" content=\"Café design notes &amp; more\">\n    <meta name=\"keywords\" content=\"कला, Design, design, café\">\n    <meta name=\"author\" content=\"Mira Example\">\n    <link rel=\"canonical\" href=\"/kala\">\n    <link rel=\"alternate\" type=\"application/rss+xml\" href=\"/feed.xml\">\n    <script type=\"application/ld+json\">{\"@type\":\"Article\",\"description\":\"Sample desc\",\"keywords\":[\"कला\"]}</script>\n  </head><body><main><h1>कला</h1><h2>Café &amp; notes</h2><p>sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text </p><a href=\"/x\">x</a></main></body></html>",
+    "https://maker.example.org/base/"
+   ],
+   "out": {
+    "title": "कला पत्रिका | Example",
+    "ogTitle": "कला पत्रिका",
+    "site": "",
+    "description": "Café design notes & more",
+    "ogType": "",
+    "lang": "hi",
+    "keywords": [
+     "कल",
+     "design",
+     "café"
+    ],
+    "headings": [
+     "कला",
+     "Café & notes"
+    ],
+    "text": "कला Café & notes sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text x",
+    "rss": [
+     "https://maker.example.org/feed.xml"
+    ],
+    "canonical": "https://maker.example.org/kala",
+    "ldType": "Article",
+    "author": "Mira Example",
+    "wall": ""
+   }
+  },
+  {
+   "fn": "parseHTML",
+   "in": [
+    "",
+    ""
+   ],
+   "out": {
+    "title": "",
+    "ogTitle": "",
+    "site": "",
+    "description": "",
+    "ogType": "",
+    "lang": "",
+    "keywords": [],
+    "headings": [],
+    "text": "",
+    "rss": [],
+    "canonical": "",
+    "ldType": "",
+    "author": "",
+    "wall": ""
+   },
+   "note": "empty input"
+  },
+  {
+   "fn": "parseHTML",
+   "in": [
+    "<html><head><title>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</title></head><body><h1>yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy</h1><p>zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</p></body></html>",
+    "https://maker.example.org/"
+   ],
+   "out": {
+    "title": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "ogTitle": "",
+    "site": "",
+    "description": "",
+    "ogType": "",
+    "lang": "",
+    "keywords": [],
+    "headings": [],
+    "text": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+    "rss": [],
+    "canonical": "",
+    "ldType": "",
+    "author": "",
+    "wall": ""
+   },
+   "note": "long text is capped"
+  },
+  {
+   "fn": "parseHTML",
+   "in": [
+    "<html><head><title>Please log in</title></head><body><h1>Log in to continue</h1><p>Sign in to see this page.</p></body></html>",
+    ""
+   ],
+   "out": {
+    "title": "Please log in",
+    "ogTitle": "",
+    "site": "",
+    "description": "",
+    "ogType": "",
+    "lang": "",
+    "keywords": [],
+    "headings": [
+     "Log in to continue"
+    ],
+    "text": "Log in to continue Sign in to see this page.",
+    "rss": [],
+    "canonical": "",
+    "ldType": "",
+    "author": "",
+    "wall": "login"
+   },
+   "note": "login wall"
+  },
+  {
+   "fn": "parseReader",
+   "in": [
+    "{\"data\":{\"title\":\"कला\",\"description\":\"Café notes\",\"content\":\"# Heading\\n\\nSome **sample** text with a [link](/x).\",\"url\":\"https://maker.example.org/kala\"}}",
+    ""
+   ],
+   "out": {
+    "title": "कला",
+    "ogTitle": "",
+    "site": "",
+    "description": "Café notes",
+    "ogType": "",
+    "lang": "",
+    "keywords": [],
+    "headings": [
+     "Heading"
+    ],
+    "text": "Heading Some sample text with a link.",
+    "rss": [],
+    "canonical": "https://maker.example.org/kala",
+    "ldType": "",
+    "author": "",
+    "wall": ""
+   }
+  },
+  {
+   "fn": "parseReader",
+   "in": [
+    "Title: कला\nURL Source: https://maker.example.org/kala\nMarkdown Content:\n# Heading\n\nCafé **text**.",
+    ""
+   ],
+   "out": {
+    "title": "कला",
+    "ogTitle": "",
+    "site": "",
+    "description": "",
+    "ogType": "",
+    "lang": "",
+    "keywords": [],
+    "headings": [
+     "Heading"
+    ],
+    "text": "Heading Café text .",
+    "rss": [],
+    "canonical": "https://maker.example.org/kala",
+    "ldType": "",
+    "author": "",
+    "wall": ""
+   }
+  },
+  {
+   "fn": "parseReader",
+   "in": [
+    "",
+    ""
+   ],
+   "out": {
+    "empty": true
+   },
+   "note": "empty input"
+  },
+  {
+   "fn": "parseReader",
+   "in": [
+    "{\"code\":404,\"message\":\"Not found\"}",
+    ""
+   ],
+   "out": {
+    "error": {
+     "code": 404,
+     "msg": "Not found"
+    }
+   },
+   "note": "error JSON"
+  },
+  {
+   "fn": "parseReader",
+   "in": [
+    "<!doctype html><html lang=\"hi\"><head>\n    <title>कला पत्रिका | Example</title>\n    <meta property=\"og:title\" content=\"कला पत्रिका\">\n    <meta name=\"description\" content=\"Café design notes &amp; more\">\n    <meta name=\"keywords\" content=\"कला, Design, design, café\">\n    <meta name=\"author\" content=\"Mira Example\">\n    <link rel=\"canonical\" href=\"/kala\">\n    <link rel=\"alternate\" type=\"application/rss+xml\" href=\"/feed.xml\">\n    <script type=\"application/ld+json\">{\"@type\":\"Article\",\"description\":\"Sample desc\",\"keywords\":[\"कला\"]}</script>\n  </head><body><main><h1>कला</h1><h2>Café &amp; notes</h2><p>sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text </p><a href=\"/x\">x</a></main></body></html>",
+    "https://maker.example.org/base/"
+   ],
+   "out": {
+    "title": "कला पत्रिका | Example",
+    "ogTitle": "कला पत्रिका",
+    "site": "",
+    "description": "Café design notes & more",
+    "ogType": "",
+    "lang": "hi",
+    "keywords": [
+     "कल",
+     "design",
+     "café"
+    ],
+    "headings": [
+     "कला",
+     "Café & notes"
+    ],
+    "text": "कला Café & notes sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text x",
+    "rss": [
+     "https://maker.example.org/feed.xml"
+    ],
+    "canonical": "https://maker.example.org/kala",
+    "ldType": "Article",
+    "author": "Mira Example",
+    "wall": ""
+   },
+   "note": "HTML fallback"
+  },
+  {
+   "fn": "parseInstagramPage",
+   "in": [
+    {
+     "description": "1,234 Followers, 56 Following, 78 Posts",
+     "ogTitle": "Café (@example_handle_9x7) • Instagram photos",
+     "title": "",
+     "text": ""
+    },
+    "example_handle_9x7"
+   ],
+   "out": {
+    "handle": "example_handle_9x7",
+    "name": "Café",
+    "bio": "",
+    "followers": "1,234",
+    "following": "56",
+    "posts": "78",
+    "private": false,
+    "shown": false
+   }
+  },
+  {
+   "fn": "parseInstagramPage",
+   "in": [
+    {
+     "description": "This account is private",
+     "ogTitle": "",
+     "title": "",
+     "text": ""
+    },
+    "hidden_handle"
+   ],
+   "out": {
+    "handle": "hidden_handle",
+    "name": "",
+    "bio": "",
+    "followers": "",
+    "following": "",
+    "posts": "",
+    "private": true,
+    "shown": false
+   },
+   "note": "private account"
+  },
+  {
+   "fn": "parseInstagramPage",
+   "in": [
+    {},
+    ""
+   ],
+   "out": {
+    "handle": "",
+    "name": "",
+    "bio": "",
+    "followers": "",
+    "following": "",
+    "posts": "",
+    "private": false,
+    "shown": false
+   },
+   "note": "missing fields"
+  },
+  {
+   "fn": "parseGithub",
+   "in": [
+    {
+     "full_name": "example-owner/example-repo-9x7",
+     "description": "A café sample",
+     "topics": [
+      "design",
+      "कला"
+     ],
+     "language": "Dart",
+     "html_url": "https://example.org/sample",
+     "archived": false
+    }
+   ],
+   "out": {
+    "title": "example-owner/example-repo-9x7",
+    "ogTitle": "",
+    "site": "GitHub",
+    "description": "A café sample",
+    "ogType": "repo",
+    "lang": "",
+    "keywords": [
+     "design",
+     "कल",
+     "dart"
+    ],
+    "headings": [],
+    "text": "A café sample",
+    "rss": [],
+    "canonical": "https://example.org/sample",
+    "ldType": "",
+    "author": "",
+    "archived": false,
+    "wall": ""
+   }
+  },
+  {
+   "fn": "parseGithub",
+   "in": [
+    {
+     "login": "example_user_9x7",
+     "bio": "कला और café",
+     "blog": "https://example.org",
+     "topics": []
+    }
+   ],
+   "out": {
+    "title": "example_user_9x7",
+    "ogTitle": "",
+    "site": "GitHub",
+    "description": "कला और café",
+    "ogType": "profile",
+    "lang": "",
+    "keywords": [],
+    "headings": [],
+    "text": "कला और café . https://example.org",
+    "rss": [],
+    "canonical": "",
+    "ldType": "",
+    "author": "",
+    "archived": false,
+    "wall": ""
+   },
+   "note": "profile"
+  },
+  {
+   "fn": "parseGithub",
+   "in": [
+    null
+   ],
+   "out": null,
+   "note": "missing input"
+  },
+  {
+   "fn": "parseGithub",
+   "in": [
+    {
+     "message": "Not Found"
+    }
+   ],
+   "out": null,
+   "note": "error"
+  },
+  {
+   "fn": "parseWikipedia",
+   "in": [
+    {
+     "title": "कला",
+     "description": "Café sample",
+     "extract": "Some sample text.",
+     "lang": "hi"
+    }
+   ],
+   "out": {
+    "title": "कला",
+    "ogTitle": "",
+    "site": "Wikipedia",
+    "description": "Café sample",
+    "ogType": "article",
+    "lang": "hi",
+    "keywords": [],
+    "headings": [],
+    "text": "Some sample text.",
+    "rss": [],
+    "canonical": "",
+    "ldType": "",
+    "author": "",
+    "wall": ""
+   }
+  },
+  {
+   "fn": "parseWikipedia",
+   "in": [
+    {
+     "title": "",
+     "extract": "x"
+    }
+   ],
+   "out": null,
+   "note": "missing title"
+  },
+  {
+   "fn": "parseWikipedia",
+   "in": [
+    {
+     "title": "x",
+     "type": "https://mediawiki.org/wiki/HyperSwitch/errors/not_found"
+    }
+   ],
+   "out": null,
+   "note": "not found"
+  },
+  {
+   "fn": "parseHTML",
+   "in": [
+    "<html><head><title>Meta page</title><meta itemprop=\"description\" content=\"Item description\"><meta http-equiv=\"keywords\" content=\"one, two\"><script type=\"application/ld+json\">{broken</script><script type=\"application/ld+json\">{\"@type\":\"Organization\",\"description\":\"Org desc\",\"keywords\":\"org, keywords\"}</script></head><body><h1>Heading 0</h1><h2>Heading 1</h2><h3>Heading 2</h3><h4>Heading 3</h4><h5>Heading 4</h5><h6>Heading 5</h6><h7>Heading 6</h7><h8>Heading 7</h8><p>body text</p></body></html>",
+    "https://meta.example.org/"
+   ],
+   "out": {
+    "title": "Meta page",
+    "ogTitle": "",
+    "site": "",
+    "description": "Item description",
+    "ogType": "",
+    "lang": "",
+    "keywords": [
+     "one",
+     "two"
+    ],
+    "headings": [
+     "Heading 0",
+     "Heading 1",
+     "Heading 2"
+    ],
+    "text": "Heading 0 Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Heading 7 body text",
+    "rss": [],
+    "canonical": "",
+    "ldType": "Organization",
+    "author": "",
+    "wall": ""
+   },
+   "note": "itemprop and http-equiv meta, broken ld+json, 8 headings"
+  },
+  {
+   "fn": "parseHTML",
+   "in": [
+    "<!doctype html><html lang=\"hi\"><head>\n    <title>कला पत्रिका | Example</title>\n    <meta property=\"og:title\" content=\"कला पत्रिका\">\n    <meta name=\"description\" content=\"Café design notes &amp; more\">\n    <meta name=\"keywords\" content=\"कला, Design, design, café\">\n    <meta name=\"author\" content=\"Mira Example\">\n    <link rel=\"canonical\" href=\"/kala\">\n    <link rel=\"alternate\" type=\"application/rss+xml\" href=\"/feed.xml\">\n    <script type=\"application/ld+json\">{\"@type\":\"Article\",\"description\":\"Sample desc\",\"keywords\":[\"कला\"]}</script>\n  </head><body><main><h1>कला</h1><h2>Café &amp; notes</h2><p>sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text </p><a href=\"/x\">x</a></main></body></html>",
+    "not a base url"
+   ],
+   "out": {
+    "title": "कला पत्रिका | Example",
+    "ogTitle": "कला पत्रिका",
+    "site": "",
+    "description": "Café design notes & more",
+    "ogType": "",
+    "lang": "hi",
+    "keywords": [
+     "कल",
+     "design",
+     "café"
+    ],
+    "headings": [
+     "कला",
+     "Café & notes"
+    ],
+    "text": "कला Café & notes sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text x",
+    "rss": [],
+    "canonical": "",
+    "ldType": "Article",
+    "author": "Mira Example",
+    "wall": ""
+   },
+   "note": "invalid base url"
+  },
+  {
+   "fn": "tidyTitle",
+   "in": [
+    "A very long first part of the title - Example",
+    "example"
+   ],
+   "out": "A very long first part of the title",
+   "note": "long first part, short last part"
+  },
+  {
+   "fn": "tidyTitle",
+   "in": [
+    "Sample - Notes",
+    "sample notes"
+   ],
+   "out": "Sample",
+   "note": "site name contains the last part"
+  },
+  {
+   "fn": "parseReader",
+   "in": [
+    "# Just markdown\n\nNo url source line here **bold**.",
+    ""
+   ],
+   "out": {
+    "title": "",
+    "ogTitle": "",
+    "site": "",
+    "description": "",
+    "ogType": "",
+    "lang": "",
+    "keywords": [],
+    "headings": [
+     "Just markdown"
+    ],
+    "text": "Just markdown No url source line here bold .",
+    "rss": [],
+    "canonical": "",
+    "ldType": "",
+    "author": "",
+    "wall": ""
+   },
+   "note": "markdown without URL Source"
+  },
+  {
+   "fn": "parseInstagramPage",
+   "in": [
+    {
+     "description": "Café. on Instagram: \"My sample bio text here.\"",
+     "ogTitle": "Name (@some_handle_1) • Instagram",
+     "title": "",
+     "text": ""
+    },
+    "some_handle_1"
+   ],
+   "out": {
+    "handle": "some_handle_1",
+    "name": "Name",
+    "bio": "My sample bio text here.",
+    "followers": "",
+    "following": "",
+    "posts": "",
+    "private": false,
+    "shown": true
+   },
+   "note": "bio from the description"
+  },
+  {
+   "fn": "parseHTML",
+   "in": [
+    "<html><head><title>Quoted</title><meta name='description' content='Single quoted'><meta name=generator content=Unquoted></head><body><p>text</p></body></html>",
+    "https://q.example.org/"
+   ],
+   "out": {
+    "title": "Quoted",
+    "ogTitle": "",
+    "site": "",
+    "description": "Single quoted",
+    "ogType": "",
+    "lang": "",
+    "keywords": [],
+    "headings": [],
+    "text": "text",
+    "rss": [],
+    "canonical": "",
+    "ldType": "",
+    "author": "",
+    "wall": ""
+   },
+   "note": "single-quoted and unquoted meta attributes"
+  },
+  {
+   "fn": "parseHTML",
+   "in": [
+    "<html><head><title>LD</title><script type=\"application/ld+json\">{not json</script><script type=\"application/ld+json\">{\"@type\":\"Organization\",\"name\":\"Org\",\"description\":\"Org description\",\"keywords\":\"org, keywords\"}</script></head><body><h1>Heading 0</h1><h2>Heading 1</h2><h3>Heading 2</h3><h1>Heading 3</h1><h2>Heading 4</h2><h3>Heading 5</h3><h1>Heading 6</h1><h2>Heading 7</h2><h3>Heading 8</h3></body></html>",
+    "https://ld.example.org/"
+   ],
+   "out": {
+    "title": "LD",
+    "ogTitle": "",
+    "site": "",
+    "description": "Org description",
+    "ogType": "",
+    "lang": "",
+    "keywords": [
+     "org",
+     "keywords"
+    ],
+    "headings": [
+     "Heading 0",
+     "Heading 1",
+     "Heading 2",
+     "Heading 3",
+     "Heading 4",
+     "Heading 5",
+     "Heading 6",
+     "Heading 7"
+    ],
+    "text": "Heading 0 Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Heading 7 Heading 8",
+    "rss": [],
+    "canonical": "",
+    "ldType": "Organization",
+    "author": "",
+    "wall": ""
+   },
+   "note": "broken ld+json, organization fallback, 9 headings"
+  },
+  {
+   "fn": "parseReader",
+   "in": [
+    "Title: T\nMarkdown Content:\n# One\n## Two\n### Three\n# Four\n## Five\n### Six\n# Seven\n## Eight\n### Nine\nSome text.",
+    ""
+   ],
+   "out": {
+    "title": "T",
+    "ogTitle": "",
+    "site": "",
+    "description": "",
+    "ogType": "",
+    "lang": "",
+    "keywords": [],
+    "headings": [
+     "One",
+     "Two",
+     "Three",
+     "Four",
+     "Five",
+     "Six",
+     "Seven",
+     "Eight"
+    ],
+    "text": "One Two Three Four Five Six Seven Eight Nine Some text.",
+    "rss": [],
+    "canonical": "",
+    "ldType": "",
+    "author": "",
+    "wall": ""
+   },
+   "note": "markdown with 9 headings"
+  },
+  {
+   "fn": "parseReader",
+   "in": [
+    "{ broken json",
+    ""
+   ],
+   "out": {
+    "title": "",
+    "ogTitle": "",
+    "site": "",
+    "description": "",
+    "ogType": "",
+    "lang": "",
+    "keywords": [],
+    "headings": [],
+    "text": "{ broken json",
+    "rss": [],
+    "canonical": "",
+    "ldType": "",
+    "author": "",
+    "wall": ""
+   },
+   "note": "broken JSON falls back to markdown"
+  },
+  {
+   "fn": "parseReader",
+   "in": [
+    "{\"code\":500}",
+    ""
+   ],
+   "out": {
+    "error": {
+     "code": 500,
+     "msg": ""
+    }
+   },
+   "note": "error JSON without a message"
+  },
+  {
+   "fn": "parseReader",
+   "in": [
+    "{\"data\":{\"title\":\"Only title\"}}",
+    ""
+   ],
+   "out": {
+    "title": "Only title",
+    "ogTitle": "",
+    "site": "",
+    "description": "",
+    "ogType": "",
+    "lang": "",
+    "keywords": [],
+    "headings": [],
+    "text": "",
+    "rss": [],
+    "canonical": "",
+    "ldType": "",
+    "author": "",
+    "wall": ""
+   },
+   "note": "JSON response without content"
+  },
+  {
+   "fn": "parseReader",
+   "in": [
+    "Title: Sample\nURL Source: https://reader.example.org/page\nSome plain text.",
+    ""
+   ],
+   "out": {
+    "title": "Sample",
+    "ogTitle": "",
+    "site": "",
+    "description": "",
+    "ogType": "",
+    "lang": "",
+    "keywords": [],
+    "headings": [],
+    "text": "Title: Sample URL Source: Some plain text.",
+    "rss": [],
+    "canonical": "https://reader.example.org/page",
+    "ldType": "",
+    "author": "",
+    "wall": ""
+   },
+   "note": "URL Source without Markdown Content"
+  },
+  {
+   "fn": "parseReader",
+   "in": [
+    "Title: T\nWarning: Target URL returned error 404: Not found\nMarkdown Content:\n# H\n\nText",
+    ""
+   ],
+   "out": {
+    "title": "T",
+    "ogTitle": "",
+    "site": "",
+    "description": "",
+    "ogType": "",
+    "lang": "",
+    "keywords": [],
+    "headings": [
+     "H"
+    ],
+    "text": "H Text",
+    "rss": [],
+    "canonical": "",
+    "ldType": "",
+    "author": "",
+    "targetError": {
+     "code": 404,
+     "msg": "Not found"
+    },
+    "wall": ""
+   },
+   "note": "reader warning line"
+  },
+  {
+   "fn": "parseGithub",
+   "in": [
+    {
+     "login": "user_9x7"
+    }
+   ],
+   "out": {
+    "title": "user_9x7",
+    "ogTitle": "",
+    "site": "GitHub",
+    "description": "",
+    "ogType": "profile",
+    "lang": "",
+    "keywords": [],
+    "headings": [],
+    "text": "",
+    "rss": [],
+    "canonical": "",
+    "ldType": "",
+    "author": "",
+    "archived": false,
+    "wall": ""
+   },
+   "note": "github profile without description, bio or owner"
+  },
+  {
+   "fn": "parseWikipedia",
+   "in": [
+    {
+     "title": "Topic"
+    }
+   ],
+   "out": {
+    "title": "Topic",
+    "ogTitle": "",
+    "site": "Wikipedia",
+    "description": "",
+    "ogType": "article",
+    "lang": "",
+    "keywords": [],
+    "headings": [],
+    "text": "",
+    "rss": [],
+    "canonical": "",
+    "ldType": "",
+    "author": "",
+    "wall": ""
+   },
+   "note": "wikipedia without description, extract or lang"
+  },
+  {
+   "fn": "parseHTML",
+   "in": [
+    "<html><head><title>LD array</title><script type=\"application/ld+json\">[null, {\"description\":\"No type at all\"}, {\"@type\":\"Organization\",\"description\":\"Array org description\",\"keywords\":\"array, keywords\"}]</script></head><body><p>text</p></body></html>",
+    "https://lda.example.org/"
+   ],
+   "out": {
+    "title": "LD array",
+    "ogTitle": "",
+    "site": "",
+    "description": "Array org description",
+    "ogType": "",
+    "lang": "",
+    "keywords": [
+     "array",
+     "keywords"
+    ],
+    "headings": [],
+    "text": "text",
+    "rss": [],
+    "canonical": "",
+    "ldType": "Organization",
+    "author": "",
+    "wall": ""
+   },
+   "note": "JSON-LD as an array, a non-object entry and an entry without @type"
+  },
+  {
+   "fn": "parseHTML",
+   "in": [
+    "<html><head><title>LD graph</title><script type=\"application/ld+json\">{\"@graph\":[{\"@type\":\"WebSite\",\"description\":\"Graph description\"}]}</script></head><body><p>text</p></body></html>",
+    "https://ldg.example.org/"
+   ],
+   "out": {
+    "title": "LD graph",
+    "ogTitle": "",
+    "site": "",
+    "description": "Graph description",
+    "ogType": "",
+    "lang": "",
+    "keywords": [],
+    "headings": [],
+    "text": "text",
+    "rss": [],
+    "canonical": "",
+    "ldType": "WebSite",
+    "author": "",
+    "wall": ""
+   },
+   "note": "JSON-LD with an @graph"
+  },
+  {
+   "fn": "parseReader",
+   "in": [
+    "{\"data\":{\"description\":\"Café notes\"}}",
+    ""
+   ],
+   "out": {
+    "title": "",
+    "ogTitle": "",
+    "site": "",
+    "description": "Café notes",
+    "ogType": "",
+    "lang": "",
+    "keywords": [],
+    "headings": [],
+    "text": "",
+    "rss": [],
+    "canonical": "",
+    "ldType": "",
+    "author": "",
+    "wall": ""
+   },
+   "note": "reader JSON without a title"
+  },
+  {
+   "fn": "parseGithub",
+   "in": [
+    {
+     "description": "Café sample",
+     "owner": {
+      "login": "owner_login"
+     }
+    }
+   ],
+   "out": {
+    "title": "",
+    "ogTitle": "",
+    "site": "GitHub",
+    "description": "Café sample",
+    "ogType": "profile",
+    "lang": "",
+    "keywords": [],
+    "headings": [],
+    "text": "Café sample",
+    "rss": [],
+    "canonical": "",
+    "ldType": "",
+    "author": "owner_login",
+    "archived": false,
+    "wall": ""
+   },
+   "note": "github payload with an owner and no full_name, name or login"
+  },
+  {
+   "fn": "parseGithub",
+   "in": [
+    {
+     "name": "user_name",
+     "description": "Café sample"
+    }
+   ],
+   "out": {
+    "title": "user_name",
+    "ogTitle": "",
+    "site": "GitHub",
+    "description": "Café sample",
+    "ogType": "profile",
+    "lang": "",
+    "keywords": [],
+    "headings": [],
+    "text": "Café sample",
+    "rss": [],
+    "canonical": "",
+    "ldType": "",
+    "author": "",
+    "archived": false,
+    "wall": ""
+   },
+   "note": "github payload with a name and no full_name"
+  }
+ ]
+}

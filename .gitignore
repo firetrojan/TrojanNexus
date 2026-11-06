@@ -1,0 +1,22 @@
+# build output and local junk
+app/build/
+app/.dart_tool/
+app/.flutter-plugins*
+app/.packages
+node_modules/
+*.log
+.DS_Store
+# written by tools/ci_log.sh on this machine (agents read them; they are not history)
+docs/CI_LAST.txt
+docs/CI_FULL.txt
+# secrets and personal data must never be committed
+*.jks
+*.keystore
+key.properties
+.env
+.env.*
+.git-credentials
+*.token
+# real backups of the owner - never in this folder
+nexus-backup*.json
+my-*.json

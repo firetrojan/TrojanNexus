@@ -1,0 +1,3121 @@
+{
+ "module": "rules",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "normRule",
+   "in": [
+    null
+   ],
+   "out": null
+  },
+  {
+   "fn": "normRule",
+   "in": [
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "tag",
+       "op": "has",
+       "v": "#design"
+      }
+     ]
+    }
+   ],
+   "out": {
+    "match": "all",
+    "conds": [
+     {
+      "f": "tag",
+      "op": "has",
+      "v": "#design"
+     }
+    ]
+   }
+  },
+  {
+   "fn": "normRule",
+   "in": [
+    {
+     "match": "any",
+     "conds": [
+      {
+       "f": "type",
+       "op": "is",
+       "v": "docs"
+      },
+      {
+       "f": "tag",
+       "op": "has",
+       "v": "video"
+      }
+     ]
+    }
+   ],
+   "out": {
+    "match": "any",
+    "conds": [
+     {
+      "f": "type",
+      "op": "is",
+      "v": "docs"
+     },
+     {
+      "f": "tag",
+      "op": "has",
+      "v": "video"
+     }
+    ]
+   }
+  },
+  {
+   "fn": "normRule",
+   "in": [
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "status",
+       "op": "is",
+       "v": "archived"
+      }
+     ]
+    }
+   ],
+   "out": {
+    "match": "all",
+    "conds": [
+     {
+      "f": "status",
+      "op": "is",
+      "v": "archived"
+     }
+    ]
+   }
+  },
+  {
+   "fn": "normRule",
+   "in": [
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "tag",
+       "op": "nohas",
+       "v": "design"
+      },
+      {
+       "f": "draft",
+       "op": "no",
+       "v": ""
+      }
+     ]
+    }
+   ],
+   "out": {
+    "match": "all",
+    "conds": [
+     {
+      "f": "tag",
+      "op": "nohas",
+      "v": "design"
+     },
+     {
+      "f": "draft",
+      "op": "no",
+      "v": ""
+     }
+    ]
+   }
+  },
+  {
+   "fn": "normRule",
+   "in": [
+    {
+     "conds": [
+      {
+       "f": "text",
+       "op": "contains",
+       "v": "slides"
+      },
+      {
+       "f": "bad field!",
+       "op": "is",
+       "v": "x"
+      },
+      {
+       "f": "type",
+       "op": "is",
+       "v": ""
+      },
+      {
+       "f": "nope",
+       "op": "zzz",
+       "v": "1"
+      }
+     ]
+    }
+   ],
+   "out": {
+    "match": "all",
+    "conds": [
+     {
+      "f": "text",
+      "op": "contains",
+      "v": "slides"
+     }
+    ]
+   }
+  },
+  {
+   "fn": "normRule",
+   "in": [
+    {
+     "match": "all",
+     "conds": []
+    }
+   ],
+   "out": null
+  },
+  {
+   "fn": "normRule",
+   "in": [
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "lastChecked",
+       "op": "older",
+       "v": "20"
+      }
+     ]
+    }
+   ],
+   "out": {
+    "match": "all",
+    "conds": [
+     {
+      "f": "lastChecked",
+      "op": "older",
+      "v": "20"
+     }
+    ]
+   }
+  },
+  {
+   "fn": "normRule",
+   "in": [
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "limit",
+       "op": "filled",
+       "v": ""
+      }
+     ]
+    }
+   ],
+   "out": {
+    "match": "all",
+    "conds": [
+     {
+      "f": "limit",
+      "op": "filled",
+      "v": ""
+     }
+    ]
+   }
+  },
+  {
+   "fn": "matches",
+   "in": [
+    "$RS",
+    null,
+    "2026-10-31"
+   ],
+   "out": [],
+   "note": "in[0] is the shared link list; out = ids of the links that match"
+  },
+  {
+   "fn": "matches",
+   "in": [
+    "$RS",
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "tag",
+       "op": "has",
+       "v": "#design"
+      }
+     ]
+    },
+    "2026-10-31"
+   ],
+   "out": [
+    "r4",
+    "r5",
+    "r6",
+    "r7",
+    "r8"
+   ],
+   "note": "in[0] is the shared link list; out = ids of the links that match"
+  },
+  {
+   "fn": "matches",
+   "in": [
+    "$RS",
+    {
+     "match": "any",
+     "conds": [
+      {
+       "f": "type",
+       "op": "is",
+       "v": "docs"
+      },
+      {
+       "f": "tag",
+       "op": "has",
+       "v": "video"
+      }
+     ]
+    },
+    "2026-10-31"
+   ],
+   "out": [
+    "r2",
+    "r9",
+    "r12"
+   ],
+   "note": "in[0] is the shared link list; out = ids of the links that match"
+  },
+  {
+   "fn": "matches",
+   "in": [
+    "$RS",
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "status",
+       "op": "is",
+       "v": "archived"
+      }
+     ]
+    },
+    "2026-10-31"
+   ],
+   "out": [
+    "r10"
+   ],
+   "note": "in[0] is the shared link list; out = ids of the links that match"
+  },
+  {
+   "fn": "matches",
+   "in": [
+    "$RS",
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "tag",
+       "op": "nohas",
+       "v": "design"
+      },
+      {
+       "f": "draft",
+       "op": "no",
+       "v": ""
+      }
+     ]
+    },
+    "2026-10-31"
+   ],
+   "out": [
+    "r1",
+    "r2",
+    "r3",
+    "r9",
+    "r11",
+    "r12",
+    "r14",
+    "r15",
+    "r16"
+   ],
+   "note": "in[0] is the shared link list; out = ids of the links that match"
+  },
+  {
+   "fn": "matches",
+   "in": [
+    "$RS",
+    {
+     "conds": [
+      {
+       "f": "text",
+       "op": "contains",
+       "v": "slides"
+      },
+      {
+       "f": "bad field!",
+       "op": "is",
+       "v": "x"
+      },
+      {
+       "f": "type",
+       "op": "is",
+       "v": ""
+      },
+      {
+       "f": "nope",
+       "op": "zzz",
+       "v": "1"
+      }
+     ]
+    },
+    "2026-10-31"
+   ],
+   "out": [],
+   "note": "in[0] is the shared link list; out = ids of the links that match"
+  },
+  {
+   "fn": "matches",
+   "in": [
+    "$RS",
+    {
+     "match": "all",
+     "conds": []
+    },
+    "2026-10-31"
+   ],
+   "out": [],
+   "note": "in[0] is the shared link list; out = ids of the links that match"
+  },
+  {
+   "fn": "matches",
+   "in": [
+    "$RS",
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "lastChecked",
+       "op": "older",
+       "v": "20"
+      }
+     ]
+    },
+    "2026-10-31"
+   ],
+   "out": [
+    "r1",
+    "r2",
+    "r3",
+    "r4",
+    "r5",
+    "r6",
+    "r7",
+    "r8",
+    "r9",
+    "r11",
+    "r12",
+    "r15",
+    "r16"
+   ],
+   "note": "in[0] is the shared link list; out = ids of the links that match"
+  },
+  {
+   "fn": "matches",
+   "in": [
+    "$RS",
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "limit",
+       "op": "filled",
+       "v": ""
+      }
+     ]
+    },
+    "2026-10-31"
+   ],
+   "out": [],
+   "note": "in[0] is the shared link list; out = ids of the links that match"
+  },
+  {
+   "fn": "OPS",
+   "in": [],
+   "out": {
+    "is": "is",
+    "not": "is not",
+    "contains": "contains",
+    "has": "has the tag",
+    "nohas": "does not have the tag",
+    "filled": "is filled in",
+    "empty": "is empty",
+    "soon": "is within the next (days) or has passed",
+    "older": "not checked for more than (days)",
+    "yes": "is yes",
+    "no": "is no"
+   },
+   "note": "constant: the Dart value must equal this"
+  },
+  {
+   "fn": "PRESETS",
+   "in": [],
+   "out": [
+    {
+     "id": "free-ai",
+     "label": "Free AI sources",
+     "rule": {
+      "match": "all",
+      "conds": [
+       {
+        "f": "type",
+        "op": "is",
+        "v": "ai-source"
+       },
+       {
+        "f": "cost",
+        "op": "not",
+        "v": "Paid"
+       }
+      ]
+     }
+    },
+    {
+     "id": "attention",
+     "label": "Needs attention this week",
+     "rule": {
+      "match": "any",
+      "conds": [
+       {
+        "f": "resets",
+        "op": "soon",
+        "v": "7"
+       },
+       {
+        "f": "trialEnd",
+        "op": "soon",
+        "v": "7"
+       },
+       {
+        "f": "lastChecked",
+        "op": "older",
+        "v": "60"
+       }
+      ]
+     }
+    },
+    {
+     "id": "trials",
+     "label": "Trials running",
+     "rule": {
+      "match": "all",
+      "conds": [
+       {
+        "f": "status",
+        "op": "is",
+        "v": "testing"
+       }
+      ]
+     }
+    },
+    {
+     "id": "totry",
+     "label": "Still to try",
+     "rule": {
+      "match": "all",
+      "conds": [
+       {
+        "f": "status",
+        "op": "is",
+        "v": "candidate"
+       }
+      ]
+     }
+    },
+    {
+     "id": "ask",
+     "label": "Places to ask people",
+     "rule": {
+      "match": "all",
+      "conds": [
+       {
+        "f": "type",
+        "op": "is",
+        "v": "community"
+       }
+      ]
+     }
+    },
+    {
+     "id": "freephone",
+     "label": "Free and works on a phone",
+     "rule": {
+      "match": "all",
+      "conds": [
+       {
+        "f": "cost",
+        "op": "is",
+        "v": "Free"
+       },
+       {
+        "f": "device",
+        "op": "not",
+        "v": "Computer"
+       }
+      ]
+     }
+    }
+   ],
+   "note": "constant: the Dart value must equal this"
+  },
+  {
+   "fn": "needsValue",
+   "in": [
+    "is"
+   ],
+   "out": true
+  },
+  {
+   "fn": "needsValue",
+   "in": [
+    "not"
+   ],
+   "out": true
+  },
+  {
+   "fn": "needsValue",
+   "in": [
+    "contains"
+   ],
+   "out": true
+  },
+  {
+   "fn": "needsValue",
+   "in": [
+    "has"
+   ],
+   "out": true
+  },
+  {
+   "fn": "needsValue",
+   "in": [
+    "nohas"
+   ],
+   "out": true
+  },
+  {
+   "fn": "needsValue",
+   "in": [
+    "filled"
+   ],
+   "out": false
+  },
+  {
+   "fn": "needsValue",
+   "in": [
+    "empty"
+   ],
+   "out": false
+  },
+  {
+   "fn": "needsValue",
+   "in": [
+    "soon"
+   ],
+   "out": true
+  },
+  {
+   "fn": "needsValue",
+   "in": [
+    "older"
+   ],
+   "out": true
+  },
+  {
+   "fn": "needsValue",
+   "in": [
+    "yes"
+   ],
+   "out": false
+  },
+  {
+   "fn": "needsValue",
+   "in": [
+    "no"
+   ],
+   "out": false
+  },
+  {
+   "fn": "needsValue",
+   "in": [
+    "bogus"
+   ],
+   "out": false
+  },
+  {
+   "fn": "opsFor",
+   "in": [
+    "choice"
+   ],
+   "out": [
+    "is",
+    "not",
+    "filled",
+    "empty"
+   ]
+  },
+  {
+   "fn": "opsFor",
+   "in": [
+    "text"
+   ],
+   "out": [
+    "contains",
+    "is",
+    "not",
+    "filled",
+    "empty"
+   ]
+  },
+  {
+   "fn": "opsFor",
+   "in": [
+    "tags"
+   ],
+   "out": [
+    "has",
+    "nohas"
+   ]
+  },
+  {
+   "fn": "opsFor",
+   "in": [
+    "date"
+   ],
+   "out": [
+    "soon",
+    "filled",
+    "empty"
+   ]
+  },
+  {
+   "fn": "opsFor",
+   "in": [
+    "age"
+   ],
+   "out": [
+    "older"
+   ]
+  },
+  {
+   "fn": "opsFor",
+   "in": [
+    "bool"
+   ],
+   "out": [
+    "yes",
+    "no"
+   ]
+  },
+  {
+   "fn": "opsFor",
+   "in": [
+    "zzz"
+   ],
+   "out": []
+  },
+  {
+   "fn": "ruleFields",
+   "in": [
+    {}
+   ],
+   "out": [
+    {
+     "key": "type",
+     "label": "Type",
+     "kind": "choice",
+     "options": []
+    },
+    {
+     "key": "status",
+     "label": "Stage",
+     "kind": "choice",
+     "options": []
+    },
+    {
+     "key": "tag",
+     "label": "Tag",
+     "kind": "tags",
+     "options": null
+    },
+    {
+     "key": "topic",
+     "label": "Topic (what it is about)",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "health",
+       "l": "Health & wellness"
+      },
+      {
+       "v": "fitness",
+       "l": "Fitness & training"
+      },
+      {
+       "v": "nature",
+       "l": "Nature & wildlife"
+      },
+      {
+       "v": "space",
+       "l": "Space & astronomy"
+      },
+      {
+       "v": "science",
+       "l": "Science & research"
+      },
+      {
+       "v": "maths",
+       "l": "Maths"
+      },
+      {
+       "v": "tech",
+       "l": "Technology & coding"
+      },
+      {
+       "v": "ai",
+       "l": "AI & machine learning"
+      },
+      {
+       "v": "business",
+       "l": "Business & startups"
+      },
+      {
+       "v": "finance",
+       "l": "Money & investing"
+      },
+      {
+       "v": "education",
+       "l": "Study & exams"
+      },
+      {
+       "v": "jobs",
+       "l": "Jobs & opportunities"
+      },
+      {
+       "v": "languages",
+       "l": "Language learning"
+      },
+      {
+       "v": "art",
+       "l": "Art & illustration"
+      },
+      {
+       "v": "design",
+       "l": "Design"
+      },
+      {
+       "v": "animation",
+       "l": "Animation & film"
+      },
+      {
+       "v": "photography",
+       "l": "Photography & video"
+      },
+      {
+       "v": "music",
+       "l": "Music & audio"
+      },
+      {
+       "v": "books",
+       "l": "Books & writing"
+      },
+      {
+       "v": "history",
+       "l": "History & culture"
+      },
+      {
+       "v": "mind",
+       "l": "Philosophy & psychology"
+      },
+      {
+       "v": "motivation",
+       "l": "Motivation & self-improvement"
+      },
+      {
+       "v": "news",
+       "l": "News & politics"
+      },
+      {
+       "v": "food",
+       "l": "Food & cooking"
+      },
+      {
+       "v": "travel",
+       "l": "Travel & places"
+      },
+      {
+       "v": "fashion",
+       "l": "Fashion & beauty"
+      },
+      {
+       "v": "sports",
+       "l": "Sports"
+      },
+      {
+       "v": "gaming",
+       "l": "Gaming"
+      },
+      {
+       "v": "humor",
+       "l": "Humour & memes"
+      },
+      {
+       "v": "spirit",
+       "l": "Spirituality & religion"
+      },
+      {
+       "v": "machines",
+       "l": "Cars, bikes & aviation"
+      },
+      {
+       "v": "diy",
+       "l": "DIY & crafts"
+      },
+      {
+       "v": "society",
+       "l": "Society & causes"
+      },
+      {
+       "v": "pets",
+       "l": "Pets"
+      }
+     ]
+    },
+    {
+     "key": "cadence",
+     "label": "Check schedule",
+     "kind": "choice",
+     "options": []
+    },
+    {
+     "key": "draft",
+     "label": "To review",
+     "kind": "bool",
+     "options": null
+    },
+    {
+     "key": "text",
+     "label": "Name, link or notes",
+     "kind": "text",
+     "options": null
+    },
+    {
+     "key": "lastChecked",
+     "label": "Last checked",
+     "kind": "age",
+     "options": null
+    },
+    {
+     "key": "trialEnd",
+     "label": "Trial ends",
+     "kind": "date",
+     "options": null
+    },
+    {
+     "key": "cost",
+     "label": "Cost",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "Free",
+       "l": "Free"
+      },
+      {
+       "v": "Free with limits",
+       "l": "Free with limits"
+      },
+      {
+       "v": "Paid",
+       "l": "Paid"
+      },
+      {
+       "v": "Unknown",
+       "l": "Unknown"
+      }
+     ]
+    },
+    {
+     "key": "login",
+     "label": "Login needed",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "No",
+       "l": "No"
+      },
+      {
+       "v": "Yes",
+       "l": "Yes"
+      },
+      {
+       "v": "Not sure",
+       "l": "Not sure"
+      }
+     ]
+    },
+    {
+     "key": "device",
+     "label": "Works on",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "Phone",
+       "l": "Phone"
+      },
+      {
+       "v": "Computer",
+       "l": "Computer"
+      },
+      {
+       "v": "Both",
+       "l": "Both"
+      }
+     ]
+    },
+    {
+     "key": "limit",
+     "label": "Free limit",
+     "kind": "text",
+     "options": null
+    },
+    {
+     "key": "resets",
+     "label": "Limit resets or offer ends",
+     "kind": "date",
+     "options": null
+    },
+    {
+     "key": "models",
+     "label": "Models or features you use",
+     "kind": "text",
+     "options": null
+    },
+    {
+     "key": "handle",
+     "label": "Handle or channel name",
+     "kind": "text",
+     "options": null
+    },
+    {
+     "key": "purpose",
+     "label": "What you use it for",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "Reminders",
+       "l": "Reminders"
+      },
+      {
+       "v": "Opportunities",
+       "l": "Opportunities"
+      },
+      {
+       "v": "Learning",
+       "l": "Learning"
+      },
+      {
+       "v": "Inspiration",
+       "l": "Inspiration"
+      },
+      {
+       "v": "News",
+       "l": "News"
+      }
+     ]
+    },
+    {
+     "key": "platform",
+     "label": "Platform",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "Discord",
+       "l": "Discord"
+      },
+      {
+       "v": "WhatsApp",
+       "l": "WhatsApp"
+      },
+      {
+       "v": "Telegram",
+       "l": "Telegram"
+      },
+      {
+       "v": "Slack",
+       "l": "Slack"
+      },
+      {
+       "v": "Forum",
+       "l": "Forum"
+      },
+      {
+       "v": "Other",
+       "l": "Other"
+      }
+     ]
+    },
+    {
+     "key": "askFor",
+     "label": "Ask here about",
+     "kind": "text",
+     "options": null
+    },
+    {
+     "key": "focus",
+     "label": "Watch it for",
+     "kind": "text",
+     "options": null
+    },
+    {
+     "key": "watch",
+     "label": "How often you watch",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "Daily",
+       "l": "Daily"
+      },
+      {
+       "v": "Weekly",
+       "l": "Weekly"
+      },
+      {
+       "v": "When needed",
+       "l": "When needed"
+      }
+     ]
+    }
+   ],
+   "note": "a field without options has options: null"
+  },
+  {
+   "fn": "ruleFields",
+   "in": [
+    {
+     "types": [
+      "web-tool",
+      "docs"
+     ],
+     "statuses": [
+      {
+       "v": "active",
+       "l": "Active"
+      }
+     ],
+     "cadences": [
+      "daily"
+     ],
+     "custom": [
+      {
+       "key": "c_rating",
+       "label": "Rating",
+       "kind": "choice",
+       "options": [
+        "Good",
+        "Bad"
+       ],
+       "types": []
+      },
+      {
+       "key": "c_notes",
+       "label": "Notes",
+       "kind": "text",
+       "options": [],
+       "types": [
+        "web-tool",
+        "nope"
+       ]
+      },
+      {
+       "key": "c_x",
+       "label": "X",
+       "kind": "date",
+       "options": [],
+       "types": []
+      }
+     ]
+    }
+   ],
+   "out": [
+    {
+     "key": "type",
+     "label": "Type",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "web-tool",
+       "l": "web-tool"
+      },
+      {
+       "v": "docs",
+       "l": "docs"
+      }
+     ]
+    },
+    {
+     "key": "status",
+     "label": "Stage",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "active",
+       "l": "Active"
+      }
+     ]
+    },
+    {
+     "key": "tag",
+     "label": "Tag",
+     "kind": "tags",
+     "options": null
+    },
+    {
+     "key": "topic",
+     "label": "Topic (what it is about)",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "health",
+       "l": "Health & wellness"
+      },
+      {
+       "v": "fitness",
+       "l": "Fitness & training"
+      },
+      {
+       "v": "nature",
+       "l": "Nature & wildlife"
+      },
+      {
+       "v": "space",
+       "l": "Space & astronomy"
+      },
+      {
+       "v": "science",
+       "l": "Science & research"
+      },
+      {
+       "v": "maths",
+       "l": "Maths"
+      },
+      {
+       "v": "tech",
+       "l": "Technology & coding"
+      },
+      {
+       "v": "ai",
+       "l": "AI & machine learning"
+      },
+      {
+       "v": "business",
+       "l": "Business & startups"
+      },
+      {
+       "v": "finance",
+       "l": "Money & investing"
+      },
+      {
+       "v": "education",
+       "l": "Study & exams"
+      },
+      {
+       "v": "jobs",
+       "l": "Jobs & opportunities"
+      },
+      {
+       "v": "languages",
+       "l": "Language learning"
+      },
+      {
+       "v": "art",
+       "l": "Art & illustration"
+      },
+      {
+       "v": "design",
+       "l": "Design"
+      },
+      {
+       "v": "animation",
+       "l": "Animation & film"
+      },
+      {
+       "v": "photography",
+       "l": "Photography & video"
+      },
+      {
+       "v": "music",
+       "l": "Music & audio"
+      },
+      {
+       "v": "books",
+       "l": "Books & writing"
+      },
+      {
+       "v": "history",
+       "l": "History & culture"
+      },
+      {
+       "v": "mind",
+       "l": "Philosophy & psychology"
+      },
+      {
+       "v": "motivation",
+       "l": "Motivation & self-improvement"
+      },
+      {
+       "v": "news",
+       "l": "News & politics"
+      },
+      {
+       "v": "food",
+       "l": "Food & cooking"
+      },
+      {
+       "v": "travel",
+       "l": "Travel & places"
+      },
+      {
+       "v": "fashion",
+       "l": "Fashion & beauty"
+      },
+      {
+       "v": "sports",
+       "l": "Sports"
+      },
+      {
+       "v": "gaming",
+       "l": "Gaming"
+      },
+      {
+       "v": "humor",
+       "l": "Humour & memes"
+      },
+      {
+       "v": "spirit",
+       "l": "Spirituality & religion"
+      },
+      {
+       "v": "machines",
+       "l": "Cars, bikes & aviation"
+      },
+      {
+       "v": "diy",
+       "l": "DIY & crafts"
+      },
+      {
+       "v": "society",
+       "l": "Society & causes"
+      },
+      {
+       "v": "pets",
+       "l": "Pets"
+      }
+     ]
+    },
+    {
+     "key": "cadence",
+     "label": "Check schedule",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "daily",
+       "l": "daily"
+      }
+     ]
+    },
+    {
+     "key": "draft",
+     "label": "To review",
+     "kind": "bool",
+     "options": null
+    },
+    {
+     "key": "text",
+     "label": "Name, link or notes",
+     "kind": "text",
+     "options": null
+    },
+    {
+     "key": "lastChecked",
+     "label": "Last checked",
+     "kind": "age",
+     "options": null
+    },
+    {
+     "key": "trialEnd",
+     "label": "Trial ends",
+     "kind": "date",
+     "options": null
+    },
+    {
+     "key": "cost",
+     "label": "Cost",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "Free",
+       "l": "Free"
+      },
+      {
+       "v": "Free with limits",
+       "l": "Free with limits"
+      },
+      {
+       "v": "Paid",
+       "l": "Paid"
+      },
+      {
+       "v": "Unknown",
+       "l": "Unknown"
+      }
+     ]
+    },
+    {
+     "key": "login",
+     "label": "Login needed",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "No",
+       "l": "No"
+      },
+      {
+       "v": "Yes",
+       "l": "Yes"
+      },
+      {
+       "v": "Not sure",
+       "l": "Not sure"
+      }
+     ]
+    },
+    {
+     "key": "device",
+     "label": "Works on",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "Phone",
+       "l": "Phone"
+      },
+      {
+       "v": "Computer",
+       "l": "Computer"
+      },
+      {
+       "v": "Both",
+       "l": "Both"
+      }
+     ]
+    },
+    {
+     "key": "limit",
+     "label": "Free limit",
+     "kind": "text",
+     "options": null
+    },
+    {
+     "key": "resets",
+     "label": "Limit resets or offer ends",
+     "kind": "date",
+     "options": null
+    },
+    {
+     "key": "models",
+     "label": "Models or features you use",
+     "kind": "text",
+     "options": null
+    },
+    {
+     "key": "handle",
+     "label": "Handle or channel name",
+     "kind": "text",
+     "options": null
+    },
+    {
+     "key": "purpose",
+     "label": "What you use it for",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "Reminders",
+       "l": "Reminders"
+      },
+      {
+       "v": "Opportunities",
+       "l": "Opportunities"
+      },
+      {
+       "v": "Learning",
+       "l": "Learning"
+      },
+      {
+       "v": "Inspiration",
+       "l": "Inspiration"
+      },
+      {
+       "v": "News",
+       "l": "News"
+      }
+     ]
+    },
+    {
+     "key": "platform",
+     "label": "Platform",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "Discord",
+       "l": "Discord"
+      },
+      {
+       "v": "WhatsApp",
+       "l": "WhatsApp"
+      },
+      {
+       "v": "Telegram",
+       "l": "Telegram"
+      },
+      {
+       "v": "Slack",
+       "l": "Slack"
+      },
+      {
+       "v": "Forum",
+       "l": "Forum"
+      },
+      {
+       "v": "Other",
+       "l": "Other"
+      }
+     ]
+    },
+    {
+     "key": "askFor",
+     "label": "Ask here about",
+     "kind": "text",
+     "options": null
+    },
+    {
+     "key": "focus",
+     "label": "Watch it for",
+     "kind": "text",
+     "options": null
+    },
+    {
+     "key": "watch",
+     "label": "How often you watch",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "Daily",
+       "l": "Daily"
+      },
+      {
+       "v": "Weekly",
+       "l": "Weekly"
+      },
+      {
+       "v": "When needed",
+       "l": "When needed"
+      }
+     ]
+    },
+    {
+     "key": "c_rating",
+     "label": "Rating",
+     "kind": "choice",
+     "options": [
+      {
+       "v": "Good",
+       "l": "Good"
+      },
+      {
+       "v": "Bad",
+       "l": "Bad"
+      }
+     ]
+    },
+    {
+     "key": "c_notes",
+     "label": "Notes",
+     "kind": "text",
+     "options": null
+    },
+    {
+     "key": "c_x",
+     "label": "X",
+     "kind": "date",
+     "options": null
+    }
+   ],
+   "note": "options are {v, l}, or null"
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m1",
+     "title": "Alpha tool",
+     "url": "https://m1.test/",
+     "type": "ai-source",
+     "tags": [
+      "ai",
+      "design"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "2026-08-01",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "Some NOTE here",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": {
+      "at": "2026-10-31",
+      "via": "offline",
+      "topic": "study",
+      "topic2": "",
+      "conf": "maybe",
+      "basis": "title",
+      "desc": "d",
+      "site": "s"
+     },
+     "fields": {
+      "cost": "Free",
+      "resets": "2026-11-20"
+     },
+     "trialEnd": "2026-11-03",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "type",
+     "op": "is",
+     "v": "ai-source"
+    },
+    "2026-10-31"
+   ],
+   "out": true
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m1",
+     "title": "Alpha tool",
+     "url": "https://m1.test/",
+     "type": "ai-source",
+     "tags": [
+      "ai",
+      "design"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "2026-08-01",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "Some NOTE here",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": {
+      "at": "2026-10-31",
+      "via": "offline",
+      "topic": "study",
+      "topic2": "",
+      "conf": "maybe",
+      "basis": "title",
+      "desc": "d",
+      "site": "s"
+     },
+     "fields": {
+      "cost": "Free",
+      "resets": "2026-11-20"
+     },
+     "trialEnd": "2026-11-03",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "type",
+     "op": "not",
+     "v": "ai-source"
+    },
+    "2026-10-31"
+   ],
+   "out": false
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m1",
+     "title": "Alpha tool",
+     "url": "https://m1.test/",
+     "type": "ai-source",
+     "tags": [
+      "ai",
+      "design"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "2026-08-01",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "Some NOTE here",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": {
+      "at": "2026-10-31",
+      "via": "offline",
+      "topic": "study",
+      "topic2": "",
+      "conf": "maybe",
+      "basis": "title",
+      "desc": "d",
+      "site": "s"
+     },
+     "fields": {
+      "cost": "Free",
+      "resets": "2026-11-20"
+     },
+     "trialEnd": "2026-11-03",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "tag",
+     "op": "has",
+     "v": "#design"
+    },
+    "2026-10-31"
+   ],
+   "out": true
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m1",
+     "title": "Alpha tool",
+     "url": "https://m1.test/",
+     "type": "ai-source",
+     "tags": [
+      "ai",
+      "design"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "2026-08-01",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "Some NOTE here",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": {
+      "at": "2026-10-31",
+      "via": "offline",
+      "topic": "study",
+      "topic2": "",
+      "conf": "maybe",
+      "basis": "title",
+      "desc": "d",
+      "site": "s"
+     },
+     "fields": {
+      "cost": "Free",
+      "resets": "2026-11-20"
+     },
+     "trialEnd": "2026-11-03",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "tag",
+     "op": "nohas",
+     "v": "design"
+    },
+    "2026-10-31"
+   ],
+   "out": false
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m2",
+     "title": "Beta",
+     "url": "https://m2.test/",
+     "type": "docs",
+     "tags": [],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "testing",
+     "checkCadence": "none",
+     "lastChecked": "",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "",
+     "draft": false,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": null,
+     "fields": {},
+     "trialEnd": "",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "tag",
+     "op": "has",
+     "v": "ai"
+    },
+    "2026-10-31"
+   ],
+   "out": false
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m1",
+     "title": "Alpha tool",
+     "url": "https://m1.test/",
+     "type": "ai-source",
+     "tags": [
+      "ai",
+      "design"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "2026-08-01",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "Some NOTE here",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": {
+      "at": "2026-10-31",
+      "via": "offline",
+      "topic": "study",
+      "topic2": "",
+      "conf": "maybe",
+      "basis": "title",
+      "desc": "d",
+      "site": "s"
+     },
+     "fields": {
+      "cost": "Free",
+      "resets": "2026-11-20"
+     },
+     "trialEnd": "2026-11-03",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "text",
+     "op": "contains",
+     "v": "note"
+    },
+    "2026-10-31"
+   ],
+   "out": true
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m1",
+     "title": "Alpha tool",
+     "url": "https://m1.test/",
+     "type": "ai-source",
+     "tags": [
+      "ai",
+      "design"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "2026-08-01",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "Some NOTE here",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": {
+      "at": "2026-10-31",
+      "via": "offline",
+      "topic": "study",
+      "topic2": "",
+      "conf": "maybe",
+      "basis": "title",
+      "desc": "d",
+      "site": "s"
+     },
+     "fields": {
+      "cost": "Free",
+      "resets": "2026-11-20"
+     },
+     "trialEnd": "2026-11-03",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "text",
+     "op": "contains",
+     "v": ""
+    },
+    "2026-10-31"
+   ],
+   "out": false
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m1",
+     "title": "Alpha tool",
+     "url": "https://m1.test/",
+     "type": "ai-source",
+     "tags": [
+      "ai",
+      "design"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "2026-08-01",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "Some NOTE here",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": {
+      "at": "2026-10-31",
+      "via": "offline",
+      "topic": "study",
+      "topic2": "",
+      "conf": "maybe",
+      "basis": "title",
+      "desc": "d",
+      "site": "s"
+     },
+     "fields": {
+      "cost": "Free",
+      "resets": "2026-11-20"
+     },
+     "trialEnd": "2026-11-03",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "cost",
+     "op": "is",
+     "v": "free"
+    },
+    "2026-10-31"
+   ],
+   "out": true
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m1",
+     "title": "Alpha tool",
+     "url": "https://m1.test/",
+     "type": "ai-source",
+     "tags": [
+      "ai",
+      "design"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "2026-08-01",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "Some NOTE here",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": {
+      "at": "2026-10-31",
+      "via": "offline",
+      "topic": "study",
+      "topic2": "",
+      "conf": "maybe",
+      "basis": "title",
+      "desc": "d",
+      "site": "s"
+     },
+     "fields": {
+      "cost": "Free",
+      "resets": "2026-11-20"
+     },
+     "trialEnd": "2026-11-03",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "cost",
+     "op": "filled",
+     "v": ""
+    },
+    "2026-10-31"
+   ],
+   "out": true
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m2",
+     "title": "Beta",
+     "url": "https://m2.test/",
+     "type": "docs",
+     "tags": [],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "testing",
+     "checkCadence": "none",
+     "lastChecked": "",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "",
+     "draft": false,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": null,
+     "fields": {},
+     "trialEnd": "",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "cost",
+     "op": "empty",
+     "v": ""
+    },
+    "2026-10-31"
+   ],
+   "out": true
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m1",
+     "title": "Alpha tool",
+     "url": "https://m1.test/",
+     "type": "ai-source",
+     "tags": [
+      "ai",
+      "design"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "2026-08-01",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "Some NOTE here",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": {
+      "at": "2026-10-31",
+      "via": "offline",
+      "topic": "study",
+      "topic2": "",
+      "conf": "maybe",
+      "basis": "title",
+      "desc": "d",
+      "site": "s"
+     },
+     "fields": {
+      "cost": "Free",
+      "resets": "2026-11-20"
+     },
+     "trialEnd": "2026-11-03",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "trialEnd",
+     "op": "soon",
+     "v": "7"
+    },
+    "2026-10-31"
+   ],
+   "out": true
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m1",
+     "title": "Alpha tool",
+     "url": "https://m1.test/",
+     "type": "ai-source",
+     "tags": [
+      "ai",
+      "design"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "2026-08-01",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "Some NOTE here",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": {
+      "at": "2026-10-31",
+      "via": "offline",
+      "topic": "study",
+      "topic2": "",
+      "conf": "maybe",
+      "basis": "title",
+      "desc": "d",
+      "site": "s"
+     },
+     "fields": {
+      "cost": "Free",
+      "resets": "2026-11-20"
+     },
+     "trialEnd": "2026-11-03",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "trialEnd",
+     "op": "soon",
+     "v": "1"
+    },
+    "2026-10-31"
+   ],
+   "out": false
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m2",
+     "title": "Beta",
+     "url": "https://m2.test/",
+     "type": "docs",
+     "tags": [],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "testing",
+     "checkCadence": "none",
+     "lastChecked": "",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "",
+     "draft": false,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": null,
+     "fields": {},
+     "trialEnd": "",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "trialEnd",
+     "op": "soon",
+     "v": "7"
+    },
+    "2026-10-31"
+   ],
+   "out": false
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m1",
+     "title": "Alpha tool",
+     "url": "https://m1.test/",
+     "type": "ai-source",
+     "tags": [
+      "ai",
+      "design"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "2026-08-01",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "Some NOTE here",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": {
+      "at": "2026-10-31",
+      "via": "offline",
+      "topic": "study",
+      "topic2": "",
+      "conf": "maybe",
+      "basis": "title",
+      "desc": "d",
+      "site": "s"
+     },
+     "fields": {
+      "cost": "Free",
+      "resets": "2026-11-20"
+     },
+     "trialEnd": "2026-11-03",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "resets",
+     "op": "soon",
+     "v": "abc"
+    },
+    "2026-10-31"
+   ],
+   "out": false
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m1",
+     "title": "Alpha tool",
+     "url": "https://m1.test/",
+     "type": "ai-source",
+     "tags": [
+      "ai",
+      "design"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "2026-08-01",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "Some NOTE here",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": {
+      "at": "2026-10-31",
+      "via": "offline",
+      "topic": "study",
+      "topic2": "",
+      "conf": "maybe",
+      "basis": "title",
+      "desc": "d",
+      "site": "s"
+     },
+     "fields": {
+      "cost": "Free",
+      "resets": "2026-11-20"
+     },
+     "trialEnd": "2026-11-03",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "lastChecked",
+     "op": "older",
+     "v": "60"
+    },
+    "2026-10-31"
+   ],
+   "out": true
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m2",
+     "title": "Beta",
+     "url": "https://m2.test/",
+     "type": "docs",
+     "tags": [],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "testing",
+     "checkCadence": "none",
+     "lastChecked": "",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "",
+     "draft": false,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": null,
+     "fields": {},
+     "trialEnd": "",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "lastChecked",
+     "op": "older",
+     "v": "60"
+    },
+    "2026-10-31"
+   ],
+   "out": false
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m1",
+     "title": "Alpha tool",
+     "url": "https://m1.test/",
+     "type": "ai-source",
+     "tags": [
+      "ai",
+      "design"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "2026-08-01",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "Some NOTE here",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": {
+      "at": "2026-10-31",
+      "via": "offline",
+      "topic": "study",
+      "topic2": "",
+      "conf": "maybe",
+      "basis": "title",
+      "desc": "d",
+      "site": "s"
+     },
+     "fields": {
+      "cost": "Free",
+      "resets": "2026-11-20"
+     },
+     "trialEnd": "2026-11-03",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "draft",
+     "op": "yes",
+     "v": ""
+    },
+    "2026-10-31"
+   ],
+   "out": true
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m2",
+     "title": "Beta",
+     "url": "https://m2.test/",
+     "type": "docs",
+     "tags": [],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "testing",
+     "checkCadence": "none",
+     "lastChecked": "",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "",
+     "draft": false,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": null,
+     "fields": {},
+     "trialEnd": "",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "draft",
+     "op": "no",
+     "v": ""
+    },
+    "2026-10-31"
+   ],
+   "out": true
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m1",
+     "title": "Alpha tool",
+     "url": "https://m1.test/",
+     "type": "ai-source",
+     "tags": [
+      "ai",
+      "design"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "2026-08-01",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "Some NOTE here",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": {
+      "at": "2026-10-31",
+      "via": "offline",
+      "topic": "study",
+      "topic2": "",
+      "conf": "maybe",
+      "basis": "title",
+      "desc": "d",
+      "site": "s"
+     },
+     "fields": {
+      "cost": "Free",
+      "resets": "2026-11-20"
+     },
+     "trialEnd": "2026-11-03",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "topic",
+     "op": "is",
+     "v": "study"
+    },
+    "2026-10-31"
+   ],
+   "out": true
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m1",
+     "title": "Alpha tool",
+     "url": "https://m1.test/",
+     "type": "ai-source",
+     "tags": [
+      "ai",
+      "design"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "2026-08-01",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "Some NOTE here",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": {
+      "at": "2026-10-31",
+      "via": "offline",
+      "topic": "study",
+      "topic2": "",
+      "conf": "maybe",
+      "basis": "title",
+      "desc": "d",
+      "site": "s"
+     },
+     "fields": {
+      "cost": "Free",
+      "resets": "2026-11-20"
+     },
+     "trialEnd": "2026-11-03",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "status",
+     "op": "is",
+     "v": "active"
+    },
+    "2026-10-31"
+   ],
+   "out": true
+  },
+  {
+   "fn": "condMatches",
+   "in": [
+    {
+     "id": "m1",
+     "title": "Alpha tool",
+     "url": "https://m1.test/",
+     "type": "ai-source",
+     "tags": [
+      "ai",
+      "design"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "2026-08-01",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "Some NOTE here",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": {
+      "at": "2026-10-31",
+      "via": "offline",
+      "topic": "study",
+      "topic2": "",
+      "conf": "maybe",
+      "basis": "title",
+      "desc": "d",
+      "site": "s"
+     },
+     "fields": {
+      "cost": "Free",
+      "resets": "2026-11-20"
+     },
+     "trialEnd": "2026-11-03",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    {
+     "f": "type",
+     "op": "bogus",
+     "v": "x"
+    },
+    "2026-10-31"
+   ],
+   "out": false
+  },
+  {
+   "fn": "mentionsStatus",
+   "in": [
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "status",
+       "op": "is",
+       "v": "archived"
+      }
+     ]
+    }
+   ],
+   "out": true
+  },
+  {
+   "fn": "mentionsStatus",
+   "in": [
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "type",
+       "op": "is",
+       "v": "docs"
+      }
+     ]
+    }
+   ],
+   "out": false
+  },
+  {
+   "fn": "mentionsStatus",
+   "in": [
+    null
+   ],
+   "out": false
+  },
+  {
+   "fn": "describeRule",
+   "in": [
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "type",
+       "op": "is",
+       "v": "ai-source"
+      },
+      {
+       "f": "cost",
+       "op": "not",
+       "v": "Paid"
+      }
+     ]
+    },
+    {}
+   ],
+   "out": "Type is ai-source and Cost is not Paid"
+  },
+  {
+   "fn": "describeRule",
+   "in": [
+    {
+     "match": "any",
+     "conds": [
+      {
+       "f": "resets",
+       "op": "soon",
+       "v": "7"
+      },
+      {
+       "f": "trialEnd",
+       "op": "soon",
+       "v": "7"
+      },
+      {
+       "f": "lastChecked",
+       "op": "older",
+       "v": "60"
+      }
+     ]
+    },
+    {}
+   ],
+   "out": "Limit resets or offer ends within 7 days or passed or Trial ends within 7 days or passed or Last checked more than 60 days ago"
+  },
+  {
+   "fn": "describeRule",
+   "in": [
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "status",
+       "op": "is",
+       "v": "testing"
+      }
+     ]
+    },
+    {}
+   ],
+   "out": "Stage is testing"
+  },
+  {
+   "fn": "describeRule",
+   "in": [
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "status",
+       "op": "is",
+       "v": "candidate"
+      }
+     ]
+    },
+    {}
+   ],
+   "out": "Stage is candidate"
+  },
+  {
+   "fn": "describeRule",
+   "in": [
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "type",
+       "op": "is",
+       "v": "community"
+      }
+     ]
+    },
+    {}
+   ],
+   "out": "Type is community"
+  },
+  {
+   "fn": "describeRule",
+   "in": [
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "cost",
+       "op": "is",
+       "v": "Free"
+      },
+      {
+       "f": "device",
+       "op": "not",
+       "v": "Computer"
+      }
+     ]
+    },
+    {}
+   ],
+   "out": "Cost is Free and Works on is not Computer"
+  },
+  {
+   "fn": "describeRule",
+   "in": [
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "type",
+       "op": "is",
+       "v": "ai-source"
+      },
+      {
+       "f": "cost",
+       "op": "not",
+       "v": "Paid"
+      }
+     ]
+    },
+    {
+     "types": [
+      {
+       "v": "ai-source",
+       "l": "AI source"
+      }
+     ],
+     "custom": [
+      {
+       "key": "c_rating",
+       "label": "Rating",
+       "kind": "choice",
+       "options": [
+        "Good",
+        "Bad"
+       ],
+       "types": []
+      },
+      {
+       "key": "c_notes",
+       "label": "Notes",
+       "kind": "text",
+       "options": [],
+       "types": [
+        "web-tool",
+        "nope"
+       ]
+      },
+      {
+       "key": "c_x",
+       "label": "X",
+       "kind": "date",
+       "options": [],
+       "types": []
+      }
+     ]
+    }
+   ],
+   "out": "Type is AI source and Cost is not Paid"
+  },
+  {
+   "fn": "describeRule",
+   "in": [
+    {
+     "match": "all",
+     "conds": []
+    },
+    {}
+   ],
+   "out": "No rule yet"
+  },
+  {
+   "fn": "describeRule",
+   "in": [
+    null,
+    {}
+   ],
+   "out": "No rule yet"
+  },
+  {
+   "fn": "describeRule",
+   "in": [
+    {
+     "match": "any",
+     "conds": [
+      {
+       "f": "zzz",
+       "op": "is",
+       "v": "q"
+      },
+      {
+       "f": "draft",
+       "op": "yes",
+       "v": ""
+      }
+     ]
+    },
+    {}
+   ],
+   "out": "zzz is q or To review is yes"
+  }
+ ]
+}

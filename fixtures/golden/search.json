@@ -1,0 +1,1514 @@
+{
+ "module": "search",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "tokenize",
+   "in": [
+    "Turn a PDF into slides!"
+   ],
+   "out": [
+    "turn",
+    "a",
+    "pdf",
+    "into",
+    "slides"
+   ]
+  },
+  {
+   "fn": "tokenize",
+   "in": [
+    "can't stop c++ and .net"
+   ],
+   "out": [
+    "can't",
+    "stop",
+    "c++",
+    "and",
+    "net"
+   ]
+  },
+  {
+   "fn": "tokenize",
+   "in": [
+    "hindi हिंदी words"
+   ],
+   "out": [
+    "hindi",
+    "ह",
+    "द",
+    "words"
+   ]
+  },
+  {
+   "fn": "tokenize",
+   "in": [
+    ""
+   ],
+   "out": []
+  },
+  {
+   "fn": "tokenize",
+   "in": [
+    "  "
+   ],
+   "out": []
+  },
+  {
+   "fn": "stem",
+   "in": [
+    "slides"
+   ],
+   "out": "slide"
+  },
+  {
+   "fn": "stem",
+   "in": [
+    "converting"
+   ],
+   "out": "convert"
+  },
+  {
+   "fn": "stem",
+   "in": [
+    "hosting"
+   ],
+   "out": "host"
+  },
+  {
+   "fn": "stem",
+   "in": [
+    "classes"
+   ],
+   "out": "class"
+  },
+  {
+   "fn": "stem",
+   "in": [
+    "status"
+   ],
+   "out": "status"
+  },
+  {
+   "fn": "stem",
+   "in": [
+    "bus"
+   ],
+   "out": "bus"
+  },
+  {
+   "fn": "stem",
+   "in": [
+    "tried"
+   ],
+   "out": "tri"
+  },
+  {
+   "fn": "stem",
+   "in": [
+    "ai"
+   ],
+   "out": "ai"
+  },
+  {
+   "fn": "stem",
+   "in": [
+    "glass"
+   ],
+   "out": "glass"
+  },
+  {
+   "fn": "search",
+   "in": [
+    "$RS",
+    "turn pdf into slides",
+    {}
+   ],
+   "out": {
+    "tokens": [
+     "turn",
+     "pdf",
+     "slides"
+    ],
+    "results": [
+     {
+      "id": "r1",
+      "score": 21,
+      "matched": 3,
+      "fields": [
+       "capabilities",
+       "tags",
+       "title"
+      ],
+      "hit": {
+       "capabilities": [
+        0,
+        1,
+        2
+       ],
+       "tags": [
+        1
+       ],
+       "title": [
+        2
+       ]
+      }
+     }
+    ]
+   },
+   "note": "opts.types/statuses are arrays here (Sets in JS); out lists ids"
+  },
+  {
+   "fn": "search",
+   "in": [
+    "$RS",
+    "video editing",
+    {}
+   ],
+   "out": {
+    "tokens": [
+     "video",
+     "editing"
+    ],
+    "results": [
+     {
+      "id": "r2",
+      "score": 11.55,
+      "matched": 2,
+      "fields": [
+       "title",
+       "tags"
+      ],
+      "hit": {
+       "title": [
+        0,
+        1
+       ],
+       "tags": [
+        0,
+        1
+       ]
+      }
+     }
+    ]
+   },
+   "note": "opts.types/statuses are arrays here (Sets in JS); out lists ids"
+  },
+  {
+   "fn": "search",
+   "in": [
+    "$RS",
+    "hosting",
+    {}
+   ],
+   "out": {
+    "tokens": [
+     "hosting"
+    ],
+    "results": [
+     {
+      "id": "r3",
+      "score": 6,
+      "matched": 1,
+      "fields": [
+       "title",
+       "tags"
+      ],
+      "hit": {
+       "title": [
+        0
+       ],
+       "tags": [
+        0
+       ]
+      }
+     }
+    ]
+   },
+   "note": "opts.types/statuses are arrays here (Sets in JS); out lists ids"
+  },
+  {
+   "fn": "search",
+   "in": [
+    "$RS",
+    "design",
+    {}
+   ],
+   "out": {
+    "tokens": [
+     "design"
+    ],
+    "results": [
+     {
+      "id": "r4",
+      "score": 6,
+      "matched": 1,
+      "fields": [
+       "title",
+       "tags"
+      ],
+      "hit": {
+       "title": [
+        0
+       ],
+       "tags": [
+        0
+       ]
+      }
+     },
+     {
+      "id": "r5",
+      "score": 3,
+      "matched": 1,
+      "fields": [
+       "tags"
+      ],
+      "hit": {
+       "tags": [
+        0
+       ]
+      }
+     },
+     {
+      "id": "r6",
+      "score": 3,
+      "matched": 1,
+      "fields": [
+       "tags"
+      ],
+      "hit": {
+       "tags": [
+        0
+       ]
+      }
+     },
+     {
+      "id": "r7",
+      "score": 3,
+      "matched": 1,
+      "fields": [
+       "tags"
+      ],
+      "hit": {
+       "tags": [
+        0
+       ]
+      }
+     },
+     {
+      "id": "r8",
+      "score": 3,
+      "matched": 1,
+      "fields": [
+       "tags"
+      ],
+      "hit": {
+       "tags": [
+        0
+       ]
+      }
+     },
+     {
+      "id": "r10",
+      "score": 1.5,
+      "matched": 1,
+      "fields": [
+       "tags"
+      ],
+      "hit": {
+       "tags": [
+        0
+       ]
+      }
+     }
+    ]
+   },
+   "note": "opts.types/statuses are arrays here (Sets in JS); out lists ids"
+  },
+  {
+   "fn": "search",
+   "in": [
+    "$RS",
+    "slidez",
+    {}
+   ],
+   "out": {
+    "tokens": [
+     "slidez"
+    ],
+    "results": [
+     {
+      "id": "r1",
+      "score": 5.95,
+      "matched": 1,
+      "fields": [
+       "capabilities",
+       "title"
+      ],
+      "hit": {
+       "capabilities": [
+        0
+       ],
+       "title": [
+        0
+       ]
+      }
+     },
+     {
+      "id": "r16",
+      "score": 2.55,
+      "matched": 1,
+      "fields": [
+       "title"
+      ],
+      "hit": {
+       "title": [
+        0
+       ]
+      }
+     },
+     {
+      "id": "r15",
+      "score": 2.55,
+      "matched": 1,
+      "fields": [
+       "title"
+      ],
+      "hit": {
+       "title": [
+        0
+       ]
+      }
+     }
+    ]
+   },
+   "note": "opts.types/statuses are arrays here (Sets in JS); out lists ids"
+  },
+  {
+   "fn": "search",
+   "in": [
+    "$RS",
+    "api docs",
+    {}
+   ],
+   "out": {
+    "tokens": [
+     "api",
+     "docs"
+    ],
+    "results": [
+     {
+      "id": "r9",
+      "score": 10.5,
+      "matched": 2,
+      "fields": [
+       "title",
+       "tags",
+       "type"
+      ],
+      "hit": {
+       "title": [
+        0
+       ],
+       "tags": [
+        0,
+        1
+       ],
+       "type": [
+        1
+       ]
+      }
+     }
+    ]
+   },
+   "note": "opts.types/statuses are arrays here (Sets in JS); out lists ids"
+  },
+  {
+   "fn": "search",
+   "in": [
+    "$RS",
+    "pdf slides video",
+    {
+     "mode": "or"
+    }
+   ],
+   "out": {
+    "tokens": [
+     "pdf",
+     "slides",
+     "video"
+    ],
+    "results": [
+     {
+      "id": "r1",
+      "score": 14,
+      "matched": 2,
+      "fields": [
+       "capabilities",
+       "tags",
+       "title"
+      ],
+      "hit": {
+       "capabilities": [
+        0,
+        1
+       ],
+       "tags": [
+        0
+       ],
+       "title": [
+        1
+       ]
+      }
+     },
+     {
+      "id": "r2",
+      "score": 6,
+      "matched": 1,
+      "fields": [
+       "title",
+       "tags"
+      ],
+      "hit": {
+       "title": [
+        2
+       ],
+       "tags": [
+        2
+       ]
+      }
+     },
+     {
+      "id": "r12",
+      "score": 3,
+      "matched": 1,
+      "fields": [
+       "tags"
+      ],
+      "hit": {
+       "tags": [
+        2
+       ]
+      }
+     },
+     {
+      "id": "r16",
+      "score": 3,
+      "matched": 1,
+      "fields": [
+       "title"
+      ],
+      "hit": {
+       "title": [
+        1
+       ]
+      }
+     },
+     {
+      "id": "r15",
+      "score": 3,
+      "matched": 1,
+      "fields": [
+       "title"
+      ],
+      "hit": {
+       "title": [
+        1
+       ]
+      }
+     }
+    ]
+   },
+   "note": "opts.types/statuses are arrays here (Sets in JS); out lists ids"
+  },
+  {
+   "fn": "search",
+   "in": [
+    "$RS",
+    "design",
+    {
+     "statuses": [
+      "archived"
+     ]
+    }
+   ],
+   "out": {
+    "tokens": [
+     "design"
+    ],
+    "results": [
+     {
+      "id": "r10",
+      "score": 1.5,
+      "matched": 1,
+      "fields": [
+       "tags"
+      ],
+      "hit": {
+       "tags": [
+        0
+       ]
+      }
+     }
+    ]
+   },
+   "note": "opts.types/statuses are arrays here (Sets in JS); out lists ids"
+  },
+  {
+   "fn": "search",
+   "in": [
+    "$RS",
+    "design",
+    {
+     "types": [
+      "catalogue",
+      "web-tool"
+     ]
+    }
+   ],
+   "out": {
+    "tokens": [
+     "design"
+    ],
+    "results": [
+     {
+      "id": "r4",
+      "score": 6,
+      "matched": 1,
+      "fields": [
+       "title",
+       "tags"
+      ],
+      "hit": {
+       "title": [
+        0
+       ],
+       "tags": [
+        0
+       ]
+      }
+     },
+     {
+      "id": "r8",
+      "score": 3,
+      "matched": 1,
+      "fields": [
+       "tags"
+      ],
+      "hit": {
+       "tags": [
+        0
+       ]
+      }
+     }
+    ]
+   },
+   "note": "opts.types/statuses are arrays here (Sets in JS); out lists ids"
+  },
+  {
+   "fn": "search",
+   "in": [
+    "$RS",
+    "quickly deck",
+    {}
+   ],
+   "out": {
+    "tokens": [
+     "quickly",
+     "deck"
+    ],
+    "results": [
+     {
+      "id": "r1",
+      "score": 13,
+      "matched": 2,
+      "fields": [
+       "useWhen"
+      ],
+      "hit": {
+       "useWhen": [
+        0,
+        1
+       ]
+      }
+     }
+    ]
+   },
+   "note": "opts.types/statuses are arrays here (Sets in JS); out lists ids"
+  },
+  {
+   "fn": "search",
+   "in": [
+    "$RS",
+    "",
+    {}
+   ],
+   "out": {
+    "tokens": [],
+    "results": []
+   },
+   "note": "opts.types/statuses are arrays here (Sets in JS); out lists ids"
+  },
+  {
+   "fn": "search",
+   "in": [
+    "$RS",
+    "the and of",
+    {}
+   ],
+   "out": {
+    "tokens": [
+     "the",
+     "and",
+     "of"
+    ],
+    "results": []
+   },
+   "note": "opts.types/statuses are arrays here (Sets in JS); out lists ids"
+  },
+  {
+   "fn": "search",
+   "in": [
+    "$RS",
+    "ai tools",
+    {}
+   ],
+   "out": {
+    "tokens": [
+     "ai",
+     "tools"
+    ],
+    "results": [
+     {
+      "id": "r2",
+      "score": 6,
+      "matched": 2,
+      "fields": [
+       "tags"
+      ],
+      "hit": {
+       "tags": [
+        0,
+        1
+       ]
+      }
+     }
+    ]
+   },
+   "note": "opts.types/statuses are arrays here (Sets in JS); out lists ids"
+  },
+  {
+   "fn": "highlight",
+   "in": [
+    "Slides converter for pdf",
+    [
+     "slides",
+     "pdf"
+    ]
+   ],
+   "out": "<mark>Slide</mark>s converter for <mark>pdf</mark>"
+  },
+  {
+   "fn": "highlight",
+   "in": [
+    "",
+    [
+     "x"
+    ]
+   ],
+   "out": ""
+  },
+  {
+   "fn": "highlight",
+   "in": [
+    "Hello & goodbye",
+    []
+   ],
+   "out": "Hello &amp; goodbye"
+  },
+  {
+   "fn": "highlight",
+   "in": [
+    "The AI is here",
+    [
+     "ai"
+    ]
+   ],
+   "out": "The <mark>AI</mark> is here"
+  },
+  {
+   "fn": "highlight",
+   "in": [
+    "Cats and cat toys",
+    [
+     "cats"
+    ]
+   ],
+   "out": "<mark>Cat</mark>s and <mark>cat</mark> toys"
+  },
+  {
+   "fn": "highlight",
+   "in": [
+    "a<b>c",
+    [
+     "b"
+    ]
+   ],
+   "out": "a&lt;<mark>b</mark>&gt;c"
+  },
+  {
+   "fn": "highlight",
+   "in": [
+    "Price (free) + more",
+    [
+     "free+",
+     "(free"
+    ]
+   ],
+   "out": "Price <mark>(free</mark>) + more"
+  },
+  {
+   "fn": "threadsFor",
+   "in": [
+    [
+     "r1",
+     "r2"
+    ],
+    [
+     {
+      "id": "t1",
+      "name": "A",
+      "steps": [
+       {
+        "rid": "r1"
+       },
+       {
+        "rid": "r2"
+       },
+       {
+        "rid": "r1"
+       }
+      ]
+     },
+     {
+      "id": "t2",
+      "name": "B",
+      "steps": [
+       {
+        "rid": "r2"
+       }
+      ]
+     },
+     {
+      "id": "t3",
+      "name": "C",
+      "steps": [
+       {
+        "rid": "r9"
+       }
+      ]
+     },
+     {
+      "id": "t4",
+      "name": "D",
+      "steps": []
+     }
+    ]
+   ],
+   "out": [
+    {
+     "id": "t1",
+     "n": 3
+    },
+    {
+     "id": "t2",
+     "n": 1
+    }
+   ],
+   "note": "out = [{id, n}] best first"
+  },
+  {
+   "fn": "threadsFor",
+   "in": [
+    [
+     "r2"
+    ],
+    [
+     {
+      "id": "t1",
+      "name": "A",
+      "steps": [
+       {
+        "rid": "r1"
+       },
+       {
+        "rid": "r2"
+       },
+       {
+        "rid": "r1"
+       }
+      ]
+     },
+     {
+      "id": "t2",
+      "name": "B",
+      "steps": [
+       {
+        "rid": "r2"
+       }
+      ]
+     },
+     {
+      "id": "t3",
+      "name": "C",
+      "steps": [
+       {
+        "rid": "r9"
+       }
+      ]
+     },
+     {
+      "id": "t4",
+      "name": "D",
+      "steps": []
+     }
+    ]
+   ],
+   "out": [
+    {
+     "id": "t1",
+     "n": 1
+    },
+    {
+     "id": "t2",
+     "n": 1
+    }
+   ],
+   "note": "out = [{id, n}] best first"
+  },
+  {
+   "fn": "threadsFor",
+   "in": [
+    [
+     "zz"
+    ],
+    [
+     {
+      "id": "t1",
+      "name": "A",
+      "steps": [
+       {
+        "rid": "r1"
+       },
+       {
+        "rid": "r2"
+       },
+       {
+        "rid": "r1"
+       }
+      ]
+     },
+     {
+      "id": "t2",
+      "name": "B",
+      "steps": [
+       {
+        "rid": "r2"
+       }
+      ]
+     },
+     {
+      "id": "t3",
+      "name": "C",
+      "steps": [
+       {
+        "rid": "r9"
+       }
+      ]
+     },
+     {
+      "id": "t4",
+      "name": "D",
+      "steps": []
+     }
+    ]
+   ],
+   "out": [],
+   "note": "out = [{id, n}] best first"
+  },
+  {
+   "fn": "threadsFor",
+   "in": [
+    [],
+    [
+     {
+      "id": "t1",
+      "name": "A",
+      "steps": [
+       {
+        "rid": "r1"
+       },
+       {
+        "rid": "r2"
+       },
+       {
+        "rid": "r1"
+       }
+      ]
+     },
+     {
+      "id": "t2",
+      "name": "B",
+      "steps": [
+       {
+        "rid": "r2"
+       }
+      ]
+     },
+     {
+      "id": "t3",
+      "name": "C",
+      "steps": [
+       {
+        "rid": "r9"
+       }
+      ]
+     },
+     {
+      "id": "t4",
+      "name": "D",
+      "steps": []
+     }
+    ]
+   ],
+   "out": [],
+   "note": "out = [{id, n}] best first"
+  },
+  {
+   "fn": "suggestLinks",
+   "in": [
+    "r1",
+    "$RS",
+    4
+   ],
+   "out": [
+    {
+     "id": "r15",
+     "score": 9
+    },
+    {
+     "id": "r16",
+     "score": 5
+    }
+   ],
+   "note": "in[0] = id of a link in the shared list; in[1] = the shared list; out = [{id, score}]"
+  },
+  {
+   "fn": "suggestLinks",
+   "in": [
+    "r4",
+    "$RS",
+    4
+   ],
+   "out": [
+    {
+     "id": "r5",
+     "score": 3
+    },
+    {
+     "id": "r6",
+     "score": 3
+    },
+    {
+     "id": "r7",
+     "score": 3
+    },
+    {
+     "id": "r8",
+     "score": 3
+    }
+   ],
+   "note": "in[0] = id of a link in the shared list; in[1] = the shared list; out = [{id, score}]"
+  },
+  {
+   "fn": "suggestLinks",
+   "in": [
+    "r6",
+    "$RS",
+    4
+   ],
+   "out": [
+    {
+     "id": "r4",
+     "score": 3
+    },
+    {
+     "id": "r5",
+     "score": 3
+    },
+    {
+     "id": "r7",
+     "score": 3
+    },
+    {
+     "id": "r8",
+     "score": 3
+    }
+   ],
+   "note": "in[0] = id of a link in the shared list; in[1] = the shared list; out = [{id, score}]"
+  },
+  {
+   "fn": "suggestLinks",
+   "in": [
+    "r2",
+    "$RS",
+    4
+   ],
+   "out": [
+    {
+     "id": "r12",
+     "score": 3
+    }
+   ],
+   "note": "in[0] = id of a link in the shared list; in[1] = the shared list; out = [{id, score}]"
+  },
+  {
+   "fn": "suggestLinks",
+   "in": [
+    "r16",
+    "$RS",
+    4
+   ],
+   "out": [
+    {
+     "id": "r1",
+     "score": 5
+    },
+    {
+     "id": "r15",
+     "score": 5
+    }
+   ],
+   "note": "in[0] = id of a link in the shared list; in[1] = the shared list; out = [{id, score}]"
+  },
+  {
+   "fn": "suggestLinks",
+   "in": [
+    "r13",
+    "$RS",
+    4
+   ],
+   "out": [],
+   "note": "in[0] = id of a link in the shared list; in[1] = the shared list; out = [{id, score}]"
+  },
+  {
+   "fn": "suggestLinks",
+   "in": [
+    "r6",
+    "$RS",
+    2
+   ],
+   "out": [
+    {
+     "id": "r4",
+     "score": 3
+    },
+    {
+     "id": "r5",
+     "score": 3
+    }
+   ],
+   "note": "k = 2"
+  },
+  {
+   "fn": "suggestJobs",
+   "in": [
+    "r8",
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "color": "#007AFF",
+      "members": [
+       "r4",
+       "r5",
+       "r6",
+       "r7"
+      ],
+      "rule": null
+     },
+     {
+      "id": "j2",
+      "name": "Video",
+      "color": "#007AFF",
+      "members": [
+       "r2",
+       "r12"
+      ],
+      "rule": null
+     },
+     {
+      "id": "j3",
+      "name": "Slides",
+      "color": "#007AFF",
+      "members": [
+       "r1"
+      ],
+      "rule": null
+     },
+     {
+      "id": "j4",
+      "name": "Empty",
+      "color": "#007AFF",
+      "members": [],
+      "rule": null
+     }
+    ],
+    3
+   ],
+   "out": [
+    {
+     "id": "j1",
+     "score": 2
+    }
+   ],
+   "note": "in[0] = id of a link in the shared list; byId(id) looks in the shared list; out = [{id, score}]"
+  },
+  {
+   "fn": "suggestJobs",
+   "in": [
+    "r2",
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "color": "#007AFF",
+      "members": [
+       "r4",
+       "r5",
+       "r6",
+       "r7"
+      ],
+      "rule": null
+     },
+     {
+      "id": "j2",
+      "name": "Video",
+      "color": "#007AFF",
+      "members": [
+       "r2",
+       "r12"
+      ],
+      "rule": null
+     },
+     {
+      "id": "j3",
+      "name": "Slides",
+      "color": "#007AFF",
+      "members": [
+       "r1"
+      ],
+      "rule": null
+     },
+     {
+      "id": "j4",
+      "name": "Empty",
+      "color": "#007AFF",
+      "members": [],
+      "rule": null
+     }
+    ],
+    3
+   ],
+   "out": [
+    {
+     "id": "j1",
+     "score": 0.2
+    },
+    {
+     "id": "j3",
+     "score": 0.2
+    }
+   ],
+   "note": "in[0] = id of a link in the shared list; byId(id) looks in the shared list; out = [{id, score}]"
+  },
+  {
+   "fn": "suggestJobs",
+   "in": [
+    "r3",
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "color": "#007AFF",
+      "members": [
+       "r4",
+       "r5",
+       "r6",
+       "r7"
+      ],
+      "rule": null
+     },
+     {
+      "id": "j2",
+      "name": "Video",
+      "color": "#007AFF",
+      "members": [
+       "r2",
+       "r12"
+      ],
+      "rule": null
+     },
+     {
+      "id": "j3",
+      "name": "Slides",
+      "color": "#007AFF",
+      "members": [
+       "r1"
+      ],
+      "rule": null
+     },
+     {
+      "id": "j4",
+      "name": "Empty",
+      "color": "#007AFF",
+      "members": [],
+      "rule": null
+     }
+    ],
+    3
+   ],
+   "out": [
+    {
+     "id": "j1",
+     "score": 0.1
+    }
+   ],
+   "note": "in[0] = id of a link in the shared list; byId(id) looks in the shared list; out = [{id, score}]"
+  },
+  {
+   "fn": "suggestJobs",
+   "in": [
+    "r13",
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "color": "#007AFF",
+      "members": [
+       "r4",
+       "r5",
+       "r6",
+       "r7"
+      ],
+      "rule": null
+     },
+     {
+      "id": "j2",
+      "name": "Video",
+      "color": "#007AFF",
+      "members": [
+       "r2",
+       "r12"
+      ],
+      "rule": null
+     },
+     {
+      "id": "j3",
+      "name": "Slides",
+      "color": "#007AFF",
+      "members": [
+       "r1"
+      ],
+      "rule": null
+     },
+     {
+      "id": "j4",
+      "name": "Empty",
+      "color": "#007AFF",
+      "members": [],
+      "rule": null
+     }
+    ],
+    3
+   ],
+   "out": [
+    {
+     "id": "j1",
+     "score": 0.2
+    },
+    {
+     "id": "j3",
+     "score": 0.2
+    },
+    {
+     "id": "j2",
+     "score": 0.141421
+    }
+   ],
+   "note": "in[0] = id of a link in the shared list; byId(id) looks in the shared list; out = [{id, score}]"
+  },
+  {
+   "fn": "suggestJobs",
+   "in": [
+    "r1",
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "color": "#007AFF",
+      "members": [
+       "r4",
+       "r5",
+       "r6",
+       "r7"
+      ],
+      "rule": null
+     },
+     {
+      "id": "j2",
+      "name": "Video",
+      "color": "#007AFF",
+      "members": [
+       "r2",
+       "r12"
+      ],
+      "rule": null
+     },
+     {
+      "id": "j3",
+      "name": "Slides",
+      "color": "#007AFF",
+      "members": [
+       "r1"
+      ],
+      "rule": null
+     },
+     {
+      "id": "j4",
+      "name": "Empty",
+      "color": "#007AFF",
+      "members": [],
+      "rule": null
+     }
+    ],
+    3
+   ],
+   "out": [
+    {
+     "id": "j1",
+     "score": 0.2
+    },
+    {
+     "id": "j2",
+     "score": 0.141421
+    }
+   ],
+   "note": "in[0] = id of a link in the shared list; byId(id) looks in the shared list; out = [{id, score}]"
+  },
+  {
+   "fn": "STOP",
+   "in": [],
+   "out": [
+    "a",
+    "an",
+    "the",
+    "and",
+    "or",
+    "of",
+    "to",
+    "for",
+    "in",
+    "on",
+    "at",
+    "is",
+    "are",
+    "was",
+    "be",
+    "been",
+    "can",
+    "could",
+    "do",
+    "does",
+    "did",
+    "how",
+    "i",
+    "me",
+    "my",
+    "we",
+    "you",
+    "your",
+    "it",
+    "its",
+    "this",
+    "that",
+    "these",
+    "those",
+    "with",
+    "from",
+    "by",
+    "as",
+    "into",
+    "about",
+    "what",
+    "which",
+    "who",
+    "where",
+    "when",
+    "why",
+    "get",
+    "use",
+    "using",
+    "need",
+    "want",
+    "help",
+    "make",
+    "please",
+    "some",
+    "any",
+    "there",
+    "here",
+    "also",
+    "just",
+    "find",
+    "looking",
+    "look",
+    "search"
+   ],
+   "note": "constant: the Dart value must equal this"
+  },
+  {
+   "fn": "FIELD_LABEL",
+   "in": [],
+   "out": {
+    "useWhen": "use when",
+    "capabilities": "can do",
+    "title": "name",
+    "tags": "tag",
+    "inputs": "input",
+    "outputs": "output",
+    "type": "type",
+    "fields": "details",
+    "notes": "notes"
+   },
+   "note": "constant: the Dart value must equal this"
+  },
+  {
+   "fn": "FIELD_WEIGHT",
+   "in": [],
+   "out": {
+    "useWhen": 5,
+    "capabilities": 4,
+    "title": 3,
+    "tags": 3,
+    "inputs": 1.5,
+    "outputs": 1.5,
+    "type": 1.5,
+    "fields": 2,
+    "notes": 1
+   },
+   "note": "constant: the Dart value must equal this"
+  }
+ ]
+}

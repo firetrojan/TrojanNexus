@@ -1,0 +1,286 @@
+{
+ "module": "install",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "installState",
+   "in": [
+    {
+     "standalone": true,
+     "protocol": "https:"
+    }
+   ],
+   "out": {
+    "kind": "installed",
+    "title": "Installed",
+    "text": "Nexus is running as an app on this device.",
+    "steps": []
+   }
+  },
+  {
+   "fn": "installState",
+   "in": [
+    {
+     "protocol": "file:"
+    }
+   ],
+   "out": {
+    "kind": "file",
+    "title": "This is a saved file",
+    "text": "Chrome cannot install a file from your storage. Installing needs the app version on an https address, once. After that it also works offline.",
+    "steps": [
+     "Unzip Nexus-app and put the folder on a free host (GitHub Pages, or Netlify Drop which takes the folder as it is).",
+     "Open that https address in Chrome.",
+     "Tap the menu (three dots), then Install app. Or come back here and press Install.",
+     "Your data stays on each device. Move it with a backup file."
+    ]
+   }
+  },
+  {
+   "fn": "installState",
+   "in": [
+    {
+     "protocol": "file:",
+     "canPrompt": true
+    }
+   ],
+   "out": {
+    "kind": "file",
+    "title": "This is a saved file",
+    "text": "Chrome cannot install a file from your storage. Installing needs the app version on an https address, once. After that it also works offline.",
+    "steps": [
+     "Unzip Nexus-app and put the folder on a free host (GitHub Pages, or Netlify Drop which takes the folder as it is).",
+     "Open that https address in Chrome.",
+     "Tap the menu (three dots), then Install app. Or come back here and press Install.",
+     "Your data stays on each device. Move it with a backup file."
+    ]
+   }
+  },
+  {
+   "fn": "installState",
+   "in": [
+    {
+     "protocol": "http:",
+     "host": "example.com"
+    }
+   ],
+   "out": {
+    "kind": "insecure",
+    "title": "Needs https",
+    "text": "Chrome only installs apps from https addresses. This one is plain http.",
+    "steps": [
+     "Put the app on an https host, then open that address."
+    ]
+   }
+  },
+  {
+   "fn": "installState",
+   "in": [
+    {
+     "protocol": "http:",
+     "host": "localhost"
+    }
+   ],
+   "out": {
+    "kind": "menu",
+    "title": "Install from the Chrome menu",
+    "text": "Chrome has not offered an Install button here. That happens when the app is already installed, or the browser is not Chrome.",
+    "steps": [
+     "Open the Chrome menu (three dots).",
+     "Choose Install app, or Add to Home screen.",
+     "Open Nexus from there."
+    ]
+   }
+  },
+  {
+   "fn": "installState",
+   "in": [
+    {
+     "protocol": "https:",
+     "host": "x.app",
+     "canPrompt": true
+    }
+   ],
+   "out": {
+    "kind": "ready",
+    "title": "Ready to install",
+    "text": "Chrome can install Nexus now. It opens in its own window, works offline, and can show a count on its icon.",
+    "steps": []
+   }
+  },
+  {
+   "fn": "installState",
+   "in": [
+    {
+     "protocol": "https:",
+     "host": "x.app"
+    }
+   ],
+   "out": {
+    "kind": "menu",
+    "title": "Install from the Chrome menu",
+    "text": "Chrome has not offered an Install button here. That happens when the app is already installed, or the browser is not Chrome.",
+    "steps": [
+     "Open the Chrome menu (three dots).",
+     "Choose Install app, or Add to Home screen.",
+     "Open Nexus from there."
+    ]
+   }
+  },
+  {
+   "fn": "installState",
+   "in": [
+    {}
+   ],
+   "out": {
+    "kind": "menu",
+    "title": "Install from the Chrome menu",
+    "text": "Chrome has not offered an Install button here. That happens when the app is already installed, or the browser is not Chrome.",
+    "steps": [
+     "Open the Chrome menu (three dots).",
+     "Choose Install app, or Add to Home screen.",
+     "Open Nexus from there."
+    ]
+   }
+  },
+  {
+   "fn": "badgeCount",
+   "in": [
+    0
+   ],
+   "out": 0
+  },
+  {
+   "fn": "badgeCount",
+   "in": [
+    5
+   ],
+   "out": 5
+  },
+  {
+   "fn": "badgeCount",
+   "in": [
+    99
+   ],
+   "out": 99
+  },
+  {
+   "fn": "badgeCount",
+   "in": [
+    150
+   ],
+   "out": 99
+  },
+  {
+   "fn": "badgeCount",
+   "in": [
+    -3
+   ],
+   "out": 0
+  },
+  {
+   "fn": "badgeCount",
+   "in": [
+    null
+   ],
+   "out": 0
+  },
+  {
+   "fn": "badgeCount",
+   "in": [
+    "7"
+   ],
+   "out": 7
+  },
+  {
+   "fn": "badgeCount",
+   "in": [
+    2.9
+   ],
+   "out": 2
+  },
+  {
+   "fn": "shortcutFor",
+   "in": [
+    {
+     "key": "/"
+    },
+    false
+   ],
+   "out": "search"
+  },
+  {
+   "fn": "shortcutFor",
+   "in": [
+    {
+     "key": "n"
+    },
+    false
+   ],
+   "out": "add"
+  },
+  {
+   "fn": "shortcutFor",
+   "in": [
+    {
+     "key": "N"
+    },
+    false
+   ],
+   "out": "add"
+  },
+  {
+   "fn": "shortcutFor",
+   "in": [
+    {
+     "key": "?"
+    },
+    false
+   ],
+   "out": "help"
+  },
+  {
+   "fn": "shortcutFor",
+   "in": [
+    {
+     "key": "x"
+    },
+    false
+   ],
+   "out": ""
+  },
+  {
+   "fn": "shortcutFor",
+   "in": [
+    {
+     "key": "n",
+     "ctrlKey": true
+    },
+    false
+   ],
+   "out": ""
+  },
+  {
+   "fn": "shortcutFor",
+   "in": [
+    {
+     "key": "/",
+     "metaKey": true
+    },
+    false
+   ],
+   "out": ""
+  },
+  {
+   "fn": "shortcutFor",
+   "in": [
+    {
+     "key": "n"
+    },
+    true
+   ],
+   "out": ""
+  }
+ ]
+}

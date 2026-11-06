@@ -1,0 +1,3993 @@
+{
+ "module": "importers",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "decode",
+   "in": [
+    "&amp; &lt; &gt;"
+   ],
+   "out": "& < >"
+  },
+  {
+   "fn": "decode",
+   "in": [
+    "&#x1F642; &#128512;"
+   ],
+   "out": "🙂 😀"
+  },
+  {
+   "fn": "decode",
+   "in": [
+    "&bad;"
+   ],
+   "out": "&bad;"
+  },
+  {
+   "fn": "decode",
+   "in": [
+    ""
+   ],
+   "out": ""
+  },
+  {
+   "fn": "toISODate",
+   "in": [
+    "1700000000"
+   ],
+   "out": "2023-11-14",
+   "note": "seconds"
+  },
+  {
+   "fn": "toISODate",
+   "in": [
+    1700000000000
+   ],
+   "out": "2023-11-14",
+   "note": "milliseconds"
+  },
+  {
+   "fn": "toISODate",
+   "in": [
+    "13300000000000000"
+   ],
+   "out": "2022-06-18",
+   "note": "Chrome microseconds since 1601"
+  },
+  {
+   "fn": "toISODate",
+   "in": [
+    "2026-10-31"
+   ],
+   "out": "2026-10-31"
+  },
+  {
+   "fn": "toISODate",
+   "in": [
+    ""
+   ],
+   "out": ""
+  },
+  {
+   "fn": "toISODate",
+   "in": [
+    "bad"
+   ],
+   "out": ""
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "<!DOCTYPE NETSCAPE-Bookmark-file-1>\n<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=UTF-8\">\n<TITLE>Bookmarks</TITLE><H1>Bookmarks</H1>\n<DL><p>\n  <DT><H3 ADD_DATE=\"1700000000\">Example folder</H3>\n  <DL><p>\n    <DT><A HREF=\"https://maker.example.org/कला\" ADD_DATE=\"1700000000\" TAGS=\"कला, design\">कला पत्रिका</A>\n    <DD>Café note\n    <DT><A HREF=\"https://docs.example.org/guide\" ADD_DATE=\"1700000000000\">Guide &amp; notes</A>\n  </DL><p>\n  <DT><A HREF=\"ftp://bad.example.org/\">Bad</A>\n</DL><p>",
+    "sample.html"
+   ],
+   "out": {
+    "kind": "bookmarks"
+   }
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"roots\":{\"bookmark_bar\":{\"children\":[{\"type\":\"folder\",\"name\":\"Example folder\",\"children\":[{\"type\":\"url\",\"name\":\"कला\",\"url\":\"https://maker.example.org/कला\",\"date_added\":\"13300000000000000\"},{\"type\":\"url\",\"name\":\"Docs\",\"url\":\"https://docs.example.org/guide\",\"date_added\":\"13300000000000000\"}]}]},\"other\":{\"children\":[]}}}",
+    "Bookmarks"
+   ],
+   "out": {
+    "kind": "bookmarks-json",
+    "data": {
+     "roots": {
+      "bookmark_bar": {
+       "children": [
+        {
+         "type": "folder",
+         "name": "Example folder",
+         "children": [
+          {
+           "type": "url",
+           "name": "कला",
+           "url": "https://maker.example.org/कला",
+           "date_added": "13300000000000000"
+          },
+          {
+           "type": "url",
+           "name": "Docs",
+           "url": "https://docs.example.org/guide",
+           "date_added": "13300000000000000"
+          }
+         ]
+        }
+       ]
+      },
+      "other": {
+       "children": []
+      }
+     }
+    },
+    "flavor": "chrome"
+   }
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "",
+    ""
+   ],
+   "out": {
+    "kind": "empty"
+   },
+   "note": "empty input"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"relationships_following\":[{\"title\":\"example_handle_9x7\",\"string_list_data\":[{\"href\":\"https://www.instagram.com/example_handle_9x7/\",\"value\":\"example_handle_9x7\",\"timestamp\":1700000000}]},{\"title\":\"__deleted__old\",\"string_list_data\":[{\"value\":\"__deleted__old\"}]},{\"title\":\"bad handle!\",\"string_list_data\":[{\"value\":\"bad handle!\"}]},{\"title\":\"example_handle_9x7\",\"string_list_data\":[{\"value\":\"example_handle_9x7\"}]}]}",
+    "following.json"
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "following",
+    "data": [
+     {
+      "title": "example_handle_9x7",
+      "string_list_data": [
+       {
+        "href": "https://www.instagram.com/example_handle_9x7/",
+        "value": "example_handle_9x7",
+        "timestamp": 1700000000
+       }
+      ]
+     },
+     {
+      "title": "__deleted__old",
+      "string_list_data": [
+       {
+        "value": "__deleted__old"
+       }
+      ]
+     },
+     {
+      "title": "bad handle!",
+      "string_list_data": [
+       {
+        "value": "bad handle!"
+       }
+      ]
+     },
+     {
+      "title": "example_handle_9x7",
+      "string_list_data": [
+       {
+        "value": "example_handle_9x7"
+       }
+      ]
+     }
+    ]
+   },
+   "note": "Instagram JSON"
+  },
+  {
+   "fn": "detectFormat",
+   "in": [
+    "<!DOCTYPE NETSCAPE-Bookmark-file-1>\n<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=UTF-8\">\n<TITLE>Bookmarks</TITLE><H1>Bookmarks</H1>\n<DL><p>\n  <DT><H3 ADD_DATE=\"1700000000\">Example folder</H3>\n  <DL><p>\n    <DT><A HREF=\"https://maker.example.org/कला\" ADD_DATE=\"1700000000\" TAGS=\"कला, design\">कला पत्रिका</A>\n    <DD>Café note\n    <DT><A HREF=\"https://docs.example.org/guide\" ADD_DATE=\"1700000000000\">Guide &amp; notes</A>\n  </DL><p>\n  <DT><A HREF=\"ftp://bad.example.org/\">Bad</A>\n</DL><p>"
+   ],
+   "out": "bookmarks"
+  },
+  {
+   "fn": "detectFormat",
+   "in": [
+    "# my sample links\nकला पत्रिका | https://maker.example.org/कला\nhttps://cafe.example.org/ Café notes\n[Design](https://design.example.org/)\nnot a link\n"
+   ],
+   "out": "url-list"
+  },
+  {
+   "fn": "detectFormat",
+   "in": [
+    "{\"resources\":[{\"id\":\"b1\",\"title\":\"Sample\",\"url\":\"https://maker.example.org/\"}]}"
+   ],
+   "out": "backup"
+  },
+  {
+   "fn": "detectFormat",
+   "in": [
+    ""
+   ],
+   "out": "empty",
+   "note": "empty input"
+  },
+  {
+   "fn": "parseBookmarksHTML",
+   "in": [
+    "<!DOCTYPE NETSCAPE-Bookmark-file-1>\n<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=UTF-8\">\n<TITLE>Bookmarks</TITLE><H1>Bookmarks</H1>\n<DL><p>\n  <DT><H3 ADD_DATE=\"1700000000\">Example folder</H3>\n  <DL><p>\n    <DT><A HREF=\"https://maker.example.org/कला\" ADD_DATE=\"1700000000\" TAGS=\"कला, design\">कला पत्रिका</A>\n    <DD>Café note\n    <DT><A HREF=\"https://docs.example.org/guide\" ADD_DATE=\"1700000000000\">Guide &amp; notes</A>\n  </DL><p>\n  <DT><A HREF=\"ftp://bad.example.org/\">Bad</A>\n</DL><p>"
+   ],
+   "out": [
+    {
+     "title": "कला पत्रिका",
+     "url": "https://maker.example.org/कला",
+     "folder": "Example folder",
+     "added": "2023-11-14",
+     "tags": [
+      "कला",
+      "design"
+     ],
+     "notes": "Café note"
+    },
+    {
+     "title": "Guide & notes",
+     "url": "https://docs.example.org/guide",
+     "folder": "Example folder",
+     "added": "2023-11-14"
+    }
+   ]
+  },
+  {
+   "fn": "parseBookmarksHTML",
+   "in": [
+    ""
+   ],
+   "out": []
+  },
+  {
+   "fn": "parseBookmarksHTML",
+   "in": [
+    "<DL><DT><A HREF=\"ftp://bad.example.org/\">Bad</A></DL>"
+   ],
+   "out": []
+  },
+  {
+   "fn": "parseBookmarksJSON",
+   "in": [
+    {
+     "roots": {
+      "bookmark_bar": {
+       "children": [
+        {
+         "type": "folder",
+         "name": "Example folder",
+         "children": [
+          {
+           "type": "url",
+           "name": "कला",
+           "url": "https://maker.example.org/कला",
+           "date_added": "13300000000000000"
+          },
+          {
+           "type": "url",
+           "name": "Docs",
+           "url": "https://docs.example.org/guide",
+           "date_added": "13300000000000000"
+          }
+         ]
+        }
+       ]
+      },
+      "other": {
+       "children": []
+      }
+     }
+    }
+   ],
+   "out": [
+    {
+     "title": "कला",
+     "url": "https://maker.example.org/कला",
+     "folder": "Example folder",
+     "added": "2022-06-18"
+    },
+    {
+     "title": "Docs",
+     "url": "https://docs.example.org/guide",
+     "folder": "Example folder",
+     "added": "2022-06-18"
+    }
+   ],
+   "note": "Chrome tree"
+  },
+  {
+   "fn": "parseBookmarksJSON",
+   "in": [
+    {
+     "type": "text/x-moz-place-container",
+     "title": "",
+     "children": [
+      {
+       "type": "text/x-moz-place",
+       "title": "Café",
+       "uri": "https://cafe.example.org/",
+       "dateAdded": 1700000000000000,
+       "tags": "café,notes"
+      }
+     ]
+    }
+   ],
+   "out": [
+    {
+     "title": "Café",
+     "url": "https://cafe.example.org/",
+     "folder": "",
+     "added": "2023-11-14",
+     "tags": [
+      "café",
+      "notes"
+     ]
+    }
+   ],
+   "note": "Firefox tree"
+  },
+  {
+   "fn": "parseBookmarksJSON",
+   "in": [
+    {}
+   ],
+   "out": [],
+   "note": "empty input"
+  },
+  {
+   "fn": "parseOPML",
+   "in": [
+    "<opml version=\"2.0\"><body><outline text=\"Feeds\"><outline text=\"कला feed\" xmlUrl=\"https://feeds.example.org/kala.xml\" htmlUrl=\"https://maker.example.org/kala\" /><outline text=\"Café notes\" xmlUrl=\"https://feeds.example.org/cafe.xml\" /></outline></body></opml>"
+   ],
+   "out": [
+    {
+     "title": "कला feed",
+     "url": "https://maker.example.org/kala",
+     "type": "feed",
+     "folder": "Feeds",
+     "rssUrl": "https://feeds.example.org/kala.xml"
+    },
+    {
+     "title": "Café notes",
+     "url": "https://feeds.example.org/cafe.xml",
+     "type": "feed",
+     "folder": "Feeds",
+     "rssUrl": "https://feeds.example.org/cafe.xml"
+    }
+   ]
+  },
+  {
+   "fn": "parseOPML",
+   "in": [
+    ""
+   ],
+   "out": []
+  },
+  {
+   "fn": "parseOPML",
+   "in": [
+    "<opml><body><outline text=\"No link\"/></body></opml>"
+   ],
+   "out": []
+  },
+  {
+   "fn": "parseCSVRows",
+   "in": [
+    "Title,URL,Tags,Notes,Added\n\"कला, पत्रिका\",https://maker.example.org/कला,\"कला;design\",\"Line one\nLine two\",2026-10-30\nCafé,https://cafe.example.org/,notes,\"A, sample\",1700000000000\n"
+   ],
+   "out": [
+    [
+     "Title",
+     "URL",
+     "Tags",
+     "Notes",
+     "Added"
+    ],
+    [
+     "कला, पत्रिका",
+     "https://maker.example.org/कला",
+     "कला;design",
+     "Line one\nLine two",
+     "2026-10-30"
+    ],
+    [
+     "Café",
+     "https://cafe.example.org/",
+     "notes",
+     "A, sample",
+     "1700000000000"
+    ]
+   ]
+  },
+  {
+   "fn": "parseCSVRows",
+   "in": [
+    "one;two\nthree;four\n"
+   ],
+   "out": [
+    [
+     "one",
+     "two"
+    ],
+    [
+     "three",
+     "four"
+    ]
+   ],
+   "note": "semicolon delimiter"
+  },
+  {
+   "fn": "parseCSVRows",
+   "in": [
+    ""
+   ],
+   "out": [],
+   "note": "empty input"
+  },
+  {
+   "fn": "parseCSV",
+   "in": [
+    "Title,URL,Tags,Notes,Added\n\"कला, पत्रिका\",https://maker.example.org/कला,\"कला;design\",\"Line one\nLine two\",2026-10-30\nCafé,https://cafe.example.org/,notes,\"A, sample\",1700000000000\n"
+   ],
+   "out": [
+    {
+     "title": "कला, पत्रिका",
+     "url": "https://maker.example.org/कला",
+     "folder": "",
+     "added": "2026-10-30",
+     "tags": [
+      "कला",
+      "design"
+     ],
+     "notes": "Line one\nLine two"
+    },
+    {
+     "title": "Café",
+     "url": "https://cafe.example.org/",
+     "folder": "",
+     "added": "2023-11-14",
+     "tags": [
+      "notes"
+     ],
+     "notes": "A, sample"
+    }
+   ]
+  },
+  {
+   "fn": "parseCSV",
+   "in": [
+    "One,Two\nhttps://maker.example.org/कला,Sample\n"
+   ],
+   "out": [
+    {
+     "title": "Sample",
+     "url": "https://maker.example.org/कला",
+     "folder": "",
+     "added": ""
+    }
+   ],
+   "note": "no url header"
+  },
+  {
+   "fn": "parseCSV",
+   "in": [
+    ""
+   ],
+   "out": [],
+   "note": "empty input"
+  },
+  {
+   "fn": "parseShortcut",
+   "in": [
+    "[InternetShortcut]\nURL=https://maker.example.org/कला\n",
+    "sample.url"
+   ],
+   "out": [
+    {
+     "title": "sample",
+     "url": "https://maker.example.org/कला"
+    }
+   ]
+  },
+  {
+   "fn": "parseShortcut",
+   "in": [
+    "<plist><dict><key>URL</key><string>https://maker.example.org/</string></dict></plist>",
+    ""
+   ],
+   "out": [
+    {
+     "title": "",
+     "url": "https://maker.example.org/"
+    }
+   ]
+  },
+  {
+   "fn": "parseShortcut",
+   "in": [
+    "",
+    ""
+   ],
+   "out": [],
+   "note": "empty input"
+  },
+  {
+   "fn": "parseLinksHTML",
+   "in": [
+    "<html><body><a href=\"https://maker.example.org/कला\" tags=\"कला,design\">कला</a><a href=\"https://cafe.example.org/\">Café</a><a href=\"ftp://bad.example.org/\">Bad</a></body></html>"
+   ],
+   "out": [
+    {
+     "title": "कला",
+     "url": "https://maker.example.org/कला",
+     "added": "",
+     "tags": [
+      "कला",
+      "design"
+     ]
+    },
+    {
+     "title": "Café",
+     "url": "https://cafe.example.org/",
+     "added": ""
+    }
+   ]
+  },
+  {
+   "fn": "parseLinksHTML",
+   "in": [
+    ""
+   ],
+   "out": []
+  },
+  {
+   "fn": "parseLinksHTML",
+   "in": [
+    "<a href=\"https://maker.example.org/कला\">कला</a><a href=\"https://cafe.example.org/\">Café</a>"
+   ],
+   "out": [
+    {
+     "title": "कला",
+     "url": "https://maker.example.org/कला",
+     "added": ""
+    },
+    {
+     "title": "Café",
+     "url": "https://cafe.example.org/",
+     "added": ""
+    }
+   ]
+  },
+  {
+   "fn": "parseUrlList",
+   "in": [
+    "# my sample links\nकला पत्रिका | https://maker.example.org/कला\nhttps://cafe.example.org/ Café notes\n[Design](https://design.example.org/)\nnot a link\n"
+   ],
+   "out": [
+    {
+     "title": "कला पत्रिका",
+     "url": "https://maker.example.org/कला"
+    },
+    {
+     "title": "Café notes",
+     "url": "https://cafe.example.org/"
+    },
+    {
+     "title": "Design",
+     "url": "https://design.example.org/"
+    }
+   ]
+  },
+  {
+   "fn": "parseUrlList",
+   "in": [
+    ""
+   ],
+   "out": []
+  },
+  {
+   "fn": "parseUrlList",
+   "in": [
+    "कला पत्रिका | https://maker.example.org/कला\nhttps://cafe.example.org/ Café"
+   ],
+   "out": [
+    {
+     "title": "कला पत्रिका",
+     "url": "https://maker.example.org/कला"
+    },
+    {
+     "title": "Café",
+     "url": "https://cafe.example.org/"
+    }
+   ]
+  },
+  {
+   "fn": "parseJSONArray",
+   "in": [
+    [
+     "https://maker.example.org/कला",
+     {
+      "title": "Café",
+      "url": "https://cafe.example.org/",
+      "tags": "notes, café",
+      "note": "sample"
+     },
+     {
+      "title": "No link"
+     },
+     42
+    ]
+   ],
+   "out": [
+    {
+     "title": "",
+     "url": "https://maker.example.org/कला"
+    },
+    {
+     "title": "Café",
+     "url": "https://cafe.example.org/",
+     "tags": [
+      "notes",
+      "café"
+     ],
+     "note": "sample",
+     "notes": "sample"
+    }
+   ]
+  },
+  {
+   "fn": "parseJSONArray",
+   "in": [
+    []
+   ],
+   "out": [],
+   "note": "empty input"
+  },
+  {
+   "fn": "parseJSONArray",
+   "in": [
+    "{"
+   ],
+   "out": {
+    "throws": "SyntaxError"
+   },
+   "note": "broken JSON throws"
+  },
+  {
+   "fn": "parseInstagramList",
+   "in": [
+    {
+     "relationships_following": [
+      {
+       "title": "example_handle_9x7",
+       "string_list_data": [
+        {
+         "href": "https://www.instagram.com/example_handle_9x7/",
+         "value": "example_handle_9x7",
+         "timestamp": 1700000000
+        }
+       ]
+      },
+      {
+       "title": "__deleted__old",
+       "string_list_data": [
+        {
+         "value": "__deleted__old"
+        }
+       ]
+      },
+      {
+       "title": "bad handle!",
+       "string_list_data": [
+        {
+         "value": "bad handle!"
+        }
+       ]
+      },
+      {
+       "title": "example_handle_9x7",
+       "string_list_data": [
+        {
+         "value": "example_handle_9x7"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "out": {
+    "entries": [
+     {
+      "title": "@example_handle_9x7",
+      "url": "https://www.instagram.com/example_handle_9x7/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": "2023-11-14"
+     }
+    ],
+    "skipped": {
+     "deleted": 1,
+     "bad": 1
+    }
+   },
+   "note": "JSON object with relationships_following"
+  },
+  {
+   "fn": "parseInstagramList",
+   "in": [
+    "<html><body><h1>Following</h1><h2>example_handle_9x7</h2><a href=\"https://www.instagram.com/example_handle_9x7/\">Café</a> Sep 10, 2026<h2>example_maker_9x7</h2><a href=\"https://www.instagram.com/example_maker_9x7/\">Maker</a></body></html>"
+   ],
+   "out": {
+    "entries": [
+     {
+      "title": "@example_handle_9x7",
+      "url": "https://www.instagram.com/example_handle_9x7/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": "2026-09-10"
+     },
+     {
+      "title": "@example_maker_9x7",
+      "url": "https://www.instagram.com/example_maker_9x7/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": ""
+     }
+    ],
+    "skipped": {
+     "deleted": 0,
+     "bad": 0
+    }
+   },
+   "note": "HTML export"
+  },
+  {
+   "fn": "parseInstagramList",
+   "in": [
+    ""
+   ],
+   "out": {
+    "entries": [],
+    "skipped": {
+     "deleted": 0,
+     "bad": 0
+    }
+   }
+  },
+  {
+   "fn": "parseInstagramFollowing",
+   "in": [
+    {
+     "relationships_following": [
+      {
+       "title": "example_handle_9x7",
+       "string_list_data": [
+        {
+         "href": "https://www.instagram.com/example_handle_9x7/",
+         "value": "example_handle_9x7",
+         "timestamp": 1700000000
+        }
+       ]
+      },
+      {
+       "title": "__deleted__old",
+       "string_list_data": [
+        {
+         "value": "__deleted__old"
+        }
+       ]
+      },
+      {
+       "title": "bad handle!",
+       "string_list_data": [
+        {
+         "value": "bad handle!"
+        }
+       ]
+      },
+      {
+       "title": "example_handle_9x7",
+       "string_list_data": [
+        {
+         "value": "example_handle_9x7"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "out": [
+    {
+     "title": "@example_handle_9x7",
+     "url": "https://www.instagram.com/example_handle_9x7/",
+     "type": "feed",
+     "tags": [
+      "instagram",
+      "following"
+     ],
+     "src": "following",
+     "research": "user",
+     "added": "2023-11-14"
+    }
+   ]
+  },
+  {
+   "fn": "parseInstagramFollowing",
+   "in": [
+    "<html><body><h1>Following</h1><h2>example_handle_9x7</h2><a href=\"https://www.instagram.com/example_handle_9x7/\">Café</a> Sep 10, 2026<h2>example_maker_9x7</h2><a href=\"https://www.instagram.com/example_maker_9x7/\">Maker</a></body></html>"
+   ],
+   "out": [
+    {
+     "title": "@example_handle_9x7",
+     "url": "https://www.instagram.com/example_handle_9x7/",
+     "type": "feed",
+     "tags": [
+      "instagram",
+      "following"
+     ],
+     "src": "following",
+     "research": "user",
+     "added": "2026-09-10"
+    },
+    {
+     "title": "@example_maker_9x7",
+     "url": "https://www.instagram.com/example_maker_9x7/",
+     "type": "feed",
+     "tags": [
+      "instagram",
+      "following"
+     ],
+     "src": "following",
+     "research": "user",
+     "added": ""
+    }
+   ]
+  },
+  {
+   "fn": "parseInstagramFollowing",
+   "in": [
+    ""
+   ],
+   "out": []
+  },
+  {
+   "fn": "inferType",
+   "in": [
+    "https://docs.example.org/guide",
+    "Docs"
+   ],
+   "out": "docs"
+  },
+  {
+   "fn": "inferType",
+   "in": [
+    "https://maker.example.org/tool",
+    "PDF converter"
+   ],
+   "out": "web-tool"
+  },
+  {
+   "fn": "inferType",
+   "in": [
+    "https://catalogue.example.org/list",
+    "Awesome catalogue"
+   ],
+   "out": "catalogue"
+  },
+  {
+   "fn": "inferType",
+   "in": [
+    "https://example.org/feed.xml",
+    ""
+   ],
+   "out": "feed"
+  },
+  {
+   "fn": "inferTags",
+   "in": [
+    "https://maker.example.org/कला",
+    "कला पत्रिका"
+   ],
+   "out": [
+    "example"
+   ]
+  },
+  {
+   "fn": "inferTags",
+   "in": [
+    "https://cafe.example.org/",
+    "Café notes"
+   ],
+   "out": [
+    "example",
+    "café",
+    "notes"
+   ]
+  },
+  {
+   "fn": "inferTags",
+   "in": [
+    "",
+    ""
+   ],
+   "out": []
+  },
+  {
+   "fn": "entryToResource",
+   "in": [
+    {
+     "title": "कला",
+     "url": "https://maker.example.org/कला",
+     "tags": [
+      "कला"
+     ]
+    }
+   ],
+   "out": {
+    "title": "कला",
+    "url": "https://maker.example.org/कला",
+    "tags": [
+     "कला"
+    ],
+    "type": "article-site",
+    "draft": true,
+    "src": "import",
+    "research": "title-only"
+   }
+  },
+  {
+   "fn": "entryToResource",
+   "in": [
+    {
+     "title": "",
+     "url": ""
+    }
+   ],
+   "out": {
+    "title": "",
+    "url": "",
+    "type": "article-site",
+    "tags": [],
+    "draft": true,
+    "src": "import",
+    "research": "title-only"
+   },
+   "note": "missing fields"
+  },
+  {
+   "fn": "entryToResource",
+   "in": [
+    {
+     "title": "Café",
+     "url": "https://cafe.example.org/"
+    }
+   ],
+   "out": {
+    "title": "Café",
+    "url": "https://cafe.example.org/",
+    "type": "article-site",
+    "tags": [
+     "example",
+     "café"
+    ],
+    "draft": true,
+    "src": "import",
+    "research": "title-only"
+   }
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "sample.html",
+    "<!DOCTYPE NETSCAPE-Bookmark-file-1>\n<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=UTF-8\">\n<TITLE>Bookmarks</TITLE><H1>Bookmarks</H1>\n<DL><p>\n  <DT><H3 ADD_DATE=\"1700000000\">Example folder</H3>\n  <DL><p>\n    <DT><A HREF=\"https://maker.example.org/कला\" ADD_DATE=\"1700000000\" TAGS=\"कला, design\">कला पत्रिका</A>\n    <DD>Café note\n    <DT><A HREF=\"https://docs.example.org/guide\" ADD_DATE=\"1700000000000\">Guide &amp; notes</A>\n  </DL><p>\n  <DT><A HREF=\"ftp://bad.example.org/\">Bad</A>\n</DL><p>"
+   ],
+   "out": {
+    "name": "sample.html",
+    "kind": "bookmarks",
+    "label": "Browser bookmarks file",
+    "entries": [
+     {
+      "title": "कला पत्रिका",
+      "url": "https://maker.example.org/कला",
+      "folder": "Example folder",
+      "added": "2023-11-14",
+      "tags": [
+       "कला",
+       "design"
+      ],
+      "notes": "Café note",
+      "type": "article-site",
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     },
+     {
+      "title": "Guide & notes",
+      "url": "https://docs.example.org/guide",
+      "folder": "Example folder",
+      "added": "2023-11-14",
+      "type": "docs",
+      "tags": [
+       "example",
+       "guide",
+       "notes"
+      ],
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     }
+    ],
+    "note": "",
+    "skip": false
+   }
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "Bookmarks",
+    "{\"roots\":{\"bookmark_bar\":{\"children\":[{\"type\":\"folder\",\"name\":\"Example folder\",\"children\":[{\"type\":\"url\",\"name\":\"कला\",\"url\":\"https://maker.example.org/कला\",\"date_added\":\"13300000000000000\"},{\"type\":\"url\",\"name\":\"Docs\",\"url\":\"https://docs.example.org/guide\",\"date_added\":\"13300000000000000\"}]}]},\"other\":{\"children\":[]}}}"
+   ],
+   "out": {
+    "name": "Bookmarks",
+    "kind": "bookmarks-json",
+    "label": "Browser bookmarks file (JSON)",
+    "entries": [
+     {
+      "title": "कला",
+      "url": "https://maker.example.org/कला",
+      "folder": "Example folder",
+      "added": "2022-06-18",
+      "type": "article-site",
+      "tags": [
+       "example"
+      ],
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     },
+     {
+      "title": "Docs",
+      "url": "https://docs.example.org/guide",
+      "folder": "Example folder",
+      "added": "2022-06-18",
+      "type": "docs",
+      "tags": [
+       "example",
+       "docs"
+      ],
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     }
+    ],
+    "note": "",
+    "skip": false
+   },
+   "note": "Chrome JSON"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "backup.json",
+    "{\"resources\":[{\"id\":\"b1\",\"title\":\"Sample\",\"url\":\"https://maker.example.org/\"}]}"
+   ],
+   "out": {
+    "name": "backup.json",
+    "kind": "backup",
+    "label": "Nexus backup",
+    "entries": [],
+    "note": "This is a full Nexus backup. It is restored with \"Import a backup\", not as links.",
+    "skip": true,
+    "backup": true
+   },
+   "note": "Nexus backup"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "broken.json",
+    "{"
+   ],
+   "out": {
+    "name": "broken.json",
+    "kind": "json-broken",
+    "label": "",
+    "entries": [],
+    "note": "This JSON is damaged or cut off.",
+    "skip": true
+   },
+   "note": "broken JSON"
+  },
+  {
+   "fn": "parseAny",
+   "in": [
+    "<!DOCTYPE NETSCAPE-Bookmark-file-1>\n<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=UTF-8\">\n<TITLE>Bookmarks</TITLE><H1>Bookmarks</H1>\n<DL><p>\n  <DT><H3 ADD_DATE=\"1700000000\">Example folder</H3>\n  <DL><p>\n    <DT><A HREF=\"https://maker.example.org/कला\" ADD_DATE=\"1700000000\" TAGS=\"कला, design\">कला पत्रिका</A>\n    <DD>Café note\n    <DT><A HREF=\"https://docs.example.org/guide\" ADD_DATE=\"1700000000000\">Guide &amp; notes</A>\n  </DL><p>\n  <DT><A HREF=\"ftp://bad.example.org/\">Bad</A>\n</DL><p>"
+   ],
+   "out": {
+    "format": "bookmarks",
+    "entries": [
+     {
+      "title": "कला पत्रिका",
+      "url": "https://maker.example.org/कला",
+      "folder": "Example folder",
+      "added": "2023-11-14",
+      "tags": [
+       "कला",
+       "design"
+      ],
+      "notes": "Café note",
+      "type": "article-site",
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     },
+     {
+      "title": "Guide & notes",
+      "url": "https://docs.example.org/guide",
+      "folder": "Example folder",
+      "added": "2023-11-14",
+      "type": "docs",
+      "tags": [
+       "example",
+       "guide",
+       "notes"
+      ],
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     }
+    ],
+    "note": "",
+    "kind": "bookmarks",
+    "label": "Browser bookmarks file",
+    "skip": false
+   },
+   "note": "bookmarks HTML"
+  },
+  {
+   "fn": "parseAny",
+   "in": [
+    "{\"roots\":{\"bookmark_bar\":{\"children\":[{\"type\":\"folder\",\"name\":\"Example folder\",\"children\":[{\"type\":\"url\",\"name\":\"कला\",\"url\":\"https://maker.example.org/कला\",\"date_added\":\"13300000000000000\"},{\"type\":\"url\",\"name\":\"Docs\",\"url\":\"https://docs.example.org/guide\",\"date_added\":\"13300000000000000\"}]}]},\"other\":{\"children\":[]}}}"
+   ],
+   "out": {
+    "format": "bookmarks-json",
+    "entries": [
+     {
+      "title": "कला",
+      "url": "https://maker.example.org/कला",
+      "folder": "Example folder",
+      "added": "2022-06-18",
+      "type": "article-site",
+      "tags": [
+       "example"
+      ],
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     },
+     {
+      "title": "Docs",
+      "url": "https://docs.example.org/guide",
+      "folder": "Example folder",
+      "added": "2022-06-18",
+      "type": "docs",
+      "tags": [
+       "example",
+       "docs"
+      ],
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     }
+    ],
+    "note": "",
+    "kind": "bookmarks-json",
+    "label": "Browser bookmarks file (JSON)",
+    "skip": false
+   },
+   "note": "Chrome bookmarks JSON"
+  },
+  {
+   "fn": "parseAny",
+   "in": [
+    "<opml version=\"2.0\"><body><outline text=\"Feeds\"><outline text=\"कला feed\" xmlUrl=\"https://feeds.example.org/kala.xml\" htmlUrl=\"https://maker.example.org/kala\" /><outline text=\"Café notes\" xmlUrl=\"https://feeds.example.org/cafe.xml\" /></outline></body></opml>"
+   ],
+   "out": {
+    "format": "opml",
+    "entries": [
+     {
+      "title": "कला feed",
+      "url": "https://maker.example.org/kala",
+      "type": "feed",
+      "folder": "Feeds",
+      "rssUrl": "https://feeds.example.org/kala.xml",
+      "tags": [
+       "example",
+       "feed"
+      ],
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     },
+     {
+      "title": "Café notes",
+      "url": "https://feeds.example.org/cafe.xml",
+      "type": "feed",
+      "folder": "Feeds",
+      "rssUrl": "https://feeds.example.org/cafe.xml",
+      "tags": [
+       "example",
+       "café",
+       "notes"
+      ],
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     }
+    ],
+    "note": "",
+    "kind": "opml",
+    "label": "Feed list (OPML)",
+    "skip": false
+   },
+   "note": "OPML"
+  },
+  {
+   "fn": "parseAny",
+   "in": [
+    "Title,URL,Tags,Notes,Added\n\"कला, पत्रिका\",https://maker.example.org/कला,\"कला;design\",\"Line one\nLine two\",2026-10-30\nCafé,https://cafe.example.org/,notes,\"A, sample\",1700000000000\n"
+   ],
+   "out": {
+    "format": "csv",
+    "entries": [
+     {
+      "title": "कला, पत्रिका",
+      "url": "https://maker.example.org/कला",
+      "folder": "",
+      "added": "2026-10-30",
+      "tags": [
+       "कला",
+       "design"
+      ],
+      "notes": "Line one\nLine two",
+      "type": "article-site",
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     },
+     {
+      "title": "Café",
+      "url": "https://cafe.example.org/",
+      "folder": "",
+      "added": "2023-11-14",
+      "tags": [
+       "notes"
+      ],
+      "notes": "A, sample",
+      "type": "article-site",
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     }
+    ],
+    "note": "",
+    "kind": "csv",
+    "label": "CSV list of links",
+    "skip": false
+   },
+   "note": "CSV"
+  },
+  {
+   "fn": "parseAny",
+   "in": [
+    "{\"relationships_following\":[{\"title\":\"example_handle_9x7\",\"string_list_data\":[{\"href\":\"https://www.instagram.com/example_handle_9x7/\",\"value\":\"example_handle_9x7\",\"timestamp\":1700000000}]},{\"title\":\"__deleted__old\",\"string_list_data\":[{\"value\":\"__deleted__old\"}]},{\"title\":\"bad handle!\",\"string_list_data\":[{\"value\":\"bad handle!\"}]},{\"title\":\"example_handle_9x7\",\"string_list_data\":[{\"value\":\"example_handle_9x7\"}]}]}"
+   ],
+   "out": {
+    "format": "instagram-json",
+    "entries": [
+     {
+      "title": "@example_handle_9x7",
+      "url": "https://www.instagram.com/example_handle_9x7/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": "2023-11-14",
+      "draft": true
+     }
+    ],
+    "note": "1 deleted account skipped.",
+    "kind": "instagram",
+    "label": "Instagram following list",
+    "skip": false
+   },
+   "note": "Instagram following JSON"
+  },
+  {
+   "fn": "parseAny",
+   "in": [
+    "# my sample links\nकला पत्रिका | https://maker.example.org/कला\nhttps://cafe.example.org/ Café notes\n[Design](https://design.example.org/)\nnot a link\n"
+   ],
+   "out": {
+    "format": "url-list",
+    "entries": [
+     {
+      "title": "कला पत्रिका",
+      "url": "https://maker.example.org/कला",
+      "type": "article-site",
+      "tags": [
+       "example"
+      ],
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     },
+     {
+      "title": "Café notes",
+      "url": "https://cafe.example.org/",
+      "type": "article-site",
+      "tags": [
+       "example",
+       "café",
+       "notes"
+      ],
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     },
+     {
+      "title": "Design",
+      "url": "https://design.example.org/",
+      "type": "article-site",
+      "tags": [
+       "example",
+       "design"
+      ],
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     }
+    ],
+    "note": "",
+    "kind": "urls",
+    "label": "Text with links",
+    "skip": false
+   },
+   "note": "plain list of urls"
+  },
+  {
+   "fn": "parseAny",
+   "in": [
+    ""
+   ],
+   "out": {
+    "format": "empty",
+    "entries": [],
+    "note": "",
+    "kind": "empty",
+    "label": "",
+    "skip": true
+   },
+   "note": "empty input"
+  },
+  {
+   "fn": "parseAny",
+   "in": [
+    "{\"resources\":[{\"id\":\"b1\",\"title\":\"Sample\",\"url\":\"https://maker.example.org/\"}]}"
+   ],
+   "out": {
+    "format": "backup",
+    "entries": [],
+    "note": "This is a full backup. Use \"Import backup\".",
+    "kind": "backup",
+    "label": "Nexus backup",
+    "skip": true
+   },
+   "note": "Nexus backup is skipped"
+  },
+  {
+   "fn": "decode",
+   "in": [
+    "&nbsp; &AMP; &#X41; &#x110000; &#99999999999999999999; &amp;amp;"
+   ],
+   "out": "  & A &#x110000; &#99999999999999999999; &amp;",
+   "note": "named, upper hex, invalid codepoint and double escape"
+  },
+  {
+   "fn": "toISODate",
+   "in": [
+    "2023-11-14T22:13:20Z"
+   ],
+   "out": "2023-11-14",
+   "note": "ISO instant"
+  },
+  {
+   "fn": "toISODate",
+   "in": [
+    "2023-11-15T03:43:20+05:30"
+   ],
+   "out": "2023-11-14",
+   "note": "ISO with offset"
+  },
+  {
+   "fn": "toISODate",
+   "in": [
+    "1994-12-31"
+   ],
+   "out": "",
+   "note": "before 1995"
+  },
+  {
+   "fn": "toISODate",
+   "in": [
+    "2101-01-01"
+   ],
+   "out": "",
+   "note": "after 2100"
+  },
+  {
+   "fn": "toISODate",
+   "in": [
+    "123456789"
+   ],
+   "out": "",
+   "note": "nine digits"
+  },
+  {
+   "fn": "parseCSVRows",
+   "in": [
+    "﻿title,url\r\n\"One, two\",\"https://one.example.org/\"\r\n"
+   ],
+   "out": [
+    [
+     "title",
+     "url"
+    ],
+    [
+     "One, two",
+     "https://one.example.org/"
+    ]
+   ],
+   "note": "BOM and CRLF"
+  },
+  {
+   "fn": "parseCSVRows",
+   "in": [
+    "title,url\n\"Say \"\"hello\"\"\",\"https://quote.example.org/\"\n"
+   ],
+   "out": [
+    [
+     "title",
+     "url"
+    ],
+    [
+     "Say \"hello\"",
+     "https://quote.example.org/"
+    ]
+   ],
+   "note": "doubled quotes"
+  },
+  {
+   "fn": "parseCSVRows",
+   "in": [
+    "title\turl\nTabbed\thttps://tab.example.org/\n"
+   ],
+   "out": [
+    [
+     "title",
+     "url"
+    ],
+    [
+     "Tabbed",
+     "https://tab.example.org/"
+    ]
+   ],
+   "note": "tab separated"
+  },
+  {
+   "fn": "parseCSVRows",
+   "in": [
+    "one\nhttps://one.example.org/\n"
+   ],
+   "out": [
+    [
+     "one"
+    ],
+    [
+     "https://one.example.org/"
+    ]
+   ],
+   "note": "single column"
+  },
+  {
+   "fn": "parseCSVRows",
+   "in": [
+    "title,url\n\"unterminated,https://one.example.org/\n"
+   ],
+   "out": [
+    [
+     "title",
+     "url"
+    ],
+    [
+     "unterminated,https://one.example.org/\n"
+    ]
+   ],
+   "note": "unterminated quote"
+  },
+  {
+   "fn": "parseCSV",
+   "in": [
+    "﻿title,url,time_added,tags\nPocket sample,https://pocket.example.org/,1700000000,\"read, later\"\n"
+   ],
+   "out": [
+    {
+     "title": "Pocket sample",
+     "url": "https://pocket.example.org/",
+     "folder": "",
+     "added": "2023-11-14",
+     "tags": [
+      "read",
+      "later"
+     ]
+    }
+   ],
+   "note": "Pocket header and BOM"
+  },
+  {
+   "fn": "parseCSV",
+   "in": [
+    "description,href,extended\nPinboard sample,https://pinboard.example.org/,A longer note\n"
+   ],
+   "out": [
+    {
+     "title": "Pinboard sample",
+     "url": "https://pinboard.example.org/",
+     "folder": "",
+     "added": ""
+    }
+   ],
+   "note": "Pinboard description is the title"
+  },
+  {
+   "fn": "parseCSV",
+   "in": [
+    "name,note\nNo link here,still none\n"
+   ],
+   "out": [],
+   "note": "no link column"
+  },
+  {
+   "fn": "parseBookmarksHTML",
+   "in": [
+    "<DL><p><DT><H3>Bookmarks bar</H3><DL><p><DT><H3>A</H3><DL><p><DT><H3>B</H3><DL><p><DT><A HREF='https://nested.example.org/' ADD_DATE=\"1700000000\" TAGS=\"कला; design\">Nested</A><DD>Long note</DL><p></DL><p></DL><p></DL><p>"
+   ],
+   "out": [
+    {
+     "title": "Nested",
+     "url": "https://nested.example.org/",
+     "folder": "A / B",
+     "added": "2023-11-14",
+     "tags": [
+      "कला",
+      "design"
+     ],
+     "notes": "Long note"
+    }
+   ],
+   "note": "three nested folders and single-quoted href"
+  },
+  {
+   "fn": "parseBookmarksHTML",
+   "in": [
+    "<DL><DT><A HREF=\"javascript:alert(1)\">Bad</A><DT><A HREF=\"https://good.example.org/\">Good</A></DL>"
+   ],
+   "out": [
+    {
+     "title": "Good",
+     "url": "https://good.example.org/",
+     "folder": "",
+     "added": ""
+    }
+   ],
+   "note": "javascript link skipped"
+  },
+  {
+   "fn": "parseBookmarksJSON",
+   "in": [
+    {
+     "roots": {
+      "bookmark_bar": {
+       "children": [
+        {
+         "type": "folder",
+         "name": "Bookmarks bar",
+         "children": [
+          {
+           "type": "url",
+           "name": "Nested",
+           "url": "https://nested.example.org/",
+           "date_added": "1700000000"
+          }
+         ]
+        }
+       ]
+      },
+      "other": {}
+     }
+    }
+   ],
+   "out": [
+    {
+     "title": "Nested",
+     "url": "https://nested.example.org/",
+     "folder": "",
+     "added": "2023-11-14"
+    }
+   ],
+   "note": "Chrome roots with nested folder"
+  },
+  {
+   "fn": "parseBookmarksJSON",
+   "in": [
+    {
+     "typeCode": 2,
+     "title": "",
+     "root": "placesRoot",
+     "children": [
+      {
+       "typeCode": 1,
+       "title": "Nested",
+       "uri": "https://nested.example.org/",
+       "dateAdded": 1700000000
+      }
+     ]
+    }
+   ],
+   "out": [
+    {
+     "title": "Nested",
+     "url": "https://nested.example.org/",
+     "folder": "",
+     "added": "2023-11-14"
+    }
+   ],
+   "note": "Firefox nested tree"
+  },
+  {
+   "fn": "parseOPML",
+   "in": [
+    "<opml><body><outline text=\"A\"><outline text=\"B\" xmlUrl=\"https://feed.example.org/rss\" htmlUrl=\"https://feed.example.org/\"/></outline></body></opml>"
+   ],
+   "out": [
+    {
+     "title": "B",
+     "url": "https://feed.example.org/",
+     "type": "feed",
+     "folder": "A",
+     "rssUrl": "https://feed.example.org/rss"
+    }
+   ],
+   "note": "two levels and feed urls"
+  },
+  {
+   "fn": "parseUrlList",
+   "in": [
+    "example.org\nExample | docs.example.org/path).\n[Design](https://design.example.org/a).\nTitle, example.net\nhttps://cafe.example.org/ (notes)\n// comment\n"
+   ],
+   "out": [
+    {
+     "title": "",
+     "url": "https://example.org"
+    },
+    {
+     "title": "Example",
+     "url": "https://docs.example.org/path"
+    },
+    {
+     "title": "Design",
+     "url": "https://design.example.org/a"
+    },
+    {
+     "title": "Title",
+     "url": "https://example.net"
+    },
+    {
+     "title": "(notes)",
+     "url": "https://cafe.example.org/"
+    }
+   ],
+   "note": "bare domains, markdown and trailing punctuation"
+  },
+  {
+   "fn": "parseInstagramList",
+   "in": [
+    [
+     {
+      "string_list_data": [
+       {
+        "value": "Café.User",
+        "timestamp": 1700000000
+       }
+      ]
+     },
+     {
+      "string_list_data": [
+       {
+        "value": "café.user"
+       }
+      ]
+     },
+     {
+      "string_list_data": [
+       {
+        "title": "no_value"
+       }
+      ]
+     },
+     {
+      "string_list_data": []
+     },
+     {
+      "title": "NoData"
+     },
+     {
+      "string_list_data": [
+       {
+        "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+       }
+      ]
+     },
+     {
+      "string_list_data": [
+       {
+        "value": "__deleted__old"
+       }
+      ]
+     },
+     {
+      "string_list_data": [
+       {
+        "value": "bad handle"
+       }
+      ]
+     }
+    ]
+   ],
+   "out": {
+    "entries": [],
+    "skipped": {
+     "deleted": 1,
+     "bad": 7
+    }
+   },
+   "note": "bare array, duplicate case, deleted and bad handles"
+  },
+  {
+   "fn": "parseInstagramList",
+   "in": [
+    "<html><h1>Following</h1><h2>Following</h2><a href=\"https://www.instagram.com/Example.One/\">Example.One</a></html>"
+   ],
+   "out": {
+    "entries": [
+     {
+      "title": "@Following",
+      "url": "https://www.instagram.com/Following/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": ""
+     }
+    ],
+    "skipped": {
+     "deleted": 0,
+     "bad": 0
+    }
+   },
+   "note": "HTML heading"
+  },
+  {
+   "fn": "parseInstagramList",
+   "in": [
+    "<html><a href=\"https://www.instagram.com/NoHeading/\">NoHeading</a></html>"
+   ],
+   "out": {
+    "entries": [
+     {
+      "title": "@NoHeading",
+      "url": "https://www.instagram.com/NoHeading/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": ""
+     }
+    ],
+    "skipped": {
+     "deleted": 0,
+     "bad": 0
+    }
+   },
+   "note": "HTML without h2"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "sample.url",
+    "[InternetShortcut]\nURL=https://shortcut.example.org/\n"
+   ],
+   "out": {
+    "name": "sample.url",
+    "kind": "shortcut",
+    "label": "Link file",
+    "entries": [
+     {
+      "title": "sample",
+      "url": "https://shortcut.example.org/",
+      "type": "article-site",
+      "tags": [
+       "example",
+       "sample"
+      ],
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     }
+    ],
+    "note": "",
+    "skip": false
+   },
+   "note": "shortcut file"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "links.html",
+    "<html><body><a href=\"https://one.example.org/\">One</a><a href=\"ftp://bad/\">Bad</a></body></html>"
+   ],
+   "out": {
+    "name": "links.html",
+    "kind": "links-html",
+    "label": "Web page with links",
+    "entries": [
+     {
+      "title": "One",
+      "url": "https://one.example.org/",
+      "added": "",
+      "type": "article-site",
+      "tags": [
+       "example"
+      ],
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     }
+    ],
+    "note": "",
+    "skip": false
+   },
+   "note": "links-only HTML"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "links.json",
+    "[\"https://one.example.org/\",\"bad\"]"
+   ],
+   "out": {
+    "name": "links.json",
+    "kind": "json-list",
+    "label": "JSON list of links",
+    "entries": [
+     {
+      "title": "",
+      "url": "https://one.example.org/",
+      "type": "article-site",
+      "tags": [
+       "example"
+      ],
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     }
+    ],
+    "note": "",
+    "skip": false
+   },
+   "note": "JSON list of urls"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "wrapped.json",
+    "{\"bookmarks\":[{\"title\":\"One\",\"url\":\"https://one.example.org/\"}]}"
+   ],
+   "out": {
+    "name": "wrapped.json",
+    "kind": "json-list",
+    "label": "JSON list of links",
+    "entries": [
+     {
+      "title": "One",
+      "url": "https://one.example.org/",
+      "type": "article-site",
+      "tags": [
+       "example"
+      ],
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     }
+    ],
+    "note": "",
+    "skip": false
+   },
+   "note": "bookmarks wrapper"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "other.json",
+    "{\"hello\":1}"
+   ],
+   "out": {
+    "name": "other.json",
+    "kind": "json-other",
+    "label": "JSON file",
+    "entries": [],
+    "note": "Not a list of links, so nothing was imported.",
+    "skip": true
+   },
+   "note": "JSON that is not a link list"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "unknown.html",
+    "<html><body><p>No links</p></body></html>"
+   ],
+   "out": {
+    "name": "unknown.html",
+    "kind": "unknown",
+    "label": "",
+    "entries": [],
+    "note": "Could not recognise this file.",
+    "skip": true
+   },
+   "note": "HTML without links"
+  },
+  {
+   "fn": "inferType",
+   "in": [
+    "https://www.youtube.com/@sample",
+    ""
+   ],
+   "out": "youtube-channel",
+   "note": "YouTube channel"
+  },
+  {
+   "fn": "inferTags",
+   "in": [
+    "https://study.example.edu/",
+    "Sample"
+   ],
+   "out": [
+    "example",
+    "education",
+    "sample"
+   ],
+   "note": "education TLD"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "[InternetShortcut]\nURL=https://shortcut.example.org/\n",
+    ""
+   ],
+   "out": {
+    "kind": "shortcut"
+   },
+   "note": "shortcut"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"items\":[{\"url\":\"https://one.example.org/\"}]}",
+    "items.json"
+   ],
+   "out": {
+    "kind": "json-list",
+    "data": [
+     {
+      "url": "https://one.example.org/"
+     }
+    ]
+   },
+   "note": "JSON items list"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"relationships_blocked\":[{\"string_list_data\":[{\"value\":\"blocked_one\"}]}]}",
+    "blocked.json"
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "blocked",
+    "data": [
+     {
+      "string_list_data": [
+       {
+        "value": "blocked_one"
+       }
+      ]
+     }
+    ]
+   },
+   "note": "Instagram blocked object"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"relationships_followers\":[{\"string_list_data\":[{\"value\":\"follower_one\"}]}]}",
+    "followers.json"
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "followers",
+    "data": [
+     {
+      "string_list_data": [
+       {
+        "value": "follower_one"
+       }
+      ]
+     }
+    ]
+   },
+   "note": "Instagram followers object"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"relationships_close_friends\":[]}",
+    "close.json"
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "close",
+    "data": []
+   },
+   "note": "Instagram close friends object"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"relationships_unfollowed_users\":[]}",
+    "unfollow.json"
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "unfollowed",
+    "data": []
+   },
+   "note": "Instagram unfollowed object"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"relationships_other\":[]}",
+    "other.json"
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "other",
+    "data": []
+   },
+   "note": "Instagram other object"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "[{\"string_list_data\":[]}]",
+    "blocked.json"
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "blocked",
+    "data": [
+     {
+      "string_list_data": []
+     }
+    ]
+   },
+   "note": "Instagram file name"
+  },
+  {
+   "fn": "parseJSONArray",
+   "in": [
+    "[{\"href\":\"https://one.example.org/\",\"name\":\"One\",\"extended\":\"Long note\",\"time\":1700000000}]"
+   ],
+   "out": [
+    {
+     "href": "https://one.example.org/",
+     "name": "One",
+     "extended": "Long note",
+     "time": 1700000000,
+     "title": "One",
+     "url": "https://one.example.org/",
+     "notes": "Long note",
+     "added": "2023-11-14"
+    }
+   ],
+   "note": "object fields and note"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "<plist><dict><key>URL</key><string>https://maker.example.org/</string></dict></plist>",
+    "x.webloc"
+   ],
+   "out": {
+    "kind": "shortcut"
+   },
+   "note": "plist shortcut"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "<html><body><h1>Followers</h1><h2>x</h2><a href=\"https://www.instagram.com/u1/\">u1</a></body></html>",
+    ""
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "followers"
+   },
+   "note": "instagram h1 fallback"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "requests.json",
+    "{\"relationships_following\":[{\"title\":\"example_handle_9x7\",\"string_list_data\":[{\"href\":\"https://www.instagram.com/example_handle_9x7/\",\"value\":\"example_handle_9x7\",\"timestamp\":1700000000}]},{\"title\":\"__deleted__old\",\"string_list_data\":[{\"value\":\"__deleted__old\"}]},{\"title\":\"bad handle!\",\"string_list_data\":[{\"value\":\"bad handle!\"}]},{\"title\":\"example_handle_9x7\",\"string_list_data\":[{\"value\":\"example_handle_9x7\"}]}]}"
+   ],
+   "out": {
+    "name": "requests.json",
+    "kind": "instagram",
+    "label": "Instagram following list",
+    "entries": [
+     {
+      "title": "@example_handle_9x7",
+      "url": "https://www.instagram.com/example_handle_9x7/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": "2023-11-14",
+      "draft": true
+     }
+    ],
+    "note": "1 deleted account skipped.",
+    "skip": false,
+    "igKind": "following",
+    "skipped": {
+     "deleted": 1,
+     "bad": 1
+    }
+   },
+   "note": "instagram requests list is skipped"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "restricted.json",
+    "{\"relationships_following\":[{\"title\":\"example_handle_9x7\",\"string_list_data\":[{\"href\":\"https://www.instagram.com/example_handle_9x7/\",\"value\":\"example_handle_9x7\",\"timestamp\":1700000000}]},{\"title\":\"__deleted__old\",\"string_list_data\":[{\"value\":\"__deleted__old\"}]},{\"title\":\"bad handle!\",\"string_list_data\":[{\"value\":\"bad handle!\"}]},{\"title\":\"example_handle_9x7\",\"string_list_data\":[{\"value\":\"example_handle_9x7\"}]}]}"
+   ],
+   "out": {
+    "name": "restricted.json",
+    "kind": "instagram",
+    "label": "Instagram following list",
+    "entries": [
+     {
+      "title": "@example_handle_9x7",
+      "url": "https://www.instagram.com/example_handle_9x7/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": "2023-11-14",
+      "draft": true
+     }
+    ],
+    "note": "1 deleted account skipped.",
+    "skip": false,
+    "igKind": "following",
+    "skipped": {
+     "deleted": 1,
+     "bad": 1
+    }
+   },
+   "note": "instagram restricted list is skipped"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "hidden.json",
+    "{\"relationships_following\":[{\"title\":\"example_handle_9x7\",\"string_list_data\":[{\"href\":\"https://www.instagram.com/example_handle_9x7/\",\"value\":\"example_handle_9x7\",\"timestamp\":1700000000}]},{\"title\":\"__deleted__old\",\"string_list_data\":[{\"value\":\"__deleted__old\"}]},{\"title\":\"bad handle!\",\"string_list_data\":[{\"value\":\"bad handle!\"}]},{\"title\":\"example_handle_9x7\",\"string_list_data\":[{\"value\":\"example_handle_9x7\"}]}]}"
+   ],
+   "out": {
+    "name": "hidden.json",
+    "kind": "instagram",
+    "label": "Instagram following list",
+    "entries": [
+     {
+      "title": "@example_handle_9x7",
+      "url": "https://www.instagram.com/example_handle_9x7/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": "2023-11-14",
+      "draft": true
+     }
+    ],
+    "note": "1 deleted account skipped.",
+    "skip": false,
+    "igKind": "following",
+    "skipped": {
+     "deleted": 1,
+     "bad": 1
+    }
+   },
+   "note": "instagram hidden list is skipped"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "followers_1.json",
+    "[{\"string_list_data\":[{\"value\":\"Café.User\",\"timestamp\":1700000000}]},{\"string_list_data\":[{\"value\":\"café.user\"}]},{\"string_list_data\":[{\"title\":\"no_value\"}]},{\"string_list_data\":[]},{\"title\":\"NoData\"},{\"string_list_data\":[{\"value\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"}]},{\"string_list_data\":[{\"value\":\"__deleted__old\"}]},{\"string_list_data\":[{\"value\":\"bad handle\"}]}]"
+   ],
+   "out": {
+    "name": "followers_1.json",
+    "kind": "instagram",
+    "label": "Instagram followers",
+    "entries": [],
+    "note": "This is not your following list, so it was left out. Look for following.json or following.html.",
+    "skip": true,
+    "igKind": "followers"
+   },
+   "note": "followers_1.json is skipped with its note"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "list.csv",
+    "name,note\nNo link here,still none\n"
+   ],
+   "out": {
+    "name": "list.csv",
+    "kind": "csv",
+    "label": "CSV list of links",
+    "entries": [],
+    "note": "No link column found. The file needs a column called url or link.",
+    "skip": true
+   },
+   "note": "csv without a link column"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "empty.json",
+    "[]"
+   ],
+   "out": {
+    "name": "empty.json",
+    "kind": "json-list",
+    "label": "JSON list of links",
+    "entries": [],
+    "note": "The list has no links in it.",
+    "skip": true
+   },
+   "note": "json list without links"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "notes.txt",
+    "no links in this text at all"
+   ],
+   "out": {
+    "name": "notes.txt",
+    "kind": "urls",
+    "label": "Text with links",
+    "entries": [],
+    "note": "No links found in this text.",
+    "skip": true
+   },
+   "note": "plain text without links"
+  },
+  {
+   "fn": "parseJSONArray",
+   "in": [
+    "{\"a\":1}"
+   ],
+   "out": {
+    "throws": "Error"
+   },
+   "note": "not an array throws"
+  },
+  {
+   "fn": "parseJSONArray",
+   "in": [
+    "[{\"url\":\"https://a.example.org/\",\"tags\":[\"one\",\"two\"]}]"
+   ],
+   "out": [
+    {
+     "url": "https://a.example.org/",
+     "tags": [
+      "one",
+      "two"
+     ],
+     "title": ""
+    }
+   ],
+   "note": "tags as an array"
+  },
+  {
+   "fn": "parseBookmarksHTML",
+   "in": [
+    "<DL><DT><A HREF=https://unquoted.example.org/>Unquoted</A></DL>"
+   ],
+   "out": [
+    {
+     "title": "Unquoted",
+     "url": "https://unquoted.example.org/",
+     "folder": "",
+     "added": ""
+    }
+   ],
+   "note": "unquoted attribute"
+  },
+  {
+   "fn": "parseOPML",
+   "in": [
+    "<opml><body><outline text=Feeds><outline text=B xmlUrl=https://feed.example.org/rss/></outline></body></opml>"
+   ],
+   "out": [
+    {
+     "title": "B",
+     "url": "https://feed.example.org/rss",
+     "type": "feed",
+     "folder": "Feeds",
+     "rssUrl": "https://feed.example.org/rss"
+    }
+   ],
+   "note": "unquoted opml attributes"
+  },
+  {
+   "fn": "parseCSV",
+   "in": [
+    "note,link,label\nn1,https://a.example.org/,L1\nn2,not-a-url,L2\n"
+   ],
+   "out": [
+    {
+     "title": "",
+     "url": "https://a.example.org/",
+     "folder": "",
+     "added": "",
+     "tags": [
+      "L1"
+     ],
+     "notes": "n1"
+    }
+   ],
+   "note": "link column not first, non-http row skipped"
+  },
+  {
+   "fn": "inferTags",
+   "in": [
+    "https://x.example.in/",
+    "T"
+   ],
+   "out": [
+    "example",
+    "india"
+   ]
+  },
+  {
+   "fn": "inferTags",
+   "in": [
+    "https://x.example.co.in/",
+    "T"
+   ],
+   "out": [
+    "india"
+   ]
+  },
+  {
+   "fn": "inferTags",
+   "in": [
+    "https://x.example.ac.in/",
+    "T"
+   ],
+   "out": [
+    "india"
+   ]
+  },
+  {
+   "fn": "toISODate",
+   "in": [
+    "2026-10-31T10:00:00"
+   ],
+   "out": "2026-10-31",
+   "note": "time without a zone is local"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"relationships_following\":[{\"title\":\"example_handle_9x7\",\"string_list_data\":[{\"href\":\"https://www.instagram.com/example_handle_9x7/\",\"value\":\"example_handle_9x7\",\"timestamp\":1700000000}]},{\"title\":\"__deleted__old\",\"string_list_data\":[{\"value\":\"__deleted__old\"}]},{\"title\":\"bad handle!\",\"string_list_data\":[{\"value\":\"bad handle!\"}]},{\"title\":\"example_handle_9x7\",\"string_list_data\":[{\"value\":\"example_handle_9x7\"}]}]}",
+    ""
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "following",
+    "data": [
+     {
+      "title": "example_handle_9x7",
+      "string_list_data": [
+       {
+        "href": "https://www.instagram.com/example_handle_9x7/",
+        "value": "example_handle_9x7",
+        "timestamp": 1700000000
+       }
+      ]
+     },
+     {
+      "title": "__deleted__old",
+      "string_list_data": [
+       {
+        "value": "__deleted__old"
+       }
+      ]
+     },
+     {
+      "title": "bad handle!",
+      "string_list_data": [
+       {
+        "value": "bad handle!"
+       }
+      ]
+     },
+     {
+      "title": "example_handle_9x7",
+      "string_list_data": [
+       {
+        "value": "example_handle_9x7"
+       }
+      ]
+     }
+    ]
+   },
+   "note": "instagram from the object key"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "[{\"title\":\"example_handle_9x7\",\"string_list_data\":[{\"href\":\"https://www.instagram.com/example_handle_9x7/\",\"value\":\"example_handle_9x7\",\"timestamp\":1700000000}]}]",
+    "list.json"
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "followers",
+    "data": [
+     {
+      "title": "example_handle_9x7",
+      "string_list_data": [
+       {
+        "href": "https://www.instagram.com/example_handle_9x7/",
+        "value": "example_handle_9x7",
+        "timestamp": 1700000000
+       }
+      ]
+     }
+    ]
+   },
+   "note": "bare array root defaults to followers"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"roots\":{\"bookmark_bar\":{\"children\":[{\"type\":\"folder\",\"name\":\"Example folder\",\"children\":[{\"type\":\"url\",\"name\":\"कला\",\"url\":\"https://maker.example.org/कला\",\"date_added\":\"13300000000000000\"},{\"type\":\"url\",\"name\":\"Docs\",\"url\":\"https://docs.example.org/guide\",\"date_added\":\"13300000000000000\"}]}]},\"other\":{\"children\":[]}}}",
+    "Bookmarks"
+   ],
+   "out": {
+    "kind": "bookmarks-json",
+    "data": {
+     "roots": {
+      "bookmark_bar": {
+       "children": [
+        {
+         "type": "folder",
+         "name": "Example folder",
+         "children": [
+          {
+           "type": "url",
+           "name": "कला",
+           "url": "https://maker.example.org/कला",
+           "date_added": "13300000000000000"
+          },
+          {
+           "type": "url",
+           "name": "Docs",
+           "url": "https://docs.example.org/guide",
+           "date_added": "13300000000000000"
+          }
+         ]
+        }
+       ]
+      },
+      "other": {
+       "children": []
+      }
+     }
+    },
+    "flavor": "chrome"
+   },
+   "note": "chrome roots bookmark_bar"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "<html><body><h1>Following</h1><h2>example_handle_9x7</h2><a href=\"https://www.instagram.com/example_handle_9x7/\">Café</a> Sep 10, 2026<h2>example_maker_9x7</h2><a href=\"https://www.instagram.com/example_maker_9x7/\">Maker</a></body></html>",
+    "following.html"
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "following"
+   },
+   "note": "instagram html with h2"
+  },
+  {
+   "fn": "detectFormat",
+   "in": [
+    "[{\"url\":\"https://one.example.org/\"}]"
+   ],
+   "out": "json-array",
+   "note": "json array format name"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "following.json",
+    "{\"relationships_following\":[{\"title\":\"example_handle_9x7\",\"string_list_data\":[{\"href\":\"https://www.instagram.com/example_handle_9x7/\",\"value\":\"example_handle_9x7\",\"timestamp\":1700000000}]},{\"title\":\"__deleted__old\",\"string_list_data\":[{\"value\":\"__deleted__old\"}]},{\"title\":\"bad handle!\",\"string_list_data\":[{\"value\":\"bad handle!\"}]},{\"title\":\"example_handle_9x7\",\"string_list_data\":[{\"value\":\"example_handle_9x7\"}]}]}"
+   ],
+   "out": {
+    "name": "following.json",
+    "kind": "instagram",
+    "label": "Instagram following list",
+    "entries": [
+     {
+      "title": "@example_handle_9x7",
+      "url": "https://www.instagram.com/example_handle_9x7/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": "2023-11-14",
+      "draft": true
+     }
+    ],
+    "note": "1 deleted account skipped.",
+    "skip": false,
+    "igKind": "following",
+    "skipped": {
+     "deleted": 1,
+     "bad": 1
+    }
+   },
+   "note": "instagram following json by name"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "following.html",
+    "<html><body><h1>Following</h1><h2>example_handle_9x7</h2><a href=\"https://www.instagram.com/example_handle_9x7/\">Café</a> Sep 10, 2026<h2>example_maker_9x7</h2><a href=\"https://www.instagram.com/example_maker_9x7/\">Maker</a></body></html>"
+   ],
+   "out": {
+    "name": "following.html",
+    "kind": "instagram",
+    "label": "Instagram following list",
+    "entries": [
+     {
+      "title": "@example_handle_9x7",
+      "url": "https://www.instagram.com/example_handle_9x7/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": "2026-09-10",
+      "draft": true
+     },
+     {
+      "title": "@example_maker_9x7",
+      "url": "https://www.instagram.com/example_maker_9x7/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": "",
+      "draft": true
+     }
+    ],
+    "note": "",
+    "skip": false,
+    "igKind": "following",
+    "skipped": {
+     "deleted": 0,
+     "bad": 0
+    }
+   },
+   "note": "instagram following html by name"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "deleted.json",
+    "{\"relationships_following\":[{\"title\":\"__deleted__x\",\"string_list_data\":[{\"value\":\"__deleted__x\"}]},{\"title\":\"example_handle_9x7\",\"string_list_data\":[{\"href\":\"https://www.instagram.com/example_handle_9x7/\",\"value\":\"example_handle_9x7\",\"timestamp\":1700000000}]}]}"
+   ],
+   "out": {
+    "name": "deleted.json",
+    "kind": "instagram",
+    "label": "Instagram following list",
+    "entries": [
+     {
+      "title": "@example_handle_9x7",
+      "url": "https://www.instagram.com/example_handle_9x7/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": "2023-11-14",
+      "draft": true
+     }
+    ],
+    "note": "1 deleted account skipped.",
+    "skip": false,
+    "igKind": "following",
+    "skipped": {
+     "deleted": 1,
+     "bad": 0
+    }
+   },
+   "note": "deleted account note uses the plural"
+  },
+  {
+   "fn": "parseBookmarksJSON",
+   "in": [
+    {
+     "roots": {
+      "bookmark_bar": {
+       "children": [
+        {
+         "type": "folder",
+         "name": "Example folder",
+         "children": [
+          {
+           "type": "url",
+           "name": "कला",
+           "url": "https://maker.example.org/कला",
+           "date_added": "13300000000000000"
+          },
+          {
+           "type": "url",
+           "name": "Docs",
+           "url": "https://docs.example.org/guide",
+           "date_added": "13300000000000000"
+          }
+         ]
+        }
+       ]
+      },
+      "other": {
+       "children": []
+      }
+     }
+    }
+   ],
+   "out": [
+    {
+     "title": "कला",
+     "url": "https://maker.example.org/कला",
+     "folder": "Example folder",
+     "added": "2022-06-18"
+    },
+    {
+     "title": "Docs",
+     "url": "https://docs.example.org/guide",
+     "folder": "Example folder",
+     "added": "2022-06-18"
+    }
+   ],
+   "note": "chrome tree walk"
+  },
+  {
+   "fn": "parseOPML",
+   "in": [
+    "<opml version=\"2.0\"><body><outline text=\"Feeds\"><outline text=\"कला feed\" xmlUrl=\"https://feeds.example.org/kala.xml\" htmlUrl=\"https://maker.example.org/kala\" /><outline text=\"Café notes\" xmlUrl=\"https://feeds.example.org/cafe.xml\" /></outline></body></opml>"
+   ],
+   "out": [
+    {
+     "title": "कला feed",
+     "url": "https://maker.example.org/kala",
+     "type": "feed",
+     "folder": "Feeds",
+     "rssUrl": "https://feeds.example.org/kala.xml"
+    },
+    {
+     "title": "Café notes",
+     "url": "https://feeds.example.org/cafe.xml",
+     "type": "feed",
+     "folder": "Feeds",
+     "rssUrl": "https://feeds.example.org/cafe.xml"
+    }
+   ],
+   "note": "opml with folders and rss"
+  },
+  {
+   "fn": "parseCSV",
+   "in": [
+    "description,link\nA pin,https://pin.example.org/\n"
+   ],
+   "out": [
+    {
+     "title": "A pin",
+     "url": "https://pin.example.org/",
+     "folder": "",
+     "added": ""
+    }
+   ],
+   "note": "pinboard style description is the title"
+  },
+  {
+   "fn": "parseCSV",
+   "in": [
+    "a,b,c\nhttps://x.example.org/,https://y.example.org/,https://z.example.org/\n"
+   ],
+   "out": [
+    {
+     "title": "",
+     "url": "https://x.example.org/",
+     "folder": "",
+     "added": ""
+    }
+   ],
+   "note": "no header name: most-links column wins"
+  },
+  {
+   "fn": "parseCSVRows",
+   "in": [
+    "a,b\r\n\"x\r\ny\",z\r\n"
+   ],
+   "out": [
+    [
+     "a",
+     "b"
+    ],
+    [
+     "x\r\ny",
+     "z"
+    ]
+   ],
+   "note": "CRLF and a line break inside quotes"
+  },
+  {
+   "fn": "parseUrlList",
+   "in": [
+    "example.com/page Title\nTitle - example.com\nhttps://trail.example.org/x).\n"
+   ],
+   "out": [
+    {
+     "title": "Title",
+     "url": "https://example.com/page"
+    },
+    {
+     "title": "Title",
+     "url": "https://example.com"
+    },
+    {
+     "title": "",
+     "url": "https://trail.example.org/x"
+    }
+   ],
+   "note": "bare domains and trailing punctuation"
+  },
+  {
+   "fn": "parseInstagramList",
+   "in": [
+    "[{\"string_list_data\":[{\"value\":\"no_href_handle\"}]},{\"title\":\"titled_only\"},{\"string_list_data\":[{\"href\":\"https://www.instagram.com/from_href_1/\"}]}]"
+   ],
+   "out": {
+    "entries": [
+     {
+      "title": "@no_href_handle",
+      "url": "https://www.instagram.com/no_href_handle/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": ""
+     },
+     {
+      "title": "@from_href_1",
+      "url": "https://www.instagram.com/from_href_1/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": ""
+     }
+    ],
+    "skipped": {
+     "deleted": 0,
+     "bad": 1
+    }
+   },
+   "note": "json entries without string_list_data, title and href fallback"
+  },
+  {
+   "fn": "parseInstagramList",
+   "in": [
+    "<html><body><a href=\"https://www.instagram.com/plain_link_1/\">x</a></body></html>"
+   ],
+   "out": {
+    "entries": [
+     {
+      "title": "@plain_link_1",
+      "url": "https://www.instagram.com/plain_link_1/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": ""
+     }
+    ],
+    "skipped": {
+     "deleted": 0,
+     "bad": 0
+    }
+   },
+   "note": "html without h2 falls back to hrefs"
+  },
+  {
+   "fn": "entryToResource",
+   "in": [
+    {
+     "url": "https://entry.example.org/",
+     "title": "Entry",
+     "draft": false
+    }
+   ],
+   "out": {
+    "url": "https://entry.example.org/",
+    "title": "Entry",
+    "draft": false,
+    "type": "article-site",
+    "tags": [
+     "example",
+     "entry"
+    ],
+    "src": "import",
+    "research": "title-only"
+   },
+   "note": "draft given as false"
+  },
+  {
+   "fn": "entryToResource",
+   "in": [
+    {
+     "url": "https://entry.example.org/",
+     "title": "Entry"
+    }
+   ],
+   "out": {
+    "url": "https://entry.example.org/",
+    "title": "Entry",
+    "type": "article-site",
+    "tags": [
+     "example",
+     "entry"
+    ],
+    "draft": true,
+    "src": "import",
+    "research": "title-only"
+   },
+   "note": "draft defaults to true"
+  },
+  {
+   "fn": "parseBookmarksJSON",
+   "in": [
+    {
+     "roots": {
+      "bookmark_bar": {
+       "children": [
+        {
+         "type": "url",
+         "uri": "https://tagged.example.org/",
+         "title": "Tagged",
+         "tags": [
+          "alpha",
+          " beta "
+         ]
+        },
+        {
+         "type": "url",
+         "uri": "https://spaces.example.org/",
+         "title": "Spaces",
+         "tags": "   "
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "out": [
+    {
+     "title": "Tagged",
+     "url": "https://tagged.example.org/",
+     "folder": "",
+     "added": "",
+     "tags": [
+      "alpha",
+      "beta"
+     ]
+    },
+    {
+     "title": "Spaces",
+     "url": "https://spaces.example.org/",
+     "folder": "",
+     "added": "",
+     "tags": []
+    }
+   ],
+   "note": "tags as an array and a blank tag string"
+  },
+  {
+   "fn": "parseCSV",
+   "in": [
+    "One,Two\nhttps://a.example.org/,\nhttps://b.example.org/,B\n"
+   ],
+   "out": [
+    {
+     "title": "",
+     "url": "https://a.example.org/",
+     "folder": "",
+     "added": ""
+    },
+    {
+     "title": "B",
+     "url": "https://b.example.org/",
+     "folder": "",
+     "added": ""
+    }
+   ],
+   "note": "no url header, empty cell in the first row"
+  },
+  {
+   "fn": "parseCSV",
+   "in": [
+    "title,url,folder,tags,notes\nA,https://a.example.org/,,,,\nB,not-a-url,,,\n"
+   ],
+   "out": [
+    {
+     "title": "A",
+     "url": "https://a.example.org/",
+     "folder": "",
+     "added": ""
+    }
+   ],
+   "note": "non-http row skipped, empty title, folder, tags and notes"
+  },
+  {
+   "fn": "parseJSONArray",
+   "in": [
+    "[{\"url\":\"https://d1.example.org/\",\"description\":\"Short description\"},{\"url\":\"https://d2.example.org/\",\"description\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"},{\"url\":\"https://d3.example.org/\",\"created\":1700000000},{\"url\":\"https://d4.example.org/\",\"date\":\"2026-10-20\"}]"
+   ],
+   "out": [
+    {
+     "url": "https://d1.example.org/",
+     "description": "Short description",
+     "title": "Short description"
+    },
+    {
+     "url": "https://d2.example.org/",
+     "description": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+     "title": ""
+    },
+    {
+     "url": "https://d3.example.org/",
+     "created": 1700000000,
+     "title": "",
+     "added": "2023-11-14"
+    },
+    {
+     "url": "https://d4.example.org/",
+     "date": "2026-10-20",
+     "title": "",
+     "added": "2026-10-20"
+    }
+   ],
+   "note": "description as title, long description, created and date"
+  },
+  {
+   "fn": "KIND_LABEL",
+   "in": [],
+   "out": {
+    "bookmarks": "Browser bookmarks file",
+    "bookmarks-json": "Browser bookmarks file (JSON)",
+    "instagram": "Instagram following list",
+    "csv": "CSV list of links",
+    "opml": "Feed list (OPML)",
+    "shortcut": "Link file",
+    "links-html": "Web page with links",
+    "json-list": "JSON list of links",
+    "urls": "Text with links",
+    "backup": "Nexus backup"
+   },
+   "note": "constant: the Dart value must equal this"
+  },
+  {
+   "fn": "KIND_LABEL",
+   "in": [],
+   "out": {
+    "bookmarks": "Browser bookmarks file",
+    "bookmarks-json": "Browser bookmarks file (JSON)",
+    "instagram": "Instagram following list",
+    "csv": "CSV list of links",
+    "opml": "Feed list (OPML)",
+    "shortcut": "Link file",
+    "links-html": "Web page with links",
+    "json-list": "JSON list of links",
+    "urls": "Text with links",
+    "backup": "Nexus backup"
+   },
+   "note": "constant: the Dart value must equal this (repeat case)"
+  },
+  {
+   "fn": "KIND_LABEL",
+   "in": [],
+   "out": {
+    "bookmarks": "Browser bookmarks file",
+    "bookmarks-json": "Browser bookmarks file (JSON)",
+    "instagram": "Instagram following list",
+    "csv": "CSV list of links",
+    "opml": "Feed list (OPML)",
+    "shortcut": "Link file",
+    "links-html": "Web page with links",
+    "json-list": "JSON list of links",
+    "urls": "Text with links",
+    "backup": "Nexus backup"
+   },
+   "note": "constant: the Dart value must equal this (repeat case)"
+  },
+  {
+   "fn": "stem",
+   "in": [
+    "slides"
+   ],
+   "out": "slide"
+  },
+  {
+   "fn": "stem",
+   "in": [
+    "café"
+   ],
+   "out": "café"
+  },
+  {
+   "fn": "stem",
+   "in": [
+    ""
+   ],
+   "out": ""
+  },
+  {
+   "fn": "parseJSONArray",
+   "in": [
+    "[{\"url\":\"https://a.example.org/\",\"tags\":\"\"}]"
+   ],
+   "out": [
+    {
+     "url": "https://a.example.org/",
+     "tags": [],
+     "title": ""
+    }
+   ],
+   "note": "tags as an empty string"
+  },
+  {
+   "fn": "parseInstagramList",
+   "in": [
+    [
+     {
+      "title": "Title One",
+      "string_list_data": [
+       {
+        "timestamp": 1700000000
+       }
+      ]
+     },
+     {
+      "string_list_data": [
+       {
+        "value": "value_two",
+        "timestamp": 1700000001
+       }
+      ]
+     }
+    ]
+   ],
+   "out": {
+    "entries": [
+     {
+      "title": "@value_two",
+      "url": "https://www.instagram.com/value_two/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": "2023-11-14"
+     }
+    ],
+    "skipped": {
+     "deleted": 0,
+     "bad": 1
+    }
+   },
+   "note": "handle from the entry title, timestamp without a value"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "followers_1.json",
+    "[{\"title\":\"Title One\",\"string_list_data\":[{\"timestamp\":1700000000}]},{\"string_list_data\":[{\"value\":\"value_two\",\"timestamp\":1700000001}]}]"
+   ],
+   "out": {
+    "name": "followers_1.json",
+    "kind": "instagram",
+    "label": "Instagram followers",
+    "entries": [],
+    "note": "This is not your following list, so it was left out. Look for following.json or following.html.",
+    "skip": true,
+    "igKind": "followers"
+   },
+   "note": "followers export with titles: skipped, label \"Instagram followers\""
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "x.txt",
+    "just some words"
+   ],
+   "out": {
+    "name": "x.txt",
+    "kind": "urls",
+    "label": "Text with links",
+    "entries": [],
+    "note": "No links found in this text.",
+    "skip": true
+   },
+   "note": "plain words in a text file"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "a.json",
+    "{\"a\":1}"
+   ],
+   "out": {
+    "name": "a.json",
+    "kind": "json-other",
+    "label": "JSON file",
+    "entries": [],
+    "note": "Not a list of links, so nothing was imported.",
+    "skip": true
+   },
+   "note": "a JSON object with no link list in it"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "",
+    "<html><body>nothing here</body></html>"
+   ],
+   "out": {
+    "name": "Pasted text",
+    "kind": "unknown",
+    "label": "",
+    "entries": [],
+    "note": "Could not recognise this file.",
+    "skip": true
+   },
+   "note": "HTML with no links and no file name"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "backup.json",
+    "{\"type\":\"text/x-moz-place-container\",\"title\":\"Café\",\"children\":[{\"type\":\"text/x-moz-place\",\"title\":\"Café\",\"uri\":\"https://cafe.example.org/\",\"dateAdded\":1700000000,\"tags\":\"café\"}]}"
+   ],
+   "out": {
+    "name": "backup.json",
+    "kind": "bookmarks-json",
+    "label": "Browser bookmarks file (JSON)",
+    "entries": [
+     {
+      "title": "Café",
+      "url": "https://cafe.example.org/",
+      "folder": "",
+      "added": "2023-11-14",
+      "tags": [
+       "café"
+      ],
+      "type": "article-site",
+      "draft": true,
+      "src": "import",
+      "research": "title-only"
+     }
+    ],
+    "note": "",
+    "skip": false
+   },
+   "note": "Firefox JSON flavour end to end"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"relationships_follow_requests\":[{\"string_list_data\":[{\"value\":\"k_one\"}]}]}",
+    ""
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "requests",
+    "data": [
+     {
+      "string_list_data": [
+       {
+        "value": "k_one"
+       }
+      ]
+     }
+    ]
+   },
+   "note": "instagram follow_requests key"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"relationships_restricted\":[{\"string_list_data\":[{\"value\":\"k_one\"}]}]}",
+    ""
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "restricted",
+    "data": [
+     {
+      "string_list_data": [
+       {
+        "value": "k_one"
+       }
+      ]
+     }
+    ]
+   },
+   "note": "instagram restricted key"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"relationships_hidden_story\":[{\"string_list_data\":[{\"value\":\"k_one\"}]}]}",
+    ""
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "other",
+    "data": [
+     {
+      "string_list_data": [
+       {
+        "value": "k_one"
+       }
+      ]
+     }
+    ]
+   },
+   "note": "instagram hidden_story key"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "[{\"string_list_data\":[{\"value\":\"bare_one\"}]}]",
+    ""
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "followers",
+    "data": [
+     {
+      "string_list_data": [
+       {
+        "value": "bare_one"
+       }
+      ]
+     }
+    ]
+   },
+   "note": "bare instagram array, file name (none)"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "[{\"string_list_data\":[{\"value\":\"bare_one\"}]}]",
+    "close_friends.json"
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "close",
+    "data": [
+     {
+      "string_list_data": [
+       {
+        "value": "bare_one"
+       }
+      ]
+     }
+    ]
+   },
+   "note": "bare instagram array, file name close_friends.json"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "[{\"string_list_data\":[{\"value\":\"bare_one\"}]}]",
+    "unfollowed.json"
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "unfollowed",
+    "data": [
+     {
+      "string_list_data": [
+       {
+        "value": "bare_one"
+       }
+      ]
+     }
+    ]
+   },
+   "note": "bare instagram array, file name unfollowed.json"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "[{\"string_list_data\":[{\"value\":\"bare_one\"}]}]",
+    "requests.json"
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "requests",
+    "data": [
+     {
+      "string_list_data": [
+       {
+        "value": "bare_one"
+       }
+      ]
+     }
+    ]
+   },
+   "note": "bare instagram array, file name requests.json"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "<html><body><h1>Blocked profiles</h1><h2>x</h2><a href=\"https://www.instagram.com/u1/\">u1</a></body></html>",
+    ""
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "blocked"
+   },
+   "note": "instagram html heading \"Blocked profiles\" -> blocked"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "<html><body><h1>Close friends</h1><h2>x</h2><a href=\"https://www.instagram.com/u1/\">u1</a></body></html>",
+    ""
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "close"
+   },
+   "note": "instagram html heading \"Close friends\" -> close"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "<html><body><h1>Recently unfollowed profiles</h1><h2>x</h2><a href=\"https://www.instagram.com/u1/\">u1</a></body></html>",
+    ""
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "unfollowed"
+   },
+   "note": "instagram html heading \"Recently unfollowed profiles\" -> unfollowed"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "<html><body><h1>Follow requests</h1><h2>x</h2><a href=\"https://www.instagram.com/u1/\">u1</a></body></html>",
+    ""
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "requests"
+   },
+   "note": "instagram html heading \"Follow requests\" -> requests"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "<html><body><h1>Restricted profiles</h1><h2>x</h2><a href=\"https://www.instagram.com/u1/\">u1</a></body></html>",
+    ""
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "restricted"
+   },
+   "note": "instagram html heading \"Restricted profiles\" -> restricted"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "<html><body><h1>Hidden story list</h1><h2>x</h2><a href=\"https://www.instagram.com/u1/\">u1</a></body></html>",
+    ""
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "hidden"
+   },
+   "note": "instagram html heading \"Hidden story list\" -> hidden"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"roots\":{\"other\":{\"children\":[]}}}",
+    ""
+   ],
+   "out": {
+    "kind": "bookmarks-json",
+    "data": {
+     "roots": {
+      "other": {
+       "children": []
+      }
+     }
+    },
+    "flavor": "chrome"
+   },
+   "note": "chrome roots with only \"other\""
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"type\":\"text/x-moz-place-container\",\"children\":[{\"type\":\"text/x-moz-place\",\"uri\":\"https://c.example.org/\"}]}",
+    ""
+   ],
+   "out": {
+    "kind": "bookmarks-json",
+    "data": {
+     "type": "text/x-moz-place-container",
+     "children": [
+      {
+       "type": "text/x-moz-place",
+       "uri": "https://c.example.org/"
+      }
+     ]
+    },
+    "flavor": "firefox"
+   },
+   "note": "firefox JSON from the type field"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"children\":[],\"typeCode\":2}",
+    ""
+   ],
+   "out": {
+    "kind": "bookmarks-json",
+    "data": {
+     "children": [],
+     "typeCode": 2
+    },
+    "flavor": "firefox"
+   },
+   "note": "firefox JSON from typeCode"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "<html><body><h2>x</h2><a href=\"https://www.instagram.com/u1/\">u1</a></body></html>",
+    ""
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "following"
+   },
+   "note": "instagram html with no h1"
+  },
+  {
+   "fn": "detectFormat",
+   "in": [
+    "{\"relationships_followers\":[{\"string_list_data\":[{\"value\":\"fol_one\"}]}]}"
+   ],
+   "out": "instagram-other",
+   "note": "an instagram list that is not the following one"
+  },
+  {
+   "fn": "parseBookmarksJSON",
+   "in": [
+    {
+     "roots": {
+      "bookmark_bar": {
+       "children": [
+        null,
+        {
+         "type": "url",
+         "name": "N",
+         "url": "https://n.example.org/",
+         "date_added": "13300000000000000"
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "out": [
+    {
+     "title": "N",
+     "url": "https://n.example.org/",
+     "folder": "",
+     "added": "2022-06-18"
+    }
+   ],
+   "note": "a null child in the tree"
+  },
+  {
+   "fn": "parseBookmarksJSON",
+   "in": [
+    {
+     "roots": {
+      "bookmark_bar": {}
+     }
+    }
+   ],
+   "out": [],
+   "note": "a root with no children and no roots"
+  },
+  {
+   "fn": "parseBookmarksJSON",
+   "in": [
+    {
+     "roots": {
+      "bookmark_bar": {
+       "roots": {
+        "inner": {
+         "type": "url",
+         "name": "Inner",
+         "url": "https://inner.example.org/"
+        }
+       }
+      }
+     }
+    }
+   ],
+   "out": [
+    {
+     "title": "Inner",
+     "url": "https://inner.example.org/",
+     "folder": "",
+     "added": ""
+    }
+   ],
+   "note": "a node that holds roots but no children"
+  },
+  {
+   "fn": "parseOPML",
+   "in": [
+    "<opml><body><outline title=\"Titled group\"><outline title=\"Feed one\" xmlUrl=\"https://feeds.example.org/one.xml\"/></outline></body></opml>"
+   ],
+   "out": [
+    {
+     "title": "Feed one",
+     "url": "https://feeds.example.org/one.xml",
+     "type": "feed",
+     "folder": "Titled group",
+     "rssUrl": "https://feeds.example.org/one.xml"
+    }
+   ],
+   "note": "names from title instead of text"
+  },
+  {
+   "fn": "parseOPML",
+   "in": [
+    "<opml><body><outline text=\"Feed group\" htmlUrl=\"https://group.example.org/\"><outline text=\"Feed two\" xmlUrl=\"https://feeds.example.org/two.xml\"/></outline></body></opml>"
+   ],
+   "out": [
+    {
+     "title": "Feed group",
+     "url": "https://group.example.org/",
+     "type": "feed",
+     "folder": ""
+    },
+    {
+     "title": "Feed two",
+     "url": "https://feeds.example.org/two.xml",
+     "type": "feed",
+     "folder": "",
+     "rssUrl": "https://feeds.example.org/two.xml"
+    }
+   ],
+   "note": "an outline that is a link and has children"
+  },
+  {
+   "fn": "parseCSVRows",
+   "in": [
+    "a,b\rc,d\r"
+   ],
+   "out": [
+    [
+     "a",
+     "b"
+    ],
+    [
+     "c",
+     "d"
+    ]
+   ],
+   "note": "lone carriage return line endings"
+  },
+  {
+   "fn": "parseCSV",
+   "in": [
+    "title,url\nNoUrlColumn\n"
+   ],
+   "out": [],
+   "note": "a body row with no url column"
+  },
+  {
+   "fn": "parseInstagramList",
+   "in": [
+    "<html><h2>  </h2><a href=\"https://www.instagram.com/SomeOne/\">SomeOne</a></html>"
+   ],
+   "out": {
+    "entries": [
+     {
+      "title": "@SomeOne",
+      "url": "https://www.instagram.com/SomeOne/",
+      "type": "feed",
+      "tags": [
+       "instagram",
+       "following"
+      ],
+      "src": "following",
+      "research": "user",
+      "added": ""
+     }
+    ],
+    "skipped": {
+     "deleted": 0,
+     "bad": 0
+    }
+   },
+   "note": "empty h2, handle from the href"
+  },
+  {
+   "fn": "parseInstagramList",
+   "in": [
+    "<html><h2>  </h2>nothing here at all</html>"
+   ],
+   "out": {
+    "entries": [],
+    "skipped": {
+     "deleted": 0,
+     "bad": 1
+    }
+   },
+   "note": "empty h2 and no link"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"relationships_hide_story\":[{\"string_list_data\":[{\"value\":\"k_one\"}]}]}",
+    ""
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "hidden",
+    "data": [
+     {
+      "string_list_data": [
+       {
+        "value": "k_one"
+       }
+      ]
+     }
+    ]
+   },
+   "note": "instagram hide_story key"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "[{\"string_list_data\":[{\"value\":\"bare_one\"}]}]",
+    "following.json"
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "following",
+    "data": [
+     {
+      "string_list_data": [
+       {
+        "value": "bare_one"
+       }
+      ]
+     }
+    ]
+   },
+   "note": "bare instagram array, file name following.json"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "<html><body><h1>Suggested users</h1><h2>x</h2><a href=\"https://www.instagram.com/u1/\">u1</a></body></html>",
+    ""
+   ],
+   "out": {
+    "kind": "instagram",
+    "igKind": "other"
+   },
+   "note": "an instagram heading that names no list"
+  },
+  {
+   "fn": "sniff",
+   "in": [
+    "{\"children\":[]}",
+    ""
+   ],
+   "out": {
+    "kind": "json-other",
+    "data": {
+     "children": []
+    }
+   },
+   "note": "a JSON object with children but no browser fields"
+  },
+  {
+   "fn": "detectFormat",
+   "in": [
+    "<html><h1>Following</h1><h2>Following</h2><a href=\"https://www.instagram.com/Following/\">Following</a></html>"
+   ],
+   "out": "instagram-html",
+   "note": "instagram html format name"
+  },
+  {
+   "fn": "parseBookmarksJSON",
+   "in": [
+    {
+     "roots": {
+      "bookmark_bar": {
+       "children": [
+        {
+         "uri": "https://bare.example.org/",
+         "title": "Bare"
+        },
+        {
+         "uri": "https://noname.example.org/"
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "out": [
+    {
+     "title": "Bare",
+     "url": "https://bare.example.org/",
+     "folder": "",
+     "added": ""
+    },
+    {
+     "title": "",
+     "url": "https://noname.example.org/",
+     "folder": "",
+     "added": ""
+    }
+   ],
+   "note": "a uri node with no type, a node with no title or name"
+  },
+  {
+   "fn": "parseCSVRows",
+   "in": [
+    "a,b\r\nc,d\r\n"
+   ],
+   "out": [
+    [
+     "a",
+     "b"
+    ],
+    [
+     "c",
+     "d"
+    ]
+   ],
+   "note": "CRLF outside quotes"
+  },
+  {
+   "fn": "parseCSV",
+   "in": [
+    "url,title\nhttps://a.example.org/\n"
+   ],
+   "out": [
+    {
+     "title": "",
+     "url": "https://a.example.org/",
+     "folder": "",
+     "added": ""
+    }
+   ],
+   "note": "a body row with no title column"
+  },
+  {
+   "fn": "parseCSV",
+   "in": [
+    "title,url,folder,tags,notes,added\nA,https://a.example.org/,,,,\n"
+   ],
+   "out": [
+    {
+     "title": "A",
+     "url": "https://a.example.org/",
+     "folder": "",
+     "added": ""
+    }
+   ],
+   "note": "a body row shorter than the date column"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "other.html",
+    "<html><body><h1>Suggested users</h1><h2>x</h2><a href=\"https://www.instagram.com/u1/\">u1</a></body></html>"
+   ],
+   "out": {
+    "name": "other.html",
+    "kind": "instagram",
+    "label": "Instagram list",
+    "entries": [],
+    "note": "This is not your following list, so it was left out. Look for following.json or following.html.",
+    "skip": true,
+    "igKind": "other"
+   },
+   "note": "an instagram list that is not the following one, by heading"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "following.json",
+    "[{\"string_list_data\":[]}]"
+   ],
+   "out": {
+    "name": "following.json",
+    "kind": "instagram",
+    "label": "Instagram following list",
+    "entries": [],
+    "note": "No links found.",
+    "skip": true,
+    "igKind": "following",
+    "skipped": {
+     "deleted": 0,
+     "bad": 1
+    }
+   },
+   "note": "a following list with no handles in it"
+  },
+  {
+   "fn": "readSource",
+   "in": [
+    "following_deleted2.json",
+    "[{\"title\":\"__deleted__one\",\"string_list_data\":[{\"value\":\"__deleted__one\"}]},{\"title\":\"__deleted__two\",\"string_list_data\":[{\"value\":\"__deleted__two\"}]}]"
+   ],
+   "out": {
+    "name": "following_deleted2.json",
+    "kind": "instagram",
+    "label": "Instagram following list",
+    "entries": [],
+    "note": "2 deleted accounts skipped.",
+    "skip": true,
+    "igKind": "following",
+    "skipped": {
+     "deleted": 2,
+     "bad": 0
+    }
+   },
+   "note": "two deleted accounts: the plural note"
+  }
+ ]
+}

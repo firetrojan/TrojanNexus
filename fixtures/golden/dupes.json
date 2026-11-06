@@ -1,0 +1,813 @@
+{
+ "module": "dupes",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "siteKey",
+   "in": [
+    "https://www.example.com/a"
+   ],
+   "out": "example.com"
+  },
+  {
+   "fn": "siteKey",
+   "in": [
+    "https://news.bbc.co.uk/x"
+   ],
+   "out": "bbc.co.uk"
+  },
+  {
+   "fn": "siteKey",
+   "in": [
+    "https://a.b.example.org/"
+   ],
+   "out": "example.org"
+  },
+  {
+   "fn": "siteKey",
+   "in": [
+    "https://github.com/user/repo"
+   ],
+   "out": "github.com/user"
+  },
+  {
+   "fn": "siteKey",
+   "in": [
+    "localhost"
+   ],
+   "out": ""
+  },
+  {
+   "fn": "siteKey",
+   "in": [
+    ""
+   ],
+   "out": ""
+  },
+  {
+   "fn": "siteIndex",
+   "in": [
+    [
+     {
+      "id": "d1",
+      "title": "T1",
+      "url": "https://github.com/alice/a"
+     },
+     {
+      "id": "d2",
+      "title": "T2",
+      "url": "https://github.com/bob/b"
+     },
+     {
+      "id": "d3",
+      "title": "T3",
+      "url": "https://news.example.org/a"
+     },
+     {
+      "id": "d4",
+      "title": "T4",
+      "url": "https://news.example.org/b"
+     },
+     {
+      "id": "d5",
+      "title": "T5",
+      "url": "https://www.youtube.com/@x/videos"
+     },
+     {
+      "id": "d6",
+      "title": "T6",
+      "url": "https://instagram.com/someone",
+      "src": "following"
+     },
+     {
+      "id": "d7",
+      "title": "T7",
+      "url": "https://github.com/alice/a/"
+     },
+     {
+      "id": "d8",
+      "title": "T8",
+      "url": ""
+     }
+    ]
+   ],
+   "out": {
+    "github.com/alice": [
+     "d1",
+     "d7"
+    ],
+    "github.com/bob": [
+     "d2"
+    ],
+    "example.org": [
+     "d3",
+     "d4"
+    ],
+    "youtube.com/@x": [
+     "d5"
+    ]
+   },
+   "note": "out = { siteKey: [ids] }"
+  },
+  {
+   "fn": "sameSite",
+   "in": [
+    {
+     "id": "d1",
+     "title": "T1",
+     "url": "https://github.com/alice/a"
+    },
+    [
+     {
+      "id": "d1",
+      "title": "T1",
+      "url": "https://github.com/alice/a"
+     },
+     {
+      "id": "d2",
+      "title": "T2",
+      "url": "https://github.com/bob/b"
+     },
+     {
+      "id": "d3",
+      "title": "T3",
+      "url": "https://news.example.org/a"
+     },
+     {
+      "id": "d4",
+      "title": "T4",
+      "url": "https://news.example.org/b"
+     },
+     {
+      "id": "d5",
+      "title": "T5",
+      "url": "https://www.youtube.com/@x/videos"
+     },
+     {
+      "id": "d6",
+      "title": "T6",
+      "url": "https://instagram.com/someone",
+      "src": "following"
+     },
+     {
+      "id": "d7",
+      "title": "T7",
+      "url": "https://github.com/alice/a/"
+     },
+     {
+      "id": "d8",
+      "title": "T8",
+      "url": ""
+     }
+    ]
+   ],
+   "out": [
+    {
+     "id": "d7",
+     "same": true
+    }
+   ],
+   "note": "in[1] = the list the index is built from (siteIndex(list)); out = [{id, same}]"
+  },
+  {
+   "fn": "sameSite",
+   "in": [
+    {
+     "id": "d2",
+     "title": "T2",
+     "url": "https://github.com/bob/b"
+    },
+    [
+     {
+      "id": "d1",
+      "title": "T1",
+      "url": "https://github.com/alice/a"
+     },
+     {
+      "id": "d2",
+      "title": "T2",
+      "url": "https://github.com/bob/b"
+     },
+     {
+      "id": "d3",
+      "title": "T3",
+      "url": "https://news.example.org/a"
+     },
+     {
+      "id": "d4",
+      "title": "T4",
+      "url": "https://news.example.org/b"
+     },
+     {
+      "id": "d5",
+      "title": "T5",
+      "url": "https://www.youtube.com/@x/videos"
+     },
+     {
+      "id": "d6",
+      "title": "T6",
+      "url": "https://instagram.com/someone",
+      "src": "following"
+     },
+     {
+      "id": "d7",
+      "title": "T7",
+      "url": "https://github.com/alice/a/"
+     },
+     {
+      "id": "d8",
+      "title": "T8",
+      "url": ""
+     }
+    ]
+   ],
+   "out": [],
+   "note": "in[1] = the list the index is built from (siteIndex(list)); out = [{id, same}]"
+  },
+  {
+   "fn": "sameSite",
+   "in": [
+    {
+     "id": "d3",
+     "title": "T3",
+     "url": "https://news.example.org/a"
+    },
+    [
+     {
+      "id": "d1",
+      "title": "T1",
+      "url": "https://github.com/alice/a"
+     },
+     {
+      "id": "d2",
+      "title": "T2",
+      "url": "https://github.com/bob/b"
+     },
+     {
+      "id": "d3",
+      "title": "T3",
+      "url": "https://news.example.org/a"
+     },
+     {
+      "id": "d4",
+      "title": "T4",
+      "url": "https://news.example.org/b"
+     },
+     {
+      "id": "d5",
+      "title": "T5",
+      "url": "https://www.youtube.com/@x/videos"
+     },
+     {
+      "id": "d6",
+      "title": "T6",
+      "url": "https://instagram.com/someone",
+      "src": "following"
+     },
+     {
+      "id": "d7",
+      "title": "T7",
+      "url": "https://github.com/alice/a/"
+     },
+     {
+      "id": "d8",
+      "title": "T8",
+      "url": ""
+     }
+    ]
+   ],
+   "out": [
+    {
+     "id": "d4",
+     "same": false
+    }
+   ],
+   "note": "in[1] = the list the index is built from (siteIndex(list)); out = [{id, same}]"
+  },
+  {
+   "fn": "sameSite",
+   "in": [
+    {
+     "id": "d5",
+     "title": "T5",
+     "url": "https://www.youtube.com/@x/videos"
+    },
+    [
+     {
+      "id": "d1",
+      "title": "T1",
+      "url": "https://github.com/alice/a"
+     },
+     {
+      "id": "d2",
+      "title": "T2",
+      "url": "https://github.com/bob/b"
+     },
+     {
+      "id": "d3",
+      "title": "T3",
+      "url": "https://news.example.org/a"
+     },
+     {
+      "id": "d4",
+      "title": "T4",
+      "url": "https://news.example.org/b"
+     },
+     {
+      "id": "d5",
+      "title": "T5",
+      "url": "https://www.youtube.com/@x/videos"
+     },
+     {
+      "id": "d6",
+      "title": "T6",
+      "url": "https://instagram.com/someone",
+      "src": "following"
+     },
+     {
+      "id": "d7",
+      "title": "T7",
+      "url": "https://github.com/alice/a/"
+     },
+     {
+      "id": "d8",
+      "title": "T8",
+      "url": ""
+     }
+    ]
+   ],
+   "out": [],
+   "note": "in[1] = the list the index is built from (siteIndex(list)); out = [{id, same}]"
+  },
+  {
+   "fn": "sameSite",
+   "in": [
+    {
+     "id": "d6",
+     "title": "T6",
+     "url": "https://instagram.com/someone",
+     "src": "following"
+    },
+    [
+     {
+      "id": "d1",
+      "title": "T1",
+      "url": "https://github.com/alice/a"
+     },
+     {
+      "id": "d2",
+      "title": "T2",
+      "url": "https://github.com/bob/b"
+     },
+     {
+      "id": "d3",
+      "title": "T3",
+      "url": "https://news.example.org/a"
+     },
+     {
+      "id": "d4",
+      "title": "T4",
+      "url": "https://news.example.org/b"
+     },
+     {
+      "id": "d5",
+      "title": "T5",
+      "url": "https://www.youtube.com/@x/videos"
+     },
+     {
+      "id": "d6",
+      "title": "T6",
+      "url": "https://instagram.com/someone",
+      "src": "following"
+     },
+     {
+      "id": "d7",
+      "title": "T7",
+      "url": "https://github.com/alice/a/"
+     },
+     {
+      "id": "d8",
+      "title": "T8",
+      "url": ""
+     }
+    ]
+   ],
+   "out": [],
+   "note": "in[1] = the list the index is built from (siteIndex(list)); out = [{id, same}]"
+  },
+  {
+   "fn": "sameSite",
+   "in": [
+    {
+     "id": "d7",
+     "title": "T7",
+     "url": "https://github.com/alice/a/"
+    },
+    [
+     {
+      "id": "d1",
+      "title": "T1",
+      "url": "https://github.com/alice/a"
+     },
+     {
+      "id": "d2",
+      "title": "T2",
+      "url": "https://github.com/bob/b"
+     },
+     {
+      "id": "d3",
+      "title": "T3",
+      "url": "https://news.example.org/a"
+     },
+     {
+      "id": "d4",
+      "title": "T4",
+      "url": "https://news.example.org/b"
+     },
+     {
+      "id": "d5",
+      "title": "T5",
+      "url": "https://www.youtube.com/@x/videos"
+     },
+     {
+      "id": "d6",
+      "title": "T6",
+      "url": "https://instagram.com/someone",
+      "src": "following"
+     },
+     {
+      "id": "d7",
+      "title": "T7",
+      "url": "https://github.com/alice/a/"
+     },
+     {
+      "id": "d8",
+      "title": "T8",
+      "url": ""
+     }
+    ]
+   ],
+   "out": [
+    {
+     "id": "d1",
+     "same": true
+    }
+   ],
+   "note": "in[1] = the list the index is built from (siteIndex(list)); out = [{id, same}]"
+  },
+  {
+   "fn": "sameSite",
+   "in": [
+    {
+     "id": "d8",
+     "title": "T8",
+     "url": ""
+    },
+    [
+     {
+      "id": "d1",
+      "title": "T1",
+      "url": "https://github.com/alice/a"
+     },
+     {
+      "id": "d2",
+      "title": "T2",
+      "url": "https://github.com/bob/b"
+     },
+     {
+      "id": "d3",
+      "title": "T3",
+      "url": "https://news.example.org/a"
+     },
+     {
+      "id": "d4",
+      "title": "T4",
+      "url": "https://news.example.org/b"
+     },
+     {
+      "id": "d5",
+      "title": "T5",
+      "url": "https://www.youtube.com/@x/videos"
+     },
+     {
+      "id": "d6",
+      "title": "T6",
+      "url": "https://instagram.com/someone",
+      "src": "following"
+     },
+     {
+      "id": "d7",
+      "title": "T7",
+      "url": "https://github.com/alice/a/"
+     },
+     {
+      "id": "d8",
+      "title": "T8",
+      "url": ""
+     }
+    ]
+   ],
+   "out": [],
+   "note": "in[1] = the list the index is built from (siteIndex(list)); out = [{id, same}]"
+  },
+  {
+   "fn": "flagEntries",
+   "in": [
+    [
+     {
+      "url": "https://github.com/alice/z",
+      "title": "New A"
+     },
+     {
+      "url": "https://news.example.org/zz",
+      "title": "New N"
+     }
+    ],
+    [
+     {
+      "id": "d1",
+      "title": "T1",
+      "url": "https://github.com/alice/a"
+     },
+     {
+      "id": "d2",
+      "title": "T2",
+      "url": "https://github.com/bob/b"
+     },
+     {
+      "id": "d3",
+      "title": "T3",
+      "url": "https://news.example.org/a"
+     },
+     {
+      "id": "d4",
+      "title": "T4",
+      "url": "https://news.example.org/b"
+     },
+     {
+      "id": "d5",
+      "title": "T5",
+      "url": "https://www.youtube.com/@x/videos"
+     },
+     {
+      "id": "d6",
+      "title": "T6",
+      "url": "https://instagram.com/someone",
+      "src": "following"
+     },
+     {
+      "id": "d7",
+      "title": "T7",
+      "url": "https://github.com/alice/a/"
+     },
+     {
+      "id": "d8",
+      "title": "T8",
+      "url": ""
+     }
+    ]
+   ],
+   "out": [
+    {
+     "entry": "https://github.com/alice/z",
+     "others": [
+      {
+       "title": "T1",
+       "url": "https://github.com/alice/a",
+       "saved": true
+      },
+      {
+       "title": "T7",
+       "url": "https://github.com/alice/a/",
+       "saved": true
+      }
+     ]
+    },
+    {
+     "entry": "https://news.example.org/zz",
+     "others": [
+      {
+       "title": "T3",
+       "url": "https://news.example.org/a",
+       "saved": true
+      },
+      {
+       "title": "T4",
+       "url": "https://news.example.org/b",
+       "saved": true
+      }
+     ]
+    }
+   ],
+   "note": "out = [{entry: url, others: [{title, url, saved}]}]"
+  },
+  {
+   "fn": "flagEntries",
+   "in": [
+    [
+     {
+      "url": "https://a.example/x",
+      "title": "P1"
+     },
+     {
+      "url": "https://a.example/y",
+      "title": "P2"
+     },
+     {
+      "url": "https://github.com/alice/a",
+      "title": "Same"
+     }
+    ],
+    [
+     {
+      "id": "d1",
+      "title": "T1",
+      "url": "https://github.com/alice/a"
+     },
+     {
+      "id": "d2",
+      "title": "T2",
+      "url": "https://github.com/bob/b"
+     },
+     {
+      "id": "d3",
+      "title": "T3",
+      "url": "https://news.example.org/a"
+     },
+     {
+      "id": "d4",
+      "title": "T4",
+      "url": "https://news.example.org/b"
+     },
+     {
+      "id": "d5",
+      "title": "T5",
+      "url": "https://www.youtube.com/@x/videos"
+     },
+     {
+      "id": "d6",
+      "title": "T6",
+      "url": "https://instagram.com/someone",
+      "src": "following"
+     },
+     {
+      "id": "d7",
+      "title": "T7",
+      "url": "https://github.com/alice/a/"
+     },
+     {
+      "id": "d8",
+      "title": "T8",
+      "url": ""
+     }
+    ]
+   ],
+   "out": [
+    {
+     "entry": "https://a.example/x",
+     "others": [
+      {
+       "title": "P2",
+       "url": "https://a.example/y",
+       "saved": false
+      }
+     ]
+    },
+    {
+     "entry": "https://a.example/y",
+     "others": [
+      {
+       "title": "P1",
+       "url": "https://a.example/x",
+       "saved": false
+      }
+     ]
+    },
+    {
+     "entry": "https://github.com/alice/a",
+     "others": [
+      {
+       "title": "T1",
+       "url": "https://github.com/alice/a",
+       "saved": true
+      },
+      {
+       "title": "T7",
+       "url": "https://github.com/alice/a/",
+       "saved": true
+      }
+     ]
+    }
+   ],
+   "note": "out = [{entry: url, others: [{title, url, saved}]}]"
+  },
+  {
+   "fn": "flagEntries",
+   "in": [
+    [
+     {
+      "url": "https://instagram.com/q",
+      "src": "following"
+     }
+    ],
+    [
+     {
+      "id": "d1",
+      "title": "T1",
+      "url": "https://github.com/alice/a"
+     },
+     {
+      "id": "d2",
+      "title": "T2",
+      "url": "https://github.com/bob/b"
+     },
+     {
+      "id": "d3",
+      "title": "T3",
+      "url": "https://news.example.org/a"
+     },
+     {
+      "id": "d4",
+      "title": "T4",
+      "url": "https://news.example.org/b"
+     },
+     {
+      "id": "d5",
+      "title": "T5",
+      "url": "https://www.youtube.com/@x/videos"
+     },
+     {
+      "id": "d6",
+      "title": "T6",
+      "url": "https://instagram.com/someone",
+      "src": "following"
+     },
+     {
+      "id": "d7",
+      "title": "T7",
+      "url": "https://github.com/alice/a/"
+     },
+     {
+      "id": "d8",
+      "title": "T8",
+      "url": ""
+     }
+    ]
+   ],
+   "out": [],
+   "note": "out = [{entry: url, others: [{title, url, saved}]}]"
+  },
+  {
+   "fn": "flagEntries",
+   "in": [
+    [],
+    [
+     {
+      "id": "d1",
+      "title": "T1",
+      "url": "https://github.com/alice/a"
+     },
+     {
+      "id": "d2",
+      "title": "T2",
+      "url": "https://github.com/bob/b"
+     },
+     {
+      "id": "d3",
+      "title": "T3",
+      "url": "https://news.example.org/a"
+     },
+     {
+      "id": "d4",
+      "title": "T4",
+      "url": "https://news.example.org/b"
+     },
+     {
+      "id": "d5",
+      "title": "T5",
+      "url": "https://www.youtube.com/@x/videos"
+     },
+     {
+      "id": "d6",
+      "title": "T6",
+      "url": "https://instagram.com/someone",
+      "src": "following"
+     },
+     {
+      "id": "d7",
+      "title": "T7",
+      "url": "https://github.com/alice/a/"
+     },
+     {
+      "id": "d8",
+      "title": "T8",
+      "url": ""
+     }
+    ]
+   ],
+   "out": [],
+   "note": "out = [{entry: url, others: [{title, url, saved}]}]"
+  }
+ ]
+}

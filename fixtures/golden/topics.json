@@ -1,0 +1,5912 @@
+{
+ "module": "topics",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "TOPICS",
+   "in": [],
+   "out": [
+    {
+     "id": "health",
+     "label": "Health & wellness",
+     "use": "learn about health and wellness",
+     "cap": "Shares health and wellness information",
+     "words": [
+      {
+       "text": "health",
+       "w": 1
+      },
+      {
+       "text": "healthy",
+       "w": 1
+      },
+      {
+       "text": "wellness",
+       "w": 1
+      },
+      {
+       "text": "wellbeing",
+       "w": 1
+      },
+      {
+       "text": "nutrition",
+       "w": 1
+      },
+      {
+       "text": "nutritionist",
+       "w": 1
+      },
+      {
+       "text": "dietitian",
+       "w": 1
+      },
+      {
+       "text": "diet",
+       "w": 1
+      },
+      {
+       "text": "doctor",
+       "w": 1
+      },
+      {
+       "text": "medical",
+       "w": 1
+      },
+      {
+       "text": "medicine",
+       "w": 1
+      },
+      {
+       "text": "clinic",
+       "w": 1
+      },
+      {
+       "text": "hospital",
+       "w": 1
+      },
+      {
+       "text": "therapy",
+       "w": 1
+      },
+      {
+       "text": "mental health",
+       "w": 1
+      },
+      {
+       "text": "mindfulness",
+       "w": 1
+      },
+      {
+       "text": "meditation",
+       "w": 1
+      },
+      {
+       "text": "sleep",
+       "w": 1
+      },
+      {
+       "text": "immunity",
+       "w": 1
+      },
+      {
+       "text": "healing",
+       "w": 1
+      },
+      {
+       "text": "ayurveda",
+       "w": 1
+      },
+      {
+       "text": "herbal",
+       "w": 1
+      },
+      {
+       "text": "vitamins",
+       "w": 1
+      },
+      {
+       "text": "symptoms",
+       "w": 1
+      },
+      {
+       "text": "disease",
+       "w": 1
+      },
+      {
+       "text": "surgeon",
+       "w": 1
+      },
+      {
+       "text": "physio",
+       "w": 1
+      },
+      {
+       "text": "physiotherapy",
+       "w": 1
+      },
+      {
+       "text": "dentist",
+       "w": 1
+      },
+      {
+       "text": "weightloss",
+       "w": 1
+      },
+      {
+       "text": "weight loss",
+       "w": 1
+      },
+      {
+       "text": "detox",
+       "w": 1
+      },
+      {
+       "text": "gut",
+       "w": 1
+      },
+      {
+       "text": "hormones",
+       "w": 1
+      },
+      {
+       "text": "healthcare",
+       "w": 1
+      },
+      {
+       "text": "patient",
+       "w": 1
+      },
+      {
+       "text": "nurse",
+       "w": 1
+      },
+      {
+       "text": "pharmacy",
+       "w": 1
+      },
+      {
+       "text": "cure",
+       "w": 1
+      },
+      {
+       "text": "remedies",
+       "w": 0.8
+      },
+      {
+       "text": "doctors",
+       "w": 1
+      },
+      {
+       "text": "wellness tips",
+       "w": 1
+      },
+      {
+       "text": "holistic",
+       "w": 1
+      },
+      {
+       "text": "anxiety",
+       "w": 0.8
+      },
+      {
+       "text": "stress",
+       "w": 0.6
+      },
+      {
+       "text": "calm",
+       "w": 0.5
+      }
+     ]
+    },
+    {
+     "id": "fitness",
+     "label": "Fitness & training",
+     "use": "follow workouts and fitness tips",
+     "cap": "Shares workouts and fitness training",
+     "words": [
+      {
+       "text": "fit",
+       "w": 1
+      },
+      {
+       "text": "fitness",
+       "w": 1
+      },
+      {
+       "text": "gym",
+       "w": 1
+      },
+      {
+       "text": "workout",
+       "w": 1
+      },
+      {
+       "text": "workouts",
+       "w": 1
+      },
+      {
+       "text": "yoga",
+       "w": 1
+      },
+      {
+       "text": "pilates",
+       "w": 1
+      },
+      {
+       "text": "crossfit",
+       "w": 1
+      },
+      {
+       "text": "bodybuilding",
+       "w": 1
+      },
+      {
+       "text": "bodybuilder",
+       "w": 1
+      },
+      {
+       "text": "calisthenics",
+       "w": 1
+      },
+      {
+       "text": "strength",
+       "w": 1
+      },
+      {
+       "text": "cardio",
+       "w": 1
+      },
+      {
+       "text": "trainer",
+       "w": 1
+      },
+      {
+       "text": "marathon",
+       "w": 1
+      },
+      {
+       "text": "running",
+       "w": 1
+      },
+      {
+       "text": "runner",
+       "w": 1
+      },
+      {
+       "text": "cycling",
+       "w": 1
+      },
+      {
+       "text": "hiit",
+       "w": 1
+      },
+      {
+       "text": "muscle",
+       "w": 1
+      },
+      {
+       "text": "muscles",
+       "w": 1
+      },
+      {
+       "text": "abs",
+       "w": 1
+      },
+      {
+       "text": "stretching",
+       "w": 1
+      },
+      {
+       "text": "mobility",
+       "w": 1
+      },
+      {
+       "text": "athlete",
+       "w": 1
+      },
+      {
+       "text": "lifting",
+       "w": 1
+      },
+      {
+       "text": "powerlifting",
+       "w": 1
+      },
+      {
+       "text": "gains",
+       "w": 0.6
+      },
+      {
+       "text": "reps",
+       "w": 1
+      },
+      {
+       "text": "sweat",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "nature",
+     "label": "Nature & wildlife",
+     "use": "see nature, wildlife and the outdoors",
+     "cap": "Shares nature and wildlife content",
+     "words": [
+      {
+       "text": "nature",
+       "w": 1
+      },
+      {
+       "text": "wildlife",
+       "w": 1
+      },
+      {
+       "text": "wild",
+       "w": 1
+      },
+      {
+       "text": "forest",
+       "w": 1
+      },
+      {
+       "text": "forests",
+       "w": 1
+      },
+      {
+       "text": "jungle",
+       "w": 1
+      },
+      {
+       "text": "mountain",
+       "w": 1
+      },
+      {
+       "text": "mountains",
+       "w": 1
+      },
+      {
+       "text": "river",
+       "w": 1
+      },
+      {
+       "text": "rivers",
+       "w": 1
+      },
+      {
+       "text": "ocean",
+       "w": 1
+      },
+      {
+       "text": "lake",
+       "w": 1
+      },
+      {
+       "text": "birds",
+       "w": 1
+      },
+      {
+       "text": "birding",
+       "w": 1
+      },
+      {
+       "text": "birdwatching",
+       "w": 1
+      },
+      {
+       "text": "tiger",
+       "w": 1
+      },
+      {
+       "text": "tigers",
+       "w": 1
+      },
+      {
+       "text": "safari",
+       "w": 1
+      },
+      {
+       "text": "national park",
+       "w": 1
+      },
+      {
+       "text": "earth",
+       "w": 1
+      },
+      {
+       "text": "ecology",
+       "w": 1
+      },
+      {
+       "text": "environment",
+       "w": 1
+      },
+      {
+       "text": "environmental",
+       "w": 1
+      },
+      {
+       "text": "climate",
+       "w": 1
+      },
+      {
+       "text": "conservation",
+       "w": 1
+      },
+      {
+       "text": "trees",
+       "w": 1
+      },
+      {
+       "text": "plants",
+       "w": 1
+      },
+      {
+       "text": "garden",
+       "w": 1
+      },
+      {
+       "text": "gardening",
+       "w": 1
+      },
+      {
+       "text": "flowers",
+       "w": 1
+      },
+      {
+       "text": "botany",
+       "w": 1
+      },
+      {
+       "text": "landscape",
+       "w": 1
+      },
+      {
+       "text": "hiking",
+       "w": 1
+      },
+      {
+       "text": "trek",
+       "w": 1
+      },
+      {
+       "text": "trekking",
+       "w": 1
+      },
+      {
+       "text": "camping",
+       "w": 1
+      },
+      {
+       "text": "outdoors",
+       "w": 1
+      },
+      {
+       "text": "waterfall",
+       "w": 1
+      },
+      {
+       "text": "himalaya",
+       "w": 1
+      },
+      {
+       "text": "himalayas",
+       "w": 1
+      },
+      {
+       "text": "animals",
+       "w": 1
+      },
+      {
+       "text": "zoo",
+       "w": 1
+      },
+      {
+       "text": "reef",
+       "w": 1
+      },
+      {
+       "text": "marine",
+       "w": 1
+      },
+      {
+       "text": "whale",
+       "w": 1
+      },
+      {
+       "text": "whales",
+       "w": 1
+      },
+      {
+       "text": "butterfly",
+       "w": 1
+      },
+      {
+       "text": "insects",
+       "w": 1
+      },
+      {
+       "text": "geology",
+       "w": 1
+      },
+      {
+       "text": "natgeo",
+       "w": 1
+      },
+      {
+       "text": "nationalgeographic",
+       "w": 1
+      },
+      {
+       "text": "naturelovers",
+       "w": 1
+      },
+      {
+       "text": "nature lover",
+       "w": 1
+      },
+      {
+       "text": "wilderness",
+       "w": 1
+      },
+      {
+       "text": "sustainability",
+       "w": 1
+      },
+      {
+       "text": "sustainable",
+       "w": 1
+      },
+      {
+       "text": "green",
+       "w": 0.5
+      },
+      {
+       "text": "earth day",
+       "w": 1
+      },
+      {
+       "text": "rainforest",
+       "w": 1
+      },
+      {
+       "text": "planet earth",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "space",
+     "label": "Space & astronomy",
+     "use": "follow space and astronomy news",
+     "cap": "Shares space and astronomy content",
+     "words": [
+      {
+       "text": "space",
+       "w": 1
+      },
+      {
+       "text": "nasa",
+       "w": 1
+      },
+      {
+       "text": "isro",
+       "w": 1
+      },
+      {
+       "text": "esa",
+       "w": 1
+      },
+      {
+       "text": "spacex",
+       "w": 1
+      },
+      {
+       "text": "astronomy",
+       "w": 1
+      },
+      {
+       "text": "astro",
+       "w": 1
+      },
+      {
+       "text": "cosmos",
+       "w": 1
+      },
+      {
+       "text": "cosmic",
+       "w": 1
+      },
+      {
+       "text": "galaxy",
+       "w": 1
+      },
+      {
+       "text": "universe",
+       "w": 1
+      },
+      {
+       "text": "telescope",
+       "w": 1
+      },
+      {
+       "text": "rocket",
+       "w": 1
+      },
+      {
+       "text": "rockets",
+       "w": 1
+      },
+      {
+       "text": "satellite",
+       "w": 1
+      },
+      {
+       "text": "satellites",
+       "w": 1
+      },
+      {
+       "text": "orbit",
+       "w": 1
+      },
+      {
+       "text": "mars",
+       "w": 1
+      },
+      {
+       "text": "moon",
+       "w": 1
+      },
+      {
+       "text": "lunar",
+       "w": 1
+      },
+      {
+       "text": "nebula",
+       "w": 1
+      },
+      {
+       "text": "astronaut",
+       "w": 1
+      },
+      {
+       "text": "astronauts",
+       "w": 1
+      },
+      {
+       "text": "cosmonaut",
+       "w": 1
+      },
+      {
+       "text": "planetary",
+       "w": 1
+      },
+      {
+       "text": "jwst",
+       "w": 1
+      },
+      {
+       "text": "hubble",
+       "w": 1
+      },
+      {
+       "text": "astrophysics",
+       "w": 1
+      },
+      {
+       "text": "solarsystem",
+       "w": 1
+      },
+      {
+       "text": "solar system",
+       "w": 1
+      },
+      {
+       "text": "solar",
+       "w": 0.7
+      },
+      {
+       "text": "launch",
+       "w": 0.6
+      },
+      {
+       "text": "stargazing",
+       "w": 1
+      },
+      {
+       "text": "starlink",
+       "w": 1
+      },
+      {
+       "text": "exoplanet",
+       "w": 1
+      },
+      {
+       "text": "exoplanets",
+       "w": 1
+      },
+      {
+       "text": "cosmology",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "science",
+     "label": "Science & research",
+     "use": "learn about science and research",
+     "cap": "Shares science and research content",
+     "words": [
+      {
+       "text": "science",
+       "w": 1
+      },
+      {
+       "text": "sciences",
+       "w": 1
+      },
+      {
+       "text": "scientist",
+       "w": 1
+      },
+      {
+       "text": "scientists",
+       "w": 1
+      },
+      {
+       "text": "research",
+       "w": 1
+      },
+      {
+       "text": "researcher",
+       "w": 1
+      },
+      {
+       "text": "physics",
+       "w": 1
+      },
+      {
+       "text": "chemistry",
+       "w": 1
+      },
+      {
+       "text": "biology",
+       "w": 1
+      },
+      {
+       "text": "lab",
+       "w": 1
+      },
+      {
+       "text": "laboratory",
+       "w": 1
+      },
+      {
+       "text": "quantum",
+       "w": 1
+      },
+      {
+       "text": "nobel",
+       "w": 1
+      },
+      {
+       "text": "nobelprize",
+       "w": 1
+      },
+      {
+       "text": "journal",
+       "w": 1
+      },
+      {
+       "text": "scientific",
+       "w": 1
+      },
+      {
+       "text": "experiment",
+       "w": 1
+      },
+      {
+       "text": "experiments",
+       "w": 1
+      },
+      {
+       "text": "neuroscience",
+       "w": 1
+      },
+      {
+       "text": "genetics",
+       "w": 1
+      },
+      {
+       "text": "molecule",
+       "w": 1
+      },
+      {
+       "text": "molecules",
+       "w": 1
+      },
+      {
+       "text": "palaeontology",
+       "w": 1
+      },
+      {
+       "text": "paleontology",
+       "w": 1
+      },
+      {
+       "text": "palaeontologist",
+       "w": 1
+      },
+      {
+       "text": "paleontologist",
+       "w": 1
+      },
+      {
+       "text": "scholar",
+       "w": 0.5
+      },
+      {
+       "text": "academic",
+       "w": 1
+      },
+      {
+       "text": "cern",
+       "w": 1
+      },
+      {
+       "text": "royal society",
+       "w": 1
+      },
+      {
+       "text": "papers",
+       "w": 0.6
+      },
+      {
+       "text": "study",
+       "w": 0.4
+      },
+      {
+       "text": "studies",
+       "w": 0.4
+      },
+      {
+       "text": "sciencenews",
+       "w": 1
+      },
+      {
+       "text": "stem",
+       "w": 1
+      },
+      {
+       "text": "peer reviewed",
+       "w": 1
+      },
+      {
+       "text": "discovery",
+       "w": 0.6
+      },
+      {
+       "text": "evolution",
+       "w": 1
+      },
+      {
+       "text": "biotech",
+       "w": 1
+      },
+      {
+       "text": "microbiology",
+       "w": 1
+      },
+      {
+       "text": "astrophysics",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "maths",
+     "label": "Maths",
+     "use": "practise or learn maths",
+     "cap": "Shares maths problems and ideas",
+     "words": [
+      {
+       "text": "math",
+       "w": 1
+      },
+      {
+       "text": "maths",
+       "w": 1
+      },
+      {
+       "text": "mathematics",
+       "w": 1
+      },
+      {
+       "text": "algebra",
+       "w": 1
+      },
+      {
+       "text": "calculus",
+       "w": 1
+      },
+      {
+       "text": "geometry",
+       "w": 1
+      },
+      {
+       "text": "trigonometry",
+       "w": 1
+      },
+      {
+       "text": "olympiad",
+       "w": 1
+      },
+      {
+       "text": "proof",
+       "w": 1
+      },
+      {
+       "text": "proofs",
+       "w": 1
+      },
+      {
+       "text": "theorem",
+       "w": 1
+      },
+      {
+       "text": "theorems",
+       "w": 1
+      },
+      {
+       "text": "number theory",
+       "w": 1
+      },
+      {
+       "text": "statistics",
+       "w": 1
+      },
+      {
+       "text": "probability",
+       "w": 1
+      },
+      {
+       "text": "combinatorics",
+       "w": 1
+      },
+      {
+       "text": "arithmetic",
+       "w": 1
+      },
+      {
+       "text": "equations",
+       "w": 1
+      },
+      {
+       "text": "equation",
+       "w": 1
+      },
+      {
+       "text": "mathematician",
+       "w": 1
+      },
+      {
+       "text": "puzzles",
+       "w": 0.6
+      },
+      {
+       "text": "numbers",
+       "w": 0.5
+      }
+     ]
+    },
+    {
+     "id": "tech",
+     "label": "Technology & coding",
+     "use": "learn coding and technology",
+     "cap": "Shares technology and coding content",
+     "words": [
+      {
+       "text": "tech",
+       "w": 1
+      },
+      {
+       "text": "technology",
+       "w": 1
+      },
+      {
+       "text": "code",
+       "w": 1
+      },
+      {
+       "text": "coding",
+       "w": 1
+      },
+      {
+       "text": "coder",
+       "w": 1
+      },
+      {
+       "text": "developer",
+       "w": 1
+      },
+      {
+       "text": "developers",
+       "w": 1
+      },
+      {
+       "text": "programming",
+       "w": 1
+      },
+      {
+       "text": "programmer",
+       "w": 1
+      },
+      {
+       "text": "software",
+       "w": 1
+      },
+      {
+       "text": "python",
+       "w": 1
+      },
+      {
+       "text": "javascript",
+       "w": 1
+      },
+      {
+       "text": "typescript",
+       "w": 1
+      },
+      {
+       "text": "linux",
+       "w": 1
+      },
+      {
+       "text": "opensource",
+       "w": 1
+      },
+      {
+       "text": "open source",
+       "w": 1
+      },
+      {
+       "text": "github",
+       "w": 1
+      },
+      {
+       "text": "devops",
+       "w": 1
+      },
+      {
+       "text": "cybersecurity",
+       "w": 1
+      },
+      {
+       "text": "hacker",
+       "w": 1
+      },
+      {
+       "text": "hacking",
+       "w": 1
+      },
+      {
+       "text": "cloud",
+       "w": 0.5
+      },
+      {
+       "text": "api",
+       "w": 1
+      },
+      {
+       "text": "webdev",
+       "w": 1
+      },
+      {
+       "text": "web development",
+       "w": 1
+      },
+      {
+       "text": "frontend",
+       "w": 1
+      },
+      {
+       "text": "backend",
+       "w": 1
+      },
+      {
+       "text": "database",
+       "w": 1
+      },
+      {
+       "text": "algorithm",
+       "w": 1
+      },
+      {
+       "text": "algorithms",
+       "w": 1
+      },
+      {
+       "text": "computer",
+       "w": 1
+      },
+      {
+       "text": "computers",
+       "w": 1
+      },
+      {
+       "text": "gadgets",
+       "w": 1
+      },
+      {
+       "text": "hardware",
+       "w": 1
+      },
+      {
+       "text": "electronics",
+       "w": 1
+      },
+      {
+       "text": "arduino",
+       "w": 1
+      },
+      {
+       "text": "raspberry",
+       "w": 1
+      },
+      {
+       "text": "robotics",
+       "w": 1
+      },
+      {
+       "text": "iot",
+       "w": 1
+      },
+      {
+       "text": "sysadmin",
+       "w": 1
+      },
+      {
+       "text": "terminal",
+       "w": 1
+      },
+      {
+       "text": "startup tech",
+       "w": 1
+      },
+      {
+       "text": "android",
+       "w": 1
+      },
+      {
+       "text": "ios",
+       "w": 1
+      },
+      {
+       "text": "app",
+       "w": 1
+      },
+      {
+       "text": "apps",
+       "w": 0.5
+      },
+      {
+       "text": "website",
+       "w": 0.4
+      },
+      {
+       "text": "engineering",
+       "w": 1
+      },
+      {
+       "text": "engineer",
+       "w": 1
+      },
+      {
+       "text": "engineers",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "ai",
+     "label": "AI & machine learning",
+     "use": "keep up with AI tools and news",
+     "cap": "Shares AI tools and news",
+     "words": [
+      {
+       "text": "ai",
+       "w": 1
+      },
+      {
+       "text": "artificial intelligence",
+       "w": 1
+      },
+      {
+       "text": "machine learning",
+       "w": 1
+      },
+      {
+       "text": "ml",
+       "w": 1
+      },
+      {
+       "text": "llm",
+       "w": 1
+      },
+      {
+       "text": "llms",
+       "w": 1
+      },
+      {
+       "text": "gpt",
+       "w": 1
+      },
+      {
+       "text": "chatgpt",
+       "w": 1
+      },
+      {
+       "text": "openai",
+       "w": 1
+      },
+      {
+       "text": "anthropic",
+       "w": 1
+      },
+      {
+       "text": "claude",
+       "w": 1
+      },
+      {
+       "text": "gemini",
+       "w": 1
+      },
+      {
+       "text": "deepseek",
+       "w": 1
+      },
+      {
+       "text": "neural",
+       "w": 1
+      },
+      {
+       "text": "deep learning",
+       "w": 1
+      },
+      {
+       "text": "deeplearning",
+       "w": 1
+      },
+      {
+       "text": "prompt",
+       "w": 1
+      },
+      {
+       "text": "prompts",
+       "w": 1
+      },
+      {
+       "text": "prompting",
+       "w": 1
+      },
+      {
+       "text": "agents",
+       "w": 1
+      },
+      {
+       "text": "genai",
+       "w": 1
+      },
+      {
+       "text": "generative",
+       "w": 1
+      },
+      {
+       "text": "midjourney",
+       "w": 1
+      },
+      {
+       "text": "diffusion",
+       "w": 1
+      },
+      {
+       "text": "automation",
+       "w": 1
+      },
+      {
+       "text": "chatbot",
+       "w": 1
+      },
+      {
+       "text": "chatbots",
+       "w": 1
+      },
+      {
+       "text": "copilot",
+       "w": 1
+      },
+      {
+       "text": "aitools",
+       "w": 1
+      },
+      {
+       "text": "ai tools",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "business",
+     "label": "Business & startups",
+     "use": "learn about business and startups",
+     "cap": "Shares business and startup advice",
+     "words": [
+      {
+       "text": "business",
+       "w": 1
+      },
+      {
+       "text": "businesses",
+       "w": 1
+      },
+      {
+       "text": "startup",
+       "w": 1
+      },
+      {
+       "text": "startups",
+       "w": 1
+      },
+      {
+       "text": "entrepreneur",
+       "w": 1
+      },
+      {
+       "text": "entrepreneurs",
+       "w": 1
+      },
+      {
+       "text": "entrepreneurship",
+       "w": 1
+      },
+      {
+       "text": "founder",
+       "w": 1
+      },
+      {
+       "text": "founders",
+       "w": 1
+      },
+      {
+       "text": "ceo",
+       "w": 1
+      },
+      {
+       "text": "marketing",
+       "w": 1
+      },
+      {
+       "text": "brand",
+       "w": 1
+      },
+      {
+       "text": "branding",
+       "w": 1
+      },
+      {
+       "text": "sales",
+       "w": 1
+      },
+      {
+       "text": "ecommerce",
+       "w": 1
+      },
+      {
+       "text": "shopify",
+       "w": 1
+      },
+      {
+       "text": "agency",
+       "w": 1
+      },
+      {
+       "text": "freelance",
+       "w": 1
+      },
+      {
+       "text": "freelancing",
+       "w": 1
+      },
+      {
+       "text": "hustle",
+       "w": 1
+      },
+      {
+       "text": "b2b",
+       "w": 1
+      },
+      {
+       "text": "saas",
+       "w": 1
+      },
+      {
+       "text": "growth",
+       "w": 1
+      },
+      {
+       "text": "leadership",
+       "w": 1
+      },
+      {
+       "text": "management",
+       "w": 1
+      },
+      {
+       "text": "strategy",
+       "w": 1
+      },
+      {
+       "text": "smallbusiness",
+       "w": 1
+      },
+      {
+       "text": "small business",
+       "w": 1
+      },
+      {
+       "text": "marketer",
+       "w": 1
+      },
+      {
+       "text": "consultant",
+       "w": 1
+      },
+      {
+       "text": "consulting",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "finance",
+     "label": "Money & investing",
+     "use": "learn about money and investing",
+     "cap": "Shares money and investing content",
+     "words": [
+      {
+       "text": "finance",
+       "w": 1
+      },
+      {
+       "text": "financial",
+       "w": 1
+      },
+      {
+       "text": "money",
+       "w": 1
+      },
+      {
+       "text": "invest",
+       "w": 1
+      },
+      {
+       "text": "investing",
+       "w": 1
+      },
+      {
+       "text": "investor",
+       "w": 1
+      },
+      {
+       "text": "investors",
+       "w": 1
+      },
+      {
+       "text": "investment",
+       "w": 1
+      },
+      {
+       "text": "investments",
+       "w": 1
+      },
+      {
+       "text": "stock",
+       "w": 1
+      },
+      {
+       "text": "stocks",
+       "w": 1
+      },
+      {
+       "text": "market",
+       "w": 1
+      },
+      {
+       "text": "markets",
+       "w": 1
+      },
+      {
+       "text": "trading",
+       "w": 1
+      },
+      {
+       "text": "trader",
+       "w": 1
+      },
+      {
+       "text": "trading tips",
+       "w": 1
+      },
+      {
+       "text": "crypto",
+       "w": 1
+      },
+      {
+       "text": "bitcoin",
+       "w": 1
+      },
+      {
+       "text": "ethereum",
+       "w": 1
+      },
+      {
+       "text": "wealth",
+       "w": 1
+      },
+      {
+       "text": "savings",
+       "w": 1
+      },
+      {
+       "text": "budget",
+       "w": 1
+      },
+      {
+       "text": "mutual fund",
+       "w": 1
+      },
+      {
+       "text": "mutualfunds",
+       "w": 1
+      },
+      {
+       "text": "sip",
+       "w": 1
+      },
+      {
+       "text": "tax",
+       "w": 1
+      },
+      {
+       "text": "taxes",
+       "w": 1
+      },
+      {
+       "text": "banking",
+       "w": 1
+      },
+      {
+       "text": "bank",
+       "w": 1
+      },
+      {
+       "text": "loan",
+       "w": 1
+      },
+      {
+       "text": "credit",
+       "w": 1
+      },
+      {
+       "text": "passive income",
+       "w": 1
+      },
+      {
+       "text": "economy",
+       "w": 1
+      },
+      {
+       "text": "economics",
+       "w": 1
+      },
+      {
+       "text": "forex",
+       "w": 1
+      },
+      {
+       "text": "fintech",
+       "w": 1
+      },
+      {
+       "text": "nifty",
+       "w": 1
+      },
+      {
+       "text": "sensex",
+       "w": 1
+      },
+      {
+       "text": "dividend",
+       "w": 1
+      },
+      {
+       "text": "dividends",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "education",
+     "label": "Study & exams",
+     "use": "prepare for exams and study",
+     "cap": "Shares study material and exam help",
+     "words": [
+      {
+       "text": "education",
+       "w": 1
+      },
+      {
+       "text": "educational",
+       "w": 1
+      },
+      {
+       "text": "study",
+       "w": 1
+      },
+      {
+       "text": "studying",
+       "w": 1
+      },
+      {
+       "text": "student",
+       "w": 1
+      },
+      {
+       "text": "students",
+       "w": 1
+      },
+      {
+       "text": "school",
+       "w": 1
+      },
+      {
+       "text": "college",
+       "w": 1
+      },
+      {
+       "text": "university",
+       "w": 1
+      },
+      {
+       "text": "exam",
+       "w": 1
+      },
+      {
+       "text": "exams",
+       "w": 1
+      },
+      {
+       "text": "exam prep",
+       "w": 1
+      },
+      {
+       "text": "ielts",
+       "w": 1
+      },
+      {
+       "text": "toefl",
+       "w": 1
+      },
+      {
+       "text": "gre",
+       "w": 1
+      },
+      {
+       "text": "gmat",
+       "w": 1
+      },
+      {
+       "text": "sat",
+       "w": 1
+      },
+      {
+       "text": "jee",
+       "w": 1
+      },
+      {
+       "text": "neet",
+       "w": 1
+      },
+      {
+       "text": "upsc",
+       "w": 1
+      },
+      {
+       "text": "tutor",
+       "w": 1
+      },
+      {
+       "text": "tutoring",
+       "w": 1
+      },
+      {
+       "text": "course",
+       "w": 1
+      },
+      {
+       "text": "courses",
+       "w": 1
+      },
+      {
+       "text": "lecture",
+       "w": 1
+      },
+      {
+       "text": "lectures",
+       "w": 1
+      },
+      {
+       "text": "learn",
+       "w": 1
+      },
+      {
+       "text": "learning",
+       "w": 1
+      },
+      {
+       "text": "lesson",
+       "w": 1
+      },
+      {
+       "text": "lessons",
+       "w": 1
+      },
+      {
+       "text": "syllabus",
+       "w": 1
+      },
+      {
+       "text": "academy",
+       "w": 1
+      },
+      {
+       "text": "classes",
+       "w": 1
+      },
+      {
+       "text": "teacher",
+       "w": 1
+      },
+      {
+       "text": "teachers",
+       "w": 1
+      },
+      {
+       "text": "mentor",
+       "w": 1
+      },
+      {
+       "text": "homework",
+       "w": 1
+      },
+      {
+       "text": "curriculum",
+       "w": 1
+      },
+      {
+       "text": "edtech",
+       "w": 1
+      },
+      {
+       "text": "edu",
+       "w": 1
+      },
+      {
+       "text": "educator",
+       "w": 1
+      },
+      {
+       "text": "educators",
+       "w": 1
+      },
+      {
+       "text": "oxford",
+       "w": 1
+      },
+      {
+       "text": "cambridge",
+       "w": 1
+      },
+      {
+       "text": "harvard",
+       "w": 1
+      },
+      {
+       "text": "stanford",
+       "w": 1
+      },
+      {
+       "text": "mit",
+       "w": 1
+      },
+      {
+       "text": "iit",
+       "w": 1
+      },
+      {
+       "text": "iim",
+       "w": 1
+      },
+      {
+       "text": "uni",
+       "w": 1
+      },
+      {
+       "text": "universities",
+       "w": 1
+      },
+      {
+       "text": "admissions",
+       "w": 1
+      },
+      {
+       "text": "admission",
+       "w": 1
+      },
+      {
+       "text": "ivy",
+       "w": 1
+      },
+      {
+       "text": "ivyleague",
+       "w": 1
+      },
+      {
+       "text": "studyabroad",
+       "w": 1
+      },
+      {
+       "text": "study abroad",
+       "w": 1
+      },
+      {
+       "text": "ucl",
+       "w": 1
+      },
+      {
+       "text": "coursera",
+       "w": 1
+      },
+      {
+       "text": "udemy",
+       "w": 1
+      },
+      {
+       "text": "nptel",
+       "w": 1
+      },
+      {
+       "text": "khanacademy",
+       "w": 1
+      },
+      {
+       "text": "tedx",
+       "w": 0.6
+      },
+      {
+       "text": "ebook",
+       "w": 0.5
+      },
+      {
+       "text": "notes",
+       "w": 0.4
+      }
+     ]
+    },
+    {
+     "id": "jobs",
+     "label": "Jobs & opportunities",
+     "use": "find jobs, scholarships and opportunities",
+     "cap": "Lists jobs, scholarships and opportunities",
+     "words": [
+      {
+       "text": "job",
+       "w": 1
+      },
+      {
+       "text": "jobs",
+       "w": 1
+      },
+      {
+       "text": "career",
+       "w": 1
+      },
+      {
+       "text": "careers",
+       "w": 1
+      },
+      {
+       "text": "hiring",
+       "w": 1
+      },
+      {
+       "text": "internship",
+       "w": 1
+      },
+      {
+       "text": "internships",
+       "w": 1
+      },
+      {
+       "text": "vacancy",
+       "w": 1
+      },
+      {
+       "text": "vacancies",
+       "w": 1
+      },
+      {
+       "text": "recruitment",
+       "w": 1
+      },
+      {
+       "text": "resume",
+       "w": 1
+      },
+      {
+       "text": "cv",
+       "w": 1
+      },
+      {
+       "text": "interview",
+       "w": 1
+      },
+      {
+       "text": "interviews",
+       "w": 1
+      },
+      {
+       "text": "fellowship",
+       "w": 1
+      },
+      {
+       "text": "fellowships",
+       "w": 1
+      },
+      {
+       "text": "grants",
+       "w": 1
+      },
+      {
+       "text": "grant",
+       "w": 1
+      },
+      {
+       "text": "opportunity",
+       "w": 1
+      },
+      {
+       "text": "opportunities",
+       "w": 1
+      },
+      {
+       "text": "scholarship",
+       "w": 1
+      },
+      {
+       "text": "scholarships",
+       "w": 1
+      },
+      {
+       "text": "remote",
+       "w": 1
+      },
+      {
+       "text": "competition",
+       "w": 1
+      },
+      {
+       "text": "competitions",
+       "w": 1
+      },
+      {
+       "text": "hackathon",
+       "w": 1
+      },
+      {
+       "text": "hackathons",
+       "w": 1
+      },
+      {
+       "text": "funding",
+       "w": 1
+      },
+      {
+       "text": "openings",
+       "w": 1
+      },
+      {
+       "text": "apply",
+       "w": 0.5
+      },
+      {
+       "text": "deadline",
+       "w": 0.5
+      },
+      {
+       "text": "stipend",
+       "w": 1
+      },
+      {
+       "text": "placement",
+       "w": 1
+      },
+      {
+       "text": "placements",
+       "w": 1
+      },
+      {
+       "text": "prize",
+       "w": 0.5
+      },
+      {
+       "text": "prizes",
+       "w": 0.5
+      },
+      {
+       "text": "award",
+       "w": 0.4
+      },
+      {
+       "text": "awards",
+       "w": 0.4
+      }
+     ]
+    },
+    {
+     "id": "languages",
+     "label": "Language learning",
+     "use": "learn or practise a language",
+     "cap": "Shares language learning help",
+     "words": [
+      {
+       "text": "language",
+       "w": 1
+      },
+      {
+       "text": "languages",
+       "w": 1
+      },
+      {
+       "text": "english",
+       "w": 1
+      },
+      {
+       "text": "spanish",
+       "w": 1
+      },
+      {
+       "text": "french",
+       "w": 1
+      },
+      {
+       "text": "german",
+       "w": 1
+      },
+      {
+       "text": "japanese",
+       "w": 1
+      },
+      {
+       "text": "korean",
+       "w": 1
+      },
+      {
+       "text": "hindi",
+       "w": 1
+      },
+      {
+       "text": "mandarin",
+       "w": 1
+      },
+      {
+       "text": "arabic",
+       "w": 1
+      },
+      {
+       "text": "vocabulary",
+       "w": 1
+      },
+      {
+       "text": "grammar",
+       "w": 1
+      },
+      {
+       "text": "speaking",
+       "w": 1
+      },
+      {
+       "text": "duolingo",
+       "w": 1
+      },
+      {
+       "text": "pronunciation",
+       "w": 1
+      },
+      {
+       "text": "translation",
+       "w": 1
+      },
+      {
+       "text": "linguistics",
+       "w": 1
+      },
+      {
+       "text": "fluency",
+       "w": 1
+      },
+      {
+       "text": "bilingual",
+       "w": 1
+      },
+      {
+       "text": "polyglot",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "art",
+     "label": "Art & illustration",
+     "use": "get art and illustration inspiration",
+     "cap": "Shares art and illustration",
+     "words": [
+      {
+       "text": "art",
+       "w": 1
+      },
+      {
+       "text": "artist",
+       "w": 1
+      },
+      {
+       "text": "artists",
+       "w": 1
+      },
+      {
+       "text": "artwork",
+       "w": 1
+      },
+      {
+       "text": "artworks",
+       "w": 1
+      },
+      {
+       "text": "drawing",
+       "w": 1
+      },
+      {
+       "text": "drawings",
+       "w": 1
+      },
+      {
+       "text": "sketch",
+       "w": 1
+      },
+      {
+       "text": "sketching",
+       "w": 1
+      },
+      {
+       "text": "illustration",
+       "w": 1
+      },
+      {
+       "text": "illustrator",
+       "w": 1
+      },
+      {
+       "text": "painting",
+       "w": 1
+      },
+      {
+       "text": "painter",
+       "w": 1
+      },
+      {
+       "text": "paint",
+       "w": 1
+      },
+      {
+       "text": "canvas",
+       "w": 1
+      },
+      {
+       "text": "watercolor",
+       "w": 1
+      },
+      {
+       "text": "watercolour",
+       "w": 1
+      },
+      {
+       "text": "doodle",
+       "w": 1
+      },
+      {
+       "text": "gallery",
+       "w": 1
+      },
+      {
+       "text": "sculpture",
+       "w": 1
+      },
+      {
+       "text": "creative",
+       "w": 1
+      },
+      {
+       "text": "procreate",
+       "w": 1
+      },
+      {
+       "text": "concept art",
+       "w": 1
+      },
+      {
+       "text": "fanart",
+       "w": 1
+      },
+      {
+       "text": "oilpainting",
+       "w": 1
+      },
+      {
+       "text": "calligraphy",
+       "w": 1
+      },
+      {
+       "text": "ink",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "design",
+     "label": "Design",
+     "use": "find design ideas and tools",
+     "cap": "Shares design ideas and tools",
+     "words": [
+      {
+       "text": "design",
+       "w": 1
+      },
+      {
+       "text": "designer",
+       "w": 1
+      },
+      {
+       "text": "designers",
+       "w": 1
+      },
+      {
+       "text": "ui",
+       "w": 1
+      },
+      {
+       "text": "ux",
+       "w": 1
+      },
+      {
+       "text": "graphic",
+       "w": 1
+      },
+      {
+       "text": "graphics",
+       "w": 1
+      },
+      {
+       "text": "typography",
+       "w": 1
+      },
+      {
+       "text": "font",
+       "w": 1
+      },
+      {
+       "text": "fonts",
+       "w": 1
+      },
+      {
+       "text": "logo",
+       "w": 1
+      },
+      {
+       "text": "logos",
+       "w": 1
+      },
+      {
+       "text": "figma",
+       "w": 1
+      },
+      {
+       "text": "canva",
+       "w": 1
+      },
+      {
+       "text": "layout",
+       "w": 1
+      },
+      {
+       "text": "poster",
+       "w": 1
+      },
+      {
+       "text": "posters",
+       "w": 1
+      },
+      {
+       "text": "mockup",
+       "w": 1
+      },
+      {
+       "text": "photoshop",
+       "w": 1
+      },
+      {
+       "text": "architecture",
+       "w": 1
+      },
+      {
+       "text": "architect",
+       "w": 1
+      },
+      {
+       "text": "interior",
+       "w": 1
+      },
+      {
+       "text": "interiors",
+       "w": 1
+      },
+      {
+       "text": "branding design",
+       "w": 1
+      },
+      {
+       "text": "moodboard",
+       "w": 1
+      },
+      {
+       "text": "palette",
+       "w": 1
+      },
+      {
+       "text": "palettes",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "animation",
+     "label": "Animation & film",
+     "use": "follow animation and film",
+     "cap": "Shares animation and film content",
+     "words": [
+      {
+       "text": "animation",
+       "w": 1
+      },
+      {
+       "text": "animator",
+       "w": 1
+      },
+      {
+       "text": "animators",
+       "w": 1
+      },
+      {
+       "text": "animated",
+       "w": 1
+      },
+      {
+       "text": "anime",
+       "w": 1
+      },
+      {
+       "text": "cartoon",
+       "w": 1
+      },
+      {
+       "text": "cartoons",
+       "w": 1
+      },
+      {
+       "text": "blender",
+       "w": 1
+      },
+      {
+       "text": "motion",
+       "w": 1
+      },
+      {
+       "text": "vfx",
+       "w": 1
+      },
+      {
+       "text": "cgi",
+       "w": 1
+      },
+      {
+       "text": "pixar",
+       "w": 1
+      },
+      {
+       "text": "ghibli",
+       "w": 1
+      },
+      {
+       "text": "film",
+       "w": 1
+      },
+      {
+       "text": "films",
+       "w": 1
+      },
+      {
+       "text": "cinema",
+       "w": 1
+      },
+      {
+       "text": "movie",
+       "w": 1
+      },
+      {
+       "text": "movies",
+       "w": 1
+      },
+      {
+       "text": "filmmaker",
+       "w": 1
+      },
+      {
+       "text": "filmmaking",
+       "w": 1
+      },
+      {
+       "text": "director",
+       "w": 1
+      },
+      {
+       "text": "cinematography",
+       "w": 1
+      },
+      {
+       "text": "screenplay",
+       "w": 1
+      },
+      {
+       "text": "storyboard",
+       "w": 1
+      },
+      {
+       "text": "trailer",
+       "w": 1
+      },
+      {
+       "text": "shortfilm",
+       "w": 1
+      },
+      {
+       "text": "studio",
+       "w": 0.5
+      },
+      {
+       "text": "3d",
+       "w": 0.6
+      },
+      {
+       "text": "manga",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "photography",
+     "label": "Photography & video",
+     "use": "get photography and video tips",
+     "cap": "Shares photography and video content",
+     "words": [
+      {
+       "text": "photo",
+       "w": 1
+      },
+      {
+       "text": "photos",
+       "w": 1
+      },
+      {
+       "text": "photography",
+       "w": 1
+      },
+      {
+       "text": "photographer",
+       "w": 1
+      },
+      {
+       "text": "photographers",
+       "w": 1
+      },
+      {
+       "text": "camera",
+       "w": 1
+      },
+      {
+       "text": "cameras",
+       "w": 1
+      },
+      {
+       "text": "lens",
+       "w": 1
+      },
+      {
+       "text": "lightroom",
+       "w": 1
+      },
+      {
+       "text": "portrait",
+       "w": 1
+      },
+      {
+       "text": "portraits",
+       "w": 1
+      },
+      {
+       "text": "videography",
+       "w": 1
+      },
+      {
+       "text": "videographer",
+       "w": 1
+      },
+      {
+       "text": "drone",
+       "w": 1
+      },
+      {
+       "text": "cinematic",
+       "w": 1
+      },
+      {
+       "text": "timelapse",
+       "w": 1
+      },
+      {
+       "text": "shoot",
+       "w": 0.5
+      },
+      {
+       "text": "editing",
+       "w": 0.4
+      },
+      {
+       "text": "clicks",
+       "w": 0.5
+      },
+      {
+       "text": "capture",
+       "w": 0.4
+      },
+      {
+       "text": "reels",
+       "w": 0.4
+      }
+     ]
+    },
+    {
+     "id": "music",
+     "label": "Music & audio",
+     "use": "find music and audio",
+     "cap": "Shares music and audio",
+     "words": [
+      {
+       "text": "music",
+       "w": 1
+      },
+      {
+       "text": "musician",
+       "w": 1
+      },
+      {
+       "text": "musicians",
+       "w": 1
+      },
+      {
+       "text": "singer",
+       "w": 1
+      },
+      {
+       "text": "songs",
+       "w": 1
+      },
+      {
+       "text": "song",
+       "w": 1
+      },
+      {
+       "text": "guitar",
+       "w": 1
+      },
+      {
+       "text": "piano",
+       "w": 1
+      },
+      {
+       "text": "drums",
+       "w": 1
+      },
+      {
+       "text": "beats",
+       "w": 1
+      },
+      {
+       "text": "producer",
+       "w": 1
+      },
+      {
+       "text": "dj",
+       "w": 1
+      },
+      {
+       "text": "band",
+       "w": 1
+      },
+      {
+       "text": "album",
+       "w": 1
+      },
+      {
+       "text": "lyrics",
+       "w": 1
+      },
+      {
+       "text": "vocals",
+       "w": 1
+      },
+      {
+       "text": "rap",
+       "w": 1
+      },
+      {
+       "text": "hiphop",
+       "w": 1
+      },
+      {
+       "text": "lofi",
+       "w": 1
+      },
+      {
+       "text": "spotify",
+       "w": 1
+      },
+      {
+       "text": "playlist",
+       "w": 1
+      },
+      {
+       "text": "concert",
+       "w": 1
+      },
+      {
+       "text": "audio",
+       "w": 1
+      },
+      {
+       "text": "soundtrack",
+       "w": 1
+      },
+      {
+       "text": "orchestra",
+       "w": 1
+      },
+      {
+       "text": "violin",
+       "w": 1
+      },
+      {
+       "text": "tabla",
+       "w": 1
+      },
+      {
+       "text": "raga",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "books",
+     "label": "Books & writing",
+     "use": "find books and reading ideas",
+     "cap": "Shares books and writing",
+     "words": [
+      {
+       "text": "book",
+       "w": 1
+      },
+      {
+       "text": "books",
+       "w": 1
+      },
+      {
+       "text": "reading",
+       "w": 1
+      },
+      {
+       "text": "reader",
+       "w": 1
+      },
+      {
+       "text": "readers",
+       "w": 1
+      },
+      {
+       "text": "author",
+       "w": 1
+      },
+      {
+       "text": "authors",
+       "w": 1
+      },
+      {
+       "text": "novel",
+       "w": 1
+      },
+      {
+       "text": "novels",
+       "w": 1
+      },
+      {
+       "text": "poetry",
+       "w": 1
+      },
+      {
+       "text": "poet",
+       "w": 1
+      },
+      {
+       "text": "poems",
+       "w": 1
+      },
+      {
+       "text": "poem",
+       "w": 1
+      },
+      {
+       "text": "writer",
+       "w": 1
+      },
+      {
+       "text": "writers",
+       "w": 1
+      },
+      {
+       "text": "writing",
+       "w": 1
+      },
+      {
+       "text": "literature",
+       "w": 1
+      },
+      {
+       "text": "library",
+       "w": 1
+      },
+      {
+       "text": "libraries",
+       "w": 1
+      },
+      {
+       "text": "storytelling",
+       "w": 1
+      },
+      {
+       "text": "stories",
+       "w": 1
+      },
+      {
+       "text": "fiction",
+       "w": 1
+      },
+      {
+       "text": "kindle",
+       "w": 1
+      },
+      {
+       "text": "publishing",
+       "w": 1
+      },
+      {
+       "text": "bookstagram",
+       "w": 1
+      },
+      {
+       "text": "bookworm",
+       "w": 1
+      },
+      {
+       "text": "bookish",
+       "w": 1
+      },
+      {
+       "text": "bookclub",
+       "w": 1
+      },
+      {
+       "text": "nonfiction",
+       "w": 1
+      },
+      {
+       "text": "literary",
+       "w": 1
+      },
+      {
+       "text": "write",
+       "w": 1
+      },
+      {
+       "text": "writes",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "history",
+     "label": "History & culture",
+     "use": "learn history and culture",
+     "cap": "Shares history and culture",
+     "words": [
+      {
+       "text": "history",
+       "w": 1
+      },
+      {
+       "text": "historical",
+       "w": 1
+      },
+      {
+       "text": "ancient",
+       "w": 1
+      },
+      {
+       "text": "archaeology",
+       "w": 1
+      },
+      {
+       "text": "heritage",
+       "w": 1
+      },
+      {
+       "text": "culture",
+       "w": 1
+      },
+      {
+       "text": "civilization",
+       "w": 1
+      },
+      {
+       "text": "civilisation",
+       "w": 1
+      },
+      {
+       "text": "museum",
+       "w": 1
+      },
+      {
+       "text": "empire",
+       "w": 1
+      },
+      {
+       "text": "empires",
+       "w": 1
+      },
+      {
+       "text": "medieval",
+       "w": 1
+      },
+      {
+       "text": "mythology",
+       "w": 1
+      },
+      {
+       "text": "vintage",
+       "w": 0.5
+      },
+      {
+       "text": "archive",
+       "w": 1
+      },
+      {
+       "text": "archives",
+       "w": 1
+      },
+      {
+       "text": "antique",
+       "w": 1
+      },
+      {
+       "text": "historian",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "mind",
+     "label": "Philosophy & psychology",
+     "use": "think about ideas, mind and philosophy",
+     "cap": "Shares philosophy and psychology",
+     "words": [
+      {
+       "text": "philosophy",
+       "w": 1
+      },
+      {
+       "text": "philosopher",
+       "w": 1
+      },
+      {
+       "text": "philosophers",
+       "w": 1
+      },
+      {
+       "text": "stoic",
+       "w": 1
+      },
+      {
+       "text": "stoicism",
+       "w": 1
+      },
+      {
+       "text": "wisdom",
+       "w": 1
+      },
+      {
+       "text": "psychology",
+       "w": 1
+      },
+      {
+       "text": "psychologist",
+       "w": 1
+      },
+      {
+       "text": "existential",
+       "w": 1
+      },
+      {
+       "text": "ethics",
+       "w": 1
+      },
+      {
+       "text": "thinking",
+       "w": 0.6
+      },
+      {
+       "text": "thoughts",
+       "w": 0.5
+      },
+      {
+       "text": "mind",
+       "w": 1
+      },
+      {
+       "text": "consciousness",
+       "w": 1
+      },
+      {
+       "text": "nietzsche",
+       "w": 1
+      },
+      {
+       "text": "plato",
+       "w": 1
+      },
+      {
+       "text": "jung",
+       "w": 1
+      },
+      {
+       "text": "mindset",
+       "w": 0.6
+      },
+      {
+       "text": "cognitive",
+       "w": 1
+      },
+      {
+       "text": "behaviour",
+       "w": 1
+      },
+      {
+       "text": "behavior",
+       "w": 1
+      },
+      {
+       "text": "neuroscience",
+       "w": 0.6
+      },
+      {
+       "text": "ideas",
+       "w": 0.4
+      },
+      {
+       "text": "thinkers",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "motivation",
+     "label": "Motivation & self-improvement",
+     "use": "get motivation and self-improvement ideas",
+     "cap": "Shares motivation and self-improvement",
+     "words": [
+      {
+       "text": "motivation",
+       "w": 1
+      },
+      {
+       "text": "motivational",
+       "w": 1
+      },
+      {
+       "text": "inspiration",
+       "w": 1
+      },
+      {
+       "text": "inspirational",
+       "w": 1
+      },
+      {
+       "text": "inspire",
+       "w": 1
+      },
+      {
+       "text": "success",
+       "w": 1
+      },
+      {
+       "text": "discipline",
+       "w": 1
+      },
+      {
+       "text": "habits",
+       "w": 1
+      },
+      {
+       "text": "habit",
+       "w": 1
+      },
+      {
+       "text": "selfimprovement",
+       "w": 1
+      },
+      {
+       "text": "self improvement",
+       "w": 1
+      },
+      {
+       "text": "goals",
+       "w": 1
+      },
+      {
+       "text": "productivity",
+       "w": 1
+      },
+      {
+       "text": "quotes",
+       "w": 1
+      },
+      {
+       "text": "affirmations",
+       "w": 1
+      },
+      {
+       "text": "positivity",
+       "w": 1
+      },
+      {
+       "text": "lifestyle",
+       "w": 0.4
+      },
+      {
+       "text": "mindset",
+       "w": 0.6
+      },
+      {
+       "text": "growth",
+       "w": 0.4
+      },
+      {
+       "text": "mentor",
+       "w": 0.4
+      },
+      {
+       "text": "sigma",
+       "w": 0.6
+      },
+      {
+       "text": "grind",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "news",
+     "label": "News & politics",
+     "use": "keep up with news and politics",
+     "cap": "Shares news and politics",
+     "words": [
+      {
+       "text": "news",
+       "w": 1
+      },
+      {
+       "text": "breaking",
+       "w": 1
+      },
+      {
+       "text": "politics",
+       "w": 1
+      },
+      {
+       "text": "political",
+       "w": 1
+      },
+      {
+       "text": "government",
+       "w": 1
+      },
+      {
+       "text": "parliament",
+       "w": 1
+      },
+      {
+       "text": "election",
+       "w": 1
+      },
+      {
+       "text": "elections",
+       "w": 1
+      },
+      {
+       "text": "policy",
+       "w": 1
+      },
+      {
+       "text": "journalism",
+       "w": 1
+      },
+      {
+       "text": "journalist",
+       "w": 1
+      },
+      {
+       "text": "reporter",
+       "w": 1
+      },
+      {
+       "text": "media",
+       "w": 0.6
+      },
+      {
+       "text": "geopolitics",
+       "w": 1
+      },
+      {
+       "text": "current affairs",
+       "w": 1
+      },
+      {
+       "text": "headlines",
+       "w": 1
+      },
+      {
+       "text": "bbc",
+       "w": 1
+      },
+      {
+       "text": "cnn",
+       "w": 1
+      },
+      {
+       "text": "reuters",
+       "w": 1
+      },
+      {
+       "text": "newspaper",
+       "w": 1
+      },
+      {
+       "text": "press",
+       "w": 0.6
+      },
+      {
+       "text": "times",
+       "w": 0.4
+      },
+      {
+       "text": "daily",
+       "w": 0.3
+      },
+      {
+       "text": "post",
+       "w": 0.2
+      },
+      {
+       "text": "world",
+       "w": 0.3
+      },
+      {
+       "text": "minister",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "food",
+     "label": "Food & cooking",
+     "use": "find recipes and food ideas",
+     "cap": "Shares recipes and food",
+     "words": [
+      {
+       "text": "food",
+       "w": 1
+      },
+      {
+       "text": "foodie",
+       "w": 1
+      },
+      {
+       "text": "foodies",
+       "w": 1
+      },
+      {
+       "text": "recipe",
+       "w": 1
+      },
+      {
+       "text": "recipes",
+       "w": 1
+      },
+      {
+       "text": "cooking",
+       "w": 1
+      },
+      {
+       "text": "cook",
+       "w": 1
+      },
+      {
+       "text": "chef",
+       "w": 1
+      },
+      {
+       "text": "kitchen",
+       "w": 1
+      },
+      {
+       "text": "baking",
+       "w": 1
+      },
+      {
+       "text": "bake",
+       "w": 1
+      },
+      {
+       "text": "cuisine",
+       "w": 1
+      },
+      {
+       "text": "restaurant",
+       "w": 1
+      },
+      {
+       "text": "restaurants",
+       "w": 1
+      },
+      {
+       "text": "cafe",
+       "w": 1
+      },
+      {
+       "text": "coffee",
+       "w": 0.7
+      },
+      {
+       "text": "tea",
+       "w": 0.6
+      },
+      {
+       "text": "street food",
+       "w": 1
+      },
+      {
+       "text": "vegan",
+       "w": 1
+      },
+      {
+       "text": "vegetarian",
+       "w": 1
+      },
+      {
+       "text": "dessert",
+       "w": 1
+      },
+      {
+       "text": "desserts",
+       "w": 1
+      },
+      {
+       "text": "meal",
+       "w": 1
+      },
+      {
+       "text": "mealprep",
+       "w": 1
+      },
+      {
+       "text": "snack",
+       "w": 1
+      },
+      {
+       "text": "snacks",
+       "w": 1
+      },
+      {
+       "text": "biryani",
+       "w": 1
+      },
+      {
+       "text": "curry",
+       "w": 1
+      },
+      {
+       "text": "pizza",
+       "w": 1
+      },
+      {
+       "text": "burger",
+       "w": 1
+      },
+      {
+       "text": "delicious",
+       "w": 1
+      },
+      {
+       "text": "tasty",
+       "w": 1
+      },
+      {
+       "text": "homemade",
+       "w": 0.5
+      },
+      {
+       "text": "eats",
+       "w": 1
+      },
+      {
+       "text": "foodblogger",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "travel",
+     "label": "Travel & places",
+     "use": "plan trips and find places",
+     "cap": "Shares travel and places",
+     "words": [
+      {
+       "text": "travel",
+       "w": 1
+      },
+      {
+       "text": "traveller",
+       "w": 1
+      },
+      {
+       "text": "traveler",
+       "w": 1
+      },
+      {
+       "text": "travelling",
+       "w": 1
+      },
+      {
+       "text": "traveling",
+       "w": 1
+      },
+      {
+       "text": "trip",
+       "w": 1
+      },
+      {
+       "text": "trips",
+       "w": 1
+      },
+      {
+       "text": "tour",
+       "w": 1
+      },
+      {
+       "text": "tours",
+       "w": 1
+      },
+      {
+       "text": "tourism",
+       "w": 1
+      },
+      {
+       "text": "tourist",
+       "w": 1
+      },
+      {
+       "text": "wanderlust",
+       "w": 1
+      },
+      {
+       "text": "explore",
+       "w": 1
+      },
+      {
+       "text": "explorer",
+       "w": 1
+      },
+      {
+       "text": "adventure",
+       "w": 1
+      },
+      {
+       "text": "backpacking",
+       "w": 1
+      },
+      {
+       "text": "backpacker",
+       "w": 1
+      },
+      {
+       "text": "vacation",
+       "w": 1
+      },
+      {
+       "text": "holiday",
+       "w": 1
+      },
+      {
+       "text": "holidays",
+       "w": 1
+      },
+      {
+       "text": "destination",
+       "w": 1
+      },
+      {
+       "text": "destinations",
+       "w": 1
+      },
+      {
+       "text": "hotel",
+       "w": 1
+      },
+      {
+       "text": "hotels",
+       "w": 1
+      },
+      {
+       "text": "itinerary",
+       "w": 1
+      },
+      {
+       "text": "roadtrip",
+       "w": 1
+      },
+      {
+       "text": "nomad",
+       "w": 1
+      },
+      {
+       "text": "visa",
+       "w": 1
+      },
+      {
+       "text": "abroad",
+       "w": 1
+      },
+      {
+       "text": "passport",
+       "w": 1
+      },
+      {
+       "text": "flights",
+       "w": 1
+      },
+      {
+       "text": "airline",
+       "w": 1
+      },
+      {
+       "text": "airport",
+       "w": 1
+      },
+      {
+       "text": "city guide",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "fashion",
+     "label": "Fashion & beauty",
+     "use": "get fashion and beauty ideas",
+     "cap": "Shares fashion and beauty",
+     "words": [
+      {
+       "text": "fashion",
+       "w": 1
+      },
+      {
+       "text": "style",
+       "w": 1
+      },
+      {
+       "text": "stylist",
+       "w": 1
+      },
+      {
+       "text": "outfit",
+       "w": 1
+      },
+      {
+       "text": "outfits",
+       "w": 1
+      },
+      {
+       "text": "ootd",
+       "w": 1
+      },
+      {
+       "text": "clothing",
+       "w": 1
+      },
+      {
+       "text": "clothes",
+       "w": 1
+      },
+      {
+       "text": "streetwear",
+       "w": 1
+      },
+      {
+       "text": "makeup",
+       "w": 1
+      },
+      {
+       "text": "beauty",
+       "w": 1
+      },
+      {
+       "text": "skincare",
+       "w": 1
+      },
+      {
+       "text": "haircare",
+       "w": 1
+      },
+      {
+       "text": "hair",
+       "w": 1
+      },
+      {
+       "text": "jewellery",
+       "w": 1
+      },
+      {
+       "text": "jewelry",
+       "w": 1
+      },
+      {
+       "text": "sneakers",
+       "w": 1
+      },
+      {
+       "text": "thrift",
+       "w": 1
+      },
+      {
+       "text": "lookbook",
+       "w": 1
+      },
+      {
+       "text": "glam",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "sports",
+     "label": "Sports",
+     "use": "follow sports",
+     "cap": "Shares sports news and highlights",
+     "words": [
+      {
+       "text": "cricket",
+       "w": 1
+      },
+      {
+       "text": "football",
+       "w": 1
+      },
+      {
+       "text": "soccer",
+       "w": 1
+      },
+      {
+       "text": "basketball",
+       "w": 1
+      },
+      {
+       "text": "nba",
+       "w": 1
+      },
+      {
+       "text": "nfl",
+       "w": 1
+      },
+      {
+       "text": "ipl",
+       "w": 1
+      },
+      {
+       "text": "fifa",
+       "w": 1
+      },
+      {
+       "text": "tennis",
+       "w": 1
+      },
+      {
+       "text": "badminton",
+       "w": 1
+      },
+      {
+       "text": "hockey",
+       "w": 1
+      },
+      {
+       "text": "kabaddi",
+       "w": 1
+      },
+      {
+       "text": "f1",
+       "w": 1
+      },
+      {
+       "text": "formula1",
+       "w": 1
+      },
+      {
+       "text": "olympics",
+       "w": 1
+      },
+      {
+       "text": "olympic",
+       "w": 1
+      },
+      {
+       "text": "sports",
+       "w": 1
+      },
+      {
+       "text": "sport",
+       "w": 1
+      },
+      {
+       "text": "match",
+       "w": 1
+      },
+      {
+       "text": "matches",
+       "w": 1
+      },
+      {
+       "text": "stadium",
+       "w": 1
+      },
+      {
+       "text": "wrestling",
+       "w": 1
+      },
+      {
+       "text": "boxing",
+       "w": 1
+      },
+      {
+       "text": "mma",
+       "w": 1
+      },
+      {
+       "text": "ufc",
+       "w": 1
+      },
+      {
+       "text": "athlete",
+       "w": 0.6
+      },
+      {
+       "text": "goal",
+       "w": 0.3
+      },
+      {
+       "text": "team",
+       "w": 0.3
+      },
+      {
+       "text": "fc",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "gaming",
+     "label": "Gaming",
+     "use": "follow games and gaming",
+     "cap": "Shares games and gaming",
+     "words": [
+      {
+       "text": "game",
+       "w": 1
+      },
+      {
+       "text": "games",
+       "w": 1
+      },
+      {
+       "text": "gaming",
+       "w": 1
+      },
+      {
+       "text": "gamer",
+       "w": 1
+      },
+      {
+       "text": "gamers",
+       "w": 1
+      },
+      {
+       "text": "esports",
+       "w": 1
+      },
+      {
+       "text": "playstation",
+       "w": 1
+      },
+      {
+       "text": "xbox",
+       "w": 1
+      },
+      {
+       "text": "nintendo",
+       "w": 1
+      },
+      {
+       "text": "steam",
+       "w": 1
+      },
+      {
+       "text": "minecraft",
+       "w": 1
+      },
+      {
+       "text": "valorant",
+       "w": 1
+      },
+      {
+       "text": "pubg",
+       "w": 1
+      },
+      {
+       "text": "bgmi",
+       "w": 1
+      },
+      {
+       "text": "fortnite",
+       "w": 1
+      },
+      {
+       "text": "gta",
+       "w": 1
+      },
+      {
+       "text": "roblox",
+       "w": 1
+      },
+      {
+       "text": "twitch",
+       "w": 1
+      },
+      {
+       "text": "speedrun",
+       "w": 1
+      },
+      {
+       "text": "chess",
+       "w": 1
+      },
+      {
+       "text": "gamedev",
+       "w": 1
+      },
+      {
+       "text": "unity",
+       "w": 1
+      },
+      {
+       "text": "unreal",
+       "w": 1
+      },
+      {
+       "text": "godot",
+       "w": 1
+      },
+      {
+       "text": "console",
+       "w": 1
+      },
+      {
+       "text": "consoles",
+       "w": 1
+      },
+      {
+       "text": "ps5",
+       "w": 1
+      },
+      {
+       "text": "fps",
+       "w": 1
+      },
+      {
+       "text": "rpg",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "humor",
+     "label": "Humour & memes",
+     "use": "get memes and humour",
+     "cap": "Shares memes and humour",
+     "words": [
+      {
+       "text": "meme",
+       "w": 1
+      },
+      {
+       "text": "memes",
+       "w": 1
+      },
+      {
+       "text": "funny",
+       "w": 1
+      },
+      {
+       "text": "comedy",
+       "w": 1
+      },
+      {
+       "text": "comedian",
+       "w": 1
+      },
+      {
+       "text": "humor",
+       "w": 1
+      },
+      {
+       "text": "humour",
+       "w": 1
+      },
+      {
+       "text": "jokes",
+       "w": 1
+      },
+      {
+       "text": "joke",
+       "w": 1
+      },
+      {
+       "text": "laugh",
+       "w": 1
+      },
+      {
+       "text": "lol",
+       "w": 1
+      },
+      {
+       "text": "satire",
+       "w": 1
+      },
+      {
+       "text": "roast",
+       "w": 1
+      },
+      {
+       "text": "troll",
+       "w": 1
+      },
+      {
+       "text": "sarcasm",
+       "w": 1
+      },
+      {
+       "text": "standup",
+       "w": 1
+      },
+      {
+       "text": "parody",
+       "w": 1
+      },
+      {
+       "text": "skit",
+       "w": 1
+      },
+      {
+       "text": "skits",
+       "w": 1
+      },
+      {
+       "text": "funnyvideos",
+       "w": 1
+      },
+      {
+       "text": "relatable",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "spirit",
+     "label": "Spirituality & religion",
+     "use": "follow spirituality and religion",
+     "cap": "Shares spiritual and religious content",
+     "words": [
+      {
+       "text": "spiritual",
+       "w": 1
+      },
+      {
+       "text": "spirituality",
+       "w": 1
+      },
+      {
+       "text": "god",
+       "w": 1
+      },
+      {
+       "text": "temple",
+       "w": 1
+      },
+      {
+       "text": "bhakti",
+       "w": 1
+      },
+      {
+       "text": "bhagavad",
+       "w": 1
+      },
+      {
+       "text": "gita",
+       "w": 1
+      },
+      {
+       "text": "krishna",
+       "w": 1
+      },
+      {
+       "text": "shiva",
+       "w": 1
+      },
+      {
+       "text": "rama",
+       "w": 1
+      },
+      {
+       "text": "church",
+       "w": 1
+      },
+      {
+       "text": "bible",
+       "w": 1
+      },
+      {
+       "text": "quran",
+       "w": 1
+      },
+      {
+       "text": "islam",
+       "w": 1
+      },
+      {
+       "text": "buddha",
+       "w": 1
+      },
+      {
+       "text": "buddhism",
+       "w": 1
+      },
+      {
+       "text": "zen",
+       "w": 1
+      },
+      {
+       "text": "dharma",
+       "w": 1
+      },
+      {
+       "text": "yogi",
+       "w": 1
+      },
+      {
+       "text": "guru",
+       "w": 1
+      },
+      {
+       "text": "sadhguru",
+       "w": 1
+      },
+      {
+       "text": "prayer",
+       "w": 1
+      },
+      {
+       "text": "mantra",
+       "w": 1
+      },
+      {
+       "text": "karma",
+       "w": 1
+      },
+      {
+       "text": "vedic",
+       "w": 1
+      },
+      {
+       "text": "upanishad",
+       "w": 1
+      },
+      {
+       "text": "sutra",
+       "w": 1
+      },
+      {
+       "text": "sacred",
+       "w": 1
+      },
+      {
+       "text": "blessed",
+       "w": 1
+      },
+      {
+       "text": "faith",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "machines",
+     "label": "Cars, bikes & aviation",
+     "use": "follow cars, bikes and aircraft",
+     "cap": "Shares cars, bikes and aircraft",
+     "words": [
+      {
+       "text": "car",
+       "w": 1
+      },
+      {
+       "text": "cars",
+       "w": 1
+      },
+      {
+       "text": "bike",
+       "w": 1
+      },
+      {
+       "text": "bikes",
+       "w": 1
+      },
+      {
+       "text": "motorcycle",
+       "w": 1
+      },
+      {
+       "text": "motorcycles",
+       "w": 1
+      },
+      {
+       "text": "motor",
+       "w": 1
+      },
+      {
+       "text": "automotive",
+       "w": 1
+      },
+      {
+       "text": "ev",
+       "w": 1
+      },
+      {
+       "text": "engine",
+       "w": 1
+      },
+      {
+       "text": "racing",
+       "w": 1
+      },
+      {
+       "text": "supercar",
+       "w": 1
+      },
+      {
+       "text": "garage",
+       "w": 1
+      },
+      {
+       "text": "mechanic",
+       "w": 1
+      },
+      {
+       "text": "aviation",
+       "w": 1
+      },
+      {
+       "text": "aircraft",
+       "w": 1
+      },
+      {
+       "text": "pilot",
+       "w": 1
+      },
+      {
+       "text": "plane",
+       "w": 1
+      },
+      {
+       "text": "planes",
+       "w": 1
+      },
+      {
+       "text": "airplane",
+       "w": 1
+      },
+      {
+       "text": "airplanes",
+       "w": 1
+      },
+      {
+       "text": "aerospace",
+       "w": 1
+      },
+      {
+       "text": "drivers",
+       "w": 1
+      },
+      {
+       "text": "rider",
+       "w": 1
+      },
+      {
+       "text": "riders",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "diy",
+     "label": "DIY & crafts",
+     "use": "get DIY and craft ideas",
+     "cap": "Shares DIY and craft projects",
+     "words": [
+      {
+       "text": "diy",
+       "w": 1
+      },
+      {
+       "text": "craft",
+       "w": 1
+      },
+      {
+       "text": "crafts",
+       "w": 1
+      },
+      {
+       "text": "handmade",
+       "w": 1
+      },
+      {
+       "text": "woodworking",
+       "w": 1
+      },
+      {
+       "text": "woodwork",
+       "w": 1
+      },
+      {
+       "text": "sewing",
+       "w": 1
+      },
+      {
+       "text": "knitting",
+       "w": 1
+      },
+      {
+       "text": "crochet",
+       "w": 1
+      },
+      {
+       "text": "pottery",
+       "w": 1
+      },
+      {
+       "text": "homemade",
+       "w": 1
+      },
+      {
+       "text": "upcycle",
+       "w": 1
+      },
+      {
+       "text": "repair",
+       "w": 1
+      },
+      {
+       "text": "maker",
+       "w": 1
+      },
+      {
+       "text": "makers",
+       "w": 1
+      },
+      {
+       "text": "hacks",
+       "w": 0.5
+      },
+      {
+       "text": "handcraft",
+       "w": 1
+      },
+      {
+       "text": "origami",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "society",
+     "label": "Society & causes",
+     "use": "follow causes, law and society",
+     "cap": "Shares causes, law and society",
+     "words": [
+      {
+       "text": "law",
+       "w": 1
+      },
+      {
+       "text": "legal",
+       "w": 1
+      },
+      {
+       "text": "lawyer",
+       "w": 1
+      },
+      {
+       "text": "lawyers",
+       "w": 1
+      },
+      {
+       "text": "advocate",
+       "w": 1
+      },
+      {
+       "text": "court",
+       "w": 1
+      },
+      {
+       "text": "legislation",
+       "w": 1
+      },
+      {
+       "text": "constitution",
+       "w": 1
+      },
+      {
+       "text": "rights",
+       "w": 0.5
+      },
+      {
+       "text": "rti",
+       "w": 1
+      },
+      {
+       "text": "civic",
+       "w": 1
+      },
+      {
+       "text": "ngo",
+       "w": 1
+      },
+      {
+       "text": "charity",
+       "w": 1
+      },
+      {
+       "text": "nonprofit",
+       "w": 1
+      },
+      {
+       "text": "volunteer",
+       "w": 1
+      },
+      {
+       "text": "activism",
+       "w": 1
+      },
+      {
+       "text": "justice",
+       "w": 1
+      },
+      {
+       "text": "humanitarian",
+       "w": 1
+      },
+      {
+       "text": "unicef",
+       "w": 1
+      },
+      {
+       "text": "unesco",
+       "w": 1
+      },
+      {
+       "text": "redcross",
+       "w": 1
+      },
+      {
+       "text": "society",
+       "w": 0.4
+      },
+      {
+       "text": "community",
+       "w": 0.4
+      },
+      {
+       "text": "awareness",
+       "w": 0.6
+      },
+      {
+       "text": "youth",
+       "w": 0.6
+      },
+      {
+       "text": "sdg",
+       "w": 1
+      },
+      {
+       "text": "sdgs",
+       "w": 1
+      },
+      {
+       "text": "globalgoals",
+       "w": 1
+      },
+      {
+       "text": "global goals",
+       "w": 1
+      },
+      {
+       "text": "sustainable development",
+       "w": 1
+      },
+      {
+       "text": "equality",
+       "w": 1
+      },
+      {
+       "text": "feminist",
+       "w": 1
+      },
+      {
+       "text": "feminism",
+       "w": 1
+      }
+     ]
+    },
+    {
+     "id": "pets",
+     "label": "Pets",
+     "use": "see pets and animal care",
+     "cap": "Shares pets and animal care",
+     "words": [
+      {
+       "text": "dog",
+       "w": 1
+      },
+      {
+       "text": "dogs",
+       "w": 1
+      },
+      {
+       "text": "cat",
+       "w": 1
+      },
+      {
+       "text": "cats",
+       "w": 1
+      },
+      {
+       "text": "pet",
+       "w": 1
+      },
+      {
+       "text": "pets",
+       "w": 1
+      },
+      {
+       "text": "puppy",
+       "w": 1
+      },
+      {
+       "text": "puppies",
+       "w": 1
+      },
+      {
+       "text": "kitten",
+       "w": 1
+      },
+      {
+       "text": "kittens",
+       "w": 1
+      },
+      {
+       "text": "vet",
+       "w": 1
+      },
+      {
+       "text": "veterinary",
+       "w": 1
+      },
+      {
+       "text": "adoption",
+       "w": 0.4
+      },
+      {
+       "text": "doggo",
+       "w": 1
+      },
+      {
+       "text": "petcare",
+       "w": 1
+      }
+     ]
+    }
+   ],
+   "note": "constant recorded once; the Dart test builds TOPIC_BY_ID from it"
+  },
+  {
+   "fn": "BASIS_LABEL",
+   "in": [],
+   "out": {
+    "bio": "the bio or description",
+    "page": "the page text",
+    "name": "the name only",
+    "link": "the link only",
+    "none": ""
+   },
+   "note": "constant: the Dart value must equal this"
+  },
+  {
+   "fn": "BASIS_LABEL",
+   "in": [],
+   "out": {
+    "bio": "the bio or description",
+    "page": "the page text",
+    "name": "the name only",
+    "link": "the link only",
+    "none": ""
+   },
+   "note": "constant: the Dart value must equal this (repeat case)"
+  },
+  {
+   "fn": "BASIS_LABEL",
+   "in": [],
+   "out": {
+    "bio": "the bio or description",
+    "page": "the page text",
+    "name": "the name only",
+    "link": "the link only",
+    "none": ""
+   },
+   "note": "constant: the Dart value must equal this (repeat case)"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {}
+   ],
+   "out": {
+    "top": null,
+    "second": null,
+    "conf": "none",
+    "basis": "none",
+    "words": [],
+    "ranked": []
+   },
+   "note": "empty input"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "bio": "मैं कला और डिज़ाइन सीखता हूँ। Café sketchbook.",
+     "name": "कला notes",
+     "tags": [
+      "design",
+      "कला"
+     ],
+     "url": "https://maker.example.org/design"
+    }
+   ],
+   "out": {
+    "top": {
+     "id": "design",
+     "label": "Design",
+     "score": 3,
+     "words": [
+      "design"
+     ]
+    },
+    "second": null,
+    "conf": "maybe",
+    "basis": "link",
+    "words": [
+     "design"
+    ],
+    "ranked": [
+     {
+      "id": "design",
+      "label": "Design",
+      "score": 3,
+      "words": [
+       "design"
+      ]
+     },
+     {
+      "id": "education",
+      "label": "Study & exams",
+      "score": 1,
+      "words": [
+       "notes"
+      ]
+     }
+    ]
+   },
+   "note": "unicode Hindi and accents"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "handle": "@example_health_9x7",
+     "name": "Café health notes"
+    }
+   ],
+   "out": {
+    "top": {
+     "id": "health",
+     "label": "Health & wellness",
+     "score": 4.5,
+     "words": [
+      "health"
+     ]
+    },
+    "second": null,
+    "conf": "maybe",
+    "basis": "name",
+    "words": [
+     "health"
+    ],
+    "ranked": [
+     {
+      "id": "health",
+      "label": "Health & wellness",
+      "score": 4.5,
+      "words": [
+       "health"
+      ]
+     },
+     {
+      "id": "education",
+      "label": "Study & exams",
+      "score": 2.4,
+      "words": [
+       "notes",
+       "exam"
+      ]
+     }
+    ]
+   },
+   "note": "joined handle"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "text": "design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography design studio and typography ",
+     "url": "https://maker.example.org/design"
+    }
+   ],
+   "out": {
+    "top": {
+     "id": "design",
+     "label": "Design",
+     "score": 4.6,
+     "words": [
+      "design",
+      "typography"
+     ]
+    },
+    "second": null,
+    "conf": "maybe",
+    "basis": "page",
+    "words": [
+     "design",
+     "typography"
+    ],
+    "ranked": [
+     {
+      "id": "design",
+      "label": "Design",
+      "score": 4.6,
+      "words": [
+       "design",
+       "typography"
+      ]
+     },
+     {
+      "id": "animation",
+      "label": "Animation & film",
+      "score": 0.85,
+      "words": [
+       "studio"
+      ]
+     }
+    ]
+   },
+   "note": "long text is capped"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "title": "",
+     "bio": "",
+     "handle": "",
+     "text": "",
+     "tags": [],
+     "url": "not a url"
+    }
+   ],
+   "out": {
+    "top": null,
+    "second": null,
+    "conf": "none",
+    "basis": "none",
+    "words": [],
+    "ranked": []
+   },
+   "note": "all fields empty"
+  },
+  {
+   "fn": "describeGuess",
+   "in": [
+    null,
+    {
+     "read": true
+    }
+   ],
+   "out": "Not clear. What was read does not say what it is about.",
+   "note": "missing guess"
+  },
+  {
+   "fn": "describeGuess",
+   "in": [
+    {
+     "top": {
+      "id": "design",
+      "label": "Design",
+      "score": 3,
+      "words": [
+       "design"
+      ]
+     },
+     "second": null,
+     "conf": "maybe",
+     "basis": "link",
+     "words": [
+      "design"
+     ],
+     "ranked": [
+      {
+       "id": "design",
+       "label": "Design",
+       "score": 3,
+       "words": [
+        "design"
+       ]
+      },
+      {
+       "id": "education",
+       "label": "Study & exams",
+       "score": 1,
+       "words": [
+        "notes"
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "site"
+    }
+   ],
+   "out": "Probably Design (from the link only: design)."
+  },
+  {
+   "fn": "describeGuess",
+   "in": [
+    {
+     "top": {
+      "id": "health",
+      "label": "Health & wellness",
+      "score": 4.5,
+      "words": [
+       "health"
+      ]
+     },
+     "second": null,
+     "conf": "maybe",
+     "basis": "name",
+     "words": [
+      "health"
+     ],
+     "ranked": [
+      {
+       "id": "health",
+       "label": "Health & wellness",
+       "score": 4.5,
+       "words": [
+        "health"
+       ]
+      },
+      {
+       "id": "education",
+       "label": "Study & exams",
+       "score": 2.4,
+       "words": [
+        "notes",
+        "exam"
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "account",
+     "handle": true
+    }
+   ],
+   "out": "Probably Health & wellness (from the name only: health)."
+  },
+  {
+   "fn": "describeGuess",
+   "in": [
+    {
+     "top": null,
+     "second": null,
+     "conf": "none",
+     "basis": "none",
+     "words": [],
+     "ranked": []
+    },
+    {}
+   ],
+   "out": "Not clear from the title alone. A bio or the page itself would be needed."
+  },
+  {
+   "fn": "guessFields",
+   "in": [
+    null,
+    {}
+   ],
+   "out": {
+    "tags": [],
+    "useWhen": [],
+    "capabilities": []
+   },
+   "note": "missing guess"
+  },
+  {
+   "fn": "guessFields",
+   "in": [
+    {
+     "top": {
+      "id": "design",
+      "label": "Design",
+      "score": 3,
+      "words": [
+       "design"
+      ]
+     },
+     "second": null,
+     "conf": "maybe",
+     "basis": "link",
+     "words": [
+      "design"
+     ],
+     "ranked": [
+      {
+       "id": "design",
+       "label": "Design",
+       "score": 3,
+       "words": [
+        "design"
+       ]
+      },
+      {
+       "id": "education",
+       "label": "Study & exams",
+       "score": 1,
+       "words": [
+        "notes"
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "site"
+    }
+   ],
+   "out": {
+    "tags": [
+     "design"
+    ],
+    "useWhen": [
+     "find design ideas and tools"
+    ],
+    "capabilities": [
+     "Shares design ideas and tools"
+    ]
+   }
+  },
+  {
+   "fn": "guessFields",
+   "in": [
+    {
+     "top": {
+      "id": "health",
+      "label": "Health & wellness",
+      "score": 4.5,
+      "words": [
+       "health"
+      ]
+     },
+     "second": null,
+     "conf": "maybe",
+     "basis": "name",
+     "words": [
+      "health"
+     ],
+     "ranked": [
+      {
+       "id": "health",
+       "label": "Health & wellness",
+       "score": 4.5,
+       "words": [
+        "health"
+       ]
+      },
+      {
+       "id": "education",
+       "label": "Study & exams",
+       "score": 2.4,
+       "words": [
+        "notes",
+        "exam"
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "account"
+    }
+   ],
+   "out": {
+    "tags": [
+     "health"
+    ],
+    "useWhen": [
+     "learn about health and wellness"
+    ],
+    "capabilities": [
+     "Shares health and wellness information (guessed from the name)"
+    ]
+   }
+  },
+  {
+   "fn": "guessFields",
+   "in": [
+    {
+     "top": {
+      "id": "design",
+      "label": "Design",
+      "score": 4.6,
+      "words": [
+       "design",
+       "typography"
+      ]
+     },
+     "second": null,
+     "conf": "maybe",
+     "basis": "page",
+     "words": [
+      "design",
+      "typography"
+     ],
+     "ranked": [
+      {
+       "id": "design",
+       "label": "Design",
+       "score": 4.6,
+       "words": [
+        "design",
+        "typography"
+       ]
+      },
+      {
+       "id": "animation",
+       "label": "Animation & film",
+       "score": 0.85,
+       "words": [
+        "studio"
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "account"
+    }
+   ],
+   "out": {
+    "tags": [
+     "design"
+    ],
+    "useWhen": [
+     "find design ideas and tools"
+    ],
+    "capabilities": [
+     "Shares design ideas and tools"
+    ]
+   },
+   "note": "long text"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "text": "mental health"
+    }
+   ],
+   "out": {
+    "top": null,
+    "second": null,
+    "conf": "none",
+    "basis": "none",
+    "words": [],
+    "ranked": [
+     {
+      "id": "health",
+      "label": "Health & wellness",
+      "score": 2,
+      "words": [
+       "health",
+       "mental health"
+      ]
+     }
+    ]
+   },
+   "note": "a phrase with a space"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "url": "https://health.example.org/"
+    }
+   ],
+   "out": {
+    "top": null,
+    "second": null,
+    "conf": "none",
+    "basis": "none",
+    "words": [],
+    "ranked": []
+   },
+   "note": "link-only basis"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "handle": "@x",
+     "title": "Café"
+    }
+   ],
+   "out": {
+    "top": null,
+    "second": null,
+    "conf": "none",
+    "basis": "none",
+    "words": [],
+    "ranked": []
+   },
+   "note": "name-only basis from handle and title"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "handle": "design.design"
+    }
+   ],
+   "out": {
+    "top": {
+     "id": "design",
+     "label": "Design",
+     "score": 2,
+     "words": [
+      "design"
+     ]
+    },
+    "second": null,
+    "conf": "maybe",
+    "basis": "name",
+    "words": [
+     "design"
+    ],
+    "ranked": [
+     {
+      "id": "design",
+      "label": "Design",
+      "score": 2,
+      "words": [
+       "design"
+      ]
+     }
+    ]
+   },
+   "note": "the same word twice in a handle"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "handle": "@ai"
+    }
+   ],
+   "out": {
+    "top": {
+     "id": "ai",
+     "label": "AI & machine learning",
+     "score": 2,
+     "words": [
+      "ai"
+     ]
+    },
+    "second": null,
+    "conf": "maybe",
+    "basis": "name",
+    "words": [
+     "ai"
+    ],
+    "ranked": [
+     {
+      "id": "ai",
+      "label": "AI & machine learning",
+      "score": 2,
+      "words": [
+       "ai"
+      ]
+     }
+    ]
+   },
+   "note": "a short allowed word"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "handle": "mymusic"
+    }
+   ],
+   "out": {
+    "top": {
+     "id": "music",
+     "label": "Music & audio",
+     "score": 1.6,
+     "words": [
+      "music"
+     ]
+    },
+    "second": null,
+    "conf": "maybe",
+    "basis": "name",
+    "words": [
+     "music"
+    ],
+    "ranked": [
+     {
+      "id": "music",
+      "label": "Music & audio",
+      "score": 1.6,
+      "words": [
+       "music"
+      ]
+     }
+    ]
+   },
+   "note": "a five letter word at the end"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "handle": "xmusicx"
+    }
+   ],
+   "out": {
+    "top": null,
+    "second": null,
+    "conf": "none",
+    "basis": "none",
+    "words": [],
+    "ranked": []
+   },
+   "note": "a word inside another word"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "handle": "codex"
+    }
+   ],
+   "out": {
+    "top": null,
+    "second": null,
+    "conf": "none",
+    "basis": "none",
+    "words": [],
+    "ranked": [
+     {
+      "id": "tech",
+      "label": "Technology & coding",
+      "score": 1.4,
+      "words": [
+       "code"
+      ]
+     }
+    ]
+   },
+   "note": "a four letter word at the start"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "handle": "learnenglish"
+    }
+   ],
+   "out": {
+    "top": {
+     "id": "languages",
+     "label": "Language learning",
+     "score": 2,
+     "words": [
+      "english"
+     ]
+    },
+    "second": {
+     "id": "education",
+     "label": "Study & exams",
+     "score": 1.6,
+     "words": [
+      "learn"
+     ]
+    },
+    "conf": "maybe",
+    "basis": "name",
+    "words": [
+     "english"
+    ],
+    "ranked": [
+     {
+      "id": "languages",
+      "label": "Language learning",
+      "score": 2,
+      "words": [
+       "english"
+      ]
+     },
+     {
+      "id": "education",
+      "label": "Study & exams",
+      "score": 1.6,
+      "words": [
+       "learn"
+      ]
+     }
+    ]
+   },
+   "note": "a six letter word inside"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "handle": "healthfitness"
+    }
+   ],
+   "out": {
+    "top": {
+     "id": "fitness",
+     "label": "Fitness & training",
+     "score": 2,
+     "words": [
+      "fitness"
+     ]
+    },
+    "second": {
+     "id": "health",
+     "label": "Health & wellness",
+     "score": 2,
+     "words": [
+      "health"
+     ]
+    },
+    "conf": "maybe",
+    "basis": "name",
+    "words": [
+     "fitness"
+    ],
+    "ranked": [
+     {
+      "id": "fitness",
+      "label": "Fitness & training",
+      "score": 2,
+      "words": [
+       "fitness"
+      ]
+     },
+     {
+      "id": "health",
+      "label": "Health & wellness",
+      "score": 2,
+      "words": [
+       "health"
+      ]
+     }
+    ]
+   },
+   "note": "two matches of different lengths"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "handle": "xhealthy"
+    }
+   ],
+   "out": {
+    "top": {
+     "id": "health",
+     "label": "Health & wellness",
+     "score": 2,
+     "words": [
+      "healthy"
+     ]
+    },
+    "second": null,
+    "conf": "maybe",
+    "basis": "name",
+    "words": [
+     "healthy"
+    ],
+    "ranked": [
+     {
+      "id": "health",
+      "label": "Health & wellness",
+      "score": 2,
+      "words": [
+       "healthy"
+      ]
+     }
+    ]
+   },
+   "note": "one match inside another"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "keywords": [
+      "design",
+      "typography"
+     ],
+     "headings": [
+      "A design heading"
+     ]
+    }
+   ],
+   "out": {
+    "top": {
+     "id": "design",
+     "label": "Design",
+     "score": 7,
+     "words": [
+      "design",
+      "typography"
+     ]
+    },
+    "second": null,
+    "conf": "clear",
+    "basis": "bio",
+    "words": [
+     "design",
+     "typography"
+    ],
+    "ranked": [
+     {
+      "id": "design",
+      "label": "Design",
+      "score": 7,
+      "words": [
+       "design",
+       "typography"
+      ]
+     }
+    ]
+   },
+   "note": "keywords and headings arrays"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "bio": "design typography"
+    }
+   ],
+   "out": {
+    "top": {
+     "id": "design",
+     "label": "Design",
+     "score": 6,
+     "words": [
+      "design",
+      "typography"
+     ]
+    },
+    "second": null,
+    "conf": "clear",
+    "basis": "bio",
+    "words": [
+     "design",
+     "typography"
+    ],
+    "ranked": [
+     {
+      "id": "design",
+      "label": "Design",
+      "score": 6,
+      "words": [
+       "design",
+       "typography"
+      ]
+     }
+    ]
+   },
+   "note": "a clear bio"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "text": "design animation"
+    }
+   ],
+   "out": {
+    "top": null,
+    "second": null,
+    "conf": "none",
+    "basis": "none",
+    "words": [],
+    "ranked": [
+     {
+      "id": "design",
+      "label": "Design",
+      "score": 1,
+      "words": [
+       "design"
+      ]
+     },
+     {
+      "id": "animation",
+      "label": "Animation & film",
+      "score": 1,
+      "words": [
+       "animation"
+      ]
+     }
+    ]
+   },
+   "note": "two close topics"
+  },
+  {
+   "fn": "describeGuess",
+   "in": [
+    {
+     "top": {
+      "id": "design",
+      "label": "Design",
+      "score": 6,
+      "words": [
+       "design",
+       "typography"
+      ]
+     },
+     "second": null,
+     "conf": "clear",
+     "basis": "bio",
+     "words": [
+      "design",
+      "typography"
+     ],
+     "ranked": [
+      {
+       "id": "design",
+       "label": "Design",
+       "score": 6,
+       "words": [
+        "design",
+        "typography"
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "site"
+    }
+   ],
+   "out": "Design (from the bio or description: design, typography).",
+   "note": "clear with no words"
+  },
+  {
+   "fn": "describeGuess",
+   "in": [
+    {
+     "top": null,
+     "second": null,
+     "conf": "none",
+     "basis": "none",
+     "words": [],
+     "ranked": [
+      {
+       "id": "design",
+       "label": "Design",
+       "score": 1,
+       "words": [
+        "design"
+       ]
+      },
+      {
+       "id": "animation",
+       "label": "Animation & film",
+       "score": 1,
+       "words": [
+        "animation"
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "site"
+    }
+   ],
+   "out": "Not clear from the title alone. A bio or the page itself would be needed.",
+   "note": "second topic in the sentence"
+  },
+  {
+   "fn": "describeGuess",
+   "in": [
+    null,
+    {
+     "handle": true
+    }
+   ],
+   "out": "Not clear from the name alone. A bio or the page itself would be needed.",
+   "note": "missing guess with a name"
+  },
+  {
+   "fn": "describeGuess",
+   "in": [
+    {
+     "top": {
+      "id": "health",
+      "label": "Health & wellness",
+      "score": 4.5,
+      "words": [
+       "health"
+      ]
+     },
+     "second": null,
+     "conf": "maybe",
+     "basis": "name",
+     "words": [
+      "health"
+     ],
+     "ranked": [
+      {
+       "id": "health",
+       "label": "Health & wellness",
+       "score": 4.5,
+       "words": [
+        "health"
+       ]
+      },
+      {
+       "id": "education",
+       "label": "Study & exams",
+       "score": 2.4,
+       "words": [
+        "notes",
+        "exam"
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "site"
+    }
+   ],
+   "out": "Probably Health & wellness (from the title and link only: health).",
+   "note": "name basis on a site"
+  },
+  {
+   "fn": "guessFields",
+   "in": [
+    {
+     "top": {
+      "id": "maths",
+      "label": "Maths",
+      "score": 4,
+      "words": [
+       "math",
+       "maths"
+      ]
+     },
+     "second": null,
+     "conf": "maybe",
+     "basis": "name",
+     "words": [
+      "math",
+      "maths"
+     ],
+     "ranked": [
+      {
+       "id": "maths",
+       "label": "Maths",
+       "score": 4,
+       "words": [
+        "math",
+        "maths"
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "account"
+    }
+   ],
+   "out": {
+    "tags": [
+     "maths"
+    ],
+    "useWhen": [
+     "practise or learn maths"
+    ],
+    "capabilities": [
+     "Shares maths problems and ideas (guessed from the name)"
+    ]
+   },
+   "note": "maths tag"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "bio": "design typography notes"
+    }
+   ],
+   "out": {
+    "top": {
+     "id": "design",
+     "label": "Design",
+     "score": 6,
+     "words": [
+      "design",
+      "typography"
+     ]
+    },
+    "second": null,
+    "conf": "clear",
+    "basis": "bio",
+    "words": [
+     "design",
+     "typography"
+    ],
+    "ranked": [
+     {
+      "id": "design",
+      "label": "Design",
+      "score": 6,
+      "words": [
+       "design",
+       "typography"
+      ]
+     },
+     {
+      "id": "education",
+      "label": "Study & exams",
+      "score": 1.2,
+      "words": [
+       "notes"
+      ]
+     }
+    ]
+   },
+   "note": "clear lead with a weak second"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "bio": "design animation"
+    }
+   ],
+   "out": {
+    "top": {
+     "id": "design",
+     "label": "Design",
+     "score": 3,
+     "words": [
+      "design"
+     ]
+    },
+    "second": {
+     "id": "animation",
+     "label": "Animation & film",
+     "score": 3,
+     "words": [
+      "animation"
+     ]
+    },
+    "conf": "maybe",
+    "basis": "bio",
+    "words": [
+     "design"
+    ],
+    "ranked": [
+     {
+      "id": "design",
+      "label": "Design",
+      "score": 3,
+      "words": [
+       "design"
+      ]
+     },
+     {
+      "id": "animation",
+      "label": "Animation & film",
+      "score": 3,
+      "words": [
+       "animation"
+      ]
+     }
+    ]
+   },
+   "note": "two close topics with weight"
+  },
+  {
+   "fn": "guessTopic",
+   "in": [
+    {
+     "handle": "healthdesign"
+    }
+   ],
+   "out": {
+    "top": {
+     "id": "health",
+     "label": "Health & wellness",
+     "score": 2,
+     "words": [
+      "health"
+     ]
+    },
+    "second": {
+     "id": "design",
+     "label": "Design",
+     "score": 2,
+     "words": [
+      "design"
+     ]
+    },
+    "conf": "maybe",
+    "basis": "name",
+    "words": [
+     "health"
+    ],
+    "ranked": [
+     {
+      "id": "health",
+      "label": "Health & wellness",
+      "score": 2,
+      "words": [
+       "health"
+      ]
+     },
+     {
+      "id": "design",
+      "label": "Design",
+      "score": 2,
+      "words": [
+       "design"
+      ]
+     }
+    ]
+   },
+   "note": "two joined words in a handle"
+  },
+  {
+   "fn": "describeGuess",
+   "in": [
+    {
+     "top": {
+      "id": "design",
+      "label": "Design",
+      "score": 6,
+      "words": [
+       "design",
+       "typography"
+      ]
+     },
+     "second": null,
+     "conf": "clear",
+     "basis": "bio",
+     "words": [
+      "design",
+      "typography"
+     ],
+     "ranked": [
+      {
+       "id": "design",
+       "label": "Design",
+       "score": 6,
+       "words": [
+        "design",
+        "typography"
+       ]
+      },
+      {
+       "id": "education",
+       "label": "Study & exams",
+       "score": 1.2,
+       "words": [
+        "notes"
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "site"
+    }
+   ],
+   "out": "Design (from the bio or description: design, typography).",
+   "note": "clear but with a second"
+  },
+  {
+   "fn": "describeGuess",
+   "in": [
+    {
+     "top": {
+      "id": "design",
+      "label": "Design",
+      "score": 3,
+      "words": [
+       "design"
+      ]
+     },
+     "second": {
+      "id": "animation",
+      "label": "Animation & film",
+      "score": 3,
+      "words": [
+       "animation"
+      ]
+     },
+     "conf": "maybe",
+     "basis": "bio",
+     "words": [
+      "design"
+     ],
+     "ranked": [
+      {
+       "id": "design",
+       "label": "Design",
+       "score": 3,
+       "words": [
+        "design"
+       ]
+      },
+      {
+       "id": "animation",
+       "label": "Animation & film",
+       "score": 3,
+       "words": [
+        "animation"
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "site"
+    }
+   ],
+   "out": "Probably Design and Animation & film (from the bio or description: design).",
+   "note": "two topics in the sentence"
+  },
+  {
+   "fn": "describeGuess",
+   "in": [
+    {
+     "top": {
+      "id": "design",
+      "label": "Design",
+      "score": 6,
+      "words": []
+     },
+     "second": null,
+     "conf": "clear",
+     "basis": "bio",
+     "words": [],
+     "ranked": []
+    },
+    {}
+   ],
+   "out": "Design (from the bio or description).",
+   "note": "no words to list"
+  }
+ ]
+}

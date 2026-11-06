@@ -1,0 +1,5 @@
+name: flutter_test
+description: Strict local stand-in for the pure-Dart golden tests. Not Flutter.
+publish_to: none
+environment:
+  sdk: '>=3.3.0 <4.0.0'

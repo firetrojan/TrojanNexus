@@ -1,0 +1,330 @@
+{
+ "module": "tags",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "cleanTag",
+   "in": [
+    "  #AI   Tools "
+   ],
+   "out": "ai tools"
+  },
+  {
+   "fn": "cleanTag",
+   "in": [
+    "a, b"
+   ],
+   "out": "a b"
+  },
+  {
+   "fn": "cleanTag",
+   "in": [
+    "###"
+   ],
+   "out": ""
+  },
+  {
+   "fn": "cleanTag",
+   "in": [
+    "हिंदी"
+   ],
+   "out": "हिंदी"
+  },
+  {
+   "fn": "cleanTag",
+   "in": [
+    "c++"
+   ],
+   "out": "c++"
+  },
+  {
+   "fn": "cleanTag",
+   "in": [
+    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+   ],
+   "out": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  },
+  {
+   "fn": "cleanTag",
+   "in": [
+    "A;B\nC"
+   ],
+   "out": "a b c"
+  },
+  {
+   "fn": "tagCounts",
+   "in": [
+    "$RS"
+   ],
+   "out": [
+    {
+     "tag": "design",
+     "n": 6,
+     "live": 5
+    },
+    {
+     "tag": "presentation",
+     "n": 2,
+     "live": 2
+    },
+    {
+     "tag": "video",
+     "n": 2,
+     "live": 2
+    },
+    {
+     "tag": "ai tools",
+     "n": 1,
+     "live": 1
+    },
+    {
+     "tag": "ai-tools",
+     "n": 1,
+     "live": 1
+    },
+    {
+     "tag": "api",
+     "n": 1,
+     "live": 1
+    },
+    {
+     "tag": "color",
+     "n": 1,
+     "live": 1
+    },
+    {
+     "tag": "docs",
+     "n": 1,
+     "live": 1
+    },
+    {
+     "tag": "editing",
+     "n": 1,
+     "live": 1
+    },
+    {
+     "tag": "following",
+     "n": 1,
+     "live": 1
+    },
+    {
+     "tag": "fonts",
+     "n": 1,
+     "live": 1
+    },
+    {
+     "tag": "hosting",
+     "n": 1,
+     "live": 1
+    },
+    {
+     "tag": "instagram",
+     "n": 1,
+     "live": 1
+    },
+    {
+     "tag": "logo",
+     "n": 1,
+     "live": 1
+    },
+    {
+     "tag": "pdf",
+     "n": 1,
+     "live": 1
+    },
+    {
+     "tag": "writing",
+     "n": 1,
+     "live": 1
+    }
+   ]
+  },
+  {
+   "fn": "retag",
+   "in": [
+    "$RS",
+    "ai tools",
+    "ai-tools"
+   ],
+   "out": {
+    "r2": [
+     "video",
+     "editing",
+     "ai-tools"
+    ]
+   }
+  },
+  {
+   "fn": "retag",
+   "in": [
+    "$RS",
+    [
+     "design",
+     "color"
+    ],
+    "visual"
+   ],
+   "out": {
+    "r4": [
+     "visual"
+    ],
+    "r5": [
+     "writing",
+     "visual"
+    ],
+    "r6": [
+     "visual"
+    ],
+    "r7": [
+     "visual",
+     "fonts"
+    ],
+    "r8": [
+     "visual",
+     "logo"
+    ],
+    "r10": [
+     "visual"
+    ]
+   }
+  },
+  {
+   "fn": "retag",
+   "in": [
+    "$RS",
+    "design",
+    ""
+   ],
+   "out": {
+    "r4": [],
+    "r5": [
+     "writing"
+    ],
+    "r6": [
+     "color"
+    ],
+    "r7": [
+     "fonts"
+    ],
+    "r8": [
+     "logo"
+    ],
+    "r10": []
+   },
+   "note": "empty target deletes"
+  },
+  {
+   "fn": "retag",
+   "in": [
+    "$RS",
+    "nope",
+    "x"
+   ],
+   "out": {}
+  },
+  {
+   "fn": "similarTags",
+   "in": [
+    [
+     {
+      "tag": "design",
+      "n": 6,
+      "live": 5
+     },
+     {
+      "tag": "presentation",
+      "n": 2,
+      "live": 2
+     },
+     {
+      "tag": "video",
+      "n": 2,
+      "live": 2
+     },
+     {
+      "tag": "ai tools",
+      "n": 1,
+      "live": 1
+     },
+     {
+      "tag": "ai-tools",
+      "n": 1,
+      "live": 1
+     },
+     {
+      "tag": "api",
+      "n": 1,
+      "live": 1
+     },
+     {
+      "tag": "color",
+      "n": 1,
+      "live": 1
+     },
+     {
+      "tag": "docs",
+      "n": 1,
+      "live": 1
+     },
+     {
+      "tag": "editing",
+      "n": 1,
+      "live": 1
+     },
+     {
+      "tag": "following",
+      "n": 1,
+      "live": 1
+     },
+     {
+      "tag": "fonts",
+      "n": 1,
+      "live": 1
+     },
+     {
+      "tag": "hosting",
+      "n": 1,
+      "live": 1
+     },
+     {
+      "tag": "instagram",
+      "n": 1,
+      "live": 1
+     },
+     {
+      "tag": "logo",
+      "n": 1,
+      "live": 1
+     },
+     {
+      "tag": "pdf",
+      "n": 1,
+      "live": 1
+     },
+     {
+      "tag": "writing",
+      "n": 1,
+      "live": 1
+     }
+    ]
+   ],
+   "out": [
+    {
+     "tags": [
+      {
+       "tag": "ai tools",
+       "n": 1,
+       "live": 1
+      },
+      {
+       "tag": "ai-tools",
+       "n": 1,
+       "live": 1
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1453 @@
+{
+ "module": "tz",
+ "generatedFrom": "legacy/web-src/js",
+ "note": "generated with TZ=UTC; wall times are local wall times",
+ "wallTimes": [
+  "02:00",
+  "23:30"
+ ],
+ "cases": [
+  {
+   "fn": "util.todayISO",
+   "wall": "02:00",
+   "in": [],
+   "out": "2026-10-31"
+  },
+  {
+   "fn": "util.addDays",
+   "wall": "02:00",
+   "in": [
+    "",
+    3
+   ],
+   "out": "2026-11-03",
+   "note": "empty date means today"
+  },
+  {
+   "fn": "util.addDays",
+   "wall": "02:00",
+   "in": [
+    "not-a-date",
+    1
+   ],
+   "out": "2026-11-01",
+   "note": "bad date means today"
+  },
+  {
+   "fn": "exporters.markdownAll",
+   "wall": "02:00",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "a1",
+       "title": "Sample a1",
+       "url": "https://a1.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "fields": {},
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "inputs": "",
+       "outputs": "",
+       "verdict": null
+      },
+      {
+       "id": "a2",
+       "title": "Sample a2",
+       "url": "https://a2.example.org/",
+       "status": "testing",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "2026-11-01",
+       "fields": {},
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "inputs": "",
+       "outputs": "",
+       "verdict": null
+      },
+      {
+       "id": "a3",
+       "title": "Sample a3",
+       "url": "https://a3.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "fields": {
+        "resets": "2026-11-05"
+       },
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "inputs": "",
+       "outputs": "",
+       "verdict": null
+      },
+      {
+       "id": "a4",
+       "title": "Sample a4",
+       "url": "https://a4.example.org/",
+       "status": "archived",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "fields": {},
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "inputs": "",
+       "outputs": "",
+       "verdict": null
+      }
+     ],
+     "jobs": [],
+     "threads": [],
+     "settings": {}
+    },
+    {}
+   ],
+   "out": "# My resources\n\nExported from Nexus on 2026-10-31.\n\n## Not in a sector\n\n- [Sample a1](https://a1.example.org/)\n- [Sample a2](https://a2.example.org/) - Trial\n- [Sample a3](https://a3.example.org/) - 2026-11-05\n"
+  },
+  {
+   "fn": "exporters.upcomingEvents",
+   "wall": "02:00",
+   "in": [
+    [
+     {
+      "id": "a1",
+      "title": "Sample a1",
+      "url": "https://a1.example.org/",
+      "status": "active",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-02",
+      "trialEnd": "",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null
+     },
+     {
+      "id": "a2",
+      "title": "Sample a2",
+      "url": "https://a2.example.org/",
+      "status": "testing",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "2026-11-01",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null
+     },
+     {
+      "id": "a3",
+      "title": "Sample a3",
+      "url": "https://a3.example.org/",
+      "status": "active",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "fields": {
+       "resets": "2026-11-05"
+      },
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null
+     },
+     {
+      "id": "a4",
+      "title": "Sample a4",
+      "url": "https://a4.example.org/",
+      "status": "archived",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null
+     }
+    ]
+   ],
+   "out": [
+    {
+     "rid": "a2",
+     "kind": "trial",
+     "date": "2026-11-01",
+     "title": "Trial ends - keep or drop: Sample a2",
+     "details": "https://a2.example.org/",
+     "url": "https://a2.example.org/"
+    },
+    {
+     "rid": "a1",
+     "kind": "check",
+     "date": "2026-11-02",
+     "title": "Check: Sample a1",
+     "details": "https://a1.example.org/",
+     "url": "https://a1.example.org/"
+    },
+    {
+     "rid": "a3",
+     "kind": "resets",
+     "date": "2026-11-05",
+     "title": "Limit resets or offer ends: Sample a3",
+     "details": "https://a3.example.org/",
+     "url": "https://a3.example.org/"
+    }
+   ]
+  },
+  {
+   "fn": "exporters.icsFor",
+   "wall": "02:00",
+   "in": [
+    [
+     {
+      "rid": "a1",
+      "kind": "check",
+      "date": "2026-11-02",
+      "title": "Check a1"
+     }
+    ]
+   ],
+   "out": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Nexus//Resources//EN\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\nBEGIN:VEVENT\r\nUID:nexus-a1-check-20261102@nexus.local\r\nDTSTAMP:20261031T020000Z\r\nDTSTART;VALUE=DATE:20261102\r\nDTEND;VALUE=DATE:20261103\r\nSUMMARY:Check a1\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+  },
+  {
+   "fn": "home.needsItems",
+   "wall": "02:00",
+   "in": [
+    [
+     {
+      "id": "a1",
+      "title": "Sample a1",
+      "url": "https://a1.example.org/",
+      "status": "active",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-02",
+      "trialEnd": "",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null
+     },
+     {
+      "id": "a2",
+      "title": "Sample a2",
+      "url": "https://a2.example.org/",
+      "status": "testing",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "2026-11-01",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null
+     },
+     {
+      "id": "a3",
+      "title": "Sample a3",
+      "url": "https://a3.example.org/",
+      "status": "active",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "fields": {
+       "resets": "2026-11-05"
+      },
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null
+     },
+     {
+      "id": "a4",
+      "title": "Sample a4",
+      "url": "https://a4.example.org/",
+      "status": "archived",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null
+     }
+    ],
+    "FN"
+   ],
+   "out": [
+    {
+     "kind": "trial",
+     "rank": 1,
+     "sub": "Trial ends in 1 day",
+     "r": {
+      "id": "a2"
+     }
+    },
+    {
+     "kind": "limit",
+     "rank": 5,
+     "sub": "Resets in 5 days",
+     "r": {
+      "id": "a3"
+     }
+    }
+   ],
+   "note": "fns are the store bucket helpers"
+  },
+  {
+   "fn": "rules.condMatches",
+   "wall": "02:00",
+   "in": [
+    {
+     "id": "r1",
+     "title": "Sample r1",
+     "url": "https://r1.example.org/",
+     "status": "testing",
+     "tags": [],
+     "draft": false,
+     "checkCadence": "none",
+     "nextCheck": "",
+     "trialEnd": "2026-11-01",
+     "fields": {},
+     "useWhen": [],
+     "capabilities": [],
+     "notes": "",
+     "inputs": "",
+     "outputs": "",
+     "verdict": null
+    },
+    {
+     "f": "trialEnd",
+     "op": "within",
+     "v": "3"
+    }
+   ],
+   "out": false
+  },
+  {
+   "fn": "rules.matches",
+   "wall": "02:00",
+   "in": [
+    {
+     "id": "r1",
+     "title": "Sample r1",
+     "url": "https://r1.example.org/",
+     "status": "testing",
+     "tags": [],
+     "draft": false,
+     "checkCadence": "none",
+     "nextCheck": "",
+     "trialEnd": "2026-11-01",
+     "fields": {},
+     "useWhen": [],
+     "capabilities": [],
+     "notes": "",
+     "inputs": "",
+     "outputs": "",
+     "verdict": null
+    },
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "status",
+       "op": "is",
+       "v": "testing"
+      }
+     ]
+    }
+   ],
+   "out": true
+  },
+  {
+   "fn": "insights.addedPerMonth",
+   "wall": "02:00",
+   "in": [
+    [
+     {
+      "id": "m1",
+      "title": "Sample m1",
+      "url": "https://m1.example.org/",
+      "status": "active",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null,
+      "createdAt": "2026-05-04"
+     },
+     {
+      "id": "m2",
+      "title": "Sample m2",
+      "url": "https://m2.example.org/",
+      "status": "active",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null,
+      "createdAt": "2026-10-01"
+     },
+     {
+      "id": "m3",
+      "title": "Sample m3",
+      "url": "https://m3.example.org/",
+      "status": "active",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null,
+      "createdAt": "2026-10-30"
+     }
+    ],
+    ""
+   ],
+   "out": [
+    {
+     "key": "2026-05",
+     "label": "May",
+     "n": 1
+    },
+    {
+     "key": "2026-06",
+     "label": "Jun",
+     "n": 0
+    },
+    {
+     "key": "2026-07",
+     "label": "Jul",
+     "n": 0
+    },
+    {
+     "key": "2026-08",
+     "label": "Aug",
+     "n": 0
+    },
+    {
+     "key": "2026-09",
+     "label": "Sep",
+     "n": 0
+    },
+    {
+     "key": "2026-10",
+     "label": "Oct",
+     "n": 2
+    }
+   ],
+   "note": "empty today means now"
+  },
+  {
+   "fn": "game.award",
+   "wall": "02:00",
+   "in": [
+    "check",
+    1
+   ],
+   "out": {
+    "gain": 10,
+    "kind": "check",
+    "label": "",
+    "levelUp": null,
+    "newBadges": [
+     {
+      "id": "clear-sky",
+      "name": "Clear Sky",
+      "desc": "No overdue signals"
+     }
+    ]
+   },
+   "note": "stamps today into days and log"
+  },
+  {
+   "fn": "game.focusDone",
+   "wall": "02:00",
+   "in": [
+    25
+   ],
+   "out": {
+    "result": {
+     "gain": 15,
+     "kind": "focus20",
+     "label": "Focus run 25 min",
+     "levelUp": null,
+     "newBadges": []
+    },
+    "focus": [
+     {
+      "date": "2026-10-30",
+      "minutes": 20
+     },
+     {
+      "date": "2026-10-31",
+      "minutes": 25
+     }
+    ],
+    "today": 25
+   }
+  },
+  {
+   "fn": "game.focusToday",
+   "wall": "02:00",
+   "in": [],
+   "out": 0
+  },
+  {
+   "fn": "game.unlock",
+   "wall": "02:00",
+   "in": [],
+   "out": [
+    {
+     "id": "clear-sky",
+     "name": "Clear Sky",
+     "desc": "No overdue signals"
+    }
+   ]
+  },
+  {
+   "fn": "week.weekDigest",
+   "wall": "02:00",
+   "in": [
+    [
+     {
+      "id": "w0",
+      "title": "Sample w0",
+      "url": "https://w0.example.org/",
+      "status": "active",
+      "createdAt": "2026-10-26",
+      "opens": 1,
+      "openedAt": "2026-10-24T23:59:59.999",
+      "log": []
+     },
+     {
+      "id": "w1",
+      "title": "Sample w1",
+      "url": "https://w1.example.org/",
+      "status": "active",
+      "createdAt": "2026-10-26",
+      "opens": 1,
+      "openedAt": "2026-10-25T00:00:00.000",
+      "log": []
+     },
+     {
+      "id": "w2",
+      "title": "Sample w2",
+      "url": "https://w2.example.org/",
+      "status": "active",
+      "createdAt": "2026-10-26",
+      "opens": 1,
+      "openedAt": "2026-10-25T00:00:00.001",
+      "log": []
+     },
+     {
+      "id": "w3",
+      "title": "Sample w3",
+      "url": "https://w3.example.org/",
+      "status": "active",
+      "createdAt": "2026-10-26",
+      "opens": 1,
+      "openedAt": "not-a-date",
+      "log": []
+     }
+    ],
+    null,
+    "2026-10-31"
+   ],
+   "out": {
+    "added": 4,
+    "opened": 2,
+    "reviewed": 0,
+    "checked": 0,
+    "learned": 0,
+    "merged": 0,
+    "stage": 0,
+    "picks": null
+   },
+   "note": "from 2026-10-25 local midnight: opened counts the 00:00:00.000 and 00:00:00.001 entries"
+  },
+  {
+   "fn": "store.addResource",
+   "wall": "02:00",
+   "in": [
+    {
+     "id": "a1",
+     "title": "Sample added",
+     "url": "https://added.example.org/",
+     "status": "candidate"
+    }
+   ],
+   "out": {
+    "id": "a1",
+    "createdAt": "2026-10-31",
+    "statusSince": "2026-10-31",
+    "added": "",
+    "nextCheck": ""
+   },
+   "note": "added and createdAt come from today"
+  },
+  {
+   "fn": "store.markChecked",
+   "wall": "02:00",
+   "in": [
+    "s1"
+   ],
+   "out": {
+    "lastChecked": "2026-10-31",
+    "nextCheck": "2026-11-07"
+   },
+   "note": "checked today, next check from today"
+  },
+  {
+   "fn": "store.startTrial",
+   "wall": "02:00",
+   "in": [
+    "s1",
+    14
+   ],
+   "out": {
+    "statusSince": "2026-10-31",
+    "trialEnd": "2026-11-14"
+   },
+   "note": "trial starts today"
+  },
+  {
+   "fn": "store.setVerdict",
+   "wall": "02:00",
+   "in": [
+    "s1",
+    "keep",
+    "worth it"
+   ],
+   "out": {
+    "statusSince": "2026-10-31",
+    "verdict": {
+     "at": "2026-10-31",
+     "result": "keep",
+     "note": "worth it"
+    }
+   },
+   "note": "the verdict date is today"
+  },
+  {
+   "fn": "store.snooze",
+   "wall": "02:00",
+   "in": [
+    "s1",
+    5
+   ],
+   "out": {
+    "nextCheck": "2026-11-05"
+   },
+   "note": "next check is today + 5 days"
+  },
+  {
+   "fn": "store.setStepDone",
+   "wall": "02:00",
+   "in": [
+    "th1",
+    0,
+    true
+   ],
+   "out": {
+    "doneAt": "2026-10-31T02:00:00.000Z",
+    "lastDone": "2026-10-31T02:00:00.000Z"
+   },
+   "note": "mission step doneAt is the frozen instant (the generator ran with TZ=UTC, so the wall clock read as UTC)"
+  },
+  {
+   "fn": "util.todayISO",
+   "wall": "23:30",
+   "in": [],
+   "out": "2026-10-31"
+  },
+  {
+   "fn": "util.addDays",
+   "wall": "23:30",
+   "in": [
+    "",
+    3
+   ],
+   "out": "2026-11-03",
+   "note": "empty date means today"
+  },
+  {
+   "fn": "util.addDays",
+   "wall": "23:30",
+   "in": [
+    "not-a-date",
+    1
+   ],
+   "out": "2026-11-01",
+   "note": "bad date means today"
+  },
+  {
+   "fn": "exporters.markdownAll",
+   "wall": "23:30",
+   "in": [
+    {
+     "resources": [
+      {
+       "id": "a1",
+       "title": "Sample a1",
+       "url": "https://a1.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "weekly",
+       "nextCheck": "2026-11-02",
+       "trialEnd": "",
+       "fields": {},
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "inputs": "",
+       "outputs": "",
+       "verdict": null
+      },
+      {
+       "id": "a2",
+       "title": "Sample a2",
+       "url": "https://a2.example.org/",
+       "status": "testing",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "2026-11-01",
+       "fields": {},
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "inputs": "",
+       "outputs": "",
+       "verdict": null
+      },
+      {
+       "id": "a3",
+       "title": "Sample a3",
+       "url": "https://a3.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "fields": {
+        "resets": "2026-11-05"
+       },
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "inputs": "",
+       "outputs": "",
+       "verdict": null
+      },
+      {
+       "id": "a4",
+       "title": "Sample a4",
+       "url": "https://a4.example.org/",
+       "status": "archived",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none",
+       "nextCheck": "",
+       "trialEnd": "",
+       "fields": {},
+       "useWhen": [],
+       "capabilities": [],
+       "notes": "",
+       "inputs": "",
+       "outputs": "",
+       "verdict": null
+      }
+     ],
+     "jobs": [],
+     "threads": [],
+     "settings": {}
+    },
+    {}
+   ],
+   "out": "# My resources\n\nExported from Nexus on 2026-10-31.\n\n## Not in a sector\n\n- [Sample a1](https://a1.example.org/)\n- [Sample a2](https://a2.example.org/) - Trial\n- [Sample a3](https://a3.example.org/) - 2026-11-05\n"
+  },
+  {
+   "fn": "exporters.upcomingEvents",
+   "wall": "23:30",
+   "in": [
+    [
+     {
+      "id": "a1",
+      "title": "Sample a1",
+      "url": "https://a1.example.org/",
+      "status": "active",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-02",
+      "trialEnd": "",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null
+     },
+     {
+      "id": "a2",
+      "title": "Sample a2",
+      "url": "https://a2.example.org/",
+      "status": "testing",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "2026-11-01",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null
+     },
+     {
+      "id": "a3",
+      "title": "Sample a3",
+      "url": "https://a3.example.org/",
+      "status": "active",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "fields": {
+       "resets": "2026-11-05"
+      },
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null
+     },
+     {
+      "id": "a4",
+      "title": "Sample a4",
+      "url": "https://a4.example.org/",
+      "status": "archived",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null
+     }
+    ]
+   ],
+   "out": [
+    {
+     "rid": "a2",
+     "kind": "trial",
+     "date": "2026-11-01",
+     "title": "Trial ends - keep or drop: Sample a2",
+     "details": "https://a2.example.org/",
+     "url": "https://a2.example.org/"
+    },
+    {
+     "rid": "a1",
+     "kind": "check",
+     "date": "2026-11-02",
+     "title": "Check: Sample a1",
+     "details": "https://a1.example.org/",
+     "url": "https://a1.example.org/"
+    },
+    {
+     "rid": "a3",
+     "kind": "resets",
+     "date": "2026-11-05",
+     "title": "Limit resets or offer ends: Sample a3",
+     "details": "https://a3.example.org/",
+     "url": "https://a3.example.org/"
+    }
+   ]
+  },
+  {
+   "fn": "exporters.icsFor",
+   "wall": "23:30",
+   "in": [
+    [
+     {
+      "rid": "a1",
+      "kind": "check",
+      "date": "2026-11-02",
+      "title": "Check a1"
+     }
+    ]
+   ],
+   "out": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Nexus//Resources//EN\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\nBEGIN:VEVENT\r\nUID:nexus-a1-check-20261102@nexus.local\r\nDTSTAMP:20261031T233000Z\r\nDTSTART;VALUE=DATE:20261102\r\nDTEND;VALUE=DATE:20261103\r\nSUMMARY:Check a1\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+  },
+  {
+   "fn": "home.needsItems",
+   "wall": "23:30",
+   "in": [
+    [
+     {
+      "id": "a1",
+      "title": "Sample a1",
+      "url": "https://a1.example.org/",
+      "status": "active",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "weekly",
+      "nextCheck": "2026-11-02",
+      "trialEnd": "",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null
+     },
+     {
+      "id": "a2",
+      "title": "Sample a2",
+      "url": "https://a2.example.org/",
+      "status": "testing",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "2026-11-01",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null
+     },
+     {
+      "id": "a3",
+      "title": "Sample a3",
+      "url": "https://a3.example.org/",
+      "status": "active",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "fields": {
+       "resets": "2026-11-05"
+      },
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null
+     },
+     {
+      "id": "a4",
+      "title": "Sample a4",
+      "url": "https://a4.example.org/",
+      "status": "archived",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null
+     }
+    ],
+    "FN"
+   ],
+   "out": [
+    {
+     "kind": "trial",
+     "rank": 1,
+     "sub": "Trial ends in 1 day",
+     "r": {
+      "id": "a2"
+     }
+    },
+    {
+     "kind": "limit",
+     "rank": 5,
+     "sub": "Resets in 5 days",
+     "r": {
+      "id": "a3"
+     }
+    }
+   ],
+   "note": "fns are the store bucket helpers"
+  },
+  {
+   "fn": "rules.condMatches",
+   "wall": "23:30",
+   "in": [
+    {
+     "id": "r1",
+     "title": "Sample r1",
+     "url": "https://r1.example.org/",
+     "status": "testing",
+     "tags": [],
+     "draft": false,
+     "checkCadence": "none",
+     "nextCheck": "",
+     "trialEnd": "2026-11-01",
+     "fields": {},
+     "useWhen": [],
+     "capabilities": [],
+     "notes": "",
+     "inputs": "",
+     "outputs": "",
+     "verdict": null
+    },
+    {
+     "f": "trialEnd",
+     "op": "within",
+     "v": "3"
+    }
+   ],
+   "out": false
+  },
+  {
+   "fn": "rules.matches",
+   "wall": "23:30",
+   "in": [
+    {
+     "id": "r1",
+     "title": "Sample r1",
+     "url": "https://r1.example.org/",
+     "status": "testing",
+     "tags": [],
+     "draft": false,
+     "checkCadence": "none",
+     "nextCheck": "",
+     "trialEnd": "2026-11-01",
+     "fields": {},
+     "useWhen": [],
+     "capabilities": [],
+     "notes": "",
+     "inputs": "",
+     "outputs": "",
+     "verdict": null
+    },
+    {
+     "match": "all",
+     "conds": [
+      {
+       "f": "status",
+       "op": "is",
+       "v": "testing"
+      }
+     ]
+    }
+   ],
+   "out": true
+  },
+  {
+   "fn": "insights.addedPerMonth",
+   "wall": "23:30",
+   "in": [
+    [
+     {
+      "id": "m1",
+      "title": "Sample m1",
+      "url": "https://m1.example.org/",
+      "status": "active",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null,
+      "createdAt": "2026-05-04"
+     },
+     {
+      "id": "m2",
+      "title": "Sample m2",
+      "url": "https://m2.example.org/",
+      "status": "active",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null,
+      "createdAt": "2026-10-01"
+     },
+     {
+      "id": "m3",
+      "title": "Sample m3",
+      "url": "https://m3.example.org/",
+      "status": "active",
+      "tags": [],
+      "draft": false,
+      "checkCadence": "none",
+      "nextCheck": "",
+      "trialEnd": "",
+      "fields": {},
+      "useWhen": [],
+      "capabilities": [],
+      "notes": "",
+      "inputs": "",
+      "outputs": "",
+      "verdict": null,
+      "createdAt": "2026-10-30"
+     }
+    ],
+    ""
+   ],
+   "out": [
+    {
+     "key": "2026-05",
+     "label": "May",
+     "n": 1
+    },
+    {
+     "key": "2026-06",
+     "label": "Jun",
+     "n": 0
+    },
+    {
+     "key": "2026-07",
+     "label": "Jul",
+     "n": 0
+    },
+    {
+     "key": "2026-08",
+     "label": "Aug",
+     "n": 0
+    },
+    {
+     "key": "2026-09",
+     "label": "Sep",
+     "n": 0
+    },
+    {
+     "key": "2026-10",
+     "label": "Oct",
+     "n": 2
+    }
+   ],
+   "note": "empty today means now"
+  },
+  {
+   "fn": "game.award",
+   "wall": "23:30",
+   "in": [
+    "check",
+    1
+   ],
+   "out": {
+    "gain": 10,
+    "kind": "check",
+    "label": "",
+    "levelUp": null,
+    "newBadges": [
+     {
+      "id": "clear-sky",
+      "name": "Clear Sky",
+      "desc": "No overdue signals"
+     }
+    ]
+   },
+   "note": "stamps today into days and log"
+  },
+  {
+   "fn": "game.focusDone",
+   "wall": "23:30",
+   "in": [
+    25
+   ],
+   "out": {
+    "result": {
+     "gain": 15,
+     "kind": "focus20",
+     "label": "Focus run 25 min",
+     "levelUp": null,
+     "newBadges": []
+    },
+    "focus": [
+     {
+      "date": "2026-10-30",
+      "minutes": 20
+     },
+     {
+      "date": "2026-10-31",
+      "minutes": 25
+     }
+    ],
+    "today": 25
+   }
+  },
+  {
+   "fn": "game.focusToday",
+   "wall": "23:30",
+   "in": [],
+   "out": 0
+  },
+  {
+   "fn": "game.unlock",
+   "wall": "23:30",
+   "in": [],
+   "out": [
+    {
+     "id": "clear-sky",
+     "name": "Clear Sky",
+     "desc": "No overdue signals"
+    }
+   ]
+  },
+  {
+   "fn": "week.weekDigest",
+   "wall": "23:30",
+   "in": [
+    [
+     {
+      "id": "w0",
+      "title": "Sample w0",
+      "url": "https://w0.example.org/",
+      "status": "active",
+      "createdAt": "2026-10-26",
+      "opens": 1,
+      "openedAt": "2026-10-24T23:59:59.999",
+      "log": []
+     },
+     {
+      "id": "w1",
+      "title": "Sample w1",
+      "url": "https://w1.example.org/",
+      "status": "active",
+      "createdAt": "2026-10-26",
+      "opens": 1,
+      "openedAt": "2026-10-25T00:00:00.000",
+      "log": []
+     },
+     {
+      "id": "w2",
+      "title": "Sample w2",
+      "url": "https://w2.example.org/",
+      "status": "active",
+      "createdAt": "2026-10-26",
+      "opens": 1,
+      "openedAt": "2026-10-25T00:00:00.001",
+      "log": []
+     },
+     {
+      "id": "w3",
+      "title": "Sample w3",
+      "url": "https://w3.example.org/",
+      "status": "active",
+      "createdAt": "2026-10-26",
+      "opens": 1,
+      "openedAt": "not-a-date",
+      "log": []
+     }
+    ],
+    null,
+    "2026-10-31"
+   ],
+   "out": {
+    "added": 4,
+    "opened": 2,
+    "reviewed": 0,
+    "checked": 0,
+    "learned": 0,
+    "merged": 0,
+    "stage": 0,
+    "picks": null
+   },
+   "note": "from 2026-10-25 local midnight: opened counts the 00:00:00.000 and 00:00:00.001 entries"
+  },
+  {
+   "fn": "store.addResource",
+   "wall": "23:30",
+   "in": [
+    {
+     "id": "a1",
+     "title": "Sample added",
+     "url": "https://added.example.org/",
+     "status": "candidate"
+    }
+   ],
+   "out": {
+    "id": "a1",
+    "createdAt": "2026-10-31",
+    "statusSince": "2026-10-31",
+    "added": "",
+    "nextCheck": ""
+   },
+   "note": "added and createdAt come from today"
+  },
+  {
+   "fn": "store.markChecked",
+   "wall": "23:30",
+   "in": [
+    "s1"
+   ],
+   "out": {
+    "lastChecked": "2026-10-31",
+    "nextCheck": "2026-11-07"
+   },
+   "note": "checked today, next check from today"
+  },
+  {
+   "fn": "store.startTrial",
+   "wall": "23:30",
+   "in": [
+    "s1",
+    14
+   ],
+   "out": {
+    "statusSince": "2026-10-31",
+    "trialEnd": "2026-11-14"
+   },
+   "note": "trial starts today"
+  },
+  {
+   "fn": "store.setVerdict",
+   "wall": "23:30",
+   "in": [
+    "s1",
+    "keep",
+    "worth it"
+   ],
+   "out": {
+    "statusSince": "2026-10-31",
+    "verdict": {
+     "at": "2026-10-31",
+     "result": "keep",
+     "note": "worth it"
+    }
+   },
+   "note": "the verdict date is today"
+  },
+  {
+   "fn": "store.snooze",
+   "wall": "23:30",
+   "in": [
+    "s1",
+    5
+   ],
+   "out": {
+    "nextCheck": "2026-11-05"
+   },
+   "note": "next check is today + 5 days"
+  },
+  {
+   "fn": "store.setStepDone",
+   "wall": "23:30",
+   "in": [
+    "th1",
+    0,
+    true
+   ],
+   "out": {
+    "doneAt": "2026-10-31T23:30:00.000Z",
+    "lastDone": "2026-10-31T23:30:00.000Z"
+   },
+   "note": "mission step doneAt is the frozen instant (the generator ran with TZ=UTC, so the wall clock read as UTC)"
+  }
+ ]
+}

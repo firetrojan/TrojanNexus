@@ -1,0 +1,281 @@
+{
+ "module": "merge",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "mergePatch",
+   "in": [
+    {
+     "id": "r1",
+     "title": "Slides converter",
+     "url": "https://slides.example.org/convert?utm_source=news&id=7",
+     "type": "other",
+     "tags": [
+      "presentation",
+      "pdf"
+     ],
+     "capabilities": [
+      "turn pdf into slides",
+      "export pptx"
+     ],
+     "useWhen": [
+      "I need a deck quickly"
+     ],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "",
+     "draft": false,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": null,
+     "fields": {},
+     "trialEnd": "",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 3,
+     "openedAt": 1793232000000
+    },
+    {
+     "id": "r15",
+     "title": "Slides converter again",
+     "url": "https://www.slides.example.org/convert?id=7",
+     "type": "other",
+     "tags": [
+      "presentation"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "",
+     "draft": false,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": null,
+     "fields": {},
+     "trialEnd": "",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    }
+   ],
+   "out": {
+    "url": "https://slides.example.org/convert?utm_source=news&id=7",
+    "tags": [
+     "presentation",
+     "pdf"
+    ],
+    "capabilities": [
+     "turn pdf into slides",
+     "export pptx"
+    ],
+    "useWhen": [
+     "I need a deck quickly"
+    ],
+    "inputs": "",
+    "outputs": "",
+    "notes": "",
+    "learned": "",
+    "fields": {},
+    "pinned": false,
+    "keep": false,
+    "opens": 3,
+    "openedAt": 1793232000000,
+    "draft": false,
+    "createdAt": "2026-10-01",
+    "watch": null,
+    "scan": null
+   }
+  },
+  {
+   "fn": "mergePatch",
+   "in": [
+    {
+     "id": "k",
+     "title": "Keep",
+     "url": "https://k.test/",
+     "type": "other",
+     "tags": [
+      "a"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "mine",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-05",
+     "statusSince": "2026-10-05",
+     "hidden": false,
+     "scan": null,
+     "fields": {},
+     "trialEnd": "",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 2,
+     "openedAt": 0
+    },
+    {
+     "id": "d",
+     "title": "Drop",
+     "url": "https://d.test/x",
+     "type": "other",
+     "tags": [
+      "a",
+      "b"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "theirs",
+     "draft": true,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-09-01",
+     "statusSince": "2026-09-01",
+     "hidden": false,
+     "scan": null,
+     "fields": {},
+     "trialEnd": "",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": true,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 3,
+     "openedAt": 0
+    }
+   ],
+   "out": {
+    "url": "https://k.test/",
+    "tags": [
+     "a",
+     "b"
+    ],
+    "capabilities": [],
+    "useWhen": [],
+    "inputs": "",
+    "outputs": "",
+    "notes": "mine\n\nFrom \"Drop\": theirs\n\nAlso: https://d.test/x",
+    "learned": "",
+    "fields": {},
+    "pinned": true,
+    "keep": false,
+    "opens": 5,
+    "openedAt": 0,
+    "draft": true,
+    "createdAt": "2026-09-01",
+    "watch": null,
+    "scan": null
+   }
+  },
+  {
+   "fn": "dupeGroups",
+   "in": [
+    "$RS",
+    []
+   ],
+   "out": [
+    {
+     "key": "example.org",
+     "ids": [
+      "r1",
+      "r6",
+      "r7",
+      "r8",
+      "r13",
+      "r14",
+      "r15",
+      "r16"
+     ],
+     "exact": true
+    }
+   ]
+  },
+  {
+   "fn": "dupeGroups",
+   "in": [
+    "$RS",
+    [
+     "slides.example.org"
+    ]
+   ],
+   "out": [
+    {
+     "key": "example.org",
+     "ids": [
+      "r1",
+      "r6",
+      "r7",
+      "r8",
+      "r13",
+      "r14",
+      "r15",
+      "r16"
+     ],
+     "exact": true
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,251 @@
+{
+ "module": "tidy",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "cleanUrl",
+   "in": [
+    "https://a.test/p?utm_source=x&utm_medium=y&id=7&fbclid=abc#top"
+   ],
+   "out": "https://a.test/p?id=7#top"
+  },
+  {
+   "fn": "cleanUrl",
+   "in": [
+    "https://a.test/p?utm_source=x"
+   ],
+   "out": "https://a.test/p"
+  },
+  {
+   "fn": "cleanUrl",
+   "in": [
+    "https://a.test/p?utm_source=x#frag"
+   ],
+   "out": "https://a.test/p#frag"
+  },
+  {
+   "fn": "cleanUrl",
+   "in": [
+    "https://a.test/p?q=a%20b&page=2"
+   ],
+   "out": "https://a.test/p?q=a%20b&page=2"
+  },
+  {
+   "fn": "cleanUrl",
+   "in": [
+    "https://www.youtube.com/watch?v=abc&si=XYZ&t=30s"
+   ],
+   "out": "https://www.youtube.com/watch?v=abc&t=30s"
+  },
+  {
+   "fn": "cleanUrl",
+   "in": [
+    "https://youtu.be/abc?si=XYZ"
+   ],
+   "out": "https://youtu.be/abc"
+  },
+  {
+   "fn": "cleanUrl",
+   "in": [
+    "https://a.test/p?si=keepme"
+   ],
+   "out": "https://a.test/p?si=keepme"
+  },
+  {
+   "fn": "cleanUrl",
+   "in": [
+    "https://a.test/p?ref=home"
+   ],
+   "out": "https://a.test/p?ref=home"
+  },
+  {
+   "fn": "cleanUrl",
+   "in": [
+    "not a link?utm_source=1"
+   ],
+   "out": "not a link?utm_source=1"
+  },
+  {
+   "fn": "cleanUrl",
+   "in": [
+    ""
+   ],
+   "out": ""
+  },
+  {
+   "fn": "cleanUrl",
+   "in": [
+    "https://a.test/?UTM_Source=x&b=1"
+   ],
+   "out": "https://a.test/?b=1"
+  },
+  {
+   "fn": "cleanUrl",
+   "in": [
+    "https://open.spotify.com/track/1?si=abc&utm_source=copy-link"
+   ],
+   "out": "https://open.spotify.com/track/1"
+  },
+  {
+   "fn": "cleanUrl",
+   "in": [
+    "https://a.test/?gclid=1&msclkid=2&irclickid=3"
+   ],
+   "out": "https://a.test/"
+  },
+  {
+   "fn": "droppedParams",
+   "in": [
+    "https://a.test/p?utm_source=x&id=7&fbclid=abc#t"
+   ],
+   "out": [
+    "utm_source",
+    "fbclid"
+   ]
+  },
+  {
+   "fn": "droppedParams",
+   "in": [
+    "https://a.test/p?id=7"
+   ],
+   "out": []
+  },
+  {
+   "fn": "droppedParams",
+   "in": [
+    "https://a.test/p?utm_source=x&utm_source=y"
+   ],
+   "out": [
+    "utm_source",
+    "utm_source"
+   ]
+  },
+  {
+   "fn": "cleanTitle",
+   "in": [
+    "(3) Great article | Medium",
+    "https://medium.com/x"
+   ],
+   "out": "Great article"
+  },
+  {
+   "fn": "cleanTitle",
+   "in": [
+    "Cat video - YouTube",
+    "https://www.youtube.com/watch?v=1"
+   ],
+   "out": "Cat video"
+  },
+  {
+   "fn": "cleanTitle",
+   "in": [
+    "Tom &amp; Jerry   fans",
+    "https://fans.test/"
+   ],
+   "out": "Tom & Jerry fans"
+  },
+  {
+   "fn": "cleanTitle",
+   "in": [
+    "Pricing - Notion",
+    "https://notion.so/pricing"
+   ],
+   "out": "Pricing"
+  },
+  {
+   "fn": "cleanTitle",
+   "in": [
+    "How AI works | MIT News",
+    "https://news.mit.edu/x"
+   ],
+   "out": "How AI works"
+  },
+  {
+   "fn": "cleanTitle",
+   "in": [
+    "Python - The Basics",
+    "https://docs.example.org/py"
+   ],
+   "out": "Python - The Basics"
+  },
+  {
+   "fn": "cleanTitle",
+   "in": [
+    "A | B",
+    "https://b.test/"
+   ],
+   "out": "A | B"
+  },
+  {
+   "fn": "cleanTitle",
+   "in": [
+    "Canva",
+    "https://canva.com"
+   ],
+   "out": "Canva"
+  },
+  {
+   "fn": "cleanTitle",
+   "in": [
+    "",
+    "https://x.test"
+   ],
+   "out": ""
+  },
+  {
+   "fn": "cleanTitle",
+   "in": [
+    "Gamma - Gamma",
+    "https://gamma.test/"
+   ],
+   "out": "Gamma"
+  },
+  {
+   "fn": "cleanTitle",
+   "in": [
+    "Why I left Google - News",
+    "https://news.example.com/a"
+   ],
+   "out": "Why I left Google - News"
+  },
+  {
+   "fn": "cleanTitle",
+   "in": [
+    "Home | BBC",
+    "https://www.bbc.co.uk/"
+   ],
+   "out": "Home"
+  },
+  {
+   "fn": "tidyFindings",
+   "in": [
+    "$RS"
+   ],
+   "out": {
+    "links": [
+     {
+      "id": "r1",
+      "to": "https://slides.example.org/convert?id=7"
+     },
+     {
+      "id": "r5",
+      "to": "https://medium.com/@x/great-read"
+     }
+    ],
+    "titles": [
+     {
+      "id": "r4",
+      "to": "Design inspiration"
+     },
+     {
+      "id": "r5",
+      "to": "Great read"
+     }
+    ],
+    "nowSame": 1
+   },
+   "note": "out lists resource ids instead of resource objects"
+  }
+ ]
+}

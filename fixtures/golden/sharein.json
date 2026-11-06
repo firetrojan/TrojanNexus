@@ -1,0 +1,202 @@
+{
+ "module": "sharein",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "parseShare",
+   "in": [
+    ""
+   ],
+   "out": null
+  },
+  {
+   "fn": "parseShare",
+   "in": [
+    "?text="
+   ],
+   "out": null
+  },
+  {
+   "fn": "parseShare",
+   "in": [
+    "?title=Caf%C3%A9+notes&text=Check+https%3A%2F%2Fmaker.example.org%2Fkala"
+   ],
+   "out": {
+    "text": "Café notes | https://maker.example.org/kala",
+    "url": "https://maker.example.org/kala",
+    "title": "Café notes"
+   }
+  },
+  {
+   "fn": "parseShare",
+   "in": [
+    "?url=https%3A%2F%2Fmaker.example.org%2Fkala%3Futm_source%3Dx"
+   ],
+   "out": {
+    "text": "https://maker.example.org/kala?utm_source=x",
+    "url": "https://maker.example.org/kala?utm_source=x",
+    "title": ""
+   }
+  },
+  {
+   "fn": "parseShare",
+   "in": [
+    "?text=No+link+here"
+   ],
+   "out": {
+    "text": "No link here",
+    "url": "",
+    "title": ""
+   }
+  },
+  {
+   "fn": "parseShare",
+   "in": [
+    "?title=%E0%A4%95%E0%A4%B2%E0%A4%BE&text=%E0%A4%89%E0%A4%A6%E0%A4%BE%E0%A4%B9%E0%A4%B0%E0%A4%A3+https%3A%2F%2Fmaker.example.org%2Fkala"
+   ],
+   "out": {
+    "text": "कला | https://maker.example.org/kala",
+    "url": "https://maker.example.org/kala",
+    "title": "कला"
+   }
+  },
+  {
+   "fn": "parseShare",
+   "in": [
+    "?url=https%3A%2F%2Fmaker.example.org%2Fkala)%2C"
+   ],
+   "out": {
+    "text": "https://maker.example.org/kala",
+    "url": "https://maker.example.org/kala",
+    "title": ""
+   }
+  },
+  {
+   "fn": "parseShare",
+   "in": [
+    "?url=https%3A%2F%2Fmaker.example.org%2Fkala%3Fq%3D1%2C"
+   ],
+   "out": {
+    "text": "https://maker.example.org/kala?q=1",
+    "url": "https://maker.example.org/kala?q=1",
+    "title": ""
+   }
+  },
+  {
+   "fn": "parseShare",
+   "in": [
+    "?title=A%7CB&text=https%3A%2F%2Fmaker.example.org%2Fkala"
+   ],
+   "out": {
+    "text": "A-B | https://maker.example.org/kala",
+    "url": "https://maker.example.org/kala",
+    "title": "A-B"
+   }
+  },
+  {
+   "fn": "parseShare",
+   "in": [
+    "?title=No+link&text=Still+no+link"
+   ],
+   "out": {
+    "text": "No link - Still no link",
+    "url": "",
+    "title": "No link"
+   }
+  },
+  {
+   "fn": "parseShare",
+   "in": [
+    "?title=https%3A%2F%2Fone.example.org%2F&text=See+https%3A%2F%2Ftwo.example.org%2F"
+   ],
+   "out": {
+    "text": "See | https://two.example.org/",
+    "url": "https://two.example.org/",
+    "title": "See"
+   }
+  },
+  {
+   "fn": "parseShare",
+   "in": [
+    "?title=Only+title+here"
+   ],
+   "out": {
+    "text": "Only title here",
+    "url": "",
+    "title": "Only title here"
+   }
+  },
+  {
+   "fn": "parseShare",
+   "in": [
+    "?url=www.example.org/x&text=see+www.example.org/x+now"
+   ],
+   "out": {
+    "text": "see www.example.org/x now",
+    "url": "",
+    "title": ""
+   }
+  },
+  {
+   "fn": "parseShare",
+   "in": [
+    "?title=Caf%C3%A9&url=https%3A%2F%2Fmaker.example.org%2Fkala&text=https%3A%2F%2Fmaker.example.org%2Fkala+Caf%C3%A9"
+   ],
+   "out": {
+    "text": "Café | https://maker.example.org/kala",
+    "url": "https://maker.example.org/kala",
+    "title": "Café"
+   }
+  },
+  {
+   "fn": "parseShare",
+   "in": [
+    "?url=example.com"
+   ],
+   "out": null
+  },
+  {
+   "fn": "parseAction",
+   "in": [
+    "?do=add"
+   ],
+   "out": "add"
+  },
+  {
+   "fn": "parseAction",
+   "in": [
+    "?do=SEARCH"
+   ],
+   "out": "search"
+  },
+  {
+   "fn": "parseAction",
+   "in": [
+    "?do=bogus"
+   ],
+   "out": ""
+  },
+  {
+   "fn": "parseAction",
+   "in": [
+    ""
+   ],
+   "out": ""
+  },
+  {
+   "fn": "parseAction",
+   "in": [
+    "?do=review"
+   ],
+   "out": "review"
+  },
+  {
+   "fn": "parseAction",
+   "in": [
+    "?do=due"
+   ],
+   "out": "due"
+  }
+ ]
+}

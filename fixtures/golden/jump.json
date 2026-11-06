@@ -1,0 +1,785 @@
+{
+ "module": "jump",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "COMMANDS",
+   "in": [],
+   "out": [
+    {
+     "id": "backup",
+     "label": "Back up my data",
+     "sub": "Save a copy off this phone",
+     "words": "backup back up save copy export download safe",
+     "icon": "download"
+    },
+    {
+     "id": "restore",
+     "label": "Restore a backup",
+     "sub": "Bring a saved copy back",
+     "words": "restore recover import backup file undo copy",
+     "icon": "upload"
+    },
+    {
+     "id": "safety",
+     "label": "Safety copies",
+     "sub": "Automatic copies made before big changes",
+     "words": "safety snapshot undo recover lost copies",
+     "icon": "lock"
+    },
+    {
+     "id": "insights",
+     "label": "Insights",
+     "sub": "What you use and what you do not",
+     "words": "insights stats numbers usage most used idle cull balance storage",
+     "icon": "sigma"
+    },
+    {
+     "id": "reset",
+     "label": "Weekly reset",
+     "sub": "A short checklist and 3 picks",
+     "words": "weekly week reset review checklist picks routine",
+     "icon": "check"
+    },
+    {
+     "id": "dupes",
+     "label": "Duplicates",
+     "sub": "Merge links about the same thing",
+     "words": "duplicates duplicate merge same site twice",
+     "icon": "layers"
+    },
+    {
+     "id": "tags",
+     "label": "Tags",
+     "sub": "Rename, merge or delete tags",
+     "words": "tags tag rename merge clean labels",
+     "icon": "tag"
+    },
+    {
+     "id": "ideas",
+     "label": "New sector ideas",
+     "sub": "Groups of links that have no sector yet",
+     "words": "ideas suggest sectors group organise organize new categories",
+     "icon": "sectors"
+    },
+    {
+     "id": "tidy",
+     "label": "Tidy up links",
+     "sub": "Remove tracking junk and fix bad titles",
+     "words": "tidy clean links tracking utm titles fix junk",
+     "icon": "spark"
+    },
+    {
+     "id": "import",
+     "label": "Import links",
+     "sub": "Bookmarks, Instagram list, CSV, OPML",
+     "words": "import bookmarks instagram csv opml upload file",
+     "icon": "upload"
+    },
+    {
+     "id": "add",
+     "label": "Add a link",
+     "sub": "Save a new link",
+     "words": "add new link save paste create",
+     "icon": "plus"
+    },
+    {
+     "id": "review",
+     "label": "Review new links",
+     "sub": "The links waiting for you",
+     "words": "review inbox new unreviewed drafts waiting confirm",
+     "icon": "scan"
+    },
+    {
+     "id": "due",
+     "label": "What is due",
+     "sub": "Checks, trials, limits, changes",
+     "words": "due alerts overdue today trials checks needs",
+     "icon": "alert"
+    },
+    {
+     "id": "stale",
+     "label": "Old links",
+     "sub": "Not checked in a while",
+     "words": "old stale unchecked outdated",
+     "icon": "clock"
+    },
+    {
+     "id": "missions",
+     "label": "Missions",
+     "sub": "Your step-by-step routes",
+     "words": "missions mission route steps threads plan",
+     "icon": "mission"
+    },
+    {
+     "id": "sectors",
+     "label": "Sectors",
+     "sub": "Your sectors in columns",
+     "words": "sectors sector folders groups columns",
+     "icon": "sectors"
+    },
+    {
+     "id": "vault",
+     "label": "Vault",
+     "sub": "Every link in one table",
+     "words": "vault table all links list filter sort",
+     "icon": "library"
+    },
+    {
+     "id": "galaxy",
+     "label": "Galaxy",
+     "sub": "The 3D map",
+     "words": "galaxy map 3d space stars",
+     "icon": "target"
+    },
+    {
+     "id": "calendar",
+     "label": "Put dates in my calendar",
+     "sub": "Due dates, trial ends, limit resets",
+     "words": "calendar dates reminders ics schedule trial",
+     "icon": "clock"
+    },
+    {
+     "id": "focus",
+     "label": "Focus run",
+     "sub": "A timed work session",
+     "words": "focus timer run session work pomodoro",
+     "icon": "play"
+    },
+    {
+     "id": "profile",
+     "label": "Profile and settings",
+     "sub": "Theme, text size, open on, lookups",
+     "words": "profile settings theme dark light text size options preferences open on",
+     "icon": "core"
+    },
+    {
+     "id": "whatsnew",
+     "label": "What's new",
+     "sub": "What changed in this version",
+     "words": "whats new changes version update release notes",
+     "icon": "star"
+    },
+    {
+     "id": "install",
+     "label": "Install the app",
+     "sub": "Add Nexus to your home screen",
+     "words": "install app home screen chrome pwa shortcut",
+     "icon": "download"
+    }
+   ],
+   "note": "the whole list; port it as data"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "backup",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [
+    "backup",
+    "restore"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "backup",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [
+    "backup",
+    "restore"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "back up my data",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [
+    "backup"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "back up my data",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [
+    "backup"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "restore",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [
+    "restore"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "restore",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [
+    "restore"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "tags",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [
+    "tags"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "tags",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "dupes",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "dupes",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "duplicates",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [
+    "dupes"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "duplicates",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [
+    "dupes"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "reset",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [
+    "reset"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "reset",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [
+    "reset"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "week",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [
+    "reset"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "week",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [
+    "reset"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "review",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [
+    "review",
+    "reset"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "review",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [
+    "review",
+    "reset"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "tidy",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [
+    "tidy"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "tidy",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "ideas",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [
+    "ideas"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "ideas",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "sector ideas",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [
+    "ideas"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "sector ideas",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "install",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [
+    "install"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "install",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "xyz",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "xyz",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "go to settings",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [
+    "profile"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "go to settings",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [
+    "profile"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "insights",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [
+    "insights"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "insights",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [
+    "insights"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "ca",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [
+    "calendar",
+    "ideas"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "ca",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [
+    "calendar"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "cal",
+    4,
+    {
+     "missing": []
+    }
+   ],
+   "out": [
+    "calendar"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  },
+  {
+   "fn": "jumpMatches",
+   "in": [
+    "cal",
+    4,
+    {
+     "missing": [
+      "tags",
+      "tidy",
+      "install",
+      "ideas"
+     ]
+    }
+   ],
+   "out": [
+    "calendar"
+   ],
+   "note": "has(id) = id is NOT in \"missing\"; out = command ids"
+  }
+ ]
+}

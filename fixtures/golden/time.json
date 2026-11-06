@@ -1,0 +1,219 @@
+{
+ "module": "time",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "timePlan",
+   "in": [
+    "quick",
+    {
+     "drafts": 9,
+     "easy": 4,
+     "attention": 5,
+     "overdueTrials": 1,
+     "missionLeft": 2,
+     "missionName": "Launch",
+     "stale": 3,
+     "backupDue": true
+    }
+   ],
+   "out": {
+    "lead": "Short on time. Do these, then stop.",
+    "items": [
+     {
+      "id": "needs",
+      "text": "Clear 3 things from Needs you (5 waiting)"
+     },
+     {
+      "id": "mission",
+      "text": "Do the next step of Launch"
+     },
+     {
+      "id": "review",
+      "text": "Review 5 new links (9 waiting)"
+     }
+    ]
+   }
+  },
+  {
+   "fn": "timePlan",
+   "in": [
+    "hour",
+    {
+     "drafts": 20,
+     "easy": 4,
+     "attention": 12,
+     "overdueTrials": 0,
+     "missionLeft": 5,
+     "missionName": "Launch",
+     "stale": 8,
+     "backupDue": true
+    }
+   ],
+   "out": {
+    "lead": "A full hour. In this order:",
+    "items": [
+     {
+      "id": "backup",
+      "text": "Back up your data"
+     },
+     {
+      "id": "needs",
+      "text": "Clear the first 8 of 12 in Needs you"
+     },
+     {
+      "id": "mission",
+      "text": "Do the next 3 steps of Launch"
+     },
+     {
+      "id": "review",
+      "text": "Review 15 new links (20 waiting)"
+     },
+     {
+      "id": "stale",
+      "text": "Look at 5 old resources"
+     }
+    ]
+   }
+  },
+  {
+   "fn": "timePlan",
+   "in": [
+    "tired",
+    {
+     "drafts": 9,
+     "easy": 4,
+     "attention": 5,
+     "overdueTrials": 2,
+     "missionLeft": 2,
+     "stale": 3,
+     "backupDue": false
+    }
+   ],
+   "out": {
+    "lead": "Tired. Only easy jobs: one tap each, no thinking.",
+    "items": [
+     {
+      "id": "needs",
+      "text": "Decide on 2 trials that already ended. They can cost money."
+     },
+     {
+      "id": "review",
+      "text": "Keep or archive 4 links that already show what they are"
+     }
+    ]
+   }
+  },
+  {
+   "fn": "timePlan",
+   "in": [
+    "quick",
+    {
+     "drafts": 0,
+     "attention": 0,
+     "missionLeft": 0
+    }
+   ],
+   "out": {
+    "lead": "Nothing is waiting. You are clear.",
+    "items": []
+   }
+  },
+  {
+   "fn": "timePlan",
+   "in": [
+    "tired",
+    {
+     "drafts": 0,
+     "easy": 0,
+     "overdueTrials": 0
+    }
+   ],
+   "out": {
+    "lead": "Nothing easy is waiting. Rest.",
+    "items": []
+   }
+  },
+  {
+   "fn": "timePlan",
+   "in": [
+    "hour",
+    {
+     "drafts": 1,
+     "attention": 1,
+     "missionLeft": 1,
+     "stale": 1
+    }
+   ],
+   "out": {
+    "lead": "A full hour. In this order:",
+    "items": [
+     {
+      "id": "needs",
+      "text": "Clear all 1 in Needs you"
+     },
+     {
+      "id": "mission",
+      "text": "Do the next 1 step of your mission"
+     },
+     {
+      "id": "review",
+      "text": "Review 1 new link"
+     },
+     {
+      "id": "stale",
+      "text": "Look at 1 old resource"
+     }
+    ]
+   }
+  },
+  {
+   "fn": "timePlan",
+   "in": [
+    "quick",
+    {
+     "attention": 2,
+     "missionLeft": 1,
+     "drafts": 1
+    }
+   ],
+   "out": {
+    "lead": "Short on time. Do these, then stop.",
+    "items": [
+     {
+      "id": "needs",
+      "text": "Clear 2 things from Needs you"
+     },
+     {
+      "id": "mission",
+      "text": "Do the next step of your mission"
+     },
+     {
+      "id": "review",
+      "text": "Review 1 new link"
+     }
+    ]
+   }
+  },
+  {
+   "fn": "MODES",
+   "in": [],
+   "out": [
+    {
+     "v": "quick",
+     "l": "10 min"
+    },
+    {
+     "v": "hour",
+     "l": "1 hour"
+    },
+    {
+     "v": "tired",
+     "l": "Tired"
+    }
+   ],
+   "note": "constant: the Dart value must equal this"
+  }
+ ]
+}

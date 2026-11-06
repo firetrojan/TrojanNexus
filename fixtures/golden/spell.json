@@ -1,0 +1,380 @@
+{
+ "module": "spell",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "vocabulary",
+   "in": [
+    "$RS"
+   ],
+   "out": {
+    "slides": 4,
+    "converter": 2,
+    "presentation": 2,
+    "pdf": 2,
+    "turn": 1,
+    "into": 1,
+    "export": 1,
+    "pptx": 1,
+    "need": 1,
+    "deck": 1,
+    "quickly": 1,
+    "video": 3,
+    "editor": 1,
+    "editing": 1,
+    "tools": 1,
+    "trim": 1,
+    "clips": 1,
+    "add": 1,
+    "subtitles": 1,
+    "cheap": 1,
+    "hosting": 2,
+    "ai-tools": 1,
+    "design": 7,
+    "inspiration": 1,
+    "dribbble": 1,
+    "great": 1,
+    "read": 1,
+    "medium": 1,
+    "writing": 1,
+    "color": 2,
+    "palette": 1,
+    "font": 1,
+    "finder": 1,
+    "fonts": 1,
+    "logo": 2,
+    "maker": 1,
+    "api": 2,
+    "guide": 1,
+    "docs": 1,
+    "look": 1,
+    "endpoint": 1,
+    "old": 1,
+    "archived": 1,
+    "tool": 1,
+    "follow": 1,
+    "someone": 1,
+    "instagram": 1,
+    "following": 1,
+    "daily": 1,
+    "channel": 1,
+    "draft": 1,
+    "link": 1,
+    "locked": 1,
+    "one": 1,
+    "again": 1,
+    "blog": 1
+   }
+  },
+  {
+   "fn": "editDistance",
+   "in": [
+    "slides",
+    "slides",
+    2
+   ],
+   "out": 0
+  },
+  {
+   "fn": "editDistance",
+   "in": [
+    "slidez",
+    "slides",
+    2
+   ],
+   "out": 1
+  },
+  {
+   "fn": "editDistance",
+   "in": [
+    "sildes",
+    "slides",
+    2
+   ],
+   "out": 1
+  },
+  {
+   "fn": "editDistance",
+   "in": [
+    "abc",
+    "abcdefg",
+    2
+   ],
+   "out": 3
+  },
+  {
+   "fn": "editDistance",
+   "in": [
+    "",
+    "ab",
+    2
+   ],
+   "out": 2
+  },
+  {
+   "fn": "editDistance",
+   "in": [
+    "kitten",
+    "sitting",
+    3
+   ],
+   "out": 3
+  },
+  {
+   "fn": "editDistance",
+   "in": [
+    "presentatoin",
+    "presentation",
+    2
+   ],
+   "out": 1
+  },
+  {
+   "fn": "didYouMean",
+   "in": [
+    "$RS",
+    "slidse converter"
+   ],
+   "out": {
+    "q": "slides converter",
+    "changes": [
+     {
+      "from": "slidse",
+      "to": "slides"
+     }
+    ]
+   },
+   "note": "first arg = resources: build vocabulary(resources) first"
+  },
+  {
+   "fn": "didYouMean",
+   "in": [
+    "$RS",
+    "slidez converter"
+   ],
+   "out": null,
+   "note": "first arg = resources: build vocabulary(resources) first"
+  },
+  {
+   "fn": "didYouMean",
+   "in": [
+    "$RS",
+    "vidoe editng"
+   ],
+   "out": {
+    "q": "video editng",
+    "changes": [
+     {
+      "from": "vidoe",
+      "to": "video"
+     }
+    ]
+   },
+   "note": "first arg = resources: build vocabulary(resources) first"
+  },
+  {
+   "fn": "didYouMean",
+   "in": [
+    "$RS",
+    "vidoe presentaton"
+   ],
+   "out": {
+    "q": "video presentation",
+    "changes": [
+     {
+      "from": "vidoe",
+      "to": "video"
+     },
+     {
+      "from": "presentaton",
+      "to": "presentation"
+     }
+    ]
+   },
+   "note": "first arg = resources: build vocabulary(resources) first"
+  },
+  {
+   "fn": "didYouMean",
+   "in": [
+    "$RS",
+    "presentatoin"
+   ],
+   "out": {
+    "q": "presentation",
+    "changes": [
+     {
+      "from": "presentatoin",
+      "to": "presentation"
+     }
+    ]
+   },
+   "note": "first arg = resources: build vocabulary(resources) first"
+  },
+  {
+   "fn": "didYouMean",
+   "in": [
+    "$RS",
+    "zzzzzz qqqq"
+   ],
+   "out": null,
+   "note": "first arg = resources: build vocabulary(resources) first"
+  },
+  {
+   "fn": "didYouMean",
+   "in": [
+    "$RS",
+    "vid"
+   ],
+   "out": null,
+   "note": "first arg = resources: build vocabulary(resources) first"
+  },
+  {
+   "fn": "didYouMean",
+   "in": [
+    "$RS",
+    ""
+   ],
+   "out": null,
+   "note": "first arg = resources: build vocabulary(resources) first"
+  },
+  {
+   "fn": "didYouMean",
+   "in": [
+    "$RS",
+    "the slidse"
+   ],
+   "out": {
+    "q": "the slides",
+    "changes": [
+     {
+      "from": "slidse",
+      "to": "slides"
+     }
+    ]
+   },
+   "note": "first arg = resources: build vocabulary(resources) first"
+  },
+  {
+   "fn": "didYouMean",
+   "in": [
+    "$RS",
+    "hsting"
+   ],
+   "out": {
+    "q": "hosting",
+    "changes": [
+     {
+      "from": "hsting",
+      "to": "hosting"
+     }
+    ]
+   },
+   "note": "first arg = resources: build vocabulary(resources) first"
+  },
+  {
+   "fn": "didYouMean",
+   "in": [
+    "$RS",
+    "desing colour"
+   ],
+   "out": {
+    "q": "design color",
+    "changes": [
+     {
+      "from": "desing",
+      "to": "design"
+     },
+     {
+      "from": "colour",
+      "to": "color"
+     }
+    ]
+   },
+   "note": "first arg = resources: build vocabulary(resources) first"
+  },
+  {
+   "fn": "suggestFix",
+   "in": [
+    "$RS",
+    "slidse converter",
+    {}
+   ],
+   "out": {
+    "q": "slides converter",
+    "changes": [
+     {
+      "from": "slidse",
+      "to": "slides"
+     }
+    ],
+    "n": 2
+   },
+   "note": "opts.types is an array here (a Set in JS)"
+  },
+  {
+   "fn": "suggestFix",
+   "in": [
+    "$RS",
+    "slidse video",
+    {}
+   ],
+   "out": null,
+   "note": "opts.types is an array here (a Set in JS)"
+  },
+  {
+   "fn": "suggestFix",
+   "in": [
+    "$RS",
+    "slidse video",
+    {
+     "mode": "or"
+    }
+   ],
+   "out": {
+    "q": "slides video",
+    "changes": [
+     {
+      "from": "slidse",
+      "to": "slides"
+     }
+    ],
+    "n": 5
+   },
+   "note": "opts.types is an array here (a Set in JS)"
+  },
+  {
+   "fn": "suggestFix",
+   "in": [
+    "$RS",
+    "hsting",
+    {}
+   ],
+   "out": {
+    "q": "hosting",
+    "changes": [
+     {
+      "from": "hsting",
+      "to": "hosting"
+     }
+    ],
+    "n": 1
+   },
+   "note": "opts.types is an array here (a Set in JS)"
+  },
+  {
+   "fn": "suggestFix",
+   "in": [
+    "$RS",
+    "vidoe",
+    {
+     "types": [
+      "web-tool"
+     ]
+    }
+   ],
+   "out": null,
+   "note": "opts.types is an array here (a Set in JS)"
+  }
+ ]
+}

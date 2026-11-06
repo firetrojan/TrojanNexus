@@ -1,0 +1,573 @@
+{
+ "module": "util",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "normUrl",
+   "in": [
+    "https://www.Example.com/a/?utm_source=x&b=2&a=1"
+   ],
+   "out": "example.com/a?a=1&b=2"
+  },
+  {
+   "fn": "normUrl",
+   "in": [
+    "https://example.com/a/"
+   ],
+   "out": "example.com/a"
+  },
+  {
+   "fn": "normUrl",
+   "in": [
+    "http://example.com"
+   ],
+   "out": "example.com"
+  },
+  {
+   "fn": "normUrl",
+   "in": [
+    "not a url"
+   ],
+   "out": "not a url"
+  },
+  {
+   "fn": "normUrl",
+   "in": [
+    ""
+   ],
+   "out": ""
+  },
+  {
+   "fn": "normUrl",
+   "in": [
+    "https://a.test/p?ref=1&igshid=2&q=3"
+   ],
+   "out": "a.test/p?q=3"
+  },
+  {
+   "fn": "domainOf",
+   "in": [
+    "https://www.example.com/x"
+   ],
+   "out": "example.com"
+  },
+  {
+   "fn": "domainOf",
+   "in": [
+    "http://sub.example.co.uk/"
+   ],
+   "out": "sub.example.co.uk"
+  },
+  {
+   "fn": "domainOf",
+   "in": [
+    ""
+   ],
+   "out": ""
+  },
+  {
+   "fn": "domainOf",
+   "in": [
+    "bad"
+   ],
+   "out": ""
+  },
+  {
+   "fn": "shortUrl",
+   "in": [
+    "https://www.example.com/some/long/path/here/and/more/and/more/stuff?x=1",
+    30
+   ],
+   "out": "example.com/some/long/path/he…"
+  },
+  {
+   "fn": "shortUrl",
+   "in": [
+    "https://a.test/",
+    46
+   ],
+   "out": "a.test"
+  },
+  {
+   "fn": "shortUrl",
+   "in": [
+    "",
+    10
+   ],
+   "out": ""
+  },
+  {
+   "fn": "daysBetween",
+   "in": [
+    "2026-10-01",
+    "2026-10-31"
+   ],
+   "out": 30
+  },
+  {
+   "fn": "daysBetween",
+   "in": [
+    "2026-10-31",
+    "2026-10-01"
+   ],
+   "out": -30
+  },
+  {
+   "fn": "daysBetween",
+   "in": [
+    "2026-02-28",
+    "2026-03-01"
+   ],
+   "out": 1
+  },
+  {
+   "fn": "daysBetween",
+   "in": [
+    "2026-12-31",
+    "2027-01-01"
+   ],
+   "out": 1
+  },
+  {
+   "fn": "addDays",
+   "in": [
+    "2026-10-31",
+    1
+   ],
+   "out": "2026-11-01"
+  },
+  {
+   "fn": "addDays",
+   "in": [
+    "2026-10-31",
+    -31
+   ],
+   "out": "2026-09-30"
+  },
+  {
+   "fn": "addDays",
+   "in": [
+    "2026-02-28",
+    1
+   ],
+   "out": "2026-03-01"
+  },
+  {
+   "fn": "addDays",
+   "in": [
+    "2026-12-31",
+    7
+   ],
+   "out": "2027-01-07"
+  },
+  {
+   "fn": "plural",
+   "in": [
+    0,
+    "link"
+   ],
+   "out": "0 links"
+  },
+  {
+   "fn": "plural",
+   "in": [
+    1,
+    "link"
+   ],
+   "out": "1 link"
+  },
+  {
+   "fn": "plural",
+   "in": [
+    2,
+    "link"
+   ],
+   "out": "2 links"
+  },
+  {
+   "fn": "plural",
+   "in": [
+    2,
+    "match",
+    "matches"
+   ],
+   "out": "2 matches"
+  },
+  {
+   "fn": "isHttpUrl",
+   "in": [
+    "https://a.test"
+   ],
+   "out": true
+  },
+  {
+   "fn": "isHttpUrl",
+   "in": [
+    "ftp://a.test"
+   ],
+   "out": false
+  },
+  {
+   "fn": "isHttpUrl",
+   "in": [
+    "a b"
+   ],
+   "out": false
+  },
+  {
+   "fn": "isHttpUrl",
+   "in": [
+    " https://a.test "
+   ],
+   "out": true
+  },
+  {
+   "fn": "clamp",
+   "in": [
+    5,
+    0,
+    3
+   ],
+   "out": 3
+  },
+  {
+   "fn": "clamp",
+   "in": [
+    -1,
+    0,
+    3
+   ],
+   "out": 0
+  },
+  {
+   "fn": "clamp",
+   "in": [
+    2,
+    0,
+    3
+   ],
+   "out": 2
+  },
+  {
+   "fn": "clamp",
+   "in": [
+    1.5,
+    1,
+    2
+   ],
+   "out": 1.5
+  },
+  {
+   "fn": "lerp",
+   "in": [
+    0,
+    10,
+    0.25
+   ],
+   "out": 2.5
+  },
+  {
+   "fn": "lerp",
+   "in": [
+    2,
+    4,
+    1
+   ],
+   "out": 4
+  },
+  {
+   "fn": "lerp",
+   "in": [
+    5,
+    5,
+    0.5
+   ],
+   "out": 5
+  },
+  {
+   "fn": "damp",
+   "in": [
+    0,
+    10,
+    4,
+    0.1
+   ],
+   "out": 3.2968
+  },
+  {
+   "fn": "damp",
+   "in": [
+    5,
+    5,
+    10,
+    1
+   ],
+   "out": 5
+  },
+  {
+   "fn": "damp",
+   "in": [
+    0,
+    1,
+    20,
+    0.016
+   ],
+   "out": 0.273851
+  },
+  {
+   "fn": "hash32",
+   "in": [
+    "a"
+   ],
+   "out": 3826002220
+  },
+  {
+   "fn": "hash32",
+   "in": [
+    "hello"
+   ],
+   "out": 1335831723
+  },
+  {
+   "fn": "hash32",
+   "in": [
+    ""
+   ],
+   "out": 2166136261
+  },
+  {
+   "fn": "hash32",
+   "in": [
+    "नमस्ते"
+   ],
+   "out": 2758904381
+  },
+  {
+   "fn": "hash32",
+   "in": [
+    "Nexus 3.3"
+   ],
+   "out": 3127127786
+  },
+  {
+   "fn": "uniq",
+   "in": [
+    [
+     1,
+     2,
+     2,
+     3,
+     1
+    ]
+   ],
+   "out": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "fn": "uniq",
+   "in": [
+    [
+     "b",
+     "a",
+     "b"
+    ]
+   ],
+   "out": [
+    "b",
+    "a"
+   ]
+  },
+  {
+   "fn": "uniq",
+   "in": [
+    []
+   ],
+   "out": []
+  },
+  {
+   "fn": "esc",
+   "in": [
+    "<a href=\"x\">Tom & 'Jerry'</a>"
+   ],
+   "out": "&lt;a href=&quot;x&quot;&gt;Tom &amp; &#39;Jerry&#39;&lt;/a&gt;"
+  },
+  {
+   "fn": "esc",
+   "in": [
+    null
+   ],
+   "out": ""
+  },
+  {
+   "fn": "esc",
+   "in": [
+    5
+   ],
+   "out": "5"
+  },
+  {
+   "fn": "esc",
+   "in": [
+    "plain"
+   ],
+   "out": "plain"
+  },
+  {
+   "fn": "relDays",
+   "in": [
+    0
+   ],
+   "out": "today"
+  },
+  {
+   "fn": "relDays",
+   "in": [
+    1
+   ],
+   "out": "tomorrow"
+  },
+  {
+   "fn": "relDays",
+   "in": [
+    -1
+   ],
+   "out": "yesterday"
+  },
+  {
+   "fn": "relDays",
+   "in": [
+    3
+   ],
+   "out": "in 3 days"
+  },
+  {
+   "fn": "relDays",
+   "in": [
+    -5
+   ],
+   "out": "5 days ago"
+  },
+  {
+   "fn": "fmtDate",
+   "in": [
+    "2026-10-31"
+   ],
+   "out": "31 Oct"
+  },
+  {
+   "fn": "fmtDate",
+   "in": [
+    "2026-01-05"
+   ],
+   "out": "5 Jan"
+  },
+  {
+   "fn": "fmtDate",
+   "in": [
+    ""
+   ],
+   "out": ""
+  },
+  {
+   "fn": "fmtDate",
+   "in": [
+    "bad"
+   ],
+   "out": ""
+  },
+  {
+   "fn": "parseISO",
+   "in": [
+    "2026-10-31"
+   ],
+   "out": {
+    "y": 2026,
+    "m": 10,
+    "d": 31
+   },
+   "note": "out = {y, m, d} of the local date, or null"
+  },
+  {
+   "fn": "parseISO",
+   "in": [
+    ""
+   ],
+   "out": null,
+   "note": "out = {y, m, d} of the local date, or null"
+  },
+  {
+   "fn": "parseISO",
+   "in": [
+    "bad"
+   ],
+   "out": null,
+   "note": "out = {y, m, d} of the local date, or null"
+  },
+  {
+   "fn": "parseISO",
+   "in": [
+    "2026-02-30"
+   ],
+   "out": {
+    "y": 2026,
+    "m": 3,
+    "d": 2
+   },
+   "note": "out = {y, m, d} of the local date, or null"
+  },
+  {
+   "fn": "parseISO",
+   "in": [
+    "2026-10-31T12:00:00Z"
+   ],
+   "out": {
+    "y": 2026,
+    "m": 10,
+    "d": 31
+   },
+   "note": "out = {y, m, d} of the local date, or null"
+  },
+  {
+   "fn": "parseISO",
+   "in": [
+    "2026-1-5"
+   ],
+   "out": null,
+   "note": "out = {y, m, d} of the local date, or null"
+  },
+  {
+   "fn": "iso",
+   "in": [
+    2026,
+    10,
+    31
+   ],
+   "out": "2026-10-31",
+   "note": "in = [year, month, day]; out = yyyy-mm-dd"
+  },
+  {
+   "fn": "iso",
+   "in": [
+    2026,
+    1,
+    5
+   ],
+   "out": "2026-01-05",
+   "note": "in = [year, month, day]; out = yyyy-mm-dd"
+  },
+  {
+   "fn": "iso",
+   "in": [
+    2027,
+    12,
+    1
+   ],
+   "out": "2027-12-01",
+   "note": "in = [year, month, day]; out = yyyy-mm-dd"
+  }
+ ]
+}

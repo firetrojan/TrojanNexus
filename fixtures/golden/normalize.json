@@ -1,0 +1,576 @@
+{
+ "module": "normalize",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "normalizeResource",
+   "in": [
+    {
+     "id": "n1",
+     "title": "  Padded  ",
+     "url": " https://a.test/x ",
+     "tags": "#AI, Tools,ai",
+     "capabilities": "one; two\nthree",
+     "useWhen": [
+      "a",
+      " ",
+      "b"
+     ],
+     "type": "nonsense",
+     "status": "weird",
+     "checkCadence": "weekly"
+    },
+    "2026-10-31"
+   ],
+   "out": {
+    "id": "n1",
+    "title": "Padded",
+    "url": "https://a.test/x",
+    "type": "other",
+    "tags": [
+     "ai",
+     "tools"
+    ],
+    "capabilities": [
+     "one",
+     "two",
+     "three"
+    ],
+    "useWhen": [
+     "a",
+     "b"
+    ],
+    "inputs": "",
+    "outputs": "",
+    "status": "active",
+    "checkCadence": "weekly",
+    "lastChecked": "",
+    "nextCheck": "2026-10-31",
+    "rssUrl": "",
+    "related": [],
+    "notes": "",
+    "draft": false,
+    "src": "user",
+    "research": "user",
+    "folder": "",
+    "added": "",
+    "createdAt": "2026-10-31",
+    "statusSince": "2026-10-31",
+    "hidden": false,
+    "scan": null,
+    "fields": {},
+    "trialEnd": "",
+    "verdict": null,
+    "watch": null,
+    "locked": false,
+    "pinned": false,
+    "keep": false,
+    "learned": "",
+    "log": [],
+    "opens": 0,
+    "openedAt": 0
+   },
+   "note": "today is the second argument"
+  },
+  {
+   "fn": "normalizeResource",
+   "in": [
+    {
+     "id": "n2",
+     "url": "https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv",
+     "type": "youtube-channel"
+    },
+    "2026-10-31"
+   ],
+   "out": {
+    "id": "n2",
+    "title": "youtube.com/channel/UCabcdefghijklmnopqrstuv",
+    "url": "https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv",
+    "type": "youtube-channel",
+    "tags": [],
+    "capabilities": [],
+    "useWhen": [],
+    "inputs": "",
+    "outputs": "",
+    "status": "active",
+    "checkCadence": "none",
+    "lastChecked": "",
+    "nextCheck": "",
+    "rssUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCabcdefghijklmnopqrstuv",
+    "related": [],
+    "notes": "",
+    "draft": false,
+    "src": "user",
+    "research": "user",
+    "folder": "",
+    "added": "",
+    "createdAt": "2026-10-31",
+    "statusSince": "2026-10-31",
+    "hidden": false,
+    "scan": null,
+    "fields": {},
+    "trialEnd": "",
+    "verdict": null,
+    "watch": null,
+    "locked": false,
+    "pinned": false,
+    "keep": false,
+    "learned": "",
+    "log": [],
+    "opens": 0,
+    "openedAt": 0
+   },
+   "note": "today is the second argument"
+  },
+  {
+   "fn": "normalizeResource",
+   "in": [
+    {
+     "id": "n3",
+     "title": "Cadence",
+     "checkCadence": "monthly",
+     "lastChecked": "2026-10-01"
+    },
+    "2026-10-31"
+   ],
+   "out": {
+    "id": "n3",
+    "title": "Cadence",
+    "url": "",
+    "type": "other",
+    "tags": [],
+    "capabilities": [],
+    "useWhen": [],
+    "inputs": "",
+    "outputs": "",
+    "status": "active",
+    "checkCadence": "monthly",
+    "lastChecked": "2026-10-01",
+    "nextCheck": "2026-10-31",
+    "rssUrl": "",
+    "related": [],
+    "notes": "",
+    "draft": false,
+    "src": "user",
+    "research": "user",
+    "folder": "",
+    "added": "",
+    "createdAt": "2026-10-31",
+    "statusSince": "2026-10-31",
+    "hidden": false,
+    "scan": null,
+    "fields": {},
+    "trialEnd": "",
+    "verdict": null,
+    "watch": null,
+    "locked": false,
+    "pinned": false,
+    "keep": false,
+    "learned": "",
+    "log": [],
+    "opens": 0,
+    "openedAt": 0
+   },
+   "note": "today is the second argument"
+  },
+  {
+   "fn": "normalizeResource",
+   "in": [
+    {
+     "id": "n4",
+     "title": "None cadence",
+     "checkCadence": "none",
+     "nextCheck": "2026-11-11"
+    },
+    "2026-10-31"
+   ],
+   "out": {
+    "id": "n4",
+    "title": "None cadence",
+    "url": "",
+    "type": "other",
+    "tags": [],
+    "capabilities": [],
+    "useWhen": [],
+    "inputs": "",
+    "outputs": "",
+    "status": "active",
+    "checkCadence": "none",
+    "lastChecked": "",
+    "nextCheck": "",
+    "rssUrl": "",
+    "related": [],
+    "notes": "",
+    "draft": false,
+    "src": "user",
+    "research": "user",
+    "folder": "",
+    "added": "",
+    "createdAt": "2026-10-31",
+    "statusSince": "2026-10-31",
+    "hidden": false,
+    "scan": null,
+    "fields": {},
+    "trialEnd": "",
+    "verdict": null,
+    "watch": null,
+    "locked": false,
+    "pinned": false,
+    "keep": false,
+    "learned": "",
+    "log": [],
+    "opens": 0,
+    "openedAt": 0
+   },
+   "note": "today is the second argument"
+  },
+  {
+   "fn": "normalizeResource",
+   "in": [
+    {
+     "id": "n5",
+     "title": "Scan",
+     "scan": {
+      "at": "2026-10-20",
+      "via": "reader",
+      "topic": "music",
+      "conf": "clear",
+      "basis": "text",
+      "desc": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "site": "site"
+     },
+     "verdict": {
+      "result": "keep",
+      "at": "2026-10-25",
+      "note": "ok"
+     },
+     "opens": -5,
+     "openedAt": 12.7
+    },
+    "2026-10-31"
+   ],
+   "out": {
+    "id": "n5",
+    "title": "Scan",
+    "url": "",
+    "type": "other",
+    "tags": [],
+    "capabilities": [],
+    "useWhen": [],
+    "inputs": "",
+    "outputs": "",
+    "status": "active",
+    "checkCadence": "none",
+    "lastChecked": "",
+    "nextCheck": "",
+    "rssUrl": "",
+    "related": [],
+    "notes": "",
+    "draft": false,
+    "src": "user",
+    "research": "user",
+    "folder": "",
+    "added": "",
+    "createdAt": "2026-10-31",
+    "statusSince": "2026-10-31",
+    "hidden": false,
+    "scan": {
+     "at": "2026-10-20",
+     "via": "reader",
+     "topic": "music",
+     "topic2": "",
+     "conf": "clear",
+     "basis": "text",
+     "desc": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+     "site": "site"
+    },
+    "fields": {},
+    "trialEnd": "",
+    "verdict": {
+     "at": "2026-10-25",
+     "result": "keep",
+     "note": "ok"
+    },
+    "watch": null,
+    "locked": false,
+    "pinned": false,
+    "keep": false,
+    "learned": "",
+    "log": [],
+    "opens": 0,
+    "openedAt": 12
+   },
+   "note": "today is the second argument"
+  },
+  {
+   "fn": "normalizeResource",
+   "in": [
+    {
+     "id": "n6",
+     "title": "Bad scan",
+     "scan": {
+      "at": "yesterday"
+     },
+     "verdict": {
+      "result": "maybe",
+      "at": "2026-10-25"
+     },
+     "learned": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+     "related": [
+      "a",
+      "a",
+      "b"
+     ]
+    },
+    "2026-10-31"
+   ],
+   "out": {
+    "id": "n6",
+    "title": "Bad scan",
+    "url": "",
+    "type": "other",
+    "tags": [],
+    "capabilities": [],
+    "useWhen": [],
+    "inputs": "",
+    "outputs": "",
+    "status": "active",
+    "checkCadence": "none",
+    "lastChecked": "",
+    "nextCheck": "",
+    "rssUrl": "",
+    "related": [
+     "a",
+     "b"
+    ],
+    "notes": "",
+    "draft": false,
+    "src": "user",
+    "research": "user",
+    "folder": "",
+    "added": "",
+    "createdAt": "2026-10-31",
+    "statusSince": "2026-10-31",
+    "hidden": false,
+    "scan": null,
+    "fields": {},
+    "trialEnd": "",
+    "verdict": null,
+    "watch": null,
+    "locked": false,
+    "pinned": false,
+    "keep": false,
+    "learned": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+    "log": [],
+    "opens": 0,
+    "openedAt": 0
+   },
+   "note": "today is the second argument"
+  },
+  {
+   "fn": "normalizeResource",
+   "in": [
+    {
+     "id": "n7",
+     "title": "Log",
+     "log": [
+      {
+       "at": "2026-10-01",
+       "k": "reviewed",
+       "t": "Marked as reviewed"
+      },
+      {
+       "at": "bad",
+       "k": "reviewed"
+      },
+      {
+       "at": "2026-10-02",
+       "k": "nope",
+       "t": "x"
+      }
+     ],
+     "fields": {
+      "limit": "100/day",
+      "resets": "2026-11-05",
+      "nonsense": "x"
+     }
+    },
+    "2026-10-31"
+   ],
+   "out": {
+    "id": "n7",
+    "title": "Log",
+    "url": "",
+    "type": "other",
+    "tags": [],
+    "capabilities": [],
+    "useWhen": [],
+    "inputs": "",
+    "outputs": "",
+    "status": "active",
+    "checkCadence": "none",
+    "lastChecked": "",
+    "nextCheck": "",
+    "rssUrl": "",
+    "related": [],
+    "notes": "",
+    "draft": false,
+    "src": "user",
+    "research": "user",
+    "folder": "",
+    "added": "",
+    "createdAt": "2026-10-31",
+    "statusSince": "2026-10-31",
+    "hidden": false,
+    "scan": null,
+    "fields": {
+     "limit": "100/day",
+     "resets": "2026-11-05",
+     "nonsense": "x"
+    },
+    "trialEnd": "",
+    "verdict": null,
+    "watch": null,
+    "locked": false,
+    "pinned": false,
+    "keep": false,
+    "learned": "",
+    "log": [
+     {
+      "at": "2026-10-01",
+      "k": "reviewed",
+      "t": "Marked as reviewed"
+     }
+    ],
+    "opens": 0,
+    "openedAt": 0
+   },
+   "note": "today is the second argument"
+  },
+  {
+   "fn": "normalizeResource",
+   "in": [
+    {
+     "id": "n8"
+    },
+    "2026-10-31"
+   ],
+   "out": {
+    "id": "n8",
+    "title": "Untitled",
+    "url": "",
+    "type": "other",
+    "tags": [],
+    "capabilities": [],
+    "useWhen": [],
+    "inputs": "",
+    "outputs": "",
+    "status": "active",
+    "checkCadence": "none",
+    "lastChecked": "",
+    "nextCheck": "",
+    "rssUrl": "",
+    "related": [],
+    "notes": "",
+    "draft": false,
+    "src": "user",
+    "research": "user",
+    "folder": "",
+    "added": "",
+    "createdAt": "2026-10-31",
+    "statusSince": "2026-10-31",
+    "hidden": false,
+    "scan": null,
+    "fields": {},
+    "trialEnd": "",
+    "verdict": null,
+    "watch": null,
+    "locked": false,
+    "pinned": false,
+    "keep": false,
+    "learned": "",
+    "log": [],
+    "opens": 0,
+    "openedAt": 0
+   },
+   "note": "today is the second argument"
+  },
+  {
+   "fn": "computeNextCheck",
+   "in": [
+    {
+     "checkCadence": "weekly",
+     "lastChecked": "2026-10-01"
+    },
+    "2026-10-31"
+   ],
+   "out": "2026-10-08"
+  },
+  {
+   "fn": "computeNextCheck",
+   "in": [
+    {
+     "checkCadence": "daily",
+     "lastChecked": ""
+    },
+    "2026-10-31"
+   ],
+   "out": "2026-10-31"
+  },
+  {
+   "fn": "computeNextCheck",
+   "in": [
+    {
+     "checkCadence": "none",
+     "lastChecked": "2026-10-01"
+    },
+    "2026-10-31"
+   ],
+   "out": ""
+  },
+  {
+   "fn": "computeNextCheck",
+   "in": [
+    {
+     "checkCadence": "monthly",
+     "lastChecked": "2026-01-31"
+    },
+    "2026-10-31"
+   ],
+   "out": "2026-03-02"
+  },
+  {
+   "fn": "deriveRssUrl",
+   "in": [
+    "https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv",
+    ""
+   ],
+   "out": "https://www.youtube.com/feeds/videos.xml?channel_id=UCabcdefghijklmnopqrstuv"
+  },
+  {
+   "fn": "deriveRssUrl",
+   "in": [
+    "https://youtube.com/@handle",
+    ""
+   ],
+   "out": ""
+  },
+  {
+   "fn": "deriveRssUrl",
+   "in": [
+    "",
+    "UCabcdefghijklmnopqrstuv"
+   ],
+   "out": "https://www.youtube.com/feeds/videos.xml?channel_id=UCabcdefghijklmnopqrstuv"
+  },
+  {
+   "fn": "deriveRssUrl",
+   "in": [
+    "https://a.test",
+    ""
+   ],
+   "out": ""
+  }
+ ]
+}

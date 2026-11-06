@@ -1,0 +1,856 @@
+{
+ "module": "week",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "normWeekly",
+   "in": [
+    null
+   ],
+   "out": {
+    "doneAt": "",
+    "pickedAt": "",
+    "snooze": "",
+    "picks": []
+   }
+  },
+  {
+   "fn": "normWeekly",
+   "in": [
+    {}
+   ],
+   "out": {
+    "doneAt": "",
+    "pickedAt": "",
+    "snooze": "",
+    "picks": []
+   }
+  },
+  {
+   "fn": "normWeekly",
+   "in": [
+    {
+     "doneAt": "2026-10-20",
+     "pickedAt": "2026-10-26",
+     "snooze": "",
+     "picks": [
+      {
+       "rid": "r1",
+       "done": true
+      },
+      {
+       "rid": "r2",
+       "done": false
+      },
+      {
+       "rid": "r1",
+       "done": false
+      },
+      {
+       "rid": "r3"
+      },
+      {
+       "rid": "r4"
+      }
+     ]
+    }
+   ],
+   "out": {
+    "doneAt": "2026-10-20",
+    "pickedAt": "2026-10-26",
+    "snooze": "",
+    "picks": [
+     {
+      "rid": "r1",
+      "done": true
+     },
+     {
+      "rid": "r2",
+      "done": false
+     },
+     {
+      "rid": "r3",
+      "done": false
+     }
+    ]
+   }
+  },
+  {
+   "fn": "normWeekly",
+   "in": [
+    {
+     "doneAt": "bad",
+     "picks": "x"
+    }
+   ],
+   "out": {
+    "doneAt": "",
+    "pickedAt": "",
+    "snooze": "",
+    "picks": []
+   }
+  },
+  {
+   "fn": "resetDue",
+   "in": [
+    null,
+    "2026-10-31",
+    12
+   ],
+   "out": {
+    "due": true,
+    "days": null
+   }
+  },
+  {
+   "fn": "resetDue",
+   "in": [
+    null,
+    "2026-10-31",
+    5
+   ],
+   "out": {
+    "due": false,
+    "days": null
+   }
+  },
+  {
+   "fn": "resetDue",
+   "in": [
+    {
+     "doneAt": "2026-10-25"
+    },
+    "2026-10-31",
+    40
+   ],
+   "out": {
+    "due": false,
+    "days": 6
+   }
+  },
+  {
+   "fn": "resetDue",
+   "in": [
+    {
+     "doneAt": "2026-10-20"
+    },
+    "2026-10-31",
+    40
+   ],
+   "out": {
+    "due": true,
+    "days": 11
+   }
+  },
+  {
+   "fn": "resetDue",
+   "in": [
+    {
+     "doneAt": "2026-10-01",
+     "snooze": "2026-11-02"
+    },
+    "2026-10-31",
+    40
+   ],
+   "out": {
+    "due": false,
+    "days": 30
+   }
+  },
+  {
+   "fn": "resetDue",
+   "in": [
+    {
+     "doneAt": "2026-10-01",
+     "snooze": "2026-10-30"
+    },
+    "2026-10-31",
+    40
+   ],
+   "out": {
+    "due": true,
+    "days": 30
+   }
+  },
+  {
+   "fn": "activePicks",
+   "in": [
+    {
+     "doneAt": "2026-10-20",
+     "pickedAt": "2026-10-26",
+     "snooze": "",
+     "picks": [
+      {
+       "rid": "r1",
+       "done": true
+      },
+      {
+       "rid": "r2",
+       "done": false
+      },
+      {
+       "rid": "r1",
+       "done": false
+      },
+      {
+       "rid": "r3"
+      },
+      {
+       "rid": "r4"
+      }
+     ]
+    },
+    "2026-10-31",
+    [
+     "r1",
+     "r2",
+     "r3"
+    ]
+   ],
+   "out": [
+    {
+     "rid": "r1",
+     "done": true
+    },
+    {
+     "rid": "r2",
+     "done": false
+    },
+    {
+     "rid": "r3",
+     "done": false
+    }
+   ],
+   "note": "has(id) = id is in the list"
+  },
+  {
+   "fn": "activePicks",
+   "in": [
+    {
+     "doneAt": "2026-10-20",
+     "pickedAt": "2026-10-26",
+     "snooze": "",
+     "picks": [
+      {
+       "rid": "r1",
+       "done": true
+      },
+      {
+       "rid": "r2",
+       "done": false
+      },
+      {
+       "rid": "r1",
+       "done": false
+      },
+      {
+       "rid": "r3"
+      },
+      {
+       "rid": "r4"
+      }
+     ]
+    },
+    "2026-11-02",
+    [
+     "r1",
+     "r2"
+    ]
+   ],
+   "out": [],
+   "note": "has(id) = id is in the list"
+  },
+  {
+   "fn": "activePicks",
+   "in": [
+    {
+     "doneAt": "2026-10-20",
+     "pickedAt": "2026-10-26",
+     "snooze": "",
+     "picks": [
+      {
+       "rid": "r1",
+       "done": true
+      },
+      {
+       "rid": "r2",
+       "done": false
+      },
+      {
+       "rid": "r1",
+       "done": false
+      },
+      {
+       "rid": "r3"
+      },
+      {
+       "rid": "r4"
+      }
+     ]
+    },
+    "2026-11-03",
+    [
+     "r1"
+    ]
+   ],
+   "out": [],
+   "note": "has(id) = id is in the list"
+  },
+  {
+   "fn": "activePicks",
+   "in": [
+    {
+     "doneAt": "2026-10-20",
+     "pickedAt": "2026-10-26",
+     "snooze": "",
+     "picks": [
+      {
+       "rid": "r1",
+       "done": true
+      },
+      {
+       "rid": "r2",
+       "done": false
+      },
+      {
+       "rid": "r1",
+       "done": false
+      },
+      {
+       "rid": "r3"
+      },
+      {
+       "rid": "r4"
+      }
+     ]
+    },
+    "2026-10-31",
+    [
+     "r2"
+    ]
+   ],
+   "out": [
+    {
+     "rid": "r2",
+     "done": false
+    }
+   ],
+   "note": "has(id) = id is in the list"
+  },
+  {
+   "fn": "activePicks",
+   "in": [
+    {},
+    "2026-10-31",
+    []
+   ],
+   "out": [],
+   "note": "has(id) = id is in the list"
+  },
+  {
+   "fn": "setPicks",
+   "in": [
+    {
+     "doneAt": "2026-10-20",
+     "pickedAt": "2026-10-26",
+     "snooze": "",
+     "picks": [
+      {
+       "rid": "r1",
+       "done": true
+      },
+      {
+       "rid": "r2",
+       "done": false
+      },
+      {
+       "rid": "r1",
+       "done": false
+      },
+      {
+       "rid": "r3"
+      },
+      {
+       "rid": "r4"
+      }
+     ]
+    },
+    [
+     "r5",
+     "r5",
+     "r6",
+     "r7",
+     "r8"
+    ],
+    "2026-10-31"
+   ],
+   "out": {
+    "doneAt": "2026-10-20",
+    "pickedAt": "2026-10-31",
+    "snooze": "",
+    "picks": [
+     {
+      "rid": "r5",
+      "done": false
+     },
+     {
+      "rid": "r6",
+      "done": false
+     },
+     {
+      "rid": "r7",
+      "done": false
+     }
+    ]
+   }
+  },
+  {
+   "fn": "togglePick",
+   "in": [
+    {
+     "doneAt": "2026-10-20",
+     "pickedAt": "2026-10-26",
+     "snooze": "",
+     "picks": [
+      {
+       "rid": "r1",
+       "done": true
+      },
+      {
+       "rid": "r2",
+       "done": false
+      },
+      {
+       "rid": "r1",
+       "done": false
+      },
+      {
+       "rid": "r3"
+      },
+      {
+       "rid": "r4"
+      }
+     ]
+    },
+    "r2"
+   ],
+   "out": {
+    "doneAt": "2026-10-20",
+    "pickedAt": "2026-10-26",
+    "snooze": "",
+    "picks": [
+     {
+      "rid": "r1",
+      "done": true
+     },
+     {
+      "rid": "r2",
+      "done": true
+     },
+     {
+      "rid": "r3",
+      "done": false
+     }
+    ]
+   }
+  },
+  {
+   "fn": "finishReset",
+   "in": [
+    {
+     "doneAt": "2026-10-20",
+     "pickedAt": "2026-10-26",
+     "snooze": "2026-11-05",
+     "picks": [
+      {
+       "rid": "r1",
+       "done": true
+      },
+      {
+       "rid": "r2",
+       "done": false
+      },
+      {
+       "rid": "r1",
+       "done": false
+      },
+      {
+       "rid": "r3"
+      },
+      {
+       "rid": "r4"
+      }
+     ]
+    },
+    "2026-10-31"
+   ],
+   "out": {
+    "doneAt": "2026-10-31",
+    "pickedAt": "2026-10-26",
+    "snooze": "",
+    "picks": [
+     {
+      "rid": "r1",
+      "done": true
+     },
+     {
+      "rid": "r2",
+      "done": false
+     },
+     {
+      "rid": "r3",
+      "done": false
+     }
+    ]
+   }
+  },
+  {
+   "fn": "snoozeReset",
+   "in": [
+    {
+     "doneAt": "2026-10-20",
+     "pickedAt": "2026-10-26",
+     "snooze": "",
+     "picks": [
+      {
+       "rid": "r1",
+       "done": true
+      },
+      {
+       "rid": "r2",
+       "done": false
+      },
+      {
+       "rid": "r1",
+       "done": false
+      },
+      {
+       "rid": "r3"
+      },
+      {
+       "rid": "r4"
+      }
+     ]
+    },
+    "2026-10-31",
+    2
+   ],
+   "out": {
+    "doneAt": "2026-10-20",
+    "pickedAt": "2026-10-26",
+    "snooze": "2026-11-02",
+    "picks": [
+     {
+      "rid": "r1",
+      "done": true
+     },
+     {
+      "rid": "r2",
+      "done": false
+     },
+     {
+      "rid": "r3",
+      "done": false
+     }
+    ]
+   }
+  },
+  {
+   "fn": "suggestPicks",
+   "in": [
+    {
+     "needs": [
+      {
+       "rid": "r1",
+       "kind": "check",
+       "sub": "Check is due today"
+      },
+      {
+       "rid": "r2",
+       "kind": "trial",
+       "sub": "Trial ends today"
+      },
+      {
+       "rid": "r3",
+       "kind": "changed",
+       "sub": "The page changed"
+      }
+     ],
+     "mission": {
+      "rid": "r4",
+      "name": "Launch"
+     },
+     "stale": [
+      "r5"
+     ],
+     "drafts": [
+      "r13",
+      "r6"
+     ]
+    }
+   ],
+   "out": [
+    {
+     "rid": "r2",
+     "why": "Trial: decide keep or drop"
+    },
+    {
+     "rid": "r4",
+     "why": "Next step of Launch"
+    },
+    {
+     "rid": "r1",
+     "why": "Check is due today"
+    }
+   ],
+   "note": "in: resources are replaced by { rid } objects; the answer only uses ids"
+  },
+  {
+   "fn": "suggestPicks",
+   "in": [
+    {
+     "needs": [],
+     "mission": null,
+     "stale": [],
+     "drafts": []
+    }
+   ],
+   "out": []
+  },
+  {
+   "fn": "weekDigest",
+   "in": [
+    [
+     {
+      "id": "d1",
+      "title": "d1",
+      "url": "",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "active",
+      "checkCadence": "none",
+      "lastChecked": "",
+      "nextCheck": "",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-25",
+      "statusSince": "2026-10-25",
+      "hidden": false,
+      "scan": null,
+      "fields": {},
+      "trialEnd": "",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [
+       {
+        "at": "2026-10-30",
+        "k": "reviewed",
+        "t": "Marked as reviewed"
+       },
+       {
+        "at": "2026-10-20",
+        "k": "reviewed",
+        "t": "old"
+       },
+       {
+        "at": "2026-10-29",
+        "k": "checked",
+        "t": "Checked"
+       },
+       {
+        "at": "2026-10-31",
+        "k": "learned",
+        "t": "x"
+       },
+       {
+        "at": "2026-10-27",
+        "k": "merged",
+        "t": "m"
+       },
+       {
+        "at": "2026-10-28",
+        "k": "status",
+        "t": "To try to Trial"
+       },
+       {
+        "at": "2026-10-28",
+        "k": "verdict",
+        "t": "Keep"
+       }
+      ],
+      "opens": 0,
+      "openedAt": 0
+     },
+     {
+      "id": "d2",
+      "title": "d2",
+      "url": "",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "active",
+      "checkCadence": "none",
+      "lastChecked": "",
+      "nextCheck": "",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-24",
+      "statusSince": "2026-10-24",
+      "hidden": false,
+      "scan": null,
+      "fields": {},
+      "trialEnd": "",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 1793016000000
+     },
+     {
+      "id": "d3",
+      "title": "d3",
+      "url": "",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "active",
+      "checkCadence": "none",
+      "lastChecked": "",
+      "nextCheck": "",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-31",
+      "statusSince": "2026-10-31",
+      "hidden": false,
+      "scan": null,
+      "fields": {},
+      "trialEnd": "",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 1792843200000
+     }
+    ],
+    {
+     "doneAt": "2026-10-20",
+     "pickedAt": "2026-10-26",
+     "snooze": "",
+     "picks": [
+      {
+       "rid": "r1",
+       "done": true
+      },
+      {
+       "rid": "r2",
+       "done": false
+      },
+      {
+       "rid": "r1",
+       "done": false
+      },
+      {
+       "rid": "r3"
+      },
+      {
+       "rid": "r4"
+      }
+     ]
+    },
+    "2026-10-31"
+   ],
+   "out": {
+    "added": 2,
+    "opened": 1,
+    "reviewed": 1,
+    "checked": 1,
+    "learned": 1,
+    "merged": 1,
+    "stage": 1,
+    "picks": {
+     "done": 1,
+     "total": 3,
+     "at": "2026-10-26"
+    }
+   },
+   "note": "openedAt compares against local midnight of the first day: use UTC for the golden run (TZ=UTC)"
+  },
+  {
+   "fn": "weekDigest",
+   "in": [
+    [],
+    null,
+    "2026-10-31"
+   ],
+   "out": {
+    "added": 0,
+    "opened": 0,
+    "reviewed": 0,
+    "checked": 0,
+    "learned": 0,
+    "merged": 0,
+    "stage": 0,
+    "picks": null
+   }
+  },
+  {
+   "fn": "RESET_EVERY",
+   "in": [],
+   "out": 7,
+   "note": "constant: the Dart value must equal this"
+  },
+  {
+   "fn": "PICKS_LIVE",
+   "in": [],
+   "out": 7,
+   "note": "constant: the Dart value must equal this"
+  },
+  {
+   "fn": "MAX_PICKS",
+   "in": [],
+   "out": 3,
+   "note": "constant: the Dart value must equal this"
+  }
+ ]
+}

@@ -1,0 +1,1237 @@
+{
+ "module": "game",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "levelStart",
+   "in": [
+    0
+   ],
+   "out": 0
+  },
+  {
+   "fn": "levelStart",
+   "in": [
+    1
+   ],
+   "out": 0
+  },
+  {
+   "fn": "levelStart",
+   "in": [
+    2
+   ],
+   "out": 30
+  },
+  {
+   "fn": "levelStart",
+   "in": [
+    10
+   ],
+   "out": 1009
+  },
+  {
+   "fn": "levelStart",
+   "in": [
+    1000
+   ],
+   "out": 1889844
+  },
+  {
+   "fn": "levelOf",
+   "in": [
+    0
+   ],
+   "out": 1
+  },
+  {
+   "fn": "levelOf",
+   "in": [
+    29
+   ],
+   "out": 1
+  },
+  {
+   "fn": "levelOf",
+   "in": [
+    30
+   ],
+   "out": 2
+  },
+  {
+   "fn": "levelOf",
+   "in": [
+    1000
+   ],
+   "out": 9
+  },
+  {
+   "fn": "levelOf",
+   "in": [
+    999999
+   ],
+   "out": 672
+  },
+  {
+   "fn": "levelOf",
+   "in": [
+    1000000
+   ],
+   "out": 672
+  },
+  {
+   "fn": "levelOf",
+   "in": [
+    1000001
+   ],
+   "out": 672
+  },
+  {
+   "fn": "rankOf",
+   "in": [
+    0
+   ],
+   "out": null
+  },
+  {
+   "fn": "rankOf",
+   "in": [
+    1
+   ],
+   "out": "Cadet"
+  },
+  {
+   "fn": "rankOf",
+   "in": [
+    4
+   ],
+   "out": "Pilot"
+  },
+  {
+   "fn": "rankOf",
+   "in": [
+    8
+   ],
+   "out": "Navigator"
+  },
+  {
+   "fn": "rankOf",
+   "in": [
+    99
+   ],
+   "out": "Architect"
+  },
+  {
+   "fn": "progress",
+   "in": [
+    {
+     "game": {},
+     "resources": []
+    }
+   ],
+   "out": {
+    "xp": 0,
+    "level": 1,
+    "rank": "Cadet",
+    "into": 0,
+    "span": 30,
+    "pct": 0,
+    "days": 0,
+    "badges": 0
+   },
+   "note": "empty game state"
+  },
+  {
+   "fn": "progress",
+   "in": [
+    {
+     "game": {
+      "xp": 30,
+      "days": [
+       "2026-10-31"
+      ],
+      "badges": {
+       "a": "2026-10-31"
+      },
+      "counters": {
+       "adds": 2
+      }
+     },
+     "resources": []
+    }
+   ],
+   "out": {
+    "xp": 30,
+    "level": 2,
+    "rank": "Cadet",
+    "into": 0,
+    "span": 61,
+    "pct": 0,
+    "days": 1,
+    "badges": 1
+   },
+   "note": "some xp"
+  },
+  {
+   "fn": "progress",
+   "in": [
+    {
+     "game": {
+      "xp": 1000000,
+      "days": [
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31",
+       "2026-10-31"
+      ],
+      "badges": {
+       "a": 1,
+       "b": 2
+      },
+      "counters": {}
+     },
+     "resources": []
+    }
+   ],
+   "out": {
+    "xp": 1000000,
+    "level": 672,
+    "rank": "Architect",
+    "into": 283,
+    "span": 2385,
+    "pct": 12,
+    "days": 20,
+    "badges": 2
+   },
+   "note": "large xp"
+  },
+  {
+   "fn": "progress",
+   "in": [
+    {
+     "game": {
+      "xp": 29,
+      "days": [],
+      "badges": {},
+      "counters": {}
+     },
+     "resources": []
+    }
+   ],
+   "out": {
+    "xp": 29,
+    "level": 1,
+    "rank": "Cadet",
+    "into": 29,
+    "span": 30,
+    "pct": 97,
+    "days": 0,
+    "badges": 0
+   },
+   "note": "xp 29"
+  },
+  {
+   "fn": "progress",
+   "in": [
+    {
+     "game": {
+      "xp": 30,
+      "days": [],
+      "badges": {},
+      "counters": {}
+     },
+     "resources": []
+    }
+   ],
+   "out": {
+    "xp": 30,
+    "level": 2,
+    "rank": "Cadet",
+    "into": 0,
+    "span": 61,
+    "pct": 0,
+    "days": 0,
+    "badges": 0
+   },
+   "note": "xp 30"
+  },
+  {
+   "fn": "progress",
+   "in": [
+    {
+     "game": {
+      "xp": 1000,
+      "days": [],
+      "badges": {},
+      "counters": {}
+     },
+     "resources": []
+    }
+   ],
+   "out": {
+    "xp": 1000,
+    "level": 9,
+    "rank": "Navigator",
+    "into": 164,
+    "span": 173,
+    "pct": 95,
+    "days": 0,
+    "badges": 0
+   },
+   "note": "xp 1000"
+  },
+  {
+   "fn": "progress",
+   "in": [
+    {
+     "game": {
+      "xp": 999999,
+      "days": [],
+      "badges": {},
+      "counters": {}
+     },
+     "resources": []
+    }
+   ],
+   "out": {
+    "xp": 999999,
+    "level": 672,
+    "rank": "Architect",
+    "into": 282,
+    "span": 2385,
+    "pct": 12,
+    "days": 0,
+    "badges": 0
+   },
+   "note": "xp 999999"
+  },
+  {
+   "fn": "progress",
+   "in": [
+    {
+     "game": {
+      "xp": 1000000,
+      "days": [],
+      "badges": {},
+      "counters": {}
+     },
+     "resources": []
+    }
+   ],
+   "out": {
+    "xp": 1000000,
+    "level": 672,
+    "rank": "Architect",
+    "into": 283,
+    "span": 2385,
+    "pct": 12,
+    "days": 0,
+    "badges": 0
+   },
+   "note": "xp 1000000"
+  },
+  {
+   "fn": "progress",
+   "in": [
+    {
+     "game": {
+      "xp": 1000001,
+      "days": [],
+      "badges": {},
+      "counters": {}
+     },
+     "resources": []
+    }
+   ],
+   "out": {
+    "xp": 1000001,
+    "level": 672,
+    "rank": "Architect",
+    "into": 284,
+    "span": 2385,
+    "pct": 12,
+    "days": 0,
+    "badges": 0
+   },
+   "note": "xp 1000001"
+  },
+  {
+   "fn": "award",
+   "in": [
+    {
+     "game": {},
+     "resources": []
+    },
+    "check",
+    2
+   ],
+   "out": {
+    "gain": 20,
+    "kind": "check",
+    "label": "",
+    "levelUp": null,
+    "newBadges": [
+     {
+      "id": "clear-sky",
+      "name": "Clear Sky",
+      "desc": "No overdue signals"
+     }
+    ]
+   },
+   "note": "fresh game"
+  },
+  {
+   "fn": "award",
+   "in": [
+    {
+     "game": {},
+     "resources": []
+    },
+    "import",
+    12
+   ],
+   "out": {
+    "gain": 12,
+    "kind": "import",
+    "label": "",
+    "levelUp": null,
+    "newBadges": [
+     {
+      "id": "broadcast",
+      "name": "Broadcast",
+      "desc": "Import 10 links at once"
+     }
+    ]
+   },
+   "note": "gain is capped"
+  },
+  {
+   "fn": "award",
+   "in": [
+    {
+     "game": {},
+     "resources": []
+    },
+    "add",
+    1,
+    "कला जोड़ा"
+   ],
+   "out": {
+    "gain": 6,
+    "kind": "add",
+    "label": "कला जोड़ा",
+    "levelUp": null,
+    "newBadges": [
+     {
+      "id": "first-contact",
+      "name": "First Contact",
+      "desc": "Add your first own resource"
+     }
+    ]
+   },
+   "note": "unicode label"
+  },
+  {
+   "fn": "award",
+   "in": [
+    {
+     "game": {},
+     "resources": []
+    },
+    "missionDone",
+    3
+   ],
+   "out": {
+    "gain": 75,
+    "kind": "missionDone",
+    "label": "",
+    "levelUp": {
+     "level": 2,
+     "rank": "Cadet",
+     "rankUp": false
+    },
+    "newBadges": [
+     {
+      "id": "finisher",
+      "name": "Finisher",
+      "desc": "Complete every step of a mission"
+     }
+    ]
+   },
+   "note": "level up happens"
+  },
+  {
+   "fn": "award",
+   "in": [
+    {
+     "game": {},
+     "resources": []
+    },
+    "bogus",
+    5
+   ],
+   "out": {
+    "gain": 0,
+    "kind": "bogus",
+    "label": "",
+    "levelUp": null,
+    "newBadges": []
+   },
+   "note": "unknown kind gives zero gain"
+  },
+  {
+   "fn": "focusDone",
+   "in": [
+    {
+     "game": {
+      "focus": []
+     },
+     "resources": []
+    },
+    10
+   ],
+   "out": {
+    "result": {
+     "gain": 4,
+     "kind": "review",
+     "label": "Focus run 10 min",
+     "levelUp": null,
+     "newBadges": []
+    },
+    "focus": [
+     {
+      "date": "2026-10-31",
+      "minutes": 10
+     }
+    ],
+    "today": 10
+   },
+   "note": "result plus the focus list"
+  },
+  {
+   "fn": "focusDone",
+   "in": [
+    {
+     "game": {
+      "focus": [
+       {
+        "date": "2026-10-30",
+        "minutes": 25
+       }
+      ]
+     },
+     "resources": []
+    },
+    20
+   ],
+   "out": {
+    "result": {
+     "gain": 15,
+     "kind": "focus20",
+     "label": "Focus run 20 min",
+     "levelUp": null,
+     "newBadges": []
+    },
+    "focus": [
+     {
+      "date": "2026-10-30",
+      "minutes": 25
+     },
+     {
+      "date": "2026-10-31",
+      "minutes": 20
+     }
+    ],
+    "today": 20
+   },
+   "note": "20+ minutes"
+  },
+  {
+   "fn": "focusDone",
+   "in": [
+    {
+     "game": {
+      "focus": [
+       {
+        "date": "2026-10-31",
+        "minutes": 5
+       },
+       {
+        "date": "2026-10-31",
+        "minutes": 5
+       },
+       {
+        "date": "2026-10-31",
+        "minutes": 5
+       }
+      ]
+     },
+     "resources": []
+    },
+    45
+   ],
+   "out": {
+    "result": {
+     "gain": 25,
+     "kind": "focus30",
+     "label": "Focus run 45 min",
+     "levelUp": null,
+     "newBadges": [
+      {
+       "id": "deep-focus",
+       "name": "Deep Focus",
+       "desc": "Finish 3 focus runs"
+      }
+     ]
+    },
+    "focus": [
+     {
+      "date": "2026-10-31",
+      "minutes": 5
+     },
+     {
+      "date": "2026-10-31",
+      "minutes": 5
+     },
+     {
+      "date": "2026-10-31",
+      "minutes": 5
+     },
+     {
+      "date": "2026-10-31",
+      "minutes": 45
+     }
+    ],
+    "today": 60
+   },
+   "note": "30+ minutes and existing runs"
+  },
+  {
+   "fn": "focusToday",
+   "in": [
+    {
+     "game": {
+      "focus": []
+     },
+     "resources": []
+    }
+   ],
+   "out": 0,
+   "note": "empty focus"
+  },
+  {
+   "fn": "focusToday",
+   "in": [
+    {
+     "game": {
+      "focus": [
+       {
+        "date": "2026-10-31",
+        "minutes": 20
+       },
+       {
+        "date": "2026-10-31",
+        "minutes": 5
+       },
+       {
+        "date": "2026-10-30",
+        "minutes": 30
+       }
+      ]
+     },
+     "resources": []
+    }
+   ],
+   "out": 25,
+   "note": "today only"
+  },
+  {
+   "fn": "focusToday",
+   "in": [
+    {
+     "game": {
+      "focus": [
+       {
+        "date": "2026-10-30",
+        "minutes": 30
+       }
+      ]
+     },
+     "resources": []
+    }
+   ],
+   "out": 0,
+   "note": "old runs"
+  },
+  {
+   "fn": "unlock",
+   "in": [
+    {
+     "game": {},
+     "resources": []
+    }
+   ],
+   "out": [],
+   "note": "no counters"
+  },
+  {
+   "fn": "unlock",
+   "in": [
+    {
+     "game": {
+      "counters": {
+       "adds": 1,
+       "checks": 5,
+       "reviews": 25,
+       "backups": 1,
+       "threads": 1,
+       "missions": 1,
+       "sectors": 1,
+       "imported": 10,
+       "links": 1,
+       "steps": 1
+      }
+     },
+     "resources": [
+      {
+       "id": "g1",
+       "title": "g1",
+       "url": "https://g1.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none"
+      }
+     ]
+    }
+   ],
+   "out": [
+    {
+     "id": "first-contact",
+     "name": "First Contact",
+     "desc": "Add your first own resource"
+    },
+    {
+     "id": "watchkeeper",
+     "name": "Watchkeeper",
+     "desc": "Check 5 resources"
+    },
+    {
+     "id": "cartographer",
+     "name": "Cartographer",
+     "desc": "Review 25 resources"
+    },
+    {
+     "id": "archivist",
+     "name": "Archivist",
+     "desc": "Export a backup"
+    },
+    {
+     "id": "route-maker",
+     "name": "Route Maker",
+     "desc": "Create a mission"
+    },
+    {
+     "id": "finisher",
+     "name": "Finisher",
+     "desc": "Complete every step of a mission"
+    },
+    {
+     "id": "founder",
+     "name": "Sector Founder",
+     "desc": "Create your own sector"
+    },
+    {
+     "id": "broadcast",
+     "name": "Broadcast",
+     "desc": "Import 10 links at once"
+    },
+    {
+     "id": "clear-sky",
+     "name": "Clear Sky",
+     "desc": "No overdue signals"
+    }
+   ],
+   "note": "many badges"
+  },
+  {
+   "fn": "unlock",
+   "in": [
+    {
+     "game": {
+      "counters": {
+       "checks": 1
+      },
+      "badges": {
+       "first-contact": "2026-10-31"
+      }
+     },
+     "resources": [
+      {
+       "id": "g2",
+       "title": "g2",
+       "url": "https://g2.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none"
+      }
+     ]
+    }
+   ],
+   "out": [
+    {
+     "id": "clear-sky",
+     "name": "Clear Sky",
+     "desc": "No overdue signals"
+    }
+   ],
+   "note": "already unlocked"
+  },
+  {
+   "fn": "unlock",
+   "in": [
+    {
+     "game": {
+      "counters": {
+       "reviews": 2
+      },
+      "badges": {}
+     },
+     "resources": [
+      {
+       "id": "fa0",
+       "title": "fa0",
+       "url": "https://fa0.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none"
+      },
+      {
+       "id": "fa1",
+       "title": "fa1",
+       "url": "https://fa1.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none"
+      },
+      {
+       "id": "fa2",
+       "title": "fa2",
+       "url": "https://fa2.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none"
+      },
+      {
+       "id": "fa3",
+       "title": "fa3",
+       "url": "https://fa3.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none"
+      },
+      {
+       "id": "fa4",
+       "title": "fa4",
+       "url": "https://fa4.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none"
+      },
+      {
+       "id": "fa5",
+       "title": "fa5",
+       "url": "https://fa5.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none"
+      },
+      {
+       "id": "fa6",
+       "title": "fa6",
+       "url": "https://fa6.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none"
+      },
+      {
+       "id": "fa7",
+       "title": "fa7",
+       "url": "https://fa7.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none"
+      },
+      {
+       "id": "fa8",
+       "title": "fa8",
+       "url": "https://fa8.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none"
+      },
+      {
+       "id": "fa9",
+       "title": "fa9",
+       "url": "https://fa9.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none"
+      },
+      {
+       "id": "fa10",
+       "title": "fa10",
+       "url": "https://fa10.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none"
+      },
+      {
+       "id": "fa11",
+       "title": "fa11",
+       "url": "https://fa11.example.org/",
+       "status": "active",
+       "tags": [],
+       "draft": false,
+       "checkCadence": "none"
+      }
+     ]
+    }
+   ],
+   "out": [
+    {
+     "id": "full-atlas",
+     "name": "Full Atlas",
+     "desc": "Clear every \"To review\" item"
+    }
+   ],
+   "note": "full-atlas conditions met"
+  },
+  {
+   "fn": "RANKS",
+   "in": [],
+   "out": [
+    "Cadet",
+    "Pilot",
+    "Navigator",
+    "Cartographer",
+    "Captain",
+    "Commander",
+    "Admiral",
+    "Architect"
+   ],
+   "note": "constant: the Dart value must equal this"
+  },
+  {
+   "fn": "RANKS",
+   "in": [],
+   "out": [
+    "Cadet",
+    "Pilot",
+    "Navigator",
+    "Cartographer",
+    "Captain",
+    "Commander",
+    "Admiral",
+    "Architect"
+   ],
+   "note": "constant: the Dart value must equal this (repeat case)"
+  },
+  {
+   "fn": "RANKS",
+   "in": [],
+   "out": [
+    "Cadet",
+    "Pilot",
+    "Navigator",
+    "Cartographer",
+    "Captain",
+    "Commander",
+    "Admiral",
+    "Architect"
+   ],
+   "note": "constant: the Dart value must equal this (repeat case)"
+  },
+  {
+   "fn": "XP",
+   "in": [],
+   "out": {
+    "add": 6,
+    "review": 4,
+    "check": 10,
+    "archive": 3,
+    "thread": 10,
+    "step": 4,
+    "missionDone": 25,
+    "link": 3,
+    "backup": 20,
+    "focus20": 15,
+    "focus30": 25,
+    "sector": 8,
+    "import": 1,
+    "scan": 1,
+    "reset": 15
+   },
+   "note": "constant: the Dart value must equal this"
+  },
+  {
+   "fn": "XP",
+   "in": [],
+   "out": {
+    "add": 6,
+    "review": 4,
+    "check": 10,
+    "archive": 3,
+    "thread": 10,
+    "step": 4,
+    "missionDone": 25,
+    "link": 3,
+    "backup": 20,
+    "focus20": 15,
+    "focus30": 25,
+    "sector": 8,
+    "import": 1,
+    "scan": 1,
+    "reset": 15
+   },
+   "note": "constant: the Dart value must equal this (repeat case)"
+  },
+  {
+   "fn": "XP",
+   "in": [],
+   "out": {
+    "add": 6,
+    "review": 4,
+    "check": 10,
+    "archive": 3,
+    "thread": 10,
+    "step": 4,
+    "missionDone": 25,
+    "link": 3,
+    "backup": 20,
+    "focus20": 15,
+    "focus30": 25,
+    "sector": 8,
+    "import": 1,
+    "scan": 1,
+    "reset": 15
+   },
+   "note": "constant: the Dart value must equal this (repeat case)"
+  },
+  {
+   "fn": "BADGES",
+   "in": [],
+   "out": [
+    {
+     "id": "first-contact",
+     "name": "First Contact",
+     "desc": "Add your first own resource"
+    },
+    {
+     "id": "watchkeeper",
+     "name": "Watchkeeper",
+     "desc": "Check 5 resources"
+    },
+    {
+     "id": "cartographer",
+     "name": "Cartographer",
+     "desc": "Review 25 resources"
+    },
+    {
+     "id": "full-atlas",
+     "name": "Full Atlas",
+     "desc": "Clear every \"To review\" item"
+    },
+    {
+     "id": "archivist",
+     "name": "Archivist",
+     "desc": "Export a backup"
+    },
+    {
+     "id": "route-maker",
+     "name": "Route Maker",
+     "desc": "Create a mission"
+    },
+    {
+     "id": "finisher",
+     "name": "Finisher",
+     "desc": "Complete every step of a mission"
+    },
+    {
+     "id": "founder",
+     "name": "Sector Founder",
+     "desc": "Create your own sector"
+    },
+    {
+     "id": "broadcast",
+     "name": "Broadcast",
+     "desc": "Import 10 links at once"
+    },
+    {
+     "id": "deep-focus",
+     "name": "Deep Focus",
+     "desc": "Finish 3 focus runs"
+    },
+    {
+     "id": "clear-sky",
+     "name": "Clear Sky",
+     "desc": "No overdue signals"
+    }
+   ],
+   "note": "constant without the test functions"
+  },
+  {
+   "fn": "BADGES",
+   "in": [],
+   "out": [
+    {
+     "id": "first-contact",
+     "name": "First Contact",
+     "desc": "Add your first own resource"
+    },
+    {
+     "id": "watchkeeper",
+     "name": "Watchkeeper",
+     "desc": "Check 5 resources"
+    },
+    {
+     "id": "cartographer",
+     "name": "Cartographer",
+     "desc": "Review 25 resources"
+    },
+    {
+     "id": "full-atlas",
+     "name": "Full Atlas",
+     "desc": "Clear every \"To review\" item"
+    },
+    {
+     "id": "archivist",
+     "name": "Archivist",
+     "desc": "Export a backup"
+    },
+    {
+     "id": "route-maker",
+     "name": "Route Maker",
+     "desc": "Create a mission"
+    },
+    {
+     "id": "finisher",
+     "name": "Finisher",
+     "desc": "Complete every step of a mission"
+    },
+    {
+     "id": "founder",
+     "name": "Sector Founder",
+     "desc": "Create your own sector"
+    },
+    {
+     "id": "broadcast",
+     "name": "Broadcast",
+     "desc": "Import 10 links at once"
+    },
+    {
+     "id": "deep-focus",
+     "name": "Deep Focus",
+     "desc": "Finish 3 focus runs"
+    },
+    {
+     "id": "clear-sky",
+     "name": "Clear Sky",
+     "desc": "No overdue signals"
+    }
+   ],
+   "note": "constant without the test functions (repeat case)"
+  },
+  {
+   "fn": "BADGES",
+   "in": [],
+   "out": [
+    {
+     "id": "first-contact",
+     "name": "First Contact",
+     "desc": "Add your first own resource"
+    },
+    {
+     "id": "watchkeeper",
+     "name": "Watchkeeper",
+     "desc": "Check 5 resources"
+    },
+    {
+     "id": "cartographer",
+     "name": "Cartographer",
+     "desc": "Review 25 resources"
+    },
+    {
+     "id": "full-atlas",
+     "name": "Full Atlas",
+     "desc": "Clear every \"To review\" item"
+    },
+    {
+     "id": "archivist",
+     "name": "Archivist",
+     "desc": "Export a backup"
+    },
+    {
+     "id": "route-maker",
+     "name": "Route Maker",
+     "desc": "Create a mission"
+    },
+    {
+     "id": "finisher",
+     "name": "Finisher",
+     "desc": "Complete every step of a mission"
+    },
+    {
+     "id": "founder",
+     "name": "Sector Founder",
+     "desc": "Create your own sector"
+    },
+    {
+     "id": "broadcast",
+     "name": "Broadcast",
+     "desc": "Import 10 links at once"
+    },
+    {
+     "id": "deep-focus",
+     "name": "Deep Focus",
+     "desc": "Finish 3 focus runs"
+    },
+    {
+     "id": "clear-sky",
+     "name": "Clear Sky",
+     "desc": "No overdue signals"
+    }
+   ],
+   "note": "constant without the test functions (repeat case)"
+  }
+ ]
+}

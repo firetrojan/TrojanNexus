@@ -1,0 +1,693 @@
+{
+ "module": "watch",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "norm",
+   "in": [
+    ""
+   ],
+   "out": ""
+  },
+  {
+   "fn": "norm",
+   "in": [
+    "  Café   PAGE 123,456.7  "
+   ],
+   "out": "café page #"
+  },
+  {
+   "fn": "norm",
+   "in": [
+    "कला   2026-10-31"
+   ],
+   "out": "कला #"
+  },
+  {
+   "fn": "norm",
+   "in": [
+    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+   ],
+   "out": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  },
+  {
+   "fn": "fingerprint",
+   "in": [
+    {},
+    ""
+   ],
+   "out": {
+    "t": "",
+    "d": "",
+    "h": [],
+    "via": ""
+   }
+  },
+  {
+   "fn": "fingerprint",
+   "in": [
+    null,
+    null
+   ],
+   "out": {
+    "t": "",
+    "d": "",
+    "h": [],
+    "via": ""
+   },
+   "note": "missing page and via"
+  },
+  {
+   "fn": "fingerprint",
+   "in": [
+    {
+     "title": "Café page",
+     "ogTitle": "",
+     "description": "A sample description 123",
+     "headings": [
+      "One",
+      "Two"
+     ]
+    },
+    "direct"
+   ],
+   "out": {
+    "t": "Café page",
+    "d": "A sample description 123",
+    "h": [
+     "One",
+     "Two"
+    ],
+    "via": "direct"
+   }
+  },
+  {
+   "fn": "fingerprint",
+   "in": [
+    {
+     "ogTitle": "कला",
+     "description": "Café",
+     "headings": [
+      "Heading 0",
+      "Heading 1",
+      "Heading 2",
+      "Heading 3",
+      "Heading 4",
+      "Heading 5",
+      "Heading 6",
+      "Heading 7",
+      "Heading 8",
+      "Heading 9",
+      "Heading 10",
+      "Heading 11",
+      "Heading 12",
+      "Heading 13",
+      "Heading 14"
+     ],
+     "title": "ignored"
+    },
+    "reader"
+   ],
+   "out": {
+    "t": "कला",
+    "d": "Café",
+    "h": [
+     "Heading 0",
+     "Heading 1",
+     "Heading 2",
+     "Heading 3",
+     "Heading 4",
+     "Heading 5",
+     "Heading 6",
+     "Heading 7",
+     "Heading 8",
+     "Heading 9",
+     "Heading 10",
+     "Heading 11"
+    ],
+    "via": "reader"
+   },
+   "note": "headings capped at 12"
+  },
+  {
+   "fn": "usable",
+   "in": [
+    null
+   ],
+   "out": false,
+   "note": "missing headings throws"
+  },
+  {
+   "fn": "usable",
+   "in": [
+    {}
+   ],
+   "out": {
+    "throws": "TypeError"
+   },
+   "note": "missing headings throws"
+  },
+  {
+   "fn": "usable",
+   "in": [
+    {
+     "t": "Café page",
+     "d": "A sample description 123",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    }
+   ],
+   "out": true,
+   "note": "missing headings throws"
+  },
+  {
+   "fn": "usable",
+   "in": [
+    {
+     "h": []
+    }
+   ],
+   "out": false,
+   "note": "missing headings throws"
+  },
+  {
+   "fn": "usable",
+   "in": [
+    {
+     "t": ""
+    }
+   ],
+   "out": {
+    "throws": "TypeError"
+   },
+   "note": "missing headings throws"
+  },
+  {
+   "fn": "compare",
+   "in": [
+    {
+     "t": "Café page",
+     "d": "A sample description 123",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    },
+    {
+     "t": "Café page",
+     "d": "A sample description 123",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    }
+   ],
+   "out": {
+    "same": true,
+    "what": []
+   }
+  },
+  {
+   "fn": "compare",
+   "in": [
+    {
+     "t": "Café page",
+     "d": "A sample description 123",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    },
+    {
+     "t": "Café page",
+     "d": "A sample description 456",
+     "h": [
+      "One",
+      "Three"
+     ],
+     "via": "direct"
+    }
+   ],
+   "out": {
+    "same": false,
+    "what": [
+     "New heading: \"Three\".",
+     "A heading is gone: \"Two\"."
+    ]
+   }
+  },
+  {
+   "fn": "compare",
+   "in": [
+    {
+     "t": "Café page",
+     "d": "A sample description 123",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    },
+    {
+     "t": "",
+     "d": "",
+     "h": [],
+     "via": ""
+    }
+   ],
+   "out": {
+    "same": true,
+    "what": [],
+    "unreadable": true
+   },
+   "note": "unreadable new page"
+  },
+  {
+   "fn": "compare",
+   "in": [
+    {
+     "t": "",
+     "d": "",
+     "h": [],
+     "via": ""
+    },
+    {
+     "t": "Café page",
+     "d": "A sample description 123",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    }
+   ],
+   "out": {
+    "same": true,
+    "what": [],
+    "rebase": true
+   },
+   "note": "rebase"
+  },
+  {
+   "fn": "compare",
+   "in": [
+    {
+     "t": "Café page",
+     "d": "A sample description 123",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    },
+    {
+     "t": "Café page",
+     "d": "A sample description 456",
+     "h": [
+      "One",
+      "Three"
+     ],
+     "via": "reader"
+    }
+   ],
+   "out": {
+    "same": true,
+    "what": [],
+    "rebase": true
+   },
+   "note": "via changed"
+  },
+  {
+   "fn": "compare",
+   "in": [
+    {
+     "t": "Café page",
+     "d": "A sample description 123",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    },
+    {
+     "t": "Café page two",
+     "d": "A sample description 123",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    }
+   ],
+   "out": {
+    "same": false,
+    "what": [
+     "The title changed: \"Café page\" is now \"Café page two\"."
+    ]
+   },
+   "note": "title changed"
+  },
+  {
+   "fn": "compare",
+   "in": [
+    {
+     "t": "Café page",
+     "d": "",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    },
+    {
+     "t": "Café page",
+     "d": "A description appeared",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    }
+   ],
+   "out": {
+    "same": false,
+    "what": [
+     "A description appeared."
+    ]
+   },
+   "note": "description appeared"
+  },
+  {
+   "fn": "compare",
+   "in": [
+    {
+     "t": "Café page",
+     "d": "An old description",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    },
+    {
+     "t": "Café page",
+     "d": "",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    }
+   ],
+   "out": {
+    "same": false,
+    "what": [
+     "The description is gone."
+    ]
+   },
+   "note": "description gone"
+  },
+  {
+   "fn": "compare",
+   "in": [
+    {
+     "t": "Café page",
+     "d": "",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    },
+    {
+     "t": "Café page",
+     "d": "",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    }
+   ],
+   "out": {
+    "same": true,
+    "what": []
+   },
+   "note": "both descriptions empty"
+  },
+  {
+   "fn": "compare",
+   "in": [
+    {
+     "t": "Café page",
+     "d": "A sample description",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    },
+    {
+     "t": "Café page",
+     "d": "Another sample description",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    }
+   ],
+   "out": {
+    "same": false,
+    "what": [
+     "The description changed."
+    ]
+   },
+   "note": "description words changed"
+  },
+  {
+   "fn": "compare",
+   "in": [
+    {
+     "t": "Café page",
+     "d": "A sample description 123",
+     "h": [],
+     "via": "direct"
+    },
+    {
+     "t": "Café page",
+     "d": "A sample description 123",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    }
+   ],
+   "out": {
+    "same": false,
+    "what": [
+     "2 new headings, like \"One\"."
+    ]
+   },
+   "note": "two new headings"
+  },
+  {
+   "fn": "compare",
+   "in": [
+    {
+     "t": "Café page",
+     "d": "A sample description 123",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    },
+    {
+     "t": "Café page",
+     "d": "A sample description 123",
+     "h": [],
+     "via": "direct"
+    }
+   ],
+   "out": {
+    "same": false,
+    "what": [
+     "2 headings are gone, like \"One\"."
+    ]
+   },
+   "note": "two headings gone"
+  },
+  {
+   "fn": "normWatch",
+   "in": [
+    null
+   ],
+   "out": null
+  },
+  {
+   "fn": "normWatch",
+   "in": [
+    {
+     "on": true,
+     "at": "2026-10-31T12:00:00Z",
+     "fp": {
+      "t": "Café page",
+      "d": "A sample description 123",
+      "h": [
+       "One",
+       "Two"
+      ],
+      "via": "direct"
+     },
+     "changed": "2026-10-30",
+     "what": [
+      "x",
+      "",
+      "y"
+     ]
+    }
+   ],
+   "out": {
+    "on": true,
+    "at": "2026-10-31",
+    "fp": {
+     "t": "Café page",
+     "d": "A sample description 123",
+     "h": [
+      "One",
+      "Two"
+     ],
+     "via": "direct"
+    },
+    "changed": "2026-10-30",
+    "what": [
+     "x",
+     "y"
+    ]
+   }
+  },
+  {
+   "fn": "normWatch",
+   "in": [
+    {
+     "on": false,
+     "fp": {
+      "t": "Café page",
+      "d": "A sample description 123",
+      "h": [
+       "One",
+       "Two"
+      ],
+      "via": "direct"
+     }
+    }
+   ],
+   "out": null,
+   "note": "not watched"
+  },
+  {
+   "fn": "normWatch",
+   "in": [
+    {
+     "on": true,
+     "at": "bad",
+     "fp": {
+      "t": "",
+      "h": []
+     },
+     "what": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e"
+     ]
+    }
+   ],
+   "out": {
+    "on": true,
+    "at": "",
+    "fp": null,
+    "changed": "",
+    "what": [
+     "a",
+     "b",
+     "c",
+     "d"
+    ]
+   },
+   "note": "bad date and unusable fingerprint"
+  },
+  {
+   "fn": "normWatch",
+   "in": [
+    {
+     "on": true,
+     "at": "2026-10-31",
+     "fp": "bad",
+     "what": "bad"
+    }
+   ],
+   "out": {
+    "on": true,
+    "at": "2026-10-31",
+    "fp": null,
+    "changed": "",
+    "what": []
+   },
+   "note": "non-object fingerprint and non-list what"
+  },
+  {
+   "fn": "normWatch",
+   "in": [
+    {
+     "on": true,
+     "fp": null,
+     "what": []
+    }
+   ],
+   "out": {
+    "on": true,
+    "at": "",
+    "fp": null,
+    "changed": "",
+    "what": []
+   },
+   "note": "null fingerprint"
+  },
+  {
+   "fn": "normWatch",
+   "in": [
+    {
+     "on": true,
+     "at": "2026-10-31",
+     "fp": {
+      "t": "Café"
+     }
+    }
+   ],
+   "out": {
+    "on": true,
+    "at": "2026-10-31",
+    "fp": {
+     "t": "Café",
+     "d": "",
+     "h": [],
+     "via": ""
+    },
+    "changed": "",
+    "what": []
+   },
+   "note": "fingerprint without headings"
+  }
+ ]
+}

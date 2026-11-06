@@ -1,0 +1,419 @@
+{
+ "module": "choices",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "pushRecent",
+   "in": [
+    [
+     "a",
+     "b"
+    ],
+    "b"
+   ],
+   "out": [
+    "b",
+    "a"
+   ]
+  },
+  {
+   "fn": "pushRecent",
+   "in": [
+    [],
+    "a"
+   ],
+   "out": [
+    "a"
+   ]
+  },
+  {
+   "fn": "pushRecent",
+   "in": [
+    [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "9"
+   ],
+   "out": [
+    "9",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ]
+  },
+  {
+   "fn": "pushRecent",
+   "in": [
+    null,
+    "a"
+   ],
+   "out": [
+    "a"
+   ]
+  },
+  {
+   "fn": "sectorChoices",
+   "in": [
+    {
+     "id": "r8",
+     "title": "Logo maker",
+     "url": "https://logos.example.org/",
+     "type": "web-tool",
+     "tags": [
+      "design",
+      "logo"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "",
+     "draft": false,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": null,
+     "fields": {},
+     "trialEnd": "",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "members": [
+       "r6",
+       "r7"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "Video",
+      "rule": null,
+      "members": []
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "all": []
+      },
+      "members": []
+     },
+     {
+      "id": "j4",
+      "name": "Docs",
+      "rule": null,
+      "members": [
+       "r9"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Misc",
+      "rule": null,
+      "members": []
+     },
+     {
+      "id": "j6",
+      "name": "More",
+      "rule": null,
+      "members": []
+     }
+    ],
+    {
+     "fits": [
+      "j1"
+     ],
+     "recent": [
+      "j2",
+      "j4"
+     ]
+    },
+    4
+   ],
+   "out": [
+    {
+     "job": "j2",
+     "kind": "recent"
+    },
+    {
+     "job": "j4",
+     "kind": "recent"
+    },
+    {
+     "job": "j1",
+     "kind": "big"
+    },
+    {
+     "job": "j5",
+     "kind": "big"
+    }
+   ],
+   "note": "in: fits is a list of job ids (JS passes {job}); out lists job ids"
+  },
+  {
+   "fn": "sectorChoices",
+   "in": [
+    {
+     "id": "r8",
+     "title": "Logo maker",
+     "url": "https://logos.example.org/",
+     "type": "web-tool",
+     "tags": [
+      "design",
+      "logo"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "",
+     "draft": false,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": null,
+     "fields": {},
+     "trialEnd": "",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "members": [
+       "r6",
+       "r7"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "Video",
+      "rule": null,
+      "members": []
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "all": []
+      },
+      "members": []
+     },
+     {
+      "id": "j4",
+      "name": "Docs",
+      "rule": null,
+      "members": [
+       "r9"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Misc",
+      "rule": null,
+      "members": []
+     },
+     {
+      "id": "j6",
+      "name": "More",
+      "rule": null,
+      "members": []
+     }
+    ],
+    {
+     "fits": [],
+     "recent": []
+    },
+    4
+   ],
+   "out": [
+    {
+     "job": "j1",
+     "kind": "big"
+    },
+    {
+     "job": "j4",
+     "kind": "big"
+    },
+    {
+     "job": "j5",
+     "kind": "big"
+    },
+    {
+     "job": "j6",
+     "kind": "big"
+    }
+   ],
+   "note": "in: fits is a list of job ids (JS passes {job}); out lists job ids"
+  },
+  {
+   "fn": "sectorChoices",
+   "in": [
+    {
+     "id": "r6",
+     "title": "Color palette",
+     "url": "https://colors.example.org/",
+     "type": "other",
+     "tags": [
+      "design",
+      "color"
+     ],
+     "capabilities": [],
+     "useWhen": [],
+     "inputs": "",
+     "outputs": "",
+     "status": "active",
+     "checkCadence": "none",
+     "lastChecked": "",
+     "nextCheck": "",
+     "rssUrl": "",
+     "related": [],
+     "notes": "",
+     "draft": false,
+     "src": "user",
+     "research": "user",
+     "folder": "",
+     "added": "",
+     "createdAt": "2026-10-01",
+     "statusSince": "2026-10-01",
+     "hidden": false,
+     "scan": null,
+     "fields": {},
+     "trialEnd": "",
+     "verdict": null,
+     "watch": null,
+     "locked": false,
+     "pinned": false,
+     "keep": false,
+     "learned": "",
+     "log": [],
+     "opens": 0,
+     "openedAt": 0
+    },
+    [
+     {
+      "id": "j1",
+      "name": "Design",
+      "rule": null,
+      "members": [
+       "r6",
+       "r7"
+      ]
+     },
+     {
+      "id": "j2",
+      "name": "Video",
+      "rule": null,
+      "members": []
+     },
+     {
+      "id": "j3",
+      "name": "Auto",
+      "rule": {
+       "all": []
+      },
+      "members": []
+     },
+     {
+      "id": "j4",
+      "name": "Docs",
+      "rule": null,
+      "members": [
+       "r9"
+      ]
+     },
+     {
+      "id": "j5",
+      "name": "Misc",
+      "rule": null,
+      "members": []
+     },
+     {
+      "id": "j6",
+      "name": "More",
+      "rule": null,
+      "members": []
+     }
+    ],
+    {
+     "fits": [
+      "j1"
+     ],
+     "recent": [
+      "j1"
+     ]
+    },
+    2
+   ],
+   "out": [
+    {
+     "job": "j4",
+     "kind": "big"
+    },
+    {
+     "job": "j5",
+     "kind": "big"
+    }
+   ],
+   "note": "in: fits is a list of job ids (JS passes {job}); out lists job ids"
+  },
+  {
+   "fn": "RECENT_MAX",
+   "in": [],
+   "out": 8,
+   "note": "constant: the Dart value must equal this"
+  }
+ ]
+}

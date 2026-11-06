@@ -1,0 +1,268 @@
+{
+ "module": "mission",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "progress",
+   "in": [
+    {
+     "id": "t1",
+     "name": "Route",
+     "steps": [
+      {
+       "rid": "r1",
+       "note": "",
+       "done": true,
+       "doneAt": "2026-10-30"
+      },
+      {
+       "rid": "gone",
+       "note": "",
+       "done": false,
+       "doneAt": ""
+      },
+      {
+       "rid": "r2",
+       "note": "",
+       "done": false,
+       "doneAt": ""
+      },
+      {
+       "rid": "r3",
+       "note": "",
+       "done": false,
+       "doneAt": ""
+      }
+     ]
+    },
+    "ids of RS"
+   ],
+   "out": {
+    "total": 3,
+    "done": 1,
+    "left": 2,
+    "pct": 33,
+    "next": {
+     "s": {
+      "rid": "r2",
+      "note": "",
+      "done": false,
+      "doneAt": ""
+     },
+     "i": 2
+    },
+    "complete": false
+   },
+   "note": "has(id) = id is in the shared link list (r1..r16)"
+  },
+  {
+   "fn": "liveSteps",
+   "in": [
+    {
+     "id": "t1",
+     "name": "Route",
+     "steps": [
+      {
+       "rid": "r1",
+       "note": "",
+       "done": true,
+       "doneAt": "2026-10-30"
+      },
+      {
+       "rid": "gone",
+       "note": "",
+       "done": false,
+       "doneAt": ""
+      },
+      {
+       "rid": "r2",
+       "note": "",
+       "done": false,
+       "doneAt": ""
+      },
+      {
+       "rid": "r3",
+       "note": "",
+       "done": false,
+       "doneAt": ""
+      }
+     ]
+    },
+    "ids of RS"
+   ],
+   "out": [
+    {
+     "s": {
+      "rid": "r1",
+      "note": "",
+      "done": true,
+      "doneAt": "2026-10-30"
+     },
+     "i": 0
+    },
+    {
+     "s": {
+      "rid": "r2",
+      "note": "",
+      "done": false,
+      "doneAt": ""
+     },
+     "i": 2
+    },
+    {
+     "s": {
+      "rid": "r3",
+      "note": "",
+      "done": false,
+      "doneAt": ""
+     },
+     "i": 3
+    }
+   ]
+  },
+  {
+   "fn": "pickActive",
+   "in": [
+    [
+     {
+      "id": "t1",
+      "name": "Route",
+      "steps": [
+       {
+        "rid": "r1",
+        "note": "",
+        "done": true,
+        "doneAt": "2026-10-30"
+       },
+       {
+        "rid": "gone",
+        "note": "",
+        "done": false,
+        "doneAt": ""
+       },
+       {
+        "rid": "r2",
+        "note": "",
+        "done": false,
+        "doneAt": ""
+       },
+       {
+        "rid": "r3",
+        "note": "",
+        "done": false,
+        "doneAt": ""
+       }
+      ]
+     },
+     {
+      "id": "t2",
+      "name": "Route",
+      "steps": []
+     }
+    ],
+    "t2",
+    "ids of RS"
+   ],
+   "out": {
+    "id": "t1",
+    "name": "Route",
+    "steps": [
+     {
+      "rid": "r1",
+      "note": "",
+      "done": true,
+      "doneAt": "2026-10-30"
+     },
+     {
+      "rid": "gone",
+      "note": "",
+      "done": false,
+      "doneAt": ""
+     },
+     {
+      "rid": "r2",
+      "note": "",
+      "done": false,
+      "doneAt": ""
+     },
+     {
+      "rid": "r3",
+      "note": "",
+      "done": false,
+      "doneAt": ""
+     }
+    ]
+   }
+  },
+  {
+   "fn": "pickActive",
+   "in": [
+    [
+     {
+      "id": "t1",
+      "name": "Route",
+      "steps": [
+       {
+        "rid": "r1",
+        "note": "",
+        "done": true,
+        "doneAt": "2026-10-30"
+       },
+       {
+        "rid": "gone",
+        "note": "",
+        "done": false,
+        "doneAt": ""
+       },
+       {
+        "rid": "r2",
+        "note": "",
+        "done": false,
+        "doneAt": ""
+       },
+       {
+        "rid": "r3",
+        "note": "",
+        "done": false,
+        "doneAt": ""
+       }
+      ]
+     }
+    ],
+    "",
+    "ids of RS"
+   ],
+   "out": {
+    "id": "t1",
+    "name": "Route",
+    "steps": [
+     {
+      "rid": "r1",
+      "note": "",
+      "done": true,
+      "doneAt": "2026-10-30"
+     },
+     {
+      "rid": "gone",
+      "note": "",
+      "done": false,
+      "doneAt": ""
+     },
+     {
+      "rid": "r2",
+      "note": "",
+      "done": false,
+      "doneAt": ""
+     },
+     {
+      "rid": "r3",
+      "note": "",
+      "done": false,
+      "doneAt": ""
+     }
+    ]
+   }
+  }
+ ]
+}

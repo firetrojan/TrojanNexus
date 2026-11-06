@@ -1,0 +1,39 @@
+# bootstrap.yml - run ONCE by hand (Actions tab > bootstrap > Run workflow), after the first green ci run.
+# It creates the android/ and web/ folders with the real Flutter tool and commits them, so later tasks can edit them
+# (share target, shortcuts, notifications). ci.yml works without this, because it creates the folders on the fly.
+name: bootstrap
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - name: Create the platform folders
+        working-directory: app
+        run: |
+          flutter --version
+          flutter create --platforms=android,web --project-name nexus --org app.nexus .
+          rm -f test/widget_test.dart
+          sed -i 's/android:label="nexus"/android:label="Nexus"/' android/app/src/main/AndroidManifest.xml || true
+          git status --short | head -50
+      - name: Commit them
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app
+          if git diff --cached --quiet; then
+            echo "Nothing new to commit."
+          else
+            git commit -m "bootstrap: add android and web platform folders"
+            git push
+          fi

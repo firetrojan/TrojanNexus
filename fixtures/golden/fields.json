@@ -1,0 +1,1067 @@
+{
+ "module": "fields",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "normFields",
+   "in": [
+    {
+     "limit": "100/day",
+     "resets": "2026-11-05",
+     "plan": "free",
+     "junk": "x"
+    }
+   ],
+   "out": {
+    "limit": "100/day",
+    "resets": "2026-11-05",
+    "plan": "free",
+    "junk": "x"
+   }
+  },
+  {
+   "fn": "normFields",
+   "in": [
+    null
+   ],
+   "out": {}
+  },
+  {
+   "fn": "normFields",
+   "in": [
+    {
+     "limit": 5
+    }
+   ],
+   "out": {
+    "limit": "5"
+   }
+  },
+  {
+   "fn": "keyFor",
+   "in": [
+    "Free limit"
+   ],
+   "out": "c_free_limit"
+  },
+  {
+   "fn": "keyFor",
+   "in": [
+    "  Hello World!! "
+   ],
+   "out": "c_hello_world"
+  },
+  {
+   "fn": "keyFor",
+   "in": [
+    ""
+   ],
+   "out": "c_"
+  },
+  {
+   "fn": "keyFor",
+   "in": [
+    "काम"
+   ],
+   "out": "c_"
+  },
+  {
+   "fn": "keyFor",
+   "in": [
+    "A very long label that exceeds twenty chars"
+   ],
+   "out": "c_a_very_long_label_th"
+  },
+  {
+   "fn": "keyFor",
+   "in": [
+    null
+   ],
+   "out": "c_"
+  },
+  {
+   "fn": "normCustom",
+   "in": [
+    [
+     {
+      "label": "Rating",
+      "kind": "choice",
+      "options": "Good, Bad ,Good"
+     },
+     {
+      "label": "Cost",
+      "kind": "text"
+     },
+     {
+      "label": "Notes",
+      "kind": "bogus",
+      "types": [
+       "web-tool",
+       "nope"
+      ]
+     },
+     {
+      "label": "Pick",
+      "kind": "choice"
+     },
+     {
+      "label": "rating"
+     },
+     {
+      "key": "c_x",
+      "label": "X",
+      "kind": "date",
+      "types": []
+     },
+     null,
+     "str",
+     {
+      "label": ""
+     }
+    ],
+    [
+     "web-tool",
+     "docs"
+    ]
+   ],
+   "out": [
+    {
+     "key": "c_rating",
+     "label": "Rating",
+     "kind": "choice",
+     "options": [
+      "Good",
+      "Bad"
+     ],
+     "types": []
+    },
+    {
+     "key": "c_notes",
+     "label": "Notes",
+     "kind": "text",
+     "options": [],
+     "types": [
+      "web-tool"
+     ]
+    },
+    {
+     "key": "c_x",
+     "label": "X",
+     "kind": "date",
+     "options": [],
+     "types": []
+    }
+   ],
+   "note": "in[1] = list of valid types, or null for any"
+  },
+  {
+   "fn": "normCustom",
+   "in": [
+    [
+     {
+      "label": "Rating",
+      "kind": "choice",
+      "options": "Good, Bad ,Good"
+     },
+     {
+      "label": "Cost",
+      "kind": "text"
+     },
+     {
+      "label": "Notes",
+      "kind": "bogus",
+      "types": [
+       "web-tool",
+       "nope"
+      ]
+     },
+     {
+      "label": "Pick",
+      "kind": "choice"
+     },
+     {
+      "label": "rating"
+     },
+     {
+      "key": "c_x",
+      "label": "X",
+      "kind": "date",
+      "types": []
+     },
+     null,
+     "str",
+     {
+      "label": ""
+     }
+    ],
+    null
+   ],
+   "out": [
+    {
+     "key": "c_rating",
+     "label": "Rating",
+     "kind": "choice",
+     "options": [
+      "Good",
+      "Bad"
+     ],
+     "types": []
+    },
+    {
+     "key": "c_notes",
+     "label": "Notes",
+     "kind": "text",
+     "options": [],
+     "types": [
+      "web-tool",
+      "nope"
+     ]
+    },
+    {
+     "key": "c_x",
+     "label": "X",
+     "kind": "date",
+     "options": [],
+     "types": []
+    }
+   ],
+   "note": "in[1] = list of valid types, or null for any"
+  },
+  {
+   "fn": "normCustom",
+   "in": [
+    null,
+    null
+   ],
+   "out": [],
+   "note": "in[1] = list of valid types, or null for any"
+  },
+  {
+   "fn": "normCustom",
+   "in": [
+    [],
+    null
+   ],
+   "out": [],
+   "note": "in[1] = list of valid types, or null for any"
+  },
+  {
+   "fn": "defsFor",
+   "in": [
+    "ai-source",
+    []
+   ],
+   "out": [
+    "cost",
+    "login",
+    "device",
+    "limit",
+    "resets",
+    "models"
+   ],
+   "note": "out = keys of the fields, in order"
+  },
+  {
+   "fn": "defsFor",
+   "in": [
+    "social",
+    []
+   ],
+   "out": [
+    "cost",
+    "handle",
+    "purpose"
+   ],
+   "note": "out = keys of the fields, in order"
+  },
+  {
+   "fn": "defsFor",
+   "in": [
+    "web-tool",
+    [
+     {
+      "key": "c_rating",
+      "label": "Rating",
+      "kind": "choice",
+      "options": [
+       "Good",
+       "Bad"
+      ],
+      "types": []
+     },
+     {
+      "key": "c_notes",
+      "label": "Notes",
+      "kind": "text",
+      "options": [],
+      "types": [
+       "web-tool",
+       "nope"
+      ]
+     },
+     {
+      "key": "c_x",
+      "label": "X",
+      "kind": "date",
+      "options": [],
+      "types": []
+     }
+    ]
+   ],
+   "out": [
+    "cost",
+    "login",
+    "device",
+    "limit",
+    "resets",
+    "c_rating",
+    "c_notes",
+    "c_x"
+   ],
+   "note": "out = keys of the fields, in order"
+  },
+  {
+   "fn": "defsFor",
+   "in": [
+    "docs",
+    [
+     {
+      "key": "c_rating",
+      "label": "Rating",
+      "kind": "choice",
+      "options": [
+       "Good",
+       "Bad"
+      ],
+      "types": []
+     },
+     {
+      "key": "c_notes",
+      "label": "Notes",
+      "kind": "text",
+      "options": [],
+      "types": [
+       "web-tool",
+       "nope"
+      ]
+     },
+     {
+      "key": "c_x",
+      "label": "X",
+      "kind": "date",
+      "options": [],
+      "types": []
+     }
+    ]
+   ],
+   "out": [
+    "cost",
+    "login",
+    "c_rating",
+    "c_x"
+   ],
+   "note": "out = keys of the fields, in order"
+  },
+  {
+   "fn": "allDefs",
+   "in": [
+    [
+     {
+      "key": "c_rating",
+      "label": "Rating",
+      "kind": "choice",
+      "options": [
+       "Good",
+       "Bad"
+      ],
+      "types": []
+     },
+     {
+      "key": "c_notes",
+      "label": "Notes",
+      "kind": "text",
+      "options": [],
+      "types": [
+       "web-tool",
+       "nope"
+      ]
+     },
+     {
+      "key": "c_x",
+      "label": "X",
+      "kind": "date",
+      "options": [],
+      "types": []
+     }
+    ]
+   ],
+   "out": [
+    "cost",
+    "login",
+    "device",
+    "limit",
+    "resets",
+    "models",
+    "handle",
+    "purpose",
+    "platform",
+    "askFor",
+    "focus",
+    "watch",
+    "c_rating",
+    "c_notes",
+    "c_x"
+   ],
+   "note": "out = keys"
+  },
+  {
+   "fn": "allDefs",
+   "in": [
+    []
+   ],
+   "out": [
+    "cost",
+    "login",
+    "device",
+    "limit",
+    "resets",
+    "models",
+    "handle",
+    "purpose",
+    "platform",
+    "askFor",
+    "focus",
+    "watch"
+   ],
+   "note": "out = keys"
+  },
+  {
+   "fn": "defOf",
+   "in": [
+    "cost",
+    []
+   ],
+   "out": {
+    "key": "cost",
+    "label": "Cost",
+    "kind": "choice",
+    "options": [
+     "Free",
+     "Free with limits",
+     "Paid",
+     "Unknown"
+    ],
+    "types": null
+   }
+  },
+  {
+   "fn": "defOf",
+   "in": [
+    "c_x",
+    [
+     {
+      "key": "c_rating",
+      "label": "Rating",
+      "kind": "choice",
+      "options": [
+       "Good",
+       "Bad"
+      ],
+      "types": []
+     },
+     {
+      "key": "c_notes",
+      "label": "Notes",
+      "kind": "text",
+      "options": [],
+      "types": [
+       "web-tool",
+       "nope"
+      ]
+     },
+     {
+      "key": "c_x",
+      "label": "X",
+      "kind": "date",
+      "options": [],
+      "types": []
+     }
+    ]
+   ],
+   "out": {
+    "key": "c_x",
+    "label": "X",
+    "kind": "date",
+    "options": [],
+    "types": []
+   }
+  },
+  {
+   "fn": "defOf",
+   "in": [
+    "zzz",
+    []
+   ],
+   "out": null
+  },
+  {
+   "fn": "defOf",
+   "in": [
+    "rating",
+    [
+     {
+      "key": "c_rating",
+      "label": "Rating",
+      "kind": "choice",
+      "options": [
+       "Good",
+       "Bad"
+      ],
+      "types": []
+     },
+     {
+      "key": "c_notes",
+      "label": "Notes",
+      "kind": "text",
+      "options": [],
+      "types": [
+       "web-tool",
+       "nope"
+      ]
+     },
+     {
+      "key": "c_x",
+      "label": "X",
+      "kind": "date",
+      "options": [],
+      "types": []
+     }
+    ]
+   ],
+   "out": null
+  },
+  {
+   "fn": "labelOf",
+   "in": [
+    "cost",
+    []
+   ],
+   "out": "Cost"
+  },
+  {
+   "fn": "labelOf",
+   "in": [
+    "zzz",
+    []
+   ],
+   "out": "zzz"
+  },
+  {
+   "fn": "labelOf",
+   "in": [
+    "c_x",
+    [
+     {
+      "key": "c_rating",
+      "label": "Rating",
+      "kind": "choice",
+      "options": [
+       "Good",
+       "Bad"
+      ],
+      "types": []
+     },
+     {
+      "key": "c_notes",
+      "label": "Notes",
+      "kind": "text",
+      "options": [],
+      "types": [
+       "web-tool",
+       "nope"
+      ]
+     },
+     {
+      "key": "c_x",
+      "label": "X",
+      "kind": "date",
+      "options": [],
+      "types": []
+     }
+    ]
+   ],
+   "out": "X"
+  },
+  {
+   "fn": "filled",
+   "in": [
+    {
+     "type": "ai-source",
+     "fields": {
+      "cost": "Free",
+      "limit": "1M tokens",
+      "resets": "2026-11-05",
+      "handle": "@x",
+      "c_x": "2026-12-01",
+      "zz": "junk"
+     }
+    },
+    [
+     {
+      "key": "c_rating",
+      "label": "Rating",
+      "kind": "choice",
+      "options": [
+       "Good",
+       "Bad"
+      ],
+      "types": []
+     },
+     {
+      "key": "c_notes",
+      "label": "Notes",
+      "kind": "text",
+      "options": [],
+      "types": [
+       "web-tool",
+       "nope"
+      ]
+     },
+     {
+      "key": "c_x",
+      "label": "X",
+      "kind": "date",
+      "options": [],
+      "types": []
+     }
+    ]
+   ],
+   "out": [
+    {
+     "key": "cost",
+     "value": "Free"
+    },
+    {
+     "key": "limit",
+     "value": "1M tokens"
+    },
+    {
+     "key": "resets",
+     "value": "2026-11-05"
+    },
+    {
+     "key": "c_x",
+     "value": "2026-12-01"
+    },
+    {
+     "key": "handle",
+     "value": "@x"
+    }
+   ],
+   "note": "in[0] = {type, fields}; out = [{key, value}]"
+  },
+  {
+   "fn": "filled",
+   "in": [
+    {
+     "type": "social",
+     "fields": {}
+    },
+    [
+     {
+      "key": "c_rating",
+      "label": "Rating",
+      "kind": "choice",
+      "options": [
+       "Good",
+       "Bad"
+      ],
+      "types": []
+     },
+     {
+      "key": "c_notes",
+      "label": "Notes",
+      "kind": "text",
+      "options": [],
+      "types": [
+       "web-tool",
+       "nope"
+      ]
+     },
+     {
+      "key": "c_x",
+      "label": "X",
+      "kind": "date",
+      "options": [],
+      "types": []
+     }
+    ]
+   ],
+   "out": [],
+   "note": "in[0] = {type, fields}; out = [{key, value}]"
+  },
+  {
+   "fn": "filled",
+   "in": [
+    {
+     "type": "other"
+    },
+    [
+     {
+      "key": "c_rating",
+      "label": "Rating",
+      "kind": "choice",
+      "options": [
+       "Good",
+       "Bad"
+      ],
+      "types": []
+     },
+     {
+      "key": "c_notes",
+      "label": "Notes",
+      "kind": "text",
+      "options": [],
+      "types": [
+       "web-tool",
+       "nope"
+      ]
+     },
+     {
+      "key": "c_x",
+      "label": "X",
+      "kind": "date",
+      "options": [],
+      "types": []
+     }
+    ]
+   ],
+   "out": [],
+   "note": "in[0] = {type, fields}; out = [{key, value}]"
+  },
+  {
+   "fn": "summaryOf",
+   "in": [
+    {
+     "type": "ai-source",
+     "fields": {
+      "cost": "Free",
+      "limit": "1M tokens",
+      "resets": "2026-11-05",
+      "handle": "@x",
+      "c_x": "2026-12-01",
+      "zz": "junk"
+     }
+    },
+    [
+     {
+      "key": "c_rating",
+      "label": "Rating",
+      "kind": "choice",
+      "options": [
+       "Good",
+       "Bad"
+      ],
+      "types": []
+     },
+     {
+      "key": "c_notes",
+      "label": "Notes",
+      "kind": "text",
+      "options": [],
+      "types": [
+       "web-tool",
+       "nope"
+      ]
+     },
+     {
+      "key": "c_x",
+      "label": "X",
+      "kind": "date",
+      "options": [],
+      "types": []
+     }
+    ],
+    []
+   ],
+   "out": "Free · 1M tokens · 2026-11-05 · 2026-12-01 · @x",
+   "note": "in[0] = {type, fields}"
+  },
+  {
+   "fn": "summaryOf",
+   "in": [
+    {
+     "type": "ai-source",
+     "fields": {
+      "cost": "Free",
+      "limit": "1M tokens",
+      "resets": "2026-11-05",
+      "handle": "@x",
+      "c_x": "2026-12-01",
+      "zz": "junk"
+     }
+    },
+    [
+     {
+      "key": "c_rating",
+      "label": "Rating",
+      "kind": "choice",
+      "options": [
+       "Good",
+       "Bad"
+      ],
+      "types": []
+     },
+     {
+      "key": "c_notes",
+      "label": "Notes",
+      "kind": "text",
+      "options": [],
+      "types": [
+       "web-tool",
+       "nope"
+      ]
+     },
+     {
+      "key": "c_x",
+      "label": "X",
+      "kind": "date",
+      "options": [],
+      "types": []
+     }
+    ],
+    [
+     "cost"
+    ]
+   ],
+   "out": "1M tokens · 2026-11-05 · 2026-12-01 · @x",
+   "note": "in[0] = {type, fields}"
+  },
+  {
+   "fn": "summaryOf",
+   "in": [
+    {
+     "type": "social",
+     "fields": {}
+    },
+    [
+     {
+      "key": "c_rating",
+      "label": "Rating",
+      "kind": "choice",
+      "options": [
+       "Good",
+       "Bad"
+      ],
+      "types": []
+     },
+     {
+      "key": "c_notes",
+      "label": "Notes",
+      "kind": "text",
+      "options": [],
+      "types": [
+       "web-tool",
+       "nope"
+      ]
+     },
+     {
+      "key": "c_x",
+      "label": "X",
+      "kind": "date",
+      "options": [],
+      "types": []
+     }
+    ],
+    []
+   ],
+   "out": "",
+   "note": "in[0] = {type, fields}"
+  },
+  {
+   "fn": "summaryOf",
+   "in": [
+    {
+     "type": "other"
+    },
+    [],
+    []
+   ],
+   "out": "",
+   "note": "in[0] = {type, fields}"
+  },
+  {
+   "fn": "BUILTIN",
+   "in": [],
+   "out": [
+    {
+     "key": "cost",
+     "label": "Cost",
+     "kind": "choice",
+     "options": [
+      "Free",
+      "Free with limits",
+      "Paid",
+      "Unknown"
+     ],
+     "types": null
+    },
+    {
+     "key": "login",
+     "label": "Login needed",
+     "kind": "choice",
+     "options": [
+      "No",
+      "Yes",
+      "Not sure"
+     ],
+     "types": [
+      "web-tool",
+      "ai-source",
+      "article-site",
+      "catalogue",
+      "docs",
+      "other"
+     ]
+    },
+    {
+     "key": "device",
+     "label": "Works on",
+     "kind": "choice",
+     "options": [
+      "Phone",
+      "Computer",
+      "Both"
+     ],
+     "types": [
+      "web-tool",
+      "ai-source"
+     ]
+    },
+    {
+     "key": "limit",
+     "label": "Free limit",
+     "kind": "text",
+     "ph": "e.g. 1.3M tokens free",
+     "types": [
+      "ai-source",
+      "web-tool"
+     ]
+    },
+    {
+     "key": "resets",
+     "label": "Limit resets or offer ends",
+     "kind": "date",
+     "types": [
+      "ai-source",
+      "web-tool"
+     ]
+    },
+    {
+     "key": "models",
+     "label": "Models or features you use",
+     "kind": "text",
+     "ph": "e.g. DeepSeek, GLM",
+     "types": [
+      "ai-source"
+     ]
+    },
+    {
+     "key": "handle",
+     "label": "Handle or channel name",
+     "kind": "text",
+     "ph": "@name",
+     "types": [
+      "social",
+      "youtube-channel",
+      "community"
+     ]
+    },
+    {
+     "key": "purpose",
+     "label": "What you use it for",
+     "kind": "choice",
+     "options": [
+      "Reminders",
+      "Opportunities",
+      "Learning",
+      "Inspiration",
+      "News"
+     ],
+     "types": [
+      "social"
+     ]
+    },
+    {
+     "key": "platform",
+     "label": "Platform",
+     "kind": "choice",
+     "options": [
+      "Discord",
+      "WhatsApp",
+      "Telegram",
+      "Slack",
+      "Forum",
+      "Other"
+     ],
+     "types": [
+      "community"
+     ]
+    },
+    {
+     "key": "askFor",
+     "label": "Ask here about",
+     "kind": "text",
+     "ph": "e.g. scholarships, maths help",
+     "types": [
+      "community"
+     ]
+    },
+    {
+     "key": "focus",
+     "label": "Watch it for",
+     "kind": "text",
+     "ph": "e.g. study methods",
+     "types": [
+      "youtube-channel"
+     ]
+    },
+    {
+     "key": "watch",
+     "label": "How often you watch",
+     "kind": "choice",
+     "options": [
+      "Daily",
+      "Weekly",
+      "When needed"
+     ],
+     "types": [
+      "youtube-channel"
+     ]
+    }
+   ],
+   "note": "constant: the Dart value must equal this"
+  },
+  {
+   "fn": "CUSTOM_KINDS",
+   "in": [],
+   "out": [
+    "text",
+    "choice",
+    "date"
+   ],
+   "note": "constant: the Dart value must equal this"
+  },
+  {
+   "fn": "KIND_LABEL",
+   "in": [],
+   "out": {
+    "text": "Text",
+    "choice": "Choice",
+    "date": "Date"
+   },
+   "note": "constant: the Dart value must equal this"
+  }
+ ]
+}

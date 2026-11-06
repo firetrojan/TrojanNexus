@@ -1,0 +1,113 @@
+{
+ "module": "ideas",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "sectorIdeas",
+   "in": [
+    "$RS",
+    [],
+    {
+     "r9": [
+      "Existing"
+     ]
+    },
+    {
+     "youtube-channel": "YouTube",
+     "catalogue": "Catalogue",
+     "docs": "Docs",
+     "article-site": "Articles"
+    },
+    {}
+   ],
+   "out": [
+    {
+     "key": "t:design",
+     "name": "Design",
+     "ids": [
+      "r4",
+      "r5",
+      "r6",
+      "r7",
+      "r8"
+     ],
+     "n": 5,
+     "how": "tag #design"
+    }
+   ],
+   "note": "manualJobsOf(id) = manual[id] or []; typeLabel(t) = labels[t] or t"
+  },
+  {
+   "fn": "sectorIdeas",
+   "in": [
+    "$RS",
+    [
+     "design"
+    ],
+    {
+     "r9": [
+      "Existing"
+     ]
+    },
+    {
+     "youtube-channel": "YouTube",
+     "catalogue": "Catalogue",
+     "docs": "Docs",
+     "article-site": "Articles"
+    },
+    {}
+   ],
+   "out": [],
+   "note": "manualJobsOf(id) = manual[id] or []; typeLabel(t) = labels[t] or t"
+  },
+  {
+   "fn": "sectorIdeas",
+   "in": [
+    "$RS",
+    [],
+    {
+     "r9": [
+      "Existing"
+     ]
+    },
+    {
+     "youtube-channel": "YouTube",
+     "catalogue": "Catalogue",
+     "docs": "Docs",
+     "article-site": "Articles"
+    },
+    {
+     "min": 2,
+     "max": 2
+    }
+   ],
+   "out": [
+    {
+     "key": "t:design",
+     "name": "Design",
+     "ids": [
+      "r4",
+      "r5",
+      "r6",
+      "r7",
+      "r8"
+     ],
+     "n": 5,
+     "how": "tag #design"
+    },
+    {
+     "key": "t:presentation",
+     "name": "Presentation",
+     "ids": [
+      "r1",
+      "r15"
+     ],
+     "n": 2,
+     "how": "tag #presentation"
+    }
+   ],
+   "note": "manualJobsOf(id) = manual[id] or []; typeLabel(t) = labels[t] or t"
+  }
+ ]
+}

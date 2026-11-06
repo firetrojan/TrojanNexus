@@ -1,0 +1,1306 @@
+{
+ "module": "home",
+ "generatedFrom": "legacy/web-src/js",
+ "today": "2026-10-31",
+ "cases": [
+  {
+   "fn": "normShelves",
+   "in": [
+    null
+   ],
+   "out": []
+  },
+  {
+   "fn": "normShelves",
+   "in": [
+    [
+     "a",
+     "b",
+     "a",
+     "c",
+     "d",
+     "e"
+    ]
+   ],
+   "out": []
+  },
+  {
+   "fn": "normShelves",
+   "in": [
+    [
+     1,
+     "x",
+     ""
+    ]
+   ],
+   "out": []
+  },
+  {
+   "fn": "shelfList",
+   "in": [
+    [
+     "r1",
+     "r2",
+     "r4",
+     "zz",
+     "r11",
+     "r10",
+     "r6"
+    ],
+    3
+   ],
+   "out": [
+    "r2",
+    "r1",
+    "r6"
+   ],
+   "note": "byId(id) looks in the shared link list; out lists ids"
+  },
+  {
+   "fn": "shelfList",
+   "in": [
+    [
+     "r1",
+     "r2",
+     "r4",
+     "zz",
+     "r11",
+     "r10",
+     "r6"
+    ],
+    8
+   ],
+   "out": [
+    "r2",
+    "r1",
+    "r6",
+    "r4"
+   ]
+  },
+  {
+   "fn": "launchable",
+   "in": [
+    "$RS"
+   ],
+   "out": [
+    {
+     "id": "r1",
+     "v": true
+    },
+    {
+     "id": "r2",
+     "v": true
+    },
+    {
+     "id": "r3",
+     "v": true
+    },
+    {
+     "id": "r4",
+     "v": true
+    },
+    {
+     "id": "r5",
+     "v": true
+    },
+    {
+     "id": "r6",
+     "v": true
+    },
+    {
+     "id": "r7",
+     "v": true
+    },
+    {
+     "id": "r8",
+     "v": true
+    },
+    {
+     "id": "r9",
+     "v": true
+    },
+    {
+     "id": "r10",
+     "v": false
+    },
+    {
+     "id": "r11",
+     "v": false
+    },
+    {
+     "id": "r12",
+     "v": true
+    },
+    {
+     "id": "r13",
+     "v": true
+    },
+    {
+     "id": "r14",
+     "v": true
+    },
+    {
+     "id": "r15",
+     "v": true
+    },
+    {
+     "id": "r16",
+     "v": true
+    }
+   ],
+   "note": "one boolean per link"
+  },
+  {
+   "fn": "launchList",
+   "in": [
+    "$RS",
+    "fav",
+    5
+   ],
+   "out": [
+    "r2",
+    "r1"
+   ]
+  },
+  {
+   "fn": "launchList",
+   "in": [
+    "$RS",
+    "recent",
+    5
+   ],
+   "out": [
+    "r2",
+    "r1"
+   ]
+  },
+  {
+   "fn": "reviewQueue",
+   "in": [
+    "$RS",
+    []
+   ],
+   "out": [
+    "r13"
+   ]
+  },
+  {
+   "fn": "reviewQueue",
+   "in": [
+    "$RS",
+    [
+     "r13"
+    ]
+   ],
+   "out": [
+    "r13"
+   ]
+  },
+  {
+   "fn": "normHome",
+   "in": [
+    null
+   ],
+   "out": {
+    "order": [
+     "needs",
+     "week",
+     "mission",
+     "continue",
+     "launch",
+     "shelves",
+     "time",
+     "review",
+     "sectors"
+    ],
+    "hide": []
+   }
+  },
+  {
+   "fn": "normHome",
+   "in": [
+    {
+     "order": [
+      "launch",
+      "needs",
+      "bogus"
+     ],
+     "hide": [
+      "sectors",
+      "nope"
+     ]
+    }
+   ],
+   "out": {
+    "order": [
+     "launch",
+     "needs",
+     "week",
+     "mission",
+     "continue",
+     "shelves",
+     "time",
+     "review",
+     "sectors"
+    ],
+    "hide": [
+     "sectors"
+    ]
+   }
+  },
+  {
+   "fn": "visibleTiles",
+   "in": [
+    {
+     "order": [
+      "launch",
+      "needs"
+     ],
+     "hide": [
+      "needs"
+     ]
+    }
+   ],
+   "out": [
+    "launch",
+    "week",
+    "mission",
+    "continue",
+    "shelves",
+    "time",
+    "review",
+    "sectors"
+   ]
+  },
+  {
+   "fn": "TILES",
+   "in": [],
+   "out": [
+    {
+     "id": "needs",
+     "label": "Needs you",
+     "sub": "Trials, changed pages and checks that are due"
+    },
+    {
+     "id": "week",
+     "label": "This week",
+     "sub": "Your 3 picks for the week and the weekly reset"
+    },
+    {
+     "id": "mission",
+     "label": "Mission",
+     "sub": "The next step of the mission you are working on"
+    },
+    {
+     "id": "continue",
+     "label": "Continue",
+     "sub": "The last links, sectors and missions you looked at"
+    },
+    {
+     "id": "launch",
+     "label": "Launch pad",
+     "sub": "Your pinned and most-opened links"
+    },
+    {
+     "id": "shelves",
+     "label": "Shelves",
+     "sub": "Sectors you pinned to Home as launch buttons"
+    },
+    {
+     "id": "time",
+     "label": "Time I have",
+     "sub": "Tell Nexus 10 minutes, an hour or tired, get a short list"
+    },
+    {
+     "id": "review",
+     "label": "Quick review",
+     "sub": "Go through new links one at a time"
+    },
+    {
+     "id": "sectors",
+     "label": "Sectors",
+     "sub": "Jump into a sector"
+    }
+   ]
+  },
+  {
+   "fn": "needsItems",
+   "in": [
+    [
+     {
+      "id": "n1",
+      "title": "Overdue check",
+      "url": "https://n1.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "active",
+      "checkCadence": "weekly",
+      "lastChecked": "2026-10-01",
+      "nextCheck": "2026-10-20",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {},
+      "trialEnd": "",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     },
+     {
+      "id": "n2",
+      "title": "Due today",
+      "url": "https://n2.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "active",
+      "checkCadence": "weekly",
+      "lastChecked": "2026-10-24",
+      "nextCheck": "2026-10-31",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {},
+      "trialEnd": "",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     },
+     {
+      "id": "n3",
+      "title": "Trial ending",
+      "url": "https://n3.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "testing",
+      "checkCadence": "none",
+      "lastChecked": "",
+      "nextCheck": "",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {},
+      "trialEnd": "2026-11-02",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     },
+     {
+      "id": "n4",
+      "title": "Trial over",
+      "url": "https://n4.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "testing",
+      "checkCadence": "none",
+      "lastChecked": "",
+      "nextCheck": "",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {},
+      "trialEnd": "2026-10-28",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     },
+     {
+      "id": "n5",
+      "title": "Page changed",
+      "url": "https://n5.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "active",
+      "checkCadence": "none",
+      "lastChecked": "",
+      "nextCheck": "",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {},
+      "trialEnd": "",
+      "verdict": null,
+      "watch": {
+       "on": true,
+       "at": "2026-10-31",
+       "fp": null,
+       "changed": "2026-10-31",
+       "what": [
+        "Price changed"
+       ]
+      },
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     },
+     {
+      "id": "n6",
+      "title": "Limit resets",
+      "url": "https://n6.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "active",
+      "checkCadence": "none",
+      "lastChecked": "",
+      "nextCheck": "",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {
+       "limit": "1M tokens",
+       "resets": "2026-11-03"
+      },
+      "trialEnd": "",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     },
+     {
+      "id": "n7",
+      "title": "Reset past",
+      "url": "https://n7.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "active",
+      "checkCadence": "none",
+      "lastChecked": "",
+      "nextCheck": "",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {
+       "resets": "2026-10-29"
+      },
+      "trialEnd": "",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     },
+     {
+      "id": "n8",
+      "title": "Archived",
+      "url": "https://n8.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "archived",
+      "checkCadence": "weekly",
+      "lastChecked": "",
+      "nextCheck": "2026-10-01",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {},
+      "trialEnd": "",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     },
+     {
+      "id": "n9",
+      "title": "Fine",
+      "url": "https://n9.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "active",
+      "checkCadence": "none",
+      "lastChecked": "",
+      "nextCheck": "",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {},
+      "trialEnd": "",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     }
+    ],
+    "2026-10-31"
+   ],
+   "out": [
+    {
+     "id": "n4",
+     "kind": "trial",
+     "rank": 0,
+     "sub": "Trial ended 3 days ago"
+    },
+    {
+     "id": "n3",
+     "kind": "trial",
+     "rank": 1,
+     "sub": "Trial ends in 2 days"
+    },
+    {
+     "id": "n5",
+     "kind": "changed",
+     "rank": 2,
+     "sub": "Price changed"
+    },
+    {
+     "id": "n1",
+     "kind": "check",
+     "rank": 3,
+     "sub": "Check is 11 days late"
+    },
+    {
+     "id": "n2",
+     "kind": "check",
+     "rank": 4,
+     "sub": "Check is due today"
+    },
+    {
+     "id": "n6",
+     "kind": "limit",
+     "rank": 5,
+     "sub": "1M tokens · Resets in 3 days"
+    },
+    {
+     "id": "n7",
+     "kind": "limit",
+     "rank": 5,
+     "sub": "Reset date passed"
+    }
+   ],
+   "note": "fns = the store's dueBucket, trialBucket, resetBucket, watchChanged (golden: store.json); out = [{id, kind, rank, sub}]"
+  },
+  {
+   "fn": "needsItems",
+   "in": [
+    [
+     {
+      "id": "n1",
+      "title": "Overdue check",
+      "url": "https://n1.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "active",
+      "checkCadence": "weekly",
+      "lastChecked": "2026-10-01",
+      "nextCheck": "2026-10-20",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {},
+      "trialEnd": "",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     },
+     {
+      "id": "n2",
+      "title": "Due today",
+      "url": "https://n2.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "active",
+      "checkCadence": "weekly",
+      "lastChecked": "2026-10-24",
+      "nextCheck": "2026-10-31",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {},
+      "trialEnd": "",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     },
+     {
+      "id": "n3",
+      "title": "Trial ending",
+      "url": "https://n3.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "testing",
+      "checkCadence": "none",
+      "lastChecked": "",
+      "nextCheck": "",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {},
+      "trialEnd": "2026-11-02",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     },
+     {
+      "id": "n4",
+      "title": "Trial over",
+      "url": "https://n4.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "testing",
+      "checkCadence": "none",
+      "lastChecked": "",
+      "nextCheck": "",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {},
+      "trialEnd": "2026-10-28",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     },
+     {
+      "id": "n5",
+      "title": "Page changed",
+      "url": "https://n5.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "active",
+      "checkCadence": "none",
+      "lastChecked": "",
+      "nextCheck": "",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {},
+      "trialEnd": "",
+      "verdict": null,
+      "watch": {
+       "on": true,
+       "at": "2026-10-31",
+       "fp": null,
+       "changed": "2026-10-31",
+       "what": [
+        "Price changed"
+       ]
+      },
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     },
+     {
+      "id": "n6",
+      "title": "Limit resets",
+      "url": "https://n6.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "active",
+      "checkCadence": "none",
+      "lastChecked": "",
+      "nextCheck": "",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {
+       "limit": "1M tokens",
+       "resets": "2026-11-03"
+      },
+      "trialEnd": "",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     },
+     {
+      "id": "n7",
+      "title": "Reset past",
+      "url": "https://n7.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "active",
+      "checkCadence": "none",
+      "lastChecked": "",
+      "nextCheck": "",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {
+       "resets": "2026-10-29"
+      },
+      "trialEnd": "",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     },
+     {
+      "id": "n8",
+      "title": "Archived",
+      "url": "https://n8.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "archived",
+      "checkCadence": "weekly",
+      "lastChecked": "",
+      "nextCheck": "2026-10-01",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {},
+      "trialEnd": "",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     },
+     {
+      "id": "n9",
+      "title": "Fine",
+      "url": "https://n9.test/",
+      "type": "other",
+      "tags": [],
+      "capabilities": [],
+      "useWhen": [],
+      "inputs": "",
+      "outputs": "",
+      "status": "active",
+      "checkCadence": "none",
+      "lastChecked": "",
+      "nextCheck": "",
+      "rssUrl": "",
+      "related": [],
+      "notes": "",
+      "draft": false,
+      "src": "user",
+      "research": "user",
+      "folder": "",
+      "added": "",
+      "createdAt": "2026-10-01",
+      "statusSince": "2026-10-01",
+      "hidden": false,
+      "scan": null,
+      "fields": {},
+      "trialEnd": "",
+      "verdict": null,
+      "watch": null,
+      "locked": false,
+      "pinned": false,
+      "keep": false,
+      "learned": "",
+      "log": [],
+      "opens": 0,
+      "openedAt": 0
+     }
+    ],
+    "2026-11-10"
+   ],
+   "out": [
+    {
+     "id": "n4",
+     "kind": "trial",
+     "rank": 0,
+     "sub": "Trial ended 13 days ago"
+    },
+    {
+     "id": "n3",
+     "kind": "trial",
+     "rank": 0,
+     "sub": "Trial ended 8 days ago"
+    },
+    {
+     "id": "n5",
+     "kind": "changed",
+     "rank": 2,
+     "sub": "Price changed"
+    },
+    {
+     "id": "n1",
+     "kind": "check",
+     "rank": 3,
+     "sub": "Check is 21 days late"
+    },
+    {
+     "id": "n2",
+     "kind": "check",
+     "rank": 3,
+     "sub": "Check is 10 days late"
+    }
+   ],
+   "note": "fns = the store's dueBucket, trialBucket, resetBucket, watchChanged (golden: store.json); out = [{id, kind, rank, sub}]"
+  },
+  {
+   "fn": "nextAction",
+   "in": [
+    {
+     "drafts": 3,
+     "stale": 2,
+     "total": 20,
+     "pins": 1
+    }
+   ],
+   "out": {
+    "id": "review",
+    "text": "3 links are still unreviewed. Two minutes in Quick review clears a few.",
+    "button": "Review now"
+   }
+  },
+  {
+   "fn": "nextAction",
+   "in": [
+    {
+     "drafts": 1,
+     "stale": 0,
+     "total": 20,
+     "pins": 1
+    }
+   ],
+   "out": {
+    "id": "review",
+    "text": "1 link is still unreviewed. Two minutes in Quick review clears a few.",
+    "button": "Review now"
+   }
+  },
+  {
+   "fn": "nextAction",
+   "in": [
+    {
+     "drafts": 0,
+     "stale": 2,
+     "total": 20,
+     "pins": 1
+    }
+   ],
+   "out": {
+    "id": "stale",
+    "text": "2 resources have not been looked at in a while.",
+    "button": "See them"
+   }
+  },
+  {
+   "fn": "nextAction",
+   "in": [
+    {
+     "drafts": 0,
+     "stale": 1,
+     "total": 20,
+     "pins": 1
+    }
+   ],
+   "out": {
+    "id": "stale",
+    "text": "1 resource has not been looked at in a while.",
+    "button": "See them"
+   }
+  },
+  {
+   "fn": "nextAction",
+   "in": [
+    {
+     "drafts": 0,
+     "stale": 0,
+     "total": 10,
+     "pins": 0
+    }
+   ],
+   "out": {
+    "id": "pin",
+    "text": "Pin the links you use most, so they are one tap away here.",
+    "button": "Pin some"
+   }
+  },
+  {
+   "fn": "nextAction",
+   "in": [
+    {
+     "drafts": 0,
+     "stale": 0,
+     "total": 3,
+     "pins": 0
+    }
+   ],
+   "out": {
+    "id": "add",
+    "text": "Add the links you use. Share them to Nexus, paste them, or import a bookmarks file.",
+    "button": "Add links"
+   }
+  },
+  {
+   "fn": "nextAction",
+   "in": [
+    {
+     "drafts": 0,
+     "stale": 0,
+     "total": 10,
+     "pins": 2
+    }
+   ],
+   "out": {
+    "id": "clear",
+    "text": "Nothing needs you right now.",
+    "button": ""
+   }
+  },
+  {
+   "fn": "exampleQueries",
+   "in": [
+    "$RS",
+    3,
+    0
+   ],
+   "out": [
+    "I need a deck quickly",
+    "look up an endpoint"
+   ]
+  },
+  {
+   "fn": "exampleQueries",
+   "in": [
+    "$RS",
+    3,
+    5
+   ],
+   "out": [
+    "look up an endpoint",
+    "I need a deck quickly"
+   ]
+  },
+  {
+   "fn": "exampleQueries",
+   "in": [
+    "$RS",
+    2,
+    -4
+   ],
+   "out": [
+    "I need a deck quickly",
+    "look up an endpoint"
+   ]
+  },
+  {
+   "fn": "exampleQueries",
+   "in": [
+    "$RS",
+    10,
+    0
+   ],
+   "out": [
+    "I need a deck quickly",
+    "look up an endpoint"
+   ]
+  },
+  {
+   "fn": "exampleQueries",
+   "in": [
+    [],
+    3,
+    0
+   ],
+   "out": []
+  },
+  {
+   "fn": "MAX_SHELVES",
+   "in": [],
+   "out": 4,
+   "note": "constant: the Dart value must equal this"
+  }
+ ]
+}

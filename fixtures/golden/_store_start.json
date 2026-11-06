@@ -1,0 +1,273 @@
+{
+ "note": "Start data for the store scenarios (store_ops.json). Raw input: it goes through the normal load path. P for generated ids: cmtc0",
+ "starts": {
+  "mini": {
+   "resources": [
+    {
+     "id": "a1",
+     "title": "Alpha tool",
+     "url": "https://alpha.test/",
+     "type": "ai-source",
+     "tags": [
+      "ai",
+      "design"
+     ],
+     "checkCadence": "weekly",
+     "lastChecked": "2026-10-20",
+     "nextCheck": "2026-10-27",
+     "useWhen": [
+      "design a logo"
+     ],
+     "opens": 2,
+     "openedAt": 1793000000000
+    },
+    {
+     "id": "a2",
+     "title": "Beta draft",
+     "url": "https://beta.test/",
+     "tags": [
+      "design"
+     ],
+     "draft": true,
+     "createdAt": "2026-10-29"
+    },
+    {
+     "id": "a3",
+     "title": "Gamma locked",
+     "url": "https://gamma.test/x?utm_source=q",
+     "locked": true,
+     "tags": [
+      "ai"
+     ]
+    },
+    {
+     "id": "a4",
+     "title": "Delta trial",
+     "url": "https://delta.test/",
+     "type": "web-tool",
+     "status": "testing",
+     "trialEnd": "2026-11-02",
+     "fields": {
+      "limit": "5/day",
+      "resets": "2026-11-03"
+     }
+    },
+    {
+     "id": "a5",
+     "title": "Epsilon old",
+     "url": "https://eps.test/",
+     "status": "archived",
+     "tags": [
+      "old"
+     ]
+    },
+    {
+     "id": "a6",
+     "title": "Zeta no link",
+     "pinned": true,
+     "related": [
+      "a1"
+     ]
+    }
+   ],
+   "jobs": [
+    {
+     "id": "j1",
+     "name": "Design",
+     "color": "#FF6B6B",
+     "members": [
+      "a1",
+      "a2"
+     ],
+     "slot": 0
+    },
+    {
+     "id": "j2",
+     "name": "Tools",
+     "color": "#4DABF7",
+     "members": [
+      "a3",
+      "a4"
+     ],
+     "slot": 1
+    },
+    {
+     "id": "j3",
+     "name": "AI sources",
+     "color": "#51CF66",
+     "members": [],
+     "slot": 2,
+     "rule": {
+      "match": "all",
+      "conds": [
+       {
+        "f": "type",
+        "op": "is",
+        "v": "ai-source"
+       }
+      ]
+     }
+    }
+   ],
+   "threads": [
+    {
+     "id": "t1",
+     "name": "Launch",
+     "steps": [
+      {
+       "rid": "a1",
+       "note": "first",
+       "done": true,
+       "doneAt": "2026-10-29T09:00:00.000Z"
+      },
+      {
+       "rid": "a2",
+       "note": "",
+       "done": false,
+       "doneAt": ""
+      },
+      {
+       "rid": "a4",
+       "note": "",
+       "done": false,
+       "doneAt": ""
+      }
+     ]
+    }
+   ],
+   "settings": {
+    "intro": false,
+    "recentJobs": [
+     "j1"
+    ],
+    "weekly": {
+     "doneAt": "",
+     "pickedAt": "2026-10-26",
+     "snooze": "",
+     "picks": [
+      {
+       "rid": "a2",
+       "done": false
+      },
+      {
+       "rid": "a4",
+       "done": true
+      }
+     ]
+    }
+   }
+  },
+  "dirty": {
+   "resources": [
+    {
+     "id": "d1",
+     "title": "One",
+     "url": "https://one.test/",
+     "related": [
+      "d1",
+      "d2",
+      "zz"
+     ]
+    },
+    {
+     "id": "d1",
+     "title": "Same id again"
+    },
+    {
+     "id": "d2",
+     "title": "Two",
+     "tags": "x, #Y ,x"
+    },
+    "junk",
+    null,
+    {
+     "title": "No id"
+    }
+   ],
+   "jobs": [
+    {
+     "id": "j1",
+     "name": "A",
+     "members": [
+      "d1",
+      "d1",
+      "zz",
+      "d2"
+     ],
+     "slot": 3
+    },
+    {
+     "id": "j2",
+     "name": "B",
+     "members": [],
+     "slot": 3
+    },
+    {
+     "id": "j3",
+     "name": "C",
+     "members": [
+      "d2"
+     ]
+    },
+    {
+     "name": ""
+    }
+   ],
+   "threads": [
+    {
+     "id": "t1",
+     "name": "T",
+     "steps": [
+      "d1",
+      {
+       "rid": "zz"
+      },
+      {
+       "rid": "d2",
+       "done": true
+      },
+      {
+       "note": "no rid"
+      }
+     ]
+    }
+   ],
+   "settings": {
+    "theme": "dark",
+    "junkKey": "kept",
+    "recentJobs": [
+     "j1",
+     5,
+     "j2"
+    ],
+    "dupeIgnore": [
+     "a|b",
+     7
+    ],
+    "customFields": [
+     {
+      "label": "Rating",
+      "kind": "choice",
+      "options": "Good, Bad"
+     }
+    ],
+    "shelves": [
+     {
+      "job": "j1"
+     },
+     {
+      "job": "j1"
+     },
+     {
+      "job": "j2"
+     }
+    ],
+    "siteIcons": "yes",
+    "badge": 0
+   },
+   "game": {
+    "xp": 5
+   }
+  }
+ }
+}

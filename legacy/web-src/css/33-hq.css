@@ -1,0 +1,99 @@
+/* 33-hq.css - fields, smart sectors, trials, Compare, share dialogs, safety copies.
+   Names here are new on purpose: .bulk and .dlg already mean other things elsewhere. */
+
+/* ---- facts and dates on the detail card ---- */
+.chips.facts { margin: 2px 0 8px; }
+.dpill { display: inline-block; padding: 1px 8px; border-radius: 999px; font: 500 12px/1.5 var(--font); color: var(--label2); background: var(--fill); }
+.dpill.warn { color: var(--orange); background: color-mix(in srgb, var(--orange) 14%, transparent); }
+.dpill.bad { color: var(--red); background: color-mix(in srgb, var(--red) 13%, transparent); }
+.kv > span:nth-child(even) { min-width: 0; overflow-wrap: anywhere; }
+.fbox { gap: 10px; }
+.field.sub { gap: 4px; }
+.field.sub > label { margin: 0 4px; font-size: 12px; }
+.fbox + .chips { margin-top: 8px; }
+
+/* ---- smart sectors ---- */
+.autotag { display: inline-block; margin-left: 8px; padding: 2px 7px; border-radius: 6px; vertical-align: middle; font: 600 10px/1.2 var(--font); letter-spacing: .05em; text-transform: uppercase; color: var(--teal); background: color-mix(in srgb, var(--teal) 15%, transparent); }
+.jchip.auto { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--teal) 55%, transparent); }
+.col-n.rule { color: var(--teal); }
+
+/* ---- the rule editor ---- */
+.dlg.rules, .dlg.shareb { width: min(94vw, 420px); }
+.rrows { display: flex; flex-direction: column; gap: 8px; }
+.rrow { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; gap: 6px; align-items: center; padding: 8px; border-radius: 12px; background: var(--fill); }
+.rrow .sel, .rrow .in { min-height: 40px; padding-top: 8px; padding-bottom: 8px; font-size: 15px; }
+.rrow > .in, .rrow > .sel:nth-child(3) { grid-column: 1 / 3; }
+.rrow > .btn { grid-column: 3; grid-row: 1 / span 2; align-self: center; }
+.rprev { margin: 10px 2px 0; text-align: left; min-height: 2.6em; }
+.dlg.rules .chips.scrollx { flex-wrap: nowrap; }
+
+/* ---- share and export dialogs ---- */
+.share-ta { width: 100%; min-height: 170px; max-height: 38vh; padding: 10px 12px; font: 12px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow: auto; white-space: pre; }
+.share-info { margin: 4px 2px 0; text-align: left; }
+.share-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.dlg.shareb .field { margin-bottom: 6px; }
+
+/* ---- Compare ---- */
+.cmp-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; background: var(--cell); }
+.cmp { border-collapse: separate; border-spacing: 0; min-width: 100%; font-size: 14px; line-height: 1.35; }
+.cmp th, .cmp td { padding: 10px 12px; text-align: left; vertical-align: top; border-bottom: .5px solid var(--sep); min-width: 150px; max-width: 230px; overflow-wrap: anywhere; font-weight: 400; }
+.cmp th:first-child { position: sticky; left: 0; z-index: 1; min-width: 92px; max-width: 104px; font-size: 11px; text-transform: uppercase; letter-spacing: .03em; color: var(--label2); background: var(--cell); }
+.cmp thead th { border-bottom-width: 1px; }
+.cmp tr.diff td { background: color-mix(in srgb, var(--orange) 7%, transparent); }
+.cmp .dd { display: inline-block; width: 6px; height: 6px; margin-left: 6px; border-radius: 50%; vertical-align: middle; background: var(--orange); }
+.cmp-h { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; margin-bottom: 6px; cursor: pointer; }
+.cmp-h b { font-size: 15px; font-weight: 600; }
+.cmp tr.pick td { border-bottom: 0; }
+.cmp tr.pick .btn { margin: 0 6px 6px 0; }
+
+/* ---- safety copies and fields manager ---- */
+.card.snap .s, .card.fcard .s { white-space: normal; }
+.card.snap .btn, .card.fcard .btn { flex: none; }
+.card.fcard { padding: 10px 12px; }
+.dlg.form .stack > .fcard { background: var(--fill); }
+
+/* ---- later polish ---- */
+.kv.fx { grid-template-columns: minmax(84px, 38%) minmax(0, 1fr); }
+.arow .grow > .s { white-space: normal; }
+.cmp th, .cmp td { min-width: 128px; }
+.cmp th:first-child { min-width: 92px; max-width: 96px; }
+.cmp th, .cmp td { min-width: 124px; }
+.card.snap { flex-wrap: wrap; }
+.card.snap > .grow { flex: 1 1 100%; }
+
+.card.watchbar .grow > .s { white-space: normal; }
+.card.watchbar .btn { flex: none; }
+
+/* ---- review cards: enough on the card to decide without opening it ---- */
+.card.scan.pick { cursor: pointer; -webkit-user-select: none; user-select: none; }
+.card.scan.hot { box-shadow: inset 0 0 0 2px var(--blue); }
+.card.scan .row { align-items: center; gap: 10px; }
+.card.scan .grow > .s.mono { font-size: 12px; font-variant-numeric: normal; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.sc-lab { margin: 2px 0 -5px; font: 600 11px/1.2 var(--font); letter-spacing: .05em; text-transform: uppercase; color: var(--label2); }
+.sc-desc { margin: 0; font-size: 15px; line-height: 1.4; color: var(--label); overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; cursor: pointer; }
+.sc-desc.open { display: block; -webkit-line-clamp: unset; }
+.sc-flag { display: grid; gap: 6px; padding: 10px 12px; border-radius: 12px; font-size: 14px; line-height: 1.4; background: color-mix(in srgb, var(--orange) 12%, transparent); }
+.sc-flag > b { color: var(--orange); }
+.sc-flag > b, .sc-flag > .row { display: inline; }
+.sc-flag > .row { display: flex; }
+.sc-other { display: flex; align-items: center; gap: 8px; width: 100%; min-width: 0; padding: 7px 10px; border-radius: 9px; text-align: left; font: inherit; font-size: 14px; color: inherit; background: var(--fill); }
+.sc-other .grow { min-width: 0; }
+.sc-tags, .sc-facts { gap: 6px; }
+.sc-tags .chip, .sc-facts .chip { min-height: 24px; font-size: 12px; }
+.sc-use p { margin: 0 0 4px; font-size: 14px; line-height: 1.4; color: var(--label2); overflow-wrap: anywhere; }
+.sc-use b { color: var(--label); font-weight: 600; }
+.sf-row { display: grid; gap: 1px; padding: 8px 0; border-top: .5px solid var(--sep); }
+.sf-row .t { font-size: 15px; color: var(--label); }
+.sitefl .how-body b { color: var(--label); }
+.fill-row .grow { flex: 1 1 100%; min-width: 0; }
+.bulk .btn.sm { padding-inline: 9px; }
+.bulk > span.dim { font-size: 15px; }
+
+/* sector hints (auto-sort) */
+.fit { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; font-size: 13px; line-height: 1.3; }
+.fit-l { font-weight: 600; color: var(--label2); }
+.fit-card { display: flex; align-items: center; gap: 12px; }
+.fit-card .t { font-weight: 600; }
+.fit-card .s { color: var(--label2); font-size: 13px; margin-top: 2px; white-space: normal; overflow: visible; text-overflow: clip; }
+
+.news { margin: 8px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.35; }
