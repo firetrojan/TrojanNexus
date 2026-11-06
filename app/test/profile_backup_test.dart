@@ -24,12 +24,12 @@ Future<void> _start(tester, {Map<String, Object?>? seed, Storage? storage}) asyn
   await tester.pumpAndSettle();
 }
 
-/// The text scale the app really applies. Read through the whole bottom bar: that widget sits
-/// inside the MediaQuery the app inserts, whatever way its labels are drawn, so this does not
-/// depend on any private widget inside app.dart. Returns 0 when there is no such MediaQuery,
-/// so a missing one fails with "expected: <1.0> actual: <0>" instead of a StateError.
+/// The text scale the app really applies. Read through a widget on the Profile page, which is the
+/// page that is open when this is called: the builder above the Navigator scales it, so this works
+/// whether or not the tabs behind it are still on stage. Returns 0 when there is no such
+/// MediaQuery, so a missing one fails with "expected: <1.0> actual: <0>" instead of a StateError.
 double _appliedTextScale(WidgetTester tester) {
-  final data = MediaQuery.maybeOf(tester.element(find.byType(NavigationBar)));
+  final data = MediaQuery.maybeOf(tester.element(find.text('Theme')));
   return data == null ? 0 : data.textScaler.scale(14);
 }
 
