@@ -1,6 +1,7 @@
 // app.dart - the root widget. Loads the store, then builds the themed app.
 // Integrator-only file.
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
 
 import 'core/storage.dart';
 import 'core/storage_pick.dart';
@@ -8,6 +9,7 @@ import 'core/nexus_store.dart';
 import 'core/store_core.dart';
 import 'theme_from_settings.dart';
 import 'ui/shell.dart';
+import 'ui/store_scope.dart';
 
 /// The key the text-scale MediaQuery carries, so tests can find it exactly.
 const Key textScaleKey = Key('nexus-text-scale');
@@ -38,12 +40,22 @@ class _NexusAppState extends State<NexusApp> {
     _load();
   }
 
+  /// The backend for this platform. A browser or a test can inject its own; otherwise the
+  /// backup goes to the app's documents directory, never to a relative path (which on
+  /// Android points at "/" and cannot be written).
+  Future<Storage> _storage() async {
+    final own = widget.storage;
+    if (own != null) return own;
+    final dir = await getApplicationDocumentsDirectory();
+    return createDefaultStorage('${dir.path}/nexus-backup.json');
+  }
+
   Future<void> _load() async {
     final store = NexusStore(
       StoreCore(
         clock: widget.clock ?? Clock(),
         idGen: (p) => '${p}_new',
-        storage: widget.storage ?? createDefaultStorage('nexus-backup.json'),
+        storage: await _storage(),
       ),
     );
     await store.load(widget.seed);
@@ -54,34 +66,39 @@ class _NexusAppState extends State<NexusApp> {
   @override
   Widget build(BuildContext context) {
     const seed = Color(0xFF007AFF);
+    final light = ThemeData(
+        colorSchemeSeed: seed, useMaterial3: true, brightness: Brightness.light);
     final store = _store;
     if (store == null) {
       return MaterialApp(
         title: 'Nexus',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(colorSchemeSeed: seed, useMaterial3: true, brightness: Brightness.light),
+        theme: light,
         home: const Scaffold(body: Center(child: CircularProgressIndicator())),
       );
     }
-    // The store is below MaterialApp, so the theme and the text scale have to be
-    // rebuilt by hand when a setting changes: listen to the store here.
+    // StoreScope wraps MaterialApp, so a page pushed on the Navigator (Profile) also reads
+    // the store. ListenableBuilder above that rebuilds MaterialApp when a setting changes,
+    // because MaterialApp sits above StoreScope.
     return ListenableBuilder(
       listenable: store,
-      builder: (context, _) => MaterialApp(
-        title: 'Nexus',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-            colorSchemeSeed: seed, useMaterial3: true, brightness: Brightness.light),
-        darkTheme: ThemeData(
-            colorSchemeSeed: seed, useMaterial3: true, brightness: Brightness.dark),
-        themeMode: themeModeFor(store.settings.theme),
-        home: Builder(
-          builder: (context) => MediaQuery(
-            key: textScaleKey,
-            data: MediaQuery.of(context).copyWith(
-              textScaler: TextScaler.linear(textScaleFor(store.settings.textSize)),
+      builder: (context, _) => StoreScope(
+        store: store,
+        child: MaterialApp(
+          title: 'Nexus',
+          debugShowCheckedModeBanner: false,
+          theme: light,
+          darkTheme: ThemeData(
+              colorSchemeSeed: seed, useMaterial3: true, brightness: Brightness.dark),
+          themeMode: themeModeFor(store.settings.theme),
+          home: Builder(
+            builder: (context) => MediaQuery(
+              key: textScaleKey,
+              data: MediaQuery.of(context).copyWith(
+                textScaler: TextScaler.linear(textScaleFor(store.settings.textSize)),
+              ),
+              child: Shell(store: store),
             ),
-            child: Shell(store: store),
           ),
         ),
       ),
